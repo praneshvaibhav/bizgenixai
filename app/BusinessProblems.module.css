@@ -1,0 +1,105 @@
+.section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 32px max(5vw, 22px) 10px;
+  background: radial-gradient(ellipse at 71% 48%, #ddf7e8 0%, transparent 44%), #f3fcf6;
+  color: #12352a;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 800px;
+  height: 800px;
+  right: -610px;
+  top: -340px;
+  border-radius: 50%;
+  background: #ddf7e8;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+  gap: 34px;
+  max-width: 1515px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.intro { padding-top: 8px; }
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #168a57;
+  font: 600 clamp(9px, .95vw, 14px)/1.5 monospace;
+  letter-spacing: .18em;
+  margin: 0 0 21px;
+}
+.eyebrow::before, .eyebrow::after { content: ''; width: 27px; height: 1px; background: #a8edc5; flex-shrink: 0; }
+.eyebrow span { width: 9px; height: 9px; background: #168a57; flex-shrink: 0; }
+.title {
+  color: #12352a;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(38px, 3.9vw, 64px);
+  font-weight: 700;
+  letter-spacing: -.055em;
+  line-height: 1.04;
+  margin: 0 0 48px;
+}
+.statement { font: 700 clamp(25px, 2.2vw, 37px)/1.15 Georgia, 'Times New Roman', serif; letter-spacing: -.04em; margin: 0; }
+.description { color: #12352abf; font-size: clamp(14px, 1.15vw, 18px); line-height: 1.5; margin: 24px 0 0; }
+
+.diagram { position: relative; min-width: 0; width: 100%; max-width: 620px; margin-inline: auto; aspect-ratio: 850 / 710; }
+.halo { position: absolute; left: 22%; top: 18%; width: 56%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, #35c97871, #a8edc544 65%, transparent 66%); box-shadow: 0 0 0 28px #a8edc52b; }
+.artwork {
+  position: absolute;
+  z-index: 2;
+  left: 29%;
+  top: 27%;
+  width: 40%;
+  aspect-ratio: 340 / 335;
+  background-image: url('/business-problems-reference.webp');
+  /* Source: 1727 x 911; artwork window: x=985, y=285, w=340, h=335. */
+  background-size: 507.941176% 271.940299%;
+  background-position: 71.016583% 49.479167%;
+  mask-image: radial-gradient(ellipse, #000 57%, transparent 74%);
+}
+.cards { list-style: none; margin: 0; padding: 0; }
+.card { position: absolute; z-index: 3; width: 28%; padding: 12px; background: #ffffffed; border: 1px solid #a8edc5; border-radius: 12px; box-shadow: 0 8px 20px #075e3b14; color: #075e3b; font-size: clamp(13px, 1vw, 15px); line-height: 1.38; letter-spacing: -.025em; }
+.card0 { left: 7%; top: 6%; }
+.card[data-reveal='pending'] { opacity: 0; }
+.card1 { left: 0; top: 39%; width: 25%; }
+.card2 { left: 16%; top: 78%; width: 31%; }
+.card3 { right: 17%; top: 0; }
+.card4 { right: 0; top: 35%; width: 27%; }
+.card5 { right: 5%; top: 73%; width: 32%; }
+.connections { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; pointer-events: none; }
+
+@media (max-width: 1100px) {
+  .section { padding-top: 32px; }
+  .layout { grid-template-columns: 1fr; gap: 40px; max-width: 800px; }
+  .title { font-size: clamp(38px, 6.3vw, 59px); margin-bottom: 30px; }
+  .statement { font-size: 32px; }
+  .description { font-size: 16px; }
+  .card { font-size: clamp(13px, 1.7vw, 15px); }
+  .eyebrow { font-size: 12px; }
+}
+
+@media (max-width: 580px) {
+  .section { padding: 24px 22px 10px; }
+  .eyebrow { font-size: 9px; gap: 8px; letter-spacing: .1em; }
+  .eyebrow::before, .eyebrow::after { width: 12px; }
+  .title { font-size: clamp(33px, 8vw, 44px); }
+  .statement { font-size: 26px; }
+  .description { font-size: 14px; margin-top: 20px; }
+  .diagram { aspect-ratio: auto; display: flex; flex-direction: column; align-items: center; }
+  .halo { left: 27%; top: 0; width: 46%; }
+  .artwork { position: relative; left: auto; top: auto; width: 50%; margin-bottom: 12px; }
+  .cards { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; }
+  .card { position: static; width: auto; font-size: 13px; padding: 12px; border-radius: 12px; }
+}
+
+.title,.statement{font-family:Arial,var(--font-geist),sans-serif}.card{background:var(--white)}
