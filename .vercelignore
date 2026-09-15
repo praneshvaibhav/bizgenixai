@@ -1,0 +1,11 @@
+.git
+.next
+.vinext
+.wrangler
+.site-stage
+node_modules
+dist
+work
+outputs
+*.tar.gz
+*.tsbuildinfo
