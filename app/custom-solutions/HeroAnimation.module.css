@@ -1,0 +1,42 @@
+.scene {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1448 / 1086;
+  container-type: inline-size;
+  isolation: isolate;
+  background: radial-gradient(ellipse at 50% 48%, #a2f3d052, transparent 66%);
+  mask-image: linear-gradient(to right, transparent, #000 5%, #000 97%, transparent);
+}
+.artwork {display: block; width: 100%; height: auto; opacity: 0; mix-blend-mode: multiply;}
+.canvas {position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0;}
+.cubePosition {position: absolute; left: 39.65%; top: 29.25%; width: 18.4%; aspect-ratio: 1; perspective: 1000px; opacity: 0;}
+.cube {position: relative; width: 100%; height: 100%; transform-style: preserve-3d; opacity: 0;}
+.face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid #9effcf;
+  border-radius: 7%;
+  backface-visibility: hidden;
+  background:
+    linear-gradient(90deg, #73efae12 1px, transparent 1px) 0 0 / 25% 25%,
+    linear-gradient(#73efae12 1px, transparent 1px) 0 0 / 25% 25%,
+    linear-gradient(145deg, #078c5a, #004632 50%, #003a2a);
+  box-shadow: inset 0 0 2px 2px #b9ffdc, inset 0 0 20px #27ef9866, 0 0 14px #24e89355;
+}
+.front {transform: translateZ(9.2cqw);}
+.right {transform: rotateY(90deg) translateZ(9.2cqw);}
+.back {transform: rotateY(180deg) translateZ(9.2cqw);}
+.left {transform: rotateY(-90deg) translateZ(9.2cqw);}
+.top {transform: rotateX(90deg) translateZ(9.2cqw); background: radial-gradient(ellipse at 30% 30%, #8bf4bd, #089b65 50%, #03603e);}
+.bottom {transform: rotateX(-90deg) translateZ(9.2cqw); background: #004731;}
+.cubeLabel {color: #eefff5; text-align: center; font: 600 2.4cqw/1.05 Arial, sans-serif; letter-spacing: -.035em; text-shadow: 0 0 8px #58ffb133;}
+.cubeLabel span {display: block; color: #70f7bb; font-size: 5cqw; line-height: 1.3; font-weight: 400;}
+.scene[data-state='playing'] .canvas, .scene[data-state='playing'] .cubePosition {opacity: 1;}
+.scene[data-state='complete'] .artwork {opacity: 1;}
+.scene[data-state='complete'] .canvas, .scene[data-state='complete'] .cubePosition {display: none;}
+@media (prefers-reduced-motion: reduce) {
+  .scene .artwork {opacity: 1;}
+  .scene .canvas, .scene .cubePosition {display: none;}
+}

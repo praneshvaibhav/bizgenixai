@@ -1,7 +1,11 @@
 'use client';
 
-import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
+import { createContext, useContext, useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
 import styles from './SplashIntro.module.css';
+
+const SplashCompleteContext = createContext(true);
+
+export const useSplashComplete = () => useContext(SplashCompleteContext);
 
 export default function SplashIntro({ children }: { children: ReactNode }) {
   const [active, setActive] = useState(true);
@@ -107,7 +111,9 @@ export default function SplashIntro({ children }: { children: ReactNode }) {
         </div>
       )}
       {/* No layout while the intro plays, so viewport animations wait for the homepage. */}
-      <div className={styles.content} data-intro-active={active}>{children}</div>
+      <SplashCompleteContext.Provider value={!active}>
+        <div className={styles.content} data-intro-active={active}>{children}</div>
+      </SplashCompleteContext.Provider>
     </>
   );
 }

@@ -5,7 +5,7 @@ import styles from './SolutionsSection.module.css';
 import { observeVisibility } from './observeVisibility';
 
 const solutions = [
-  { title: 'In-House Products', description: 'Ready solutions built by Bizgenix for real business use cases.', items: ['Voice AI', 'BizChat – WhatsApp AI', 'ScaleOS', 'Growth Intelligence – Business Analytics'], action: 'View Products', href: '#growth-intelligence' },
+  { title: 'In-House Products', description: 'Ready solutions built by Bizgenix for real business use cases.', items: ['Voice AI', 'BizChat – WhatsApp AI', 'ScaleOS', 'Growth Intelligence – Business Analytics'], action: 'View Products', href: '/products' },
   { title: 'Custom AI Solutions', description: 'Purpose-built systems designed around your process, team and data.', items: ['AI ERP and CRM systems', 'Enterprise AI applications', 'AI web and mobile applications', 'Business intelligence systems', 'Tally, WhatsApp, CRM integrations'], action: 'Build Your Solution', href: '/custom-solutions' },
   { title: 'Automation Solutions', description: 'Automations that remove repetitive operational work.', items: ['Lead capture and follow-up automation', 'WhatsApp and customer communication', 'Finance, receivables and reminders', 'HR, approval and task workflows', 'Inventory, reporting and operational automation'], action: 'See Automations', href: '#contact' },
 ];

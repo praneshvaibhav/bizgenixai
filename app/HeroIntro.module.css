@@ -1,6 +1,21 @@
 /* Reserve the full text layout while progressively revealing its prefix. */
 .untyped { visibility: hidden; }
 
+.caret { position: relative; }
+.caret::after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: .1em;
+  height: .85em;
+  border-right: 2px solid #078755;
+  animation: blinkCaret 700ms step-end infinite;
+}
+
+@keyframes blinkCaret {
+  50% { opacity: 0; }
+}
+
 .srOnly {
   position: absolute;
   width: 1px;
@@ -29,6 +44,18 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .untyped { visibility: visible; }
+  .caret { display: none; }
+  .actions[data-ready='false'] { visibility: visible; opacity: 1; pointer-events: auto; }
   .actions[data-ready='true'] { animation: none; }
 }
-.animatedIntro { display: contents; }
+
+/* Keep the mobile booking action available beneath the morph during typing. */
+@media (max-width: 650px) {
+  .actions[data-ready] {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    animation: none;
+  }
+}

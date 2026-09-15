@@ -1,0 +1,41 @@
+{
+  "ai-foundations": {
+    "source": "/scale-with-ai/surat.webp",
+    "credit": "Existing Bizgenix workshop photography"
+  },
+  "prompt-engineering": {
+    "source": "https://unsplash.com/photos/rv2ooDQuNuI",
+    "image": "https://images.unsplash.com/photo-1675271591211-126ad94e495d",
+    "credit": "Zac Wolff / Unsplash"
+  },
+  "n8n-automation": {
+    "source": "https://unsplash.com/photos/5CFy4V-7WzU",
+    "image": "https://images.unsplash.com/photo-1681164315430-6159b2361615",
+    "credit": "Ofspace LLC / Unsplash"
+  },
+  "voice-agents": {
+    "source": "https://www.pexels.com/photo/woman-with-a-black-headset-working-on-her-laptop-7682103/",
+    "image": "https://images.pexels.com/photos/7682103/pexels-photo-7682103.jpeg",
+    "credit": "Mikhail Nilov / Pexels"
+  },
+  "whatsapp-automation": {
+    "source": "https://unsplash.com/photos/juIcqUyhmu0",
+    "image": "https://images.unsplash.com/photo-1719204718581-5c95889c8ec9",
+    "credit": "Amanz / Unsplash"
+  },
+  "business-leaders": {
+    "source": "Existing photo source from public/industries/sources.json",
+    "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902",
+    "credit": "Unsplash"
+  },
+  "sales-marketing": {
+    "source": "https://unsplash.com/photos/eveI7MOcSmw",
+    "image": "https://images.unsplash.com/photo-1599658880436-c61792e70672",
+    "credit": "Myriam Jessier / Unsplash"
+  },
+  "finance-operations": {
+    "source": "https://www.pexels.com/photo/person-using-black-desk-calculator-5915236/",
+    "image": "https://images.pexels.com/photos/5915236/pexels-photo-5915236.jpeg",
+    "credit": "RDNE Stock project / Pexels"
+  }
+}

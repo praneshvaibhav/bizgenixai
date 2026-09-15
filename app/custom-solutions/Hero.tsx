@@ -1,8 +1,8 @@
-import Image from 'next/image';
+import HeroAnimation from './HeroAnimation';
 import styles from './Hero.module.css';
 
-const requirementUrl = `https://wa.me/918200858674?text=${encodeURIComponent("Hi Bizgenix, I'd like to discuss a custom AI solution for my business.")}`;
-const strategyUrl = `https://wa.me/918200858674?text=${encodeURIComponent("Hi Bizgenix, I'd like to book a Free AI Strategy Session.")}`;
+const requirementUrl = `https://wa.me/918780671906?text=${encodeURIComponent("Hi Bizgenix, I'd like to discuss a custom AI solution for my business.")}`;
+export const strategyUrl = 'https://api.whatsapp.com/send/?phone=918780671906&text=Hi+Bizgenix%2C+I%27d+like+to+have+a+AI+Session+with+Umang+Sir.&type=phone_number&app_absent=0';
 
 export default function Hero() {
   return <section className={styles.hero} aria-labelledby="custom-title">
@@ -23,7 +23,7 @@ export default function Hero() {
         </dl>
       </div>
       <div className={styles.visual}>
-        <Image className={styles.artwork} src="/custom-solutions-hero.webp" alt="A green glass cube representing your business, connecting your people, processes, data and customers with Custom AI, CRM and ERP, and automation." width={1448} height={1086} sizes="(max-width: 900px) 100vw, 64vw" priority unoptimized />
+        <HeroAnimation />
       </div>
     </div>
   </section>;

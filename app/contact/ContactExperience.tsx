@@ -1,0 +1,14 @@
+import { email, enquiryOptions, phone, strategyUrl, whatsappUrl } from './content';
+import styles from './page.module.css';
+
+export default function ContactExperience() {
+  return <>
+    <section className={styles.hero} id="contact-intro" aria-labelledby="contact-title"><div className={`${styles.container} ${styles.heroLayout}`}>
+      <div className={styles.heroCopy}><p className={styles.eyebrow}><span className={styles.dot} />LET’S START WITH YOUR BUSINESS</p><h1 id="contact-title">Let’s build the right<br /><em>AI solution</em> for<br />your business.</h1><p className={styles.lead}>Tell us what is slowing your business down, where your team is losing time or which process you want to improve.</p><p className={styles.heroDescription}>Bizgenix will help you identify the right combination of AI, automation, analytics and custom software for your requirement.</p><a className={styles.strategyLink} href={strategyUrl} target="_blank" rel="noopener noreferrer"><span className={styles.roundArrow} aria-hidden="true">↗</span><span>Book a Free AI Strategy Session<small>A conversation about your next practical step.</small></span></a>
+        <div className={styles.directContact}><p className={styles.eyebrow}>PREFER TO REACH OUT DIRECTLY?</p><a href={`mailto:${email}`}><span aria-hidden="true">@</span><div><small>WRITE TO US</small><strong>{email}</strong></div><b aria-hidden="true">↗</b></a><a href="tel:+918200858674"><span aria-hidden="true">↗</span><div><small>GIVE US A CALL</small><strong>{phone}</strong></div><b aria-hidden="true">↗</b></a></div>
+        <p className={styles.locationNote}><span aria-hidden="true">◎</span> Based in Ahmedabad. Working with businesses beyond city limits.</p>
+      </div>
+    </div></section>
+    <section className={`${styles.container} ${styles.section}`} id="enquiry-options" aria-labelledby="options-title"><div className={styles.sectionHeading}><div><p className={styles.eyebrow}>THE RIGHT CONVERSATION STARTS HERE</p><h2 id="options-title">What brings<br /><em>you to Bizgenix?</em></h2></div><p>Whether you need a product demo, a custom AI platform, business automation, corporate AI training or an implementation consultation, our team is ready to understand your goals.</p></div><div className={styles.optionGrid}>{enquiryOptions.map((option, index) => <a key={option.value} className={styles.optionCard} href={whatsappUrl(`Hi Bizgenix, I would like to discuss: ${option.title}.`)} target="_blank" rel="noopener noreferrer"><div className={styles.optionTop}><span className={styles.optionIcon} aria-hidden="true">{option.symbol}</span><span className={styles.optionIndex}>0{index + 1}</span></div><h3>{option.title}</h3><p>{option.copy}</p><span className={styles.audience}>{option.audience}</span><span className={styles.optionAction}>Start a conversation <span aria-hidden="true">↗</span></span></a>)}</div></section>
+  </>;
+}

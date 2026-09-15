@@ -161,7 +161,7 @@ export default function ScaleWithAI() {
       <div className={styles.container}>
         <div className={styles.actions}>
           <a className={styles.exploreButton} href="https://scalewithai.in/" target="_blank" rel="noopener noreferrer">Explore Scale with AI <span aria-hidden="true">↗</span></a>
-          <a className={styles.trainingLink} href="https://api.whatsapp.com/send/?phone=918200858674&text=Hi%21+I%27d+like+to+know+more+about+the+Corporate+Training+Program+%E2%80%94+including+the+program+fee+and+enrolment+details.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">Enquire about Corporate Training <span aria-hidden="true">→</span></a>
+          <a className={styles.trainingLink} href="https://api.whatsapp.com/send/?phone=918780671906&text=Hi%21+I%27d+like+to+know+more+about+the+Corporate+Training+Program+%E2%80%94+including+the+program+fee+and+enrolment+details.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">Enquire about Corporate Training <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>
