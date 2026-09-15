@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import Navigation from './custom-solutions/Navigation';
 import DeferredScene from './DeferredScene';
 import HeroIntro from './HeroIntro';
 import SplashIntro from './SplashIntro';
@@ -17,8 +17,8 @@ import OurProcess from './OurProcess';
 import ContactSection from './ContactSection';
 const institutions=[['ICAI','Institute of Chartered Accountants of India','icai','/institution-icai.webp'],['CMAI','The Clothing Manufacturers Association of India','cmai','/institution-cmai.webp'],['JITO Ladies','JITO Ladies','jito','/institution-jito-ladies.webp'],['TEDx','TEDx','tedx'],['BNI','Business Network International','bni','/institution-bni.webp'],['Skillathon','Skillathon Pune','skillthon','/institution-skillthon.webp']];
 const Arrow=()=> <span className="arrow">↗</span>;
-export default function Home(){const[menu,setMenu]=useState(false);return <SplashIntro><main><ScrollAnimations/>
-<nav className="nav"><a href="#top"><img src="/bizgenixlogo.webp" alt="Bizgenix AI" width={640} height={233} fetchPriority="high"/></a><button className="menu" onClick={()=>setMenu(!menu)} aria-label="Toggle navigation">☰</button><div className={menu?'links open':'links'}>{[['Home','#top'],['About','/about'],['Custom Solution','/custom-solutions'],['Product','/products'],['Learning','/courses'],['Blog','/blog'],['Contact Us','/contact']].map(([label,href])=><a key={label} onClick={()=>setMenu(false)} href={href}>{label}</a>)}</div></nav>
+export default function Home(){return <SplashIntro><main><ScrollAnimations/>
+<Navigation activePath="/" />
 <section className="hero section" id="top"><div className="heroCopy"><p className="eyebrow">AI SOLUTIONS FOR A SMARTER TOMORROW</p><HeroIntro/><p className="support">Custom AI Solutions <b>|</b> Ready-to-Use AI Products <b>|</b> Business Automation <b>|</b> AI Education</p></div><DeferredScene kind="particles"/></section>
 <section className="trust section" id="about"><div className="trustTop"><DeferredScene kind="credibility"/><div className="trustCopy"><p className="eyebrow">INSTANT CREDIBILITY</p><h2>Built by a team that teaches AI only after deploying it inside real businesses.</h2></div></div><CredibilityStats/><div className="institutions"><div className="institutionCopy"><i>◈</i> Trusted stages and institutions</div><div className="institutionLogos" aria-label="Trusted stages and institutions">{institutions.map(([shortName,fullName,style,logo])=><span data-scroll-animation className={'institutionLogo '+style} key={shortName} title={fullName} aria-label={fullName}>{logo?<img src={logo} alt={fullName} loading="lazy" decoding="async"/>:shortName}</span>)}</div></div></section>
 <BusinessProblems/>
