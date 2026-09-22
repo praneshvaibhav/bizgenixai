@@ -134,3 +134,18 @@ main section[id]{scroll-margin-top:calc(var(--nav-height) + 16px)}
   .hero::after{width:94px;height:36px;right:-34px;bottom:112px}
   .hero .actions>.textBtn{justify-self:center}
 }
+
+/* Growth Intelligence uses a light mint surface instead of the former black panel. */
+.intelligence{
+  background:
+    radial-gradient(circle at 88% 18%,rgba(116,215,143,.3),transparent 34%),
+    linear-gradient(135deg,#e7faec 0%,#f6fff8 56%,#dff6e6 100%);
+  color:#0b321b;
+}
+.intelligence h2{color:#0b321b}
+.intelligence>div>p:not(.eyebrow),.intelligence .points span{color:#214f31}
+.intelligence .eyebrow{color:#238b49}
+.intelligence .points span:before{color:#35b85b}
+.intelligence .outline{border-color:#2f9f55;color:#0f512b}
+.intelligence .outline:hover{background:#2f9f55;color:#fff}
+.intelligence .growthActions a:focus-visible{outline-color:#0f512b}
