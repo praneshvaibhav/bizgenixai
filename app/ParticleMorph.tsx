@@ -8,7 +8,7 @@ import { useAnimationViewport } from './useAnimationViewport';
 const WORDS = ['AI AUTOMATE', 'CUSTOM SOLUTIONS', 'GROWTH INTELLIGENCE', 'SCALE WITH AI'];
 const COUNT = 6200;
 // Keep every particle in the hero's light-green spectrum.
-const palette = ['#4ECF72', '#73DC8E', '#96E7AA', '#BAF1C6'].map(color => new THREE.Color(color).toArray());
+const palette = ['#35B85B', '#53C872', '#72D48A', '#93DFA3'].map(color => new THREE.Color(color).toArray());
 
 const seededValue = (index:number,salt:number) => {
   const value=Math.sin(index*12.9898+salt*78.233)*43758.5453;
