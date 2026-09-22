@@ -36,7 +36,6 @@
 .desktopLinks a[aria-current='page'] { color: var(--nav-text); font-weight: 500; border-bottom-color: var(--nav-text); }
 .desktopLinks a:hover { color: var(--nav-text); }
 .actions { display: flex; align-items: center; gap: 16px; }
-.themeToggle { display: grid; place-items: center; width: 40px; height: 44px; padding: 0; border: 0; background: transparent; color: var(--nav-text); font: 28px/1 'Site Navigation', system-ui, sans-serif; cursor: pointer; }
 .mobileMenu { display: none; }
 .menuToggle { display: grid; place-items: center; min-width: 44px; min-height: 44px; padding: 8px; cursor: pointer; list-style: none; color: var(--nav-secondary); font-size: 22px; }
 .menuToggle::-webkit-details-marker { display: none; }

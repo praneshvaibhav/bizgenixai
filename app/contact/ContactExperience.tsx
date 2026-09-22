@@ -7,7 +7,6 @@ import SiteFooter from '../SiteFooter';
 import Navigation from '../custom-solutions/Navigation';
 
 export default function ContactExperience() {
-  const [light, setLight] = useState(false);
   const [emailOpened, setEmailOpened] = useState(false);
 
   function sendMessage(event: FormEvent<HTMLFormElement>) {
@@ -21,9 +20,9 @@ export default function ContactExperience() {
   }
 
   return (
-    <div className={styles.page} data-theme={light ? 'light' : 'dark'} id="top">
+    <div className={styles.page} data-theme="dark" id="top">
       <a className={styles.skipLink} href="#main-content">Skip to content</a>
-      <Navigation activePath="/contact" overlay light={light} onThemeToggle={() => setLight(value => !value)} />
+      <Navigation activePath="/contact" overlay />
       <main id="main-content" className={styles.main}>
         <section className={styles.hero} aria-labelledby="contact-title"><div className={styles.heroCopy}>
           <p className={styles.eyebrow}>Start the Conversation</p>
