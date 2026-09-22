@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { CSSProperties } from 'react';
 import styles from './ServicesSection.module.css';
 
 const services = [
@@ -15,10 +16,10 @@ const services = [
     action: 'Explore products',
   },
   {
-    title: 'Training',
+    title: 'Learning',
     description: 'Practical AI courses and workshops for professionals and business teams.',
     href: '/courses',
-    action: 'Explore training',
+    action: 'Explore Learning',
   },
 ];
 
@@ -29,7 +30,13 @@ export default function ServicesSection() {
         <h2 id="services-title">Services we provide</h2>
         <div className={styles.cards}>
           {services.map((service, index) => (
-            <Link className={styles.card} href={service.href} key={service.href}>
+            <Link
+              className={styles.card}
+              href={service.href}
+              key={service.href}
+              data-scroll-animation
+              style={{ '--service-delay': `${index * 160}ms` } as CSSProperties}
+            >
               <span className={styles.number} aria-hidden="true">0{index + 1}</span>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
