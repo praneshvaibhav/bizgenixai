@@ -39,7 +39,7 @@
 }
 
 .number { margin-bottom: 28px; color: #5AAA6C; font-size: 30px; line-height: 1; font-weight: 700; }
-.card h3 { margin: 0 0 14px; font-size: clamp(25px, 2.3vw, 34px); line-height: 1.15; }
+.card h3 { margin: 0 0 14px; font-size: clamp(25px, 2.3vw, 34px); line-height: 1.15; letter-spacing: 0; font-kerning: normal; }
 .card p { margin: 0 0 32px; max-width: 350px; font-size: 15px; line-height: 1.65; }
 .action { display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; margin-top: auto; padding-top: 20px; border-top: 1px solid #5AAA6C; font-size: 13px; font-weight: 700; }
 .action > span { font-size: 23px; line-height: 1; }
