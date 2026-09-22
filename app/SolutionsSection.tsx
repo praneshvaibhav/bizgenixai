@@ -1,105 +1,80 @@
-'use client';
-
-import { useEffect, useRef } from 'react';
 import styles from './SolutionsSection.module.css';
-import { observeVisibility } from './observeVisibility';
 
 const testimonials = [
   {
-    name: 'Aarav Mehta',
-    role: 'Founder, Example Retail Co.',
-    initials: 'AM',
-    service: 'AI Products',
-    quote: 'We used to spend hours pulling reports from different systems. Now our team has a clear view of the business in one place, and our meetings focus on decisions instead of spreadsheets.',
+    name: 'Arvind Sanghvi',
+    company: 'Arihant Infomatics',
+    initials: 'AS',
+    quote: 'Bizgenix brought greater structure and clarity to our everyday work. Information is easier to access, follow-ups are more organised and the team can move forward with confidence.',
   },
   {
-    name: 'Neha Shah',
-    role: 'Operations Head, Example Manufacturing Co.',
-    initials: 'NS',
-    service: 'Custom Solution',
-    quote: 'The team took time to understand how we work before building anything. Our custom solution connects the steps that used to happen across calls, emails and spreadsheets, making everyday work much simpler.',
+    name: 'Ashok Sanghvi',
+    company: 'Mahavir Traders',
+    initials: 'AS',
+    quote: 'As our work expanded, manual tracking became difficult. The new workflow gives us clearer ownership, better visibility and a simpler way to stay on top of every important action.',
   },
   {
-    name: 'Rohan Patel',
-    role: 'Director, Example Services Co.',
-    initials: 'RP',
-    service: 'Business Automation',
-    quote: 'Following up with every enquiry was a daily challenge. With a connected workflow, our team knows who needs a response and what comes next. We can give customers more attention with less manual tracking.',
+    name: 'Bhavya',
+    company: 'VS Associate',
+    initials: 'B',
+    quote: 'The solution fits the way our team actually works. It reduces repetitive effort and keeps client communication, responsibilities and day-to-day tasks better organised.',
+  },
+  {
+    name: 'Chintan Shah',
+    company: 'Linq Corporate Solutions',
+    initials: 'CS',
+    quote: 'We now have a more connected view of work across the business. The system helps our team collaborate better, act faster and spend less time searching for updates.',
+  },
+  {
+    name: 'Dhaval Ukani',
+    company: 'Aavkar Corporation',
+    initials: 'DU',
+    quote: 'From routine coordination to management visibility, the solution has made our process more consistent. We can follow progress clearly and respond without unnecessary delays.',
+  },
+  {
+    name: 'Prachetan Bansal',
+    company: 'Spectrum Dyes and Chemical Private Limited',
+    initials: 'PB',
+    quote: 'Bizgenix translated a complex requirement into a practical system. It brings the right information together and supports faster, clearer and more informed decisions.',
   },
 ];
 
-export default function SolutionsSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    const cards = section?.querySelector<HTMLElement>(`.${styles.cards}`);
-    if (!section || !cards) return;
-    const motion = matchMedia('(prefers-reduced-motion: reduce)');
-    if (motion.matches || !('IntersectionObserver' in window) || !('animate' in Element.prototype)) return;
-    const boxes = Array.from(section.querySelectorAll<HTMLElement>('[data-solution-pop]'));
-    const animations: Animation[] = [];
-    section.dataset.popReady = '';
-    boxes.forEach(box => { box.dataset.popPending = ''; });
-    // Each card waits for its own viewport entry, including stacked mobile cards.
-    const stops = boxes.map((box, index) => {
-      let animation: Animation | undefined;
-      let finished = false;
-      return observeVisibility(box, visible => {
-        if (finished) return;
-        if (animation) {
-          if (visible) animation.play();
-          else animation.pause();
-          return;
-        }
-        if (!visible) return;
-        delete box.dataset.popPending;
-        const delay = index * 300;
-        animation = box.animate([
-          { opacity: 0, scale: '.88', translate: '0 12px', offset: 0 },
-          { opacity: 1, scale: '1.035', translate: '0 0', offset: .7 },
-          { opacity: 1, scale: '1', translate: '0 0', offset: 1 },
-        ], { duration: 550, delay, easing: 'ease-out', fill: 'backwards' });
-        animation.onfinish = () => { finished = true; animation?.cancel(); };
-        animations.push(animation);
-      });
-    });
-    const showAll = () => {
-      stops.forEach(stop => stop());
-      animations.forEach(animation => animation.cancel());
-      boxes.forEach(box => { delete box.dataset.popPending; });
-      delete section.dataset.popReady;
-    };
-    const onMotionChange = () => { if (motion.matches) showAll(); };
-    motion.addEventListener('change', onMotionChange);
-    return () => { showAll(); motion.removeEventListener('change', onMotionChange); };
-  }, []);
-
+function TestimonialCard({ testimonial, featured = false }: { testimonial: typeof testimonials[number]; featured?: boolean }) {
   return (
-    <section ref={sectionRef} className={styles.section} id="products" aria-labelledby="solutions-title">
+    <figure className={`${styles.card} ${featured ? styles.featured : ''}`}>
+      <div className={styles.cardHeader}>
+        <span className={styles.service}>Client experience</span>
+        <span className={styles.company}>{testimonial.company}</span>
+      </div>
+      <span className={styles.quoteMark} aria-hidden="true">“</span>
+      <blockquote><p>{testimonial.quote}</p></blockquote>
+      <figcaption className={styles.client}>
+        <span className={styles.avatar} aria-hidden="true">{testimonial.initials}</span>
+        <div><strong>{testimonial.name}</strong><span>{testimonial.company}</span></div>
+      </figcaption>
+    </figure>
+  );
+}
+
+export default function SolutionsSection() {
+  return (
+    <section className={styles.section} id="products" aria-labelledby="solutions-title">
       <div className={styles.inner}>
         <div className={styles.hero}>
           <div className={styles.copy}>
-            <h2 id="solutions-title">Solution on which <em>client trusted</em></h2>
-            <p>Demo client testimonials — names, companies and quotes below are illustrative.</p>
+            <h2 id="solutions-title">Solutions our <em>clients trust</em></h2>
+            <p>Businesses that trust Bizgenix to make everyday work clearer, faster and more connected.</p>
           </div>
-
         </div>
-        <div className={styles.cards} id="solution-options">
-          {testimonials.map((testimonial, index) => (
-            <figure key={testimonial.name} id={index === 1 ? 'solutions' : index === 2 ? 'automation' : undefined} data-solution-pop className={`${styles.card} ${index === 1 ? styles.featured : ''}`}>
-              <div className={styles.cardHeader}>
-                <span className={styles.service}>{testimonial.service}</span>
-                <span className={styles.demo}>Demo</span>
-              </div>
-              <span className={styles.quoteMark} aria-hidden="true">“</span>
-              <blockquote><p>{testimonial.quote}</p></blockquote>
-              <figcaption className={styles.client}>
-                <span className={styles.avatar} aria-hidden="true">{testimonial.initials}</span>
-                <div><strong>{testimonial.name}</strong><span>{testimonial.role}</span></div>
-              </figcaption>
-            </figure>
-          ))}
+        <div className={styles.cards} id="solution-options" role="region" aria-label="Client experiences">
+          <div className={styles.track}>
+            <div className={styles.group}>
+              {testimonials.map((testimonial, index) => <TestimonialCard key={testimonial.name} testimonial={testimonial} featured={index === 1 || index === 4} />)}
+            </div>
+            <div className={`${styles.group} ${styles.duplicate}`} aria-hidden="true">
+              {testimonials.map((testimonial, index) => <TestimonialCard key={`${testimonial.name}-duplicate`} testimonial={testimonial} featured={index === 1 || index === 4} />)}
+            </div>
+          </div>
         </div>
       </div>
     </section>

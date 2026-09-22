@@ -1,30 +1,50 @@
-.section { position: relative; isolation: isolate; overflow: hidden; padding: 12px max(4.5vw, 22px) 40px; background: #FFFFFF; color: #000000; }
-.section::after { content: ''; position: absolute; z-index: -1; width: 125%; height: 530px; left: -9%; bottom: -335px; border: 26px double #5AAA6C; border-radius: 50%; transform: rotate(-13deg); }
-.inner { max-width: 1480px; margin: auto; }
-.hero { text-align: center; padding: 18px 0 44px; }
+.section { position: relative; isolation: isolate; overflow: hidden; padding: 12px 0 52px; background: #fff; color: #000; }
+.section::after { content: ''; position: absolute; z-index: -1; width: 125%; height: 530px; left: -9%; bottom: -335px; border: 26px double #5aaa6c; border-radius: 50%; transform: rotate(-13deg); }
+.inner { width: 100%; margin: auto; }
+.hero { text-align: center; padding: 18px max(4.5vw, 22px) 44px; }
 .copy { max-width: 760px; margin: 0 auto; }
 .copy h2 { font: 700 clamp(38px, 4vw, 61px)/1.04 Arial, sans-serif; letter-spacing: -.045em; margin: 0 0 18px; }
-.copy h2 em { color: #5AAA6C; font-style: normal; }
-.copy > p { font-size: 14px; line-height: 1.6; max-width: 600px; margin: 0 auto; }
-.section[data-pop-ready] [data-pop-pending] { opacity: 0; }
-.cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: stretch; scroll-margin-top: 115px; }
-.card { display: flex; flex-direction: column; min-width: 0; margin: 0; padding: 30px; border: 1px solid #5AAA6C; border-radius: 21px; background: #FFFFFF; color: #000000; scroll-margin-top: 115px; }
-.featured { background: #5AAA6C; }
-.cardHeader { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-.service { font-size: 12px; font-weight: 700; line-height: 1.4; }
-.demo { padding: 5px 9px; border: 1px solid #5AAA6C; border-radius: 99px; font-size: 10px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; }
-.featured .demo { border-color: #000000; }
-.quoteMark { height: 65px; margin-top: 22px; color: #5AAA6C; font: 90px/1 Georgia, serif; }
-.featured .quoteMark { color: #000000; }
+.copy h2 em { color: #5aaa6c; font-style: normal; }
+.copy > p { font-size: 14px; line-height: 1.6; max-width: 630px; margin: 0 auto; }
+.cards { width: 100%; overflow: hidden; scroll-margin-top: 115px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+.track { display: flex; align-items: stretch; gap: 20px; width: max-content; padding: 4px 0 16px; animation: clientMarquee 52s linear infinite; will-change: transform; }
+.group { display: flex; align-items: stretch; gap: 20px; }
+.cards:hover .track, .cards:focus-within .track { animation-play-state: paused; }
+.card { display: flex; flex: 0 0 clamp(310px, 31vw, 430px); flex-direction: column; min-width: 0; margin: 0; padding: 30px; border: 1px solid #5aaa6c; border-radius: 21px; background: #fff; color: #000; box-shadow: 0 12px 30px rgba(34, 91, 48, .07); }
+.featured { background: #5aaa6c; }
+.cardHeader { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; min-height: 38px; }
+.service { flex: 0 0 auto; font-size: 11px; font-weight: 700; line-height: 1.4; letter-spacing: .06em; text-transform: uppercase; }
+.company { max-width: 210px; padding: 5px 9px; border: 1px solid #5aaa6c; border-radius: 99px; font-size: 10px; font-weight: 600; line-height: 1.35; text-align: right; }
+.featured .company { border-color: #000; }
+.quoteMark { height: 65px; margin-top: 18px; color: #5aaa6c; font: 90px/1 Georgia, serif; }
+.featured .quoteMark { color: #000; }
 .card blockquote { margin: 0 0 30px; }
-.card blockquote p { margin: 0; font-size: clamp(16px, 1.3vw, 20px); line-height: 1.65; letter-spacing: -.015em; }
-.client { display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 24px; border-top: 1px solid #5AAA6C; }
-.featured .client { border-color: #000000; }
-.avatar { display: grid; place-items: center; flex: 0 0 48px; height: 48px; border-radius: 50%; background: #5AAA6C; color: #000000; font-size: 15px; font-weight: 700; }
-.featured .avatar { background: #FFFFFF; }
+.card blockquote p { margin: 0; font-size: clamp(16px, 1.2vw, 19px); line-height: 1.65; letter-spacing: -.015em; }
+.client { display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 24px; border-top: 1px solid #5aaa6c; }
+.featured .client { border-color: #000; }
+.avatar { display: grid; place-items: center; flex: 0 0 48px; height: 48px; border-radius: 50%; background: #5aaa6c; color: #000; font-size: 15px; font-weight: 700; }
+.featured .avatar { background: #fff; }
 .client > div { min-width: 0; }
 .client strong { display: block; font-size: 16px; line-height: 1.4; }
 .client div > span { display: block; margin-top: 5px; font-size: 12px; line-height: 1.5; }
-@media (max-width: 1100px) { .cards { gap: 16px; }.card { padding: 24px; }.client { gap: 10px; }.client strong { font-size: 15px; } }
-@media (max-width: 850px) { .cards { grid-template-columns: 1fr; max-width: 700px; margin: auto; }.copy h2 { font-size: clamp(36px, 6vw, 53px); }.card blockquote p { font-size: 18px; }.hero { padding-bottom: 32px; } }
-@media (max-width: 400px) { .card { padding: 22px; }.card blockquote p { font-size: 16px; }.avatar { flex-basis: 42px; height: 42px; } }
+@keyframes clientMarquee { to { transform: translateX(calc(-50% - 10px)); } }
+@media (max-width: 850px) {
+  .copy h2 { font-size: clamp(36px, 8vw, 53px); }
+  .hero { padding-bottom: 32px; }
+  .track, .group { gap: 14px; }
+  .track { animation-duration: 46s; }
+  .card { flex-basis: min(82vw, 370px); padding: 24px; }
+  .card blockquote p { font-size: 17px; }
+  @keyframes clientMarquee { to { transform: translateX(calc(-50% - 7px)); } }
+}
+@media (max-width: 400px) {
+  .card { padding: 22px; }
+  .card blockquote p { font-size: 16px; }
+  .avatar { flex-basis: 42px; height: 42px; }
+  .company { max-width: 165px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cards { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
+  .track { animation: none; padding-inline: 22px; }
+  .duplicate { display: none; }
+}
