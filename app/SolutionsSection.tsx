@@ -2,10 +2,10 @@ import styles from './SolutionsSection.module.css';
 
 const testimonials = [
   {
-    name: 'Arvind Sanghvi',
-    company: 'Arihant Infomatics',
-    image: '/client-profiles/arvind-sanghvi.webp',
-    quote: 'Bizgenix brought greater structure and clarity to our everyday work. Information is easier to access, follow-ups are more organised and the team can move forward with confidence.',
+    name: 'Kaushk Savla',
+    company: 'MYKRAFT Apparels',
+    image: '/client-profiles/kaushk-savla.webp',
+    quote: 'Bizgenix helped us connect day-to-day operations with a clearer view of orders and priorities. The team spends less time chasing updates and more time moving the business forward.',
   },
   {
     name: 'Ashok Sanghvi',
@@ -36,6 +36,12 @@ const testimonials = [
     company: 'Spectrum Dyes and Chemical Private Limited',
     image: '/client-profiles/prachetan-bansal.webp',
     quote: 'Bizgenix translated a complex requirement into a practical system. It brings the right information together and supports faster, clearer and more informed decisions.',
+  },
+  {
+    name: 'Varun Shrivastava',
+    company: 'Kailash Veda Infra',
+    image: '/client-profiles/varun-shrivastava.webp',
+    quote: 'The solution gives our team a dependable way to coordinate projects, track responsibilities and keep important information visible. Decisions are faster because everyone works from the same picture.',
   },
 ];
 
