@@ -1,21 +1,21 @@
-.section { position: relative; isolation: isolate; overflow: hidden; padding: 38px max(3.2vw, 22px) 35px; background: radial-gradient(ellipse at 50% 44%, #a8edc570, transparent 40%), radial-gradient(ellipse at 2% 55%, #ddf7e87a, transparent 47%), radial-gradient(ellipse at 97% 56%, #a8edc581, transparent 42%), #f3fcf6; color: #12352a; scroll-margin-top: 90px; }
+.section { position: relative; isolation: isolate; overflow: hidden; padding: 38px max(3.2vw, 22px) 35px; background: #FFFFFF; color: #000000; scroll-margin-top: 90px; }
 .inner { position: relative; max-width: 1000px; margin: 0 auto; }
 .header { text-align: center; margin: 0 auto 24px; }
-.eyebrow { display: flex; align-items: center; justify-content: center; gap: 19px; margin: 0 0 21px; color: #075e3b; font-size: 16px; font-weight: 700; letter-spacing: .19em; }
-.eyebrow::before, .eyebrow::after { content: ''; width: 65px; height: 1px; background: #a8edc5; }
-.eyebrow span { padding: 11px 23px; border-radius: 99px; background: #ddf7e8; }
+.eyebrow { display: flex; align-items: center; justify-content: center; gap: 19px; margin: 0 0 21px; color: #000000; font-size: 16px; font-weight: 700; letter-spacing: .19em; }
+.eyebrow::before, .eyebrow::after { content: ''; width: 65px; height: 1px; background: #FFFFFF; color: #000000; }
+.eyebrow span { padding: 11px 23px; border-radius: 99px; background: #FFFFFF; color: #000000; }
 .features { display: grid; position: relative; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(3, minmax(116px, auto)); gap: 24px 32px; align-items: stretch; }
-.feature { position: relative; z-index: 1; display: grid; grid-template-columns: 56px minmax(0, 1fr); align-items: start; gap: 12px; min-width: 0; padding: 16px 44px 16px 16px; border: 1px solid #fff; border-radius: 16px; background: #ffffffed; box-shadow: 0 12px 28px #168a5710; transition: transform .25s, box-shadow .25s, border-color .25s; }
-.feature:hover { transform: translateY(-3px); border-color: #35c978; box-shadow: 0 15px 30px #168a571c; }
+.feature { position: relative; z-index: 1; display: grid; grid-template-columns: 56px minmax(0, 1fr); align-items: start; gap: 12px; min-width: 0; padding: 16px 44px 16px 16px; border: 1px solid #FFFFFF; border-radius: 16px; background: #FFFFFF; box-shadow: none; transition: transform .25s, box-shadow .25s, border-color .25s; color: #000000; }
+.feature:hover { transform: translateY(-3px); border-color: #5AAA6C; box-shadow: none; }
 .left { grid-column: 1; grid-row: var(--row); }
 .right { grid-column: 2; grid-row: var(--row); }
-.icon { position: relative; display: block; flex-shrink: 0; width: 56px; aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: #ddf7e8; }
+.icon { position: relative; display: block; flex-shrink: 0; width: 56px; aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: #FFFFFF; color: #000000; }
 .icon img { position: absolute; width: calc(1536 / var(--crop) * 100%); max-width: none; height: auto; left: calc(var(--x) / var(--crop) * -100%); top: calc(var(--y) / var(--crop) * -100%); }
-.featureCopy { border-left: 1px solid #a8edc5; padding-left: 13px; min-height: 56px; }
-.feature h3 { margin: 1px 0 7px; color: #075e3b; font-size: clamp(17px, 1.35vw, 20px); line-height: 1.16; letter-spacing: -.035em; }
-.feature p { margin: 0; color: #12352abf; font-size: clamp(13px, 1vw, 15px); line-height: 1.36; }
-.number { position: absolute; right: 11px; top: 14px; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #ddf7e8; color: #168a57; font-size: 14px; font-weight: 700; }
-.stepArrow { color: #168a57; margin: 0 6px; font-size: 21px; line-height: .8; }
+.featureCopy { border-left: 1px solid #5AAA6C; padding-left: 13px; min-height: 56px; }
+.feature h3 { margin: 1px 0 7px; color: #000000; font-size: clamp(17px, 1.35vw, 20px); line-height: 1.16; letter-spacing: -.035em; }
+.feature p { margin: 0; color: #000000; font-size: clamp(13px, 1vw, 15px); line-height: 1.36; }
+.number { position: absolute; right: 11px; top: 14px; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #FFFFFF; color: #000000; font-size: 14px; font-weight: 700; }
+.stepArrow { color: #000000; margin: 0 6px; font-size: 21px; line-height: .8; }
 @media (max-width: 1400px) {
   .feature { grid-template-columns: 54px minmax(0, 1fr); gap: 12px; padding: 16px 42px 16px 15px; }
   .feature .icon { width: 54px; }

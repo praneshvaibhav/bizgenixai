@@ -79,7 +79,7 @@ export default function GrowthDashboard() {
               fontSize: `${metric.fontSize / 16}cqw`,
               fontFamily: metric.font ?? '"Courier New", monospace',
               fontWeight: metric.weight ?? 700,
-              color: metric.color ?? '#18271a', background: metric.background ?? '#ffffff',
+              color: metric.color ?? '#000000', background: metric.background ?? '#FFFFFF',
             }}>{formatDashboardMetric(metric, progress)}</span>
           ))}
         </div>

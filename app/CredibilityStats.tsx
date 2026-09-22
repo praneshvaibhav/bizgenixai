@@ -30,15 +30,13 @@ function Counter({ value, prefix = '', suffix = '', active, delay }: CounterProp
   useEffect(() => {
     if (!active) return;
 
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setShown(value);
-      return;
-    }
-
     let frame = 0;
-    let timer: ReturnType<typeof setTimeout>;
-
-    timer = setTimeout(() => {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const timer = setTimeout(() => {
+      if (reduceMotion) {
+        setShown(value);
+        return;
+      }
       const startedAt = performance.now();
 
       const tick = (now: number) => {

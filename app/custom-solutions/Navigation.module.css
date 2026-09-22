@@ -1,11 +1,40 @@
-.navigation{z-index:50}
-.mobileMenu{display:none}
-.menuToggle{display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 12px;border:1px solid #c9e3d6;border-radius:9px;background:#fff;color:#14392e;font:600 13px/1.5 Arial,sans-serif;cursor:pointer;list-style:none}
-.menuToggle::-webkit-details-marker{display:none}
-.menuToggle>span{font-size:21px}
-.menuToggle:focus-visible,.mobileLinks>a:focus-visible{outline:3px solid #159a6b;outline-offset:3px}
-.mobileMenu[open] .menuToggle{background:#e4f5ea}
-.mobileLinks{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;gap:4px;padding:15px 22px 22px;background:#fff;border-bottom:1px solid #c9e3d6;box-shadow:0 16px 24px #14392e14;max-height:calc(100dvh - 100px);overflow-y:auto}
-.mobileLinks>a{display:flex;align-items:center;min-height:44px;padding:10px 12px;border-radius:7px;font:500 14px/1.5 Arial,sans-serif;color:#14392e}
-.mobileLinks>a:hover,.mobileLinks>a[aria-current=page]{background:#edf8f0;color:#00865b;text-decoration:none}
-@media(max-width:1100px){.navigation .desktopLinks{display:none}.mobileMenu{display:block;margin-left:auto}}
+﻿@font-face { font-family: Site Navigation; src: url('/fonts/contact-dm-sans.woff2') format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
+.space { height: 68px; }
+.overlay { height: 0; }
+.header {
+  --nav-bg: #0b0e14;
+  --nav-menu: #101520;
+  --nav-text: #fff;
+  --nav-secondary: #c5cbe9;
+  --nav-border: #ee00ee1a;
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+  color: var(--nav-text);
+  font-family: 'Site Navigation', system-ui, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+.header[data-theme='light'] { --nav-bg: #fff; --nav-menu: #f7f8fc; --nav-text: #0b0e14; --nav-secondary: #3a3f55; --nav-border: #0000000f; }
+.navigation { display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: 1200px; height: 68px; margin: 0 auto; padding: 0 32px; }
+.logo { display: flex; align-items: center; flex: 0 0 auto; width: 180px; height: 60px; }
+.logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.desktopLinks { display: flex; align-items: center; gap: 26px; }
+.desktopLinks a { padding: 10px 0 2px; margin-bottom: 8px; border-bottom: 1px solid transparent; color: var(--nav-secondary); font-size: 13px; font-weight: 400; letter-spacing: .05em; white-space: nowrap; text-decoration: none; }
+.desktopLinks a[aria-current='page'] { color: var(--nav-text); font-weight: 500; border-bottom-color: var(--nav-text); }
+.desktopLinks a:hover { color: var(--nav-text); }
+.actions { display: flex; align-items: center; gap: 16px; }
+.themeToggle { display: grid; place-items: center; width: 40px; height: 44px; padding: 0; border: 0; background: transparent; color: var(--nav-text); font: 28px/1 'Site Navigation', system-ui, sans-serif; cursor: pointer; }
+.mobileMenu { display: none; }
+.menuToggle { display: grid; place-items: center; min-width: 44px; min-height: 44px; padding: 8px; cursor: pointer; list-style: none; color: var(--nav-secondary); font-size: 22px; }
+.menuToggle::-webkit-details-marker { display: none; }
+.mobileLinks { position: absolute; inset: 68px 0 auto; display: flex; flex-direction: column; padding: 16px 32px 24px; background: var(--nav-menu); border-bottom: 1px solid var(--nav-border); max-height: calc(100dvh - 68px); overflow-y: auto; }
+.mobileLinks a { display: flex; align-items: center; min-height: 48px; padding: 12px 0; border-bottom: 1px solid var(--nav-border); font-size: 15px; font-weight: 400; color: var(--nav-secondary); text-decoration: none; }
+.mobileLinks a:hover { color: var(--nav-text); }
+.mobileLinks a[aria-current='page'] { color: var(--nav-text); font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
+.header a:focus-visible, .header button:focus-visible, .header summary:focus-visible { outline: 2px solid #5aaa6c; outline-offset: 4px; }
+@media(max-width:1100px) { .desktopLinks { display: none; } .mobileMenu { display: block; } .actions { margin-left: auto; } }
+@media(max-width:520px) { .navigation { gap: 12px; padding: 0 24px; } .logo { width: 160px; } .actions { gap: 8px; } .mobileLinks { padding: 16px 24px 24px; } }
+@media(max-width:360px) { .navigation { padding: 0 16px; } .logo { width: 140px; } }

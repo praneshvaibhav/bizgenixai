@@ -1,14 +1,14 @@
 // Metric locations in the supplied 1600 × 788 dashboard screenshot.
 // Dates, fiscal years, and version identifiers are labels, not count-up totals.
 export const dashboardMetrics = [
-  { label: 'Decisions needing attention', value: 3, x: 364, y: 114, width: 28, height: 42, fontSize: 40, background: '#fcfcf4', font: 'Arial, sans-serif' },
-  { label: 'Verified vouchers', value: 51083, x: 419, y: 276, width: 29, height: 11, fontSize: 8, color: '#ffffff', background: '#305c38', font: 'Arial, sans-serif' },
-  { label: 'Grounded decisions', value: 3, x: 1127, y: 276, width: 6, height: 11, fontSize: 8, color: '#ffffff', background: '#305c3c', font: 'Arial, sans-serif' },
+  { label: 'Decisions needing attention', value: 3, x: 364, y: 114, width: 28, height: 42, fontSize: 40, background: '#FFFFFF', font: 'Arial, sans-serif' },
+  { label: 'Verified vouchers', value: 51083, x: 419, y: 276, width: 29, height: 11, fontSize: 8, color: '#FFFFFF', background: '#000000', font: 'Arial, sans-serif' },
+  { label: 'Grounded decisions', value: 3, x: 1127, y: 276, width: 6, height: 11, fontSize: 8, color: '#FFFFFF', background: '#000000', font: 'Arial, sans-serif' },
   { label: 'Revenue', value: 13.10, decimals: 2, prefix: '₹', suffix: ' Cr', x: 378, y: 381, width: 178, height: 27, fontSize: 22 },
   { label: 'Receivables', value: 6.95, decimals: 2, prefix: '₹', suffix: ' Cr', x: 593, y: 381, width: 178, height: 27, fontSize: 22 },
-  { label: 'Overdue receivables', value: 6.19, decimals: 2, prefix: '₹', suffix: ' Cr', x: 808, y: 381, width: 178, height: 27, fontSize: 22, color: '#d45342' },
+  { label: 'Overdue receivables', value: 6.19, decimals: 2, prefix: '₹', suffix: ' Cr', x: 808, y: 381, width: 178, height: 27, fontSize: 22, color: '#5AAA6C' },
   { label: 'Payables', value: 1.67, decimals: 2, prefix: '₹', suffix: ' Cr', x: 1022, y: 381, width: 178, height: 27, fontSize: 22 },
-  { label: 'Overdue payables', value: 1.59, decimals: 2, prefix: '₹', suffix: ' Cr', x: 1236, y: 381, width: 178, height: 27, fontSize: 22, color: '#d45342' },
+  { label: 'Overdue payables', value: 1.59, decimals: 2, prefix: '₹', suffix: ' Cr', x: 1236, y: 381, width: 178, height: 27, fontSize: 22, color: '#5AAA6C' },
   { label: 'Bank balance', value: 93.80, decimals: 2, prefix: '₹', suffix: ' L', x: 378, y: 496, width: 178, height: 27, fontSize: 22 },
   { label: 'Cash in hand', value: 3.28, decimals: 2, prefix: '₹', suffix: ' L', x: 593, y: 496, width: 178, height: 27, fontSize: 22 },
   { label: 'Closing stock', value: 49.01, decimals: 2, prefix: '₹', suffix: ' L', x: 808, y: 496, width: 178, height: 27, fontSize: 22 },

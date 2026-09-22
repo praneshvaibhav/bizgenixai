@@ -4,32 +4,29 @@ import { useEffect, useRef } from 'react';
 import styles from './SolutionsSection.module.css';
 import { observeVisibility } from './observeVisibility';
 
-const solutions = [
-  { title: 'In-House Products', description: 'Ready solutions built by Bizgenix for real business use cases.', items: ['Voice AI', 'BizChat – WhatsApp AI', 'ScaleOS', 'Growth Intelligence – Business Analytics'], action: 'View Products', href: '/products' },
-  { title: 'Custom AI Solutions', description: 'Purpose-built systems designed around your process, team and data.', items: ['AI ERP and CRM systems', 'Enterprise AI applications', 'AI web and mobile applications', 'Business intelligence systems', 'Tally, WhatsApp, CRM integrations'], action: 'Build Your Solution', href: '/custom-solutions' },
-  { title: 'Automation Solutions', description: 'Automations that remove repetitive operational work.', items: ['Lead capture and follow-up automation', 'WhatsApp and customer communication', 'Finance, receivables and reminders', 'HR, approval and task workflows', 'Inventory, reporting and operational automation'], action: 'See Automations', href: '#contact' },
+const testimonials = [
+  {
+    name: 'Aarav Mehta',
+    role: 'Founder, Example Retail Co.',
+    initials: 'AM',
+    service: 'AI Products',
+    quote: 'We used to spend hours pulling reports from different systems. Now our team has a clear view of the business in one place, and our meetings focus on decisions instead of spreadsheets.',
+  },
+  {
+    name: 'Neha Shah',
+    role: 'Operations Head, Example Manufacturing Co.',
+    initials: 'NS',
+    service: 'Custom Solution',
+    quote: 'The team took time to understand how we work before building anything. Our custom solution connects the steps that used to happen across calls, emails and spreadsheets, making everyday work much simpler.',
+  },
+  {
+    name: 'Rohan Patel',
+    role: 'Director, Example Services Co.',
+    initials: 'RP',
+    service: 'Business Automation',
+    quote: 'Following up with every enquiry was a daily challenge. With a connected workflow, our team knows who needs a response and what comes next. We can give customers more attention with less manual tracking.',
+  },
 ];
-
-function CardArt({ index }: { index: number }) {
-  if (index === 0) return (
-    <div className={styles.productsArt} aria-hidden="true">
-      <div className={styles.appTiles}><span>♧</span><span>▣</span><span>◉</span><span>▥</span></div>
-      <div className={styles.productBase}>Bizgenix<small>Products</small></div>
-    </div>
-  );
-  if (index === 1) return (
-    <div className={styles.stackArt} aria-hidden="true">
-      {['Your Process', 'Your Data', 'Our AI', 'Your Growth'].map(label => <div key={label}><span>{label}</span></div>)}
-    </div>
-  );
-  return (
-    <div className={styles.automationArt} aria-hidden="true">
-      <div className={styles.sources}><span>☎</span><span>✉</span><span>▤</span><span>♧</span></div>
-      <div className={styles.processor}><b>⚙</b><small>Automation</small></div>
-      <div className={styles.outputs}>{['Capture', 'Process', 'Notify', 'Save Time'].map(label => <span key={label}>{label}</span>)}</div>
-    </div>
-  );
-}
 
 export default function SolutionsSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -83,23 +80,25 @@ export default function SolutionsSection() {
       <div className={styles.inner}>
         <div className={styles.hero}>
           <div className={styles.copy}>
-            <h2 id="solutions-title">AI <em>Solutions</em></h2>
-            <p>One partner for products, custom systems and automation.</p>
+            <h2 id="solutions-title">Solution on which <em>client trusted</em></h2>
+            <p>Demo client testimonials — names, companies and quotes below are illustrative.</p>
           </div>
 
         </div>
         <div className={styles.cards} id="solution-options">
-          {solutions.map((solution, index) => (
-            <article key={solution.title} id={index === 1 ? 'solutions' : index === 2 ? 'automation' : undefined} data-solution-pop className={`${styles.card} ${index === 1 ? styles.featured : ''}`}>
+          {testimonials.map((testimonial, index) => (
+            <figure key={testimonial.name} id={index === 1 ? 'solutions' : index === 2 ? 'automation' : undefined} data-solution-pop className={`${styles.card} ${index === 1 ? styles.featured : ''}`}>
               <div className={styles.cardHeader}>
-                <span className={styles.number}>0{index + 1}</span>
-                <h3>{solution.title}</h3>
-                <p>{solution.description}</p>
-                <CardArt index={index} />
+                <span className={styles.service}>{testimonial.service}</span>
+                <span className={styles.demo}>Demo</span>
               </div>
-              <ul>{solution.items.map(item => <li key={item}><span aria-hidden="true">✓</span>{item}</li>)}</ul>
-              <a href={solution.href}>{solution.action} <span aria-hidden="true">→</span></a>
-            </article>
+              <span className={styles.quoteMark} aria-hidden="true">“</span>
+              <blockquote><p>{testimonial.quote}</p></blockquote>
+              <figcaption className={styles.client}>
+                <span className={styles.avatar} aria-hidden="true">{testimonial.initials}</span>
+                <div><strong>{testimonial.name}</strong><span>{testimonial.role}</span></div>
+              </figcaption>
+            </figure>
           ))}
         </div>
       </div>
