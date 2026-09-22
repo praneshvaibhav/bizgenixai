@@ -27,7 +27,7 @@ export default function Home(){return <SplashIntro><main><ScrollAnimations/>
 <IndustriesSection/>
 <WhyBizgenix/>
 
-<FounderSection/>
 <OurProcess/>
+<FounderSection/>
 <ContactSection/>
 </main></SplashIntro>}
