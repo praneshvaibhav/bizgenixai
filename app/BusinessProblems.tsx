@@ -143,13 +143,13 @@ export default function BusinessProblems() {
           const point = pointAt(progress * step / 48);
           context.lineTo(point.x, point.y);
         }
-        context.strokeStyle = '#5AAA6C';
+        context.strokeStyle = '#388a5f88';
         context.lineWidth = 1.25;
         context.setLineDash([4, 6]);
         context.stroke();
         context.setLineDash([]);
 
-        context.fillStyle = '#5AAA6C';
+        context.fillStyle = '#278255';
         context.beginPath();
         context.arc(start.x, start.y, 3, 0, Math.PI * 2);
         context.fill();
@@ -160,11 +160,11 @@ export default function BusinessProblems() {
         const { x, y } = pointAt(t);
         context.beginPath();
         context.arc(x, y, 8, 0, Math.PI * 2);
-        context.fillStyle = '#5AAA6C';
+        context.fillStyle = '#35c97825';
         context.fill();
         context.beginPath();
         context.arc(x, y, 3.5, 0, Math.PI * 2);
-        context.fillStyle = '#5AAA6C';
+        context.fillStyle = '#168a57';
         context.fill();
       });
       if (visible && !motion.matches && !disposed) frame = requestAnimationFrame(draw);

@@ -74,6 +74,7 @@ export default function HeroIntro() {
       </p>
       <div className={`actions ${styles.actions}`} data-ready={complete}>
         <a className="button" href="https://api.whatsapp.com/send/?phone=918780671906&text=Hi%21+I%27d+like+to+book+a+Free+AI+Strategy+Session+including+details.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">Book an AI Strategy Session <span className="arrow">↗</span></a>
+        <a className="textBtn" href="#solutions">Find Your Business Leak <span>→</span></a>
       </div>
     </>
   );
