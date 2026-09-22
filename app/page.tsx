@@ -17,7 +17,7 @@ import ContactSection from './ContactSection';
 const institutions=[['ICAI','Institute of Chartered Accountants of India','icai','/institution-icai.webp'],['CMAI','The Clothing Manufacturers Association of India','cmai','/institution-cmai.webp'],['JITO Ladies','JITO Ladies','jito','/institution-jito-ladies.webp'],['TEDx','TEDx','tedx'],['BNI','Business Network International','bni','/institution-bni.webp'],['Skillathon','Skillathon Pune','skillthon','/institution-skillthon.webp']];
 const Arrow=()=> <span className="arrow">↗</span>;
 export default function Home(){return <SplashIntro><main><ScrollAnimations/>
-<Navigation activePath="/" />
+<Navigation activePath="/" heroBlend />
 <section className="hero section" id="top"><div className="heroCopy"><HeroIntro/></div><DeferredScene kind="particles"/></section>
 <section className="trust section" id="about"><div className="institutions"><div className="institutionCopy"><i>◈</i> Trusted stages and institutions</div><div className="institutionLogos" aria-label="Trusted stages and institutions">{institutions.map(([shortName,fullName,style,logo])=><span data-scroll-animation className={'institutionLogo '+style} key={shortName} title={fullName} aria-label={fullName}>{logo?<img src={logo} alt={fullName} loading="lazy" decoding="async"/>:shortName}</span>)}</div></div></section>
 <ServicesSection/>
