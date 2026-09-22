@@ -14,40 +14,12 @@ export const courses = [
   { id: 'finance-operations', title: 'AI for Finance and Operations', level: 'Intermediate', category: 'Finance & operations', image: "/courses/finance-operations.webp", imageAlt: "Person using a calculator to review printed financial charts and reports", imagePosition: "50% 50%", outcome: 'Apply AI to reporting, reconciliation, receivables, operational visibility and management decision-making.' },
 ] as const;
 
-export const learningPaths = [
-  { name: 'AI for Business Owners', audience: 'Founders · Entrepreneurs · CEOs', description: 'Identify AI opportunities, automate operations and build a clear AI roadmap.', topics: ['AI strategy for business', 'Process automation', 'AI for sales and customer service', 'AI ROI and implementation planning'], href: '#featured-courses' },
-  { name: 'AI for Professionals', audience: 'Working professionals', description: 'Improve productivity, decision-making and service delivery using AI tools.', topics: ['Prompt engineering', 'AI productivity systems', 'Research and reporting', 'Role-specific AI workflows'], href: '#featured-courses' },
-  { name: 'AI for Students', audience: 'Students · Fresh graduates', description: 'Get practical exposure to AI tools, automation and business applications.', topics: ['AI foundations', 'Portfolio projects', 'Automation basics', 'Career-ready AI skills'], href: '#featured-courses' },
-  { name: 'Corporate AI Training', audience: 'Organizations · Teams', description: 'Upskill teams, create responsible AI practices and improve company-wide productivity.', topics: ['Department-specific training', 'Live use cases', 'Custom workshops', 'Post-training implementation guidance'], href: '#corporate-training' },
-];
-
-export const learningOutcomes = [
-  ['AI Fundamentals', 'Understand AI, generative AI, machine learning, large language models and the role of AI in modern business.'],
-  ['Prompt Engineering', 'Learn structured prompting methods for research, writing, strategy, analysis, marketing, sales and business operations.'],
-  ['AI Productivity', 'Reduce repetitive work in emails, reports, presentations, research, meetings, documentation and planning.'],
-  ['Business Automation', 'Create workflows that connect apps, process data, send notifications and perform routine tasks.'],
-  ['AI Agents', 'Understand how intelligent assistants handle lead qualification, support, follow-ups, appointment booking and internal operations.'],
-  ['Voice and WhatsApp AI', 'Explore multilingual voice agents, WhatsApp automation and customer communication systems.'],
-  ['Business Intelligence', 'Turn business data into insights using analytics, dashboards, reports and AI-assisted decision support.'],
-  ['AI Strategy and ROI', 'Identify the right AI opportunities, prioritise implementation and track measurable business outcomes.'],
-];
-
 export const whyLearn = [
   'Learn from real business use cases rather than isolated tool demonstrations.',
   'Understand how AI can improve productivity, revenue, customer experience and decision-making.',
   'Work with practical prompts, workflows, templates and automation frameworks.',
   'Build confidence to apply AI independently after completing the program.',
   'Learn from implementation experience across multiple industries.',
-];
-export const experience = [
-  ['Flexible learning formats', 'Live and recorded learning, depending on the program.'],
-  ['Hands-on implementation', 'Activities and real business implementation exercises.'],
-  ['Resources you can reuse', 'Templates, prompts, checklists and workflow frameworks.'],
-  ['Examples from your industry', 'Sales, finance, manufacturing, marketing, HR and customer service.'],
-  ['Learn by doing', 'Assignments and practical projects to apply every module.'],
-  ['Community access', 'Peer learning, updates and discussions.'],
-  ['Completion certificates', 'Certificates for eligible programs.'],
-  ['Evolving curriculum', 'Periodic updates as AI tools and market needs evolve.'],
 ];
 export const learningJourney = [
   ['Choose your learning path', 'Select a course based on your role, experience and desired outcome.'],
@@ -65,14 +37,6 @@ export const corporateTopics = [
   'Post-training implementation roadmap and consulting support.',
 ];
 export const audiences = ['Business owners', 'Founders', 'Executives', 'Managers', 'Chartered accountants', 'Lawyers', 'Doctors', 'Consultants', 'Sales professionals', 'Marketing professionals', 'HR teams', 'Finance teams', 'Students', 'Freelancers'];
-export const academyReasons = [
-  ['Implementation-Led Learning', 'Courses are informed by real AI implementation work, not only academic theory.'],
-  ['Business-Focused Curriculum', 'Every module connects AI capabilities with business results.'],
-  ['India-Relevant Use Cases', 'Examples reflect the tools, languages and workflows commonly used by Indian organizations.'],
-  ['Practical Resources', 'Receive templates and frameworks you can reuse after the course.'],
-  ['Continuously Updated', 'Programs evolve as new AI models, tools and automation platforms emerge.'],
-  ['Community and Expert Access', 'Become part of an ecosystem focused on practical AI adoption.'],
-];
 export const courseFaqs = [
   ['Do I need coding knowledge?', 'No. Beginner courses are designed for non-technical learners. Technical prerequisites are mentioned for advanced programs.'],
   ['Are the courses theoretical or practical?', 'The learning is implementation-focused and includes demonstrations, exercises, templates, case studies and projects.'],

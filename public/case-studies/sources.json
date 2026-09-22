@@ -1,0 +1,336 @@
+{
+  "source": "Bizgenix-AI-Case-Study-Booklet.pdf",
+  "providedBy": "User",
+  "images": [
+    {
+      "case": "waffle-castle",
+      "page": 7,
+      "images": [
+        {
+          "src": "/case-studies/page-7-1.png",
+          "width": 1184,
+          "height": 609,
+          "caption": "Franchise lifecycle Kanban — live store pipeline"
+        },
+        {
+          "src": "/case-studies/page-7-2.png",
+          "width": 1184,
+          "height": 611,
+          "caption": "Ad-fund dashboard and escalation ladder"
+        }
+      ]
+    },
+    {
+      "case": "una-homes",
+      "page": 10,
+      "images": [
+        {
+          "src": "/case-studies/page-10-1.png",
+          "width": 1184,
+          "height": 610,
+          "caption": "Bill verification queue"
+        },
+        {
+          "src": "/case-studies/page-10-2.png",
+          "width": 1184,
+          "height": 610,
+          "caption": "Document upload and AI extraction"
+        }
+      ]
+    },
+    {
+      "case": "bhaskar-silk-mills",
+      "page": 9,
+      "images": [
+        {
+          "src": "/case-studies/page-9-1.png",
+          "width": 1184,
+          "height": 610,
+          "caption": "Payment collection flow — 487 instances"
+        },
+        {
+          "src": "/case-studies/page-9-2.png",
+          "width": 1184,
+          "height": 610,
+          "caption": "Flow engine across live operations"
+        }
+      ]
+    },
+    {
+      "case": "mahavir-traders",
+      "page": 8,
+      "images": [
+        {
+          "src": "/case-studies/page-8-1.png",
+          "width": 1400,
+          "height": 663,
+          "caption": "Renewal dashboard and dated buckets"
+        },
+        {
+          "src": "/case-studies/page-8-2.png",
+          "width": 1400,
+          "height": 673,
+          "caption": "Kanban pipeline from discussion to renewal"
+        }
+      ]
+    },
+    {
+      "case": "spectrum-dyes",
+      "page": 11,
+      "images": [
+        {
+          "src": "/case-studies/page-11-1.png",
+          "width": 1400,
+          "height": 664,
+          "caption": "Client-facing knowledge copilot"
+        },
+        {
+          "src": "/case-studies/page-11-2.png",
+          "width": 1400,
+          "height": 665,
+          "caption": "Admin upload panel for product sheets and SOPs"
+        }
+      ]
+    },
+    {
+      "case": "sanjay-jain-scaleos",
+      "page": 12,
+      "images": [
+        {
+          "src": "/case-studies/page-12-1.png",
+          "width": 1400,
+          "height": 637,
+          "caption": "Projects, employees and notifications dashboard"
+        },
+        {
+          "src": "/case-studies/page-12-2.png",
+          "width": 1400,
+          "height": 541,
+          "caption": "MIS snapshot with workload and overdue metrics"
+        }
+      ]
+    },
+    {
+      "case": "manoj-hirpara-ai-imagery",
+      "page": 13,
+      "images": [
+        {
+          "src": "/case-studies/page-13-1.png",
+          "width": 1051,
+          "height": 1400,
+          "caption": "Input fabric detail"
+        },
+        {
+          "src": "/case-studies/page-13-2.png",
+          "width": 1049,
+          "height": 1400,
+          "caption": "AI-generated model render"
+        },
+        {
+          "src": "/case-studies/page-13-3.png",
+          "width": 1049,
+          "height": 1400,
+          "caption": "Styled catalog image"
+        }
+      ]
+    },
+    {
+      "case": "cheque-reminder-system",
+      "page": 14,
+      "images": [
+        {
+          "src": "/case-studies/page-14-1.png",
+          "width": 1400,
+          "height": 701,
+          "caption": "Automated WhatsApp cheque reminder"
+        },
+        {
+          "src": "/case-studies/page-14-2.png",
+          "width": 1400,
+          "height": 638,
+          "caption": "Central cheque tracking dashboard"
+        }
+      ]
+    },
+    {
+      "case": "email-intelligence",
+      "page": 15,
+      "images": [
+        {
+          "src": "/case-studies/page-15-1.png",
+          "width": 1400,
+          "height": 558,
+          "caption": "Email-to-sheet automation"
+        },
+        {
+          "src": "/case-studies/page-15-2.png",
+          "width": 1400,
+          "height": 516,
+          "caption": "Weekly summary workflow"
+        }
+      ]
+    },
+    {
+      "case": "kishor-pawar-task-visibility",
+      "page": 16,
+      "images": [
+        {
+          "src": "/case-studies/page-16-1.png",
+          "width": 1400,
+          "height": 1345,
+          "caption": "Manager dashboard — pending and completed work"
+        },
+        {
+          "src": "/case-studies/page-16-2.png",
+          "width": 1400,
+          "height": 946,
+          "caption": "Task list workspace"
+        }
+      ]
+    },
+    {
+      "case": "aavkar-valuation-workflow",
+      "page": 17,
+      "images": [
+        {
+          "src": "/case-studies/page-17-1.png",
+          "width": 1400,
+          "height": 615,
+          "caption": "Live customer tracking sheet"
+        },
+        {
+          "src": "/case-studies/page-17-2.png",
+          "width": 1400,
+          "height": 640,
+          "caption": "Overdue-status tagging workflow"
+        }
+      ]
+    },
+    {
+      "case": "sales-call-analysis",
+      "page": 18,
+      "images": [
+        {
+          "src": "/case-studies/page-18-1.png",
+          "width": 1400,
+          "height": 587,
+          "caption": "AI call report generation workflow"
+        },
+        {
+          "src": "/case-studies/page-18-2.png",
+          "width": 1400,
+          "height": 598,
+          "caption": "Central agent performance sheet"
+        }
+      ]
+    },
+    {
+      "case": "sj-sangath-interest-calculator",
+      "page": 19,
+      "images": [
+        {
+          "src": "/case-studies/page-19-1.png",
+          "width": 1400,
+          "height": 687,
+          "caption": "Interest calculator — customer and flat details"
+        },
+        {
+          "src": "/case-studies/page-19-2.png",
+          "width": 995,
+          "height": 1400,
+          "caption": "Generated customer interest certificate"
+        }
+      ]
+    },
+    {
+      "case": "stock-keeping-system",
+      "page": 20,
+      "images": [
+        {
+          "src": "/case-studies/page-20-1.png",
+          "width": 1400,
+          "height": 1338,
+          "caption": "Factory report dashboard and filters"
+        },
+        {
+          "src": "/case-studies/page-20-2.png",
+          "width": 1400,
+          "height": 268,
+          "caption": "Excel report with quality-wise totals"
+        }
+      ]
+    },
+    {
+      "case": "dispatch-ocr-follow-up",
+      "page": 21,
+      "images": [
+        {
+          "src": "/case-studies/page-21-1.png",
+          "width": 1400,
+          "height": 670,
+          "caption": "Drive-to-OCR-to-Sheets workflow"
+        },
+        {
+          "src": "/case-studies/page-21-2.png",
+          "width": 1400,
+          "height": 684,
+          "caption": "WhatsApp follow-up automation"
+        }
+      ]
+    },
+    {
+      "case": "arihant-support-automation",
+      "page": 22,
+      "images": [
+        {
+          "src": "/case-studies/page-22-1.png",
+          "width": 1400,
+          "height": 572,
+          "caption": "Gmail, Sheets and AI acknowledgement workflow"
+        },
+        {
+          "src": "/case-studies/page-22-2.png",
+          "width": 1400,
+          "height": 589,
+          "caption": "Resolution email triggered by status change"
+        }
+      ]
+    },
+    {
+      "case": "kbp-interior",
+      "page": 23,
+      "images": [
+        {
+          "src": "/case-studies/page-23-1.png",
+          "width": 1400,
+          "height": 642,
+          "caption": "Task dashboard with project metrics"
+        },
+        {
+          "src": "/case-studies/page-23-2.png",
+          "width": 1400,
+          "height": 642,
+          "caption": "WhatsApp notification logs and reports"
+        }
+      ]
+    },
+    {
+      "case": "just-roofing",
+      "page": 24,
+      "images": [
+        {
+          "src": "/case-studies/page-24-1.png",
+          "width": 1400,
+          "height": 618,
+          "caption": "Owner dashboard — payment exposure and retention"
+        },
+        {
+          "src": "/case-studies/page-24-2.png",
+          "width": 1400,
+          "height": 639,
+          "caption": "Daily site reports with measurements and labour"
+        }
+      ]
+    }
+  ]
+}

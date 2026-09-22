@@ -56,6 +56,9 @@ export const directors = [
   {
     id: 'hitesh-mehra',
     name: 'Hitesh Mehra',
+    image: '/directors/hitesh-mehra.jpeg',
+    imageAlt: 'Hitesh Mehra, Director at Bizgenix',
+    imagePosition: 'center 18%',
     focus: 'Finance leadership, strategic advisory & investment',
     paragraphs: [
       'Hitesh Mehra is a finance leader, strategic advisor and investor with over 28 years of experience across controlling, treasury, audit, financial planning and analysis, management reporting, and business-unit finance. His experience spans complex, multicultural organizations, combining financial discipline with a practical understanding of how businesses operate.',
@@ -67,6 +70,9 @@ export const directors = [
   {
     id: 'archit-shah',
     name: 'Archit Shah',
+    image: '/directors/archit-shah.jpeg',
+    imageAlt: 'Archit Shah, Director at Bizgenix',
+    imagePosition: 'center 28%',
     focus: 'Chartered accountancy, corporate finance & business advisory',
     paragraphs: [
       'Archit Shah is a Chartered Accountant and Managing Partner at M A A K & Associates in Ahmedabad. He qualified as a Chartered Accountant in 2010 with All India Rank 3 in the CA Final examination and also pursued an MBA.',

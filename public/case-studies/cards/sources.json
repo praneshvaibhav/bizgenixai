@@ -1,0 +1,29 @@
+{
+  "logos": {
+    "waffle-castle-logo.png": "https://www.wafflecastle.in/images/logo.png",
+    "una-homes-logo.png": "https://cdn.prod.website-files.com/65a7ec210dd2236626b579bf/65a842fe300ea605abd434da_Una%20logo%20blue-02.png",
+    "bhaskar-silk-mills-logo.png": "https://bhaskarsilkmills.com/wp-content/uploads/2023/09/Bhaskar-New-Logo-With-R-PNG-300x88.png",
+    "mahavir-traders-logo.png": "https://mahavirtraders.co.in/wp-content/uploads/2021/08/mahavir-logo.png",
+    "spectrum-dyes-logo.svg": "https://spectrumdyes.com/images/logo_white.svg",
+    "just-roofing-logo.png": "https://justroofing.in/wp-content/uploads/2023/02/JUST-Roofing-Logo-e1676870334286.png"
+  },
+  "fieldImages": {
+    "sanjay-jain-field.jpg": "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+    "manoj-hirpara-field.jpg": "https://images.unsplash.com/photo-1483985988355-763728e1935b",
+    "dhaval-cheque-field.jpg": "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+    "dhaval-email-field.jpg": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
+    "kishor-task-field.jpg": "https://images.unsplash.com/photo-1504307651254-35680f356dfd",
+    "aavkar-field.jpg": "https://images.unsplash.com/photo-1560518883-ce09059eeffa",
+    "sales-call-field.jpg": "https://images.unsplash.com/photo-1709715357479-591f9971fb05",
+    "sj-sangath-field.jpg": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab",
+    "sk-stock-field.jpg": "https://images.unsplash.com/photo-1528459105426-b9548367069b",
+    "sk-dispatch-field.jpg": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d",
+    "arihant-field.jpg": "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    "kbp-interior-field.jpg": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
+    ,"una-homes-field.jpg": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+    ,"bhaskar-silk-mills-field.jpg": "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633"
+    ,"mahavir-traders-field.jpg": "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77"
+    ,"spectrum-dyes-field.jpg": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69"
+    ,"just-roofing-field.jpg": "https://lirp.cdn-website.com/a00771c5/dms3rep/multi/opt/35-1920w.jpg"
+  }
+}

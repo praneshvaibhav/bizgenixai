@@ -4,7 +4,8 @@
   z-index: 1000;
   display: grid;
   place-items: center;
-  background: radial-gradient(ellipse at center, #fff 0%, #f3fcf6 50%, #ddf7e8 100%);
+  background: #FFFFFF;
+  color: #000000;
 }
 
 .logo {
@@ -38,15 +39,15 @@
   right: max(24px, env(safe-area-inset-right));
   bottom: max(24px, env(safe-area-inset-bottom));
   padding: 10px 16px;
-  border: 1px solid #168a5733;
+  border: 1px solid #5AAA6C;
   border-radius: 999px;
-  background: #ffffff99;
-  color: #075e3b;
+  background: #FFFFFF;
+  color: #000000;
   font: inherit;
   font-size: 13px;
   cursor: pointer;
 }
 
-.skip:hover { background: #ddf7e8; }
-.skip:focus-visible { outline: 2px solid #075e3b; outline-offset: 4px; }
+.skip:hover { background: #FFFFFF; color: #000000; }
+.skip:focus-visible { outline: 2px solid #5AAA6C; outline-offset: 4px; }
 .content[data-intro-active='true'] { display: none; }

@@ -21,9 +21,10 @@
   width: 100%;
   height: 65%;
   border-radius: 3% 95% 4% 95%;
-  background: linear-gradient(145deg, #b2dd99 0%, #76bf77 38%, #429963 49%, #84c781 53%, #379762 100%);
-  box-shadow: inset 0 1px 2px #dcf5c887, 0 2px 3px #185a3020;
+  background: #FFFFFF;
+  box-shadow: none;
   animation: flutter var(--flutter) ease-in-out var(--delay) infinite;
+  color: #000000;
 }
 .leaf::after {
   content: '';
@@ -32,9 +33,10 @@
   top: 48%;
   width: 105%;
   height: 1px;
-  background: #296f3c80;
+  background: #000000;
   transform: rotate(29deg);
   transform-origin: center;
+  color: #FFFFFF;
 }
 .traveler, .sway, .leaf {animation-play-state: paused;}
 .wind[data-playing='true'] .traveler,
@@ -67,16 +69,16 @@
   gap: 7px;
   min-height: 36px;
   padding: 7px 12px;
-  border: 1px solid #b7dfc9;
+  border: 1px solid #5AAA6C;
   border-radius: 999px;
-  background: #f9fffcf2;
-  color: #306e52;
+  background: #FFFFFF;
+  color: #000000;
   font: 12px/1.3 Arial, sans-serif;
   cursor: pointer;
   pointer-events: auto;
 }
-.control:hover {background: #e8f9ee;}
-.control:focus-visible {outline: 2px solid #008d59; outline-offset: 3px;}
+.control:hover {background: #FFFFFF;color: #000000;}
+.control:focus-visible {outline: 2px solid #5AAA6C; outline-offset: 3px;}
 
 @media (max-width: 900px) {
   .field {opacity: .48;}

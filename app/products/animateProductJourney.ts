@@ -24,7 +24,6 @@ export function animateProductJourney(flow: HTMLElement) {
   ], start, duration, 'linear');
 
   const points = flow.querySelectorAll('[data-journey-point]');
-  const numbers = flow.querySelectorAll('[data-journey-number]');
   const stems = flow.querySelectorAll('[data-journey-stem]');
   cards.forEach((card, index) => {
     // Equal grid columns place each point at its column's midpoint.
@@ -33,7 +32,6 @@ export function animateProductJourney(flow: HTMLElement) {
     animate(points[index], [
       { clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0% 0 0)' },
     ], arrival - 100, 220, 'linear');
-    animate(numbers[index], [{ color: '#4c8b66' }, { color: '#ffffff' }], arrival, 180);
     animate(stems[index], [{ transform: 'scaleY(0)' }, { transform: 'scaleY(1)' }], arrival + 100, 200, 'linear');
     animate(card, [
       { opacity: 0, transform: 'translateY(20px) scale(.96)' },

@@ -140,10 +140,9 @@ export default function ProductHero() {
         <p className={styles.note}>One platform.<br />Many possibilities.</p>
       </div>
       <div className={styles.diagram} ref={diagramRef} role="group" aria-label="AI for real business connects four Bizgenix products">
-        <div className={styles.dotGrid} aria-hidden="true" />
         <div className={styles.hub} data-hub><h2>AI for<br /> real business</h2><span aria-hidden="true" /><p>A complete suite of AI products, built to work together for greater impact.</p></div>
         <svg className={styles.desktopConnections} viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
-          <defs><linearGradient id={gradientId}><stop stopColor="#009a67" /><stop offset="1" stopColor="#bce8d8" /></linearGradient></defs>
+          <defs><linearGradient id={gradientId}><stop stopColor="#5AAA6C" /><stop offset="1" stopColor="#FFFFFF" /></linearGradient></defs>
           {desktopPaths.map((path, index) => <g key={path}>
             <path d={path} pathLength="1" stroke={`url(#${gradientId})`} data-connection={index} />
             <g data-node={index}><circle cx="230" cy={[270, 296, 296, 322][index]} r="6" /><circle cx="430" cy={63 + index * 156} r="6" /></g>

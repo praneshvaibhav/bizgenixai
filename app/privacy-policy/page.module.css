@@ -1,0 +1,21 @@
+.page { min-height: 100vh; background: #050810; color: #e2e8f0; font-family: Arial, sans-serif; }
+.skipLink { position: fixed; top: -80px; left: 20px; z-index: 100; padding: 12px 20px; background: #fff; color: #050810; }
+.skipLink:focus { top: 12px; }
+.hero { padding: 80px 24px 64px; text-align: center; background: radial-gradient(ellipse at 15% 0%, #00ff8814, transparent 55%), radial-gradient(ellipse at 90% 100%, #00e5ff12, transparent 55%), #050810; }
+.eyebrow { display: inline-block; margin: 0 0 24px; padding: 7px 16px; border: 1px solid #00ff8833; border-radius: 999px; background: #00ff8814; color: #5aaa6c; font-size: 13px; font-weight: 600; line-height: 1.5; letter-spacing: .1em; text-transform: uppercase; }
+.hero h1 { margin: 0 0 24px; color: #5aaa6c; font-size: clamp(40px, 5vw, 64px); font-weight: 700; line-height: 1.1; letter-spacing: -.04em; }
+.hero > p:last-child { max-width: 680px; margin: 0 auto; color: #94a3b8; font-size: 18px; line-height: 1.75; }
+.content { padding: 0 24px 80px; }
+.policy { max-width: 1024px; margin: 0 auto; padding: clamp(24px, 4vw, 48px); border: 1px solid #ffffff1a; border-radius: 24px; background: #07111d; box-shadow: 0 24px 60px #00000030; font-size: 16px; line-height: 1.85; overflow-wrap: anywhere; }
+.policy h2 { margin: 36px 0 14px; color: #f1f5f9; font-size: clamp(22px, 2.2vw, 28px); font-weight: 600; line-height: 1.35; letter-spacing: -.02em; }
+.policy h3 { margin: 24px 0 12px; color: #e2e8f0; font-size: 19px; font-weight: 600; line-height: 1.4; letter-spacing: 0; }
+.policy p { margin: 0 0 16px; color: #b8c5d6; }
+.policy > p:first-child { padding-bottom: 24px; border-bottom: 1px solid #ffffff1a; }
+.policy > p:last-child { margin-bottom: 0; }
+.policy strong { color: #f1f5f9; font-weight: 600; }
+.policy ul { list-style: disc; padding-left: 24px; margin: 12px 0 20px; color: #b8c5d6; }
+.policy li { padding-left: 4px; margin-bottom: 6px; }
+.policy a { color: #72c98b; text-decoration: underline; text-underline-offset: 4px; }
+.policy a:hover { color: #fff; }
+.policy a:focus-visible { outline: 2px solid #72c98b; outline-offset: 4px; }
+@media(max-width:650px) { .hero { padding: 52px 22px 40px; } .hero > p:last-child { font-size: 16px; } .content { padding: 0 16px 48px; } .policy { padding: 24px 20px; border-radius: 16px; font-size: 15px; } }

@@ -1,34 +1,34 @@
-.section { --card-width: clamp(285px, 25vw, 360px); --card-gap: 20px; padding: 96px 0 42px; overflow: hidden; background: linear-gradient(180deg, #fff 0%, #f3fcf6 100%); scroll-margin-top: 90px; }
+.section { --card-width: clamp(285px, 25vw, 360px); --card-gap: 20px; padding: 96px 0 42px; overflow: hidden; background: #FFFFFF; scroll-margin-top: 90px; color: #000000; }
 .header { max-width: 1000px; margin: 0 auto 46px; padding: 0 24px; text-align: center; }
-.eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 21px; color: #168a57; font-size: 11px; font-weight: 700; letter-spacing: .16em; }
-.eyebrow > span, .statusDot { width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: #168a57; }
-.header h2 { font-size: clamp(32px, 3.6vw, 53px); line-height: 1.12; letter-spacing: -.045em; margin: 0 0 19px; color: #12352a; }
-.header h2 em { color: #168a57; font-style: normal; }
-.intro { color: #12352abf; font-size: 16px; line-height: 1.6; margin: 0; }
+.eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 21px; color: #000000; font-size: 11px; font-weight: 700; letter-spacing: .16em; }
+.eyebrow > span, .statusDot { width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: #5AAA6C; color: #000000; }
+.header h2 { font-size: clamp(32px, 3.6vw, 53px); line-height: 1.12; letter-spacing: -.045em; margin: 0 0 19px; color: #000000; }
+.header h2 em { color: #5AAA6C; font-style: normal; }
+.intro { color: #000000; font-size: 16px; line-height: 1.6; margin: 0; }
 .viewport { overflow-x: auto; overflow-y: hidden; scrollbar-width: none; overscroll-behavior-x: contain; padding: 12px 0 24px; }
 .viewport::-webkit-scrollbar { display: none; }
 .track { display: flex; width: max-content; padding-left: max(5vw, 22px); }
 .group { display: flex; gap: var(--card-gap); padding-right: var(--card-gap); }
-.card { position: relative; display: block; flex: 0 0 var(--card-width); width: var(--card-width); height: 422px; isolation: isolate; overflow: hidden; border-radius: 20px; color: #fff; background: #075e3b; box-shadow: 0 8px 18px #075e3b10; transition: transform .35s ease, box-shadow .35s ease; }
+.card { position: relative; display: block; flex: 0 0 var(--card-width); width: var(--card-width); height: 422px; isolation: isolate; overflow: hidden; border-radius: 20px; color: #FFFFFF; background: #000000; box-shadow: none; transition: transform .35s ease, box-shadow .35s ease; }
 .image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .7s cubic-bezier(.2,.7,.2,1); }
-.shade { position: absolute; inset: 0; background: linear-gradient(180deg, #051e2466 0%, #06291d08 30%, #05271fd9 61%, #04271ffb 100%); }
+.shade { position: absolute; inset: 0; background: linear-gradient(180deg, transparent, #000000); }
 .cardTop { position: absolute; inset: 21px 21px auto; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-.tag { padding: 8px 10px; border: 1px solid #ffffff42; border-radius: 6px; background: #06271f75; backdrop-filter: blur(10px); font-size: 8px; font-weight: 700; letter-spacing: .09em; }
-.number { font-size: 12px; font-weight: 600; color: #fff; }
+.tag { padding: 8px 10px; border: 1px solid #FFFFFF; border-radius: 6px; background: #000000; backdrop-filter: blur(10px); font-size: 8px; font-weight: 700; letter-spacing: .09em; color: #FFFFFF; }
+.number { font-size: 12px; font-weight: 600; color: #FFFFFF; }
 .content { position: absolute; inset: auto 25px 28px; }
-.content h3 { margin: 0; max-width: 285px; color: #fff; font-size: 27px; line-height: 1.13; letter-spacing: -.035em; }
+.content h3 { margin: 0; max-width: 285px; color: #FFFFFF; font-size: 27px; line-height: 1.13; letter-spacing: -.035em; }
 .description { display: grid; grid-template-rows: 0fr; opacity: 0; transform: translateY(10px); transition: grid-template-rows .5s cubic-bezier(.22, 1, .36, 1), opacity .35s ease, transform .5s cubic-bezier(.22, 1, .36, 1); }
 .description > div { min-height: 0; overflow: hidden; }
-.description p { margin: 0; padding-top: 14px; max-width: 270px; color: #ddf7e8; font-size: 13px; line-height: 1.65; }
+.description p { margin: 0; padding-top: 14px; max-width: 270px; color: #FFFFFF; font-size: 13px; line-height: 1.65; }
 .card:hover .description, .card:focus-visible .description { grid-template-rows: 1fr; opacity: 1; transform: translateY(0); }
-.card:hover, .card:focus-visible { transform: translateY(-6px); box-shadow: 0 15px 25px #075e3b25; }
+.card:hover, .card:focus-visible { transform: translateY(-6px); box-shadow: none; }
 .card:hover .image, .card:focus-visible .image { transform: scale(1.055); }
 .bottom { display: flex; align-items: center; justify-content: space-between; gap: 18px; max-width: 1480px; margin: 0 auto; padding: 0 max(5vw, 22px); }
-.bottom > p { display: flex; align-items: center; gap: 9px; margin: 0; color: #12352abf; font-size: 12px; }
+.bottom > p { display: flex; align-items: center; gap: 9px; margin: 0; color: #000000; font-size: 12px; }
 .controls { display: flex; align-items: center; gap: 9px; }
-.controls button { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 41px; height: 41px; border: 1px solid #a8edc5; border-radius: 50%; background: #fff; color: #075e3b; font: 20px Arial, sans-serif; cursor: pointer; transition: background .2s, border-color .2s; }
-.controls button:hover { background: #ddf7e8; border-color: #168a57; }
-.section :focus-visible { outline: 3px solid #168a57; outline-offset: 4px; }
+.controls button { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 41px; height: 41px; border: 1px solid #5AAA6C; border-radius: 50%; background: #FFFFFF; color: #000000; font: 20px Arial, sans-serif; cursor: pointer; transition: background .2s, border-color .2s; }
+.controls button:hover { background: #FFFFFF; border-color: #5AAA6C; color: #000000; }
+.section :focus-visible { outline: 3px solid #5AAA6C; outline-offset: 4px; }
 .viewport:focus-visible { outline-offset: -3px; }
 @media (max-width: 700px) {
   .section { --card-width: min(80vw, 330px); --card-gap: 15px; padding: 64px 0 30px; }

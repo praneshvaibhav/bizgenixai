@@ -1,15 +1,15 @@
 .section { padding: 90px max(5vw, 22px) 64px; background: var(--pale); scroll-margin-top: 100px; }
 .section h2 { text-align: center; margin: 0 0 48px; }
-.viewport { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #a8edc5 transparent; padding: 6px 0 20px; }
+.viewport { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #FFFFFF transparent; padding: 6px 0 20px; }
 .viewport:focus-visible { outline: 2px solid var(--green); outline-offset: 6px; border-radius: 8px; }
 .track { position: relative; min-width: 1050px; max-width: 1480px; margin: 0 auto; }
 .steps { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); list-style: none; margin: 0; padding: 0; }
 .steps li { position: relative; padding: 0 14px; text-align: center; }
-.number { position: relative; display: grid; place-items: center; width: 44px; height: 44px; margin: 0 auto; border: 5px solid var(--pale); border-radius: 50%; background: var(--green); color: #fff; font-size: 11px; font-weight: 700; }
+.number { position: relative; display: grid; place-items: center; width: 44px; height: 44px; margin: 0 auto; border: 5px solid var(--pale); border-radius: 50%; background: var(--green); color: #000000; font-size: 11px; font-weight: 700; }
 .steps p { color: var(--ink); font-size: 13px; line-height: 1.55; margin: 18px 0 0; }
-.line { position: absolute; left: calc(100% / 14); right: calc(100% / 14); top: 21px; height: 2px; background: #a8edc566; }
+.line { position: absolute; left: calc(100% / 14); right: calc(100% / 14); top: 21px; height: 2px; background: #FFFFFF; color: #000000; }
 .line > span { display: block; width: 100%; height: 100%; background: var(--green); transform-origin: left center; }
-.hint { display: none; margin: 10px 0 0; text-align: center; color: #5c7267; font-size: 12px; }
+.hint { display: none; margin: 10px 0 0; text-align: center; color: #000000; font-size: 12px; }
 .hint span { margin-left: 7px; color: var(--green); }
 @media (max-width: 1200px) { .hint { display: block; } }
 @media (max-width: 650px) {

@@ -95,9 +95,9 @@ export default function HeroAnimation() {
       ctx.beginPath();
       // Split the ellipse so the thread passes behind and in front of the cube.
       ctx.ellipse(700, 419, 416, 198, .13, front ? 0 : Math.PI, (front ? 0 : Math.PI) + Math.PI * reveal);
-      ctx.strokeStyle = '#24dba4';
+      ctx.strokeStyle = '#5AAA6C';
       ctx.lineWidth = 2.5;
-      ctx.shadowColor = '#4df4b5';
+      ctx.shadowColor = '#FFFFFF';
       ctx.shadowBlur = 9;
       ctx.globalAlpha = reveal * .8;
       ctx.stroke();
@@ -109,9 +109,9 @@ export default function HeroAnimation() {
         const px = 700 + x * Math.cos(.13) - y * Math.sin(.13);
         const py = 419 + x * Math.sin(.13) + y * Math.cos(.13);
         const glow = ctx.createRadialGradient(px - 3, py - 4, 1, px, py, 14);
-        glow.addColorStop(0, '#effff9');
-        glow.addColorStop(.35, '#a2ffdb');
-        glow.addColorStop(1, '#28c98a');
+        glow.addColorStop(0, '#FFFFFF');
+        glow.addColorStop(.35, '#FFFFFF');
+        glow.addColorStop(1, '#5AAA6C');
         ctx.fillStyle = glow;
         ctx.beginPath();
         ctx.arc(px, py, 13, 0, Math.PI * 2);
@@ -128,9 +128,9 @@ export default function HeroAnimation() {
       ctx.globalAlpha = base;
       ctx.translate(0, (1 - base) * 48);
       const glass = ctx.createLinearGradient(300, 550, 800, 985);
-      glass.addColorStop(0, '#d9f7ea');
-      glass.addColorStop(.5, '#a3e5c9');
-      glass.addColorStop(1, '#9cddc3');
+      glass.addColorStop(0, '#FFFFFF');
+      glass.addColorStop(.5, '#FFFFFF');
+      glass.addColorStop(1, '#FFFFFF');
       ctx.fillStyle = glass;
       ctx.fill(platformMask);
       ctx.restore();

@@ -1,0 +1,70 @@
+.footer {
+  display: block;
+  position: relative;
+  isolation: isolate;
+  padding: 0 20px;
+  border-top: 1px solid rgba(0, 224, 137, .15);
+  background: #040812;
+  color: #94a3b8;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 auto;
+  height: 140px;
+  background: linear-gradient(180deg, rgba(0, 224, 137, .10), rgba(0, 130, 155, .035) 65%, transparent);
+  pointer-events: none;
+}
+.footer > .inner { width: 100%; max-width: 1920px; margin: 0 auto; }
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .95fr) minmax(0, 1.25fr) minmax(0, .8fr);
+  gap: clamp(24px, 2.1vw, 40px);
+  padding: 26px clamp(12px, 2.1vw, 40px);
+}
+.brand, .linkGroup, .contact, .follow { min-width: 0; }
+.brandLink { display: inline-flex; align-items: center; max-width: 100%; padding: 0; }
+.brandLink .brandLogo { display: block; width: 190px; height: auto; max-width: 100%; padding: 0; border: 0; border-radius: 0; background: transparent; }
+.footer .description { max-width: 390px; margin: 12px 0 0; color: #94a3b8; font-size: inherit; font-weight: 400; line-height: 1.65; letter-spacing: 0; }
+.socials { display: flex; flex-direction: column; gap: 2px; padding: 0; margin: 0; list-style: none; }
+.social { display: flex; align-items: center; gap: 8px; min-height: 28px; color: #c5cbe9; font-size: 14px; font-weight: 400; line-height: 1.4; letter-spacing: .02em; text-decoration: none; }
+.social img { display: block; flex: 0 0 16px; width: 16px; height: 16px; padding: 0; border: 0; border-radius: 0; background: transparent; filter: brightness(0) saturate(100%) invert(87%) sepia(13%) saturate(560%) hue-rotate(190deg); }
+.footer .follow .heading { color: #c5cbe9; letter-spacing: .22em; }
+.footer .heading { margin: 0 0 14px; color: #f8fafc; font-size: 13px; font-weight: 600; line-height: 1.5; letter-spacing: .16em; text-transform: uppercase; }
+.linkGroup ul { display: flex; flex-direction: column; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.linkGroup a { display: inline-block; color: #94a3b8; line-height: 1.45; text-decoration: none; }
+.contactList { display: flex; flex-direction: column; gap: 12px; font-style: normal; }
+.contactList > a { display: flex; align-items: flex-start; gap: 10px; color: #94a3b8; text-decoration: none; }
+.contactList > a > span:last-child { padding-top: 4px; overflow-wrap: anywhere; }
+.contactList > a:last-child > span:last-child { padding-top: 1px; }
+.contactIcon { display: flex; align-items: center; justify-content: center; flex: 0 0 32px; width: 32px; height: 32px; border: 1px solid #00e08933; border-radius: 8px; background: #00e0891a; }
+.contactIcon img { display: block; width: 16px; height: 16px; padding: 0; border: 0; border-radius: 0; background: transparent; }
+.bottom { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; padding: 14px clamp(12px, 2.1vw, 40px); border-top: 1px solid #ffffff0d; font-size: 12px; }
+.footer .copyright { margin: 0; color: #94a3b8; font-size: inherit; font-weight: 400; line-height: 1.7; letter-spacing: 0; }
+.legal { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.legal a { color: #94a3b8; text-decoration: none; }
+.footer a:hover { color: #fff; }
+.footer a:focus-visible { outline: 2px solid #00e089; outline-offset: 5px; border-radius: 3px; }
+@media(max-width:1100px) {
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 36px; }
+  .brandLink { padding-left: 0; }
+}
+@media(max-width:650px) {
+  .footer { padding: 0 22px; font-size: 14px; }
+  .grid { padding: 24px 0; grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .brandLink { padding: 0; }
+  .footer .description { margin: 10px 0 0; line-height: 1.65; }
+  .footer .heading { margin-bottom: 12px; font-size: 13px; }
+  .contactList { display: flex; }
+  .socials { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; }
+  .social { min-height: 36px; }
+  .linkGroup a { padding: 4px 0; }
+  .linkGroup ul { gap: 4px; }
+  .bottom { flex-direction: column; justify-content: center; gap: 8px; padding: 14px 0; text-align: center; }
+  .legal { gap: 12px; }
+}
