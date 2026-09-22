@@ -120,7 +120,17 @@ main section[id]{scroll-margin-top:calc(var(--nav-height) + 16px)}
 .hero .particleMorph{
   background:radial-gradient(circle at 50% 48%,rgba(255,255,255,.82),rgba(204,246,214,.34) 48%,transparent 74%);
 }
+.heroCopy{
+  align-self:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.hero .lead,.hero .support{margin-left:auto;margin-right:auto}
+.hero .actions{justify-content:center}
 @media(max-width:650px){
   .hero::before{width:82px;height:31px;left:-32px;top:48px}
   .hero::after{width:94px;height:36px;right:-34px;bottom:112px}
+  .hero .actions>.textBtn{justify-self:center}
 }
