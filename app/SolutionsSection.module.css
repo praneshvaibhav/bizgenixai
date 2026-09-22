@@ -22,8 +22,9 @@
 .card blockquote p { margin: 0; font-size: clamp(16px, 1.2vw, 19px); line-height: 1.65; letter-spacing: -.015em; }
 .client { display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 24px; border-top: 1px solid #5aaa6c; }
 .featured .client { border-color: #000; }
-.avatar { display: grid; place-items: center; flex: 0 0 48px; height: 48px; border-radius: 50%; background: #5aaa6c; color: #000; font-size: 15px; font-weight: 700; }
-.featured .avatar { background: #fff; }
+.avatar { display: block; flex: 0 0 52px; height: 52px; overflow: hidden; border: 2px solid #5aaa6c; border-radius: 50%; background: #fff; }
+.avatar img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.featured .avatar { border-color: #fff; }
 .client > div { min-width: 0; }
 .client strong { display: block; font-size: 16px; line-height: 1.4; }
 .client div > span { display: block; margin-top: 5px; font-size: 12px; line-height: 1.5; }
@@ -40,7 +41,7 @@
 @media (max-width: 400px) {
   .card { padding: 22px; }
   .card blockquote p { font-size: 16px; }
-  .avatar { flex-basis: 42px; height: 42px; }
+  .avatar { flex-basis: 46px; height: 46px; }
   .company { max-width: 165px; }
 }
 @media (prefers-reduced-motion: reduce) {
