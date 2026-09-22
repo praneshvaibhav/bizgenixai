@@ -112,11 +112,11 @@ main section[id]{scroll-margin-top:calc(var(--nav-height) + 16px)}
 .hero h1 span[aria-hidden='true']{text-shadow:0 1px 0 rgba(255,255,255,.5)}
 .hero .lead{color:#183b26}
 .hero .button{
-  background:#092d1d;
-  color:#fff;
-  box-shadow:0 12px 28px rgba(9,45,29,.16);
+  background:#8fe6a4;
+  color:#0b321b;
+  box-shadow:0 12px 28px rgba(62,181,91,.2);
 }
-.hero .button:hover{background:#146b36;color:#fff}
+.hero .button:hover{background:#6ed88a;color:#082615}
 .hero .particleMorph{
   background:radial-gradient(circle at 50% 48%,rgba(255,255,255,.82),rgba(204,246,214,.34) 48%,transparent 74%);
 }
