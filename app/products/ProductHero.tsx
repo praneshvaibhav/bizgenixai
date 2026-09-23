@@ -153,7 +153,7 @@ export default function ProductHero() {
           {mobilePaths.map((path, index) => <g key={path}><path d={path} pathLength="1" data-connection={index} /><g data-node={index}><circle cx="180" cy="180" r="4" /><circle cx="44" cy={285 + index * 115} r="4" /></g></g>)}
         </svg>
         {products.map((product, index) => <a key={product.id} href={'externalUrl' in product ? product.externalUrl : `#${product.id}`} target={'externalUrl' in product ? '_blank' : undefined} rel={'externalUrl' in product ? 'noopener noreferrer' : undefined} className={`${styles.product} ${styles[`product${index}`]}`} data-product={index}>
-          <img className={styles.productArtwork} src={`/products/hero-${product.id}.png`} alt="" /><div><h2>{product.name}</h2><p>{product.summary}</p></div><span className={styles.arrow} aria-hidden="true">→</span>
+          <span className={styles.number}>0{index + 1}</span><div><h2>{product.name}</h2><p>{product.summary}</p></div><span className={styles.arrow} aria-hidden="true">→</span>
         </a>)}
         <p className={styles.signature}>Tools<br />that work<br /><span>together.</span></p>
         <p className={styles.future}>Built<br />for what’s<br />next.</p>
