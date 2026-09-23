@@ -25,7 +25,7 @@ const corporateTrainingGallery = [
 export default function CoursesPage() {
   return <div className={styles.page} id="top">
     <a className={styles.skipLink} href="#courses-main">Skip to content</a>
-    <Navigation activePath="/courses" />
+    <Navigation activePath="/courses" theme="light" />
     <main id="courses-main">
       <section className={styles.hero} aria-labelledby="courses-title"><div className={`${styles.container} ${styles.heroLayout}`}>
         <div className={styles.heroCopy}><h1 id="courses-title">Learn AI that solves <em>real business problems.</em></h1><p className={styles.heroLead}>Practical skills. Real tools. Possibilities you can put to work.</p><p className={styles.description}>Build practical AI, automation and business transformation skills through hands-on courses designed for business owners, professionals, students and corporate teams.</p></div>

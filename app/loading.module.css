@@ -1,0 +1,85 @@
+.loading {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 22px;
+  min-height: 100svh;
+  background: #fff;
+  color: #245d38;
+  font-family: Arial, sans-serif;
+}
+
+.mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  border: 2px solid rgba(90, 170, 108, .2);
+  border-top-color: #5aaa6c;
+  border-radius: 50%;
+  animation: spin 1.15s linear infinite;
+}
+
+.ring:nth-child(2) {
+  inset: 11px;
+  border-color: rgba(45, 107, 66, .18);
+  border-bottom-color: #2d6b42;
+  animation-direction: reverse;
+  animation-duration: .85s;
+}
+
+.core {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: #2d6b42;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  box-shadow: 0 10px 28px rgba(35, 91, 54, .2);
+}
+
+.loading p {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  animation: pulse 1.25s ease-in-out infinite;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  50% { opacity: .5; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ring,
+  .loading p { animation: none; }
+}

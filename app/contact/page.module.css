@@ -23,3 +23,34 @@
 @media(max-width:860px){.contactGrid{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:520px){.nameRow{grid-template-columns:minmax(0,1fr)}.card{padding:24px}.hero{padding-top:112px}.hero .eyebrow{font-size:14px;letter-spacing:.18em}.hero h1{font-size:42px}.cardHeading h2{font-size:18px}.form label{font-size:17px}.contactSection{padding-bottom:64px}}
 @media(prefers-reduced-motion:reduce){.page,.page *{animation:none!important;transition:none!important}}
+
+/* Light contact-page palette */
+.page[data-theme='light']{--contact-bg:#fff;--contact-input:#245d38;--contact-card:#2d6b42;--contact-text:#111713;--contact-secondary:#357647;--contact-muted:#d8eadc;--contact-accent:#2d6b42;--contact-glow:#2d6b420d;--contact-border:#245a37;--contact-input-border:#ffffff47;--contact-focus:#ffffffb3;--contact-shadow:0 12px 32px #183f2724}
+.page[data-theme='light'] .hero h1{color:#111713}
+.page[data-theme='light'] .hero .introduction{color:#357647}
+.page[data-theme='light'] .card{color:#fff}
+.page[data-theme='light'] .cardHeading h2,
+.page[data-theme='light'] .cardHeading p,
+.page[data-theme='light'] .form label,
+.page[data-theme='light'] .form label span,
+.page[data-theme='light'] .form .formHelp,
+.page[data-theme='light'] .form .formStatus,
+.page[data-theme='light'] .formStatus a,
+.page[data-theme='light'] .steps p,
+.page[data-theme='light'] .contactDetails h3,
+.page[data-theme='light'] .contactDetails p,
+.page[data-theme='light'] .contactDetails a,
+.page[data-theme='light'] .contactIcon,
+.page[data-theme='light'] .mapLink{color:#fff}
+.page[data-theme='light'] .steps li>span{background:#ffffff1f;border-color:#fff;color:#fff}
+.page[data-theme='light'] .pinIcon,
+.page[data-theme='light'] .pinIcon::after{border-color:#fff}
+.page[data-theme='light'] .sendButton{background:#fff;color:#245a37;font-weight:600}
+.page[data-theme='light'] .sendButton:hover{opacity:.9}
+.page[data-theme='light'] .form input,
+.page[data-theme='light'] .form select,
+.page[data-theme='light'] .form textarea{color:#fff}
+.page[data-theme='light'] .form input::placeholder,
+.page[data-theme='light'] .form textarea::placeholder{color:#fff;opacity:.7}
+.page[data-theme='light'] .form select option{background:#245d38;color:#fff}
+.page[data-theme='light'] .skipLink{color:#fff}

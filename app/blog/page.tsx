@@ -12,7 +12,7 @@ export const metadata: Metadata = { title, description, openGraph: { title, desc
 export default function BlogPage() {
   return <div className={styles.page} id="top">
     <a className={styles.skipLink} href="#main-content">Skip to content</a>
-    <Navigation activePath="/blog" />
+    <Navigation activePath="/blog" theme="light" />
     <main id="main-content" className={styles.main}>
       <header className={styles.hero}>
         <p className={styles.eyebrow}>THE BIZGENIX BLOG</p>

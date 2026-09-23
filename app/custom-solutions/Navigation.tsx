@@ -1,7 +1,7 @@
 ﻿'use client';
 
-/* eslint-disable @next/next/no-html-link-for-pages -- Match the site's document navigation. */
 /* eslint-disable @next/next/no-img-element -- Use the existing local company logo. */
+import Link from 'next/link';
 import { useRef } from 'react';
 import styles from './Navigation.module.css';
 
@@ -21,7 +21,7 @@ export default function Navigation({ activePath = '/custom-solutions', overlay =
   const menuRef = useRef<HTMLDetailsElement>(null);
   const closeMenu = () => { if (menuRef.current) menuRef.current.open = false; };
   const navigationLinks = links.map(([label, href]) => (
-    <a key={href} href={href} onClick={closeMenu} aria-current={href === activePath ? 'page' : undefined}>{label}</a>
+    <Link key={href} href={href} onClick={closeMenu} aria-current={href === activePath ? 'page' : undefined}>{label}</Link>
   ));
 
   return (
@@ -33,7 +33,7 @@ export default function Navigation({ activePath = '/custom-solutions', overlay =
         }
       }}>
         <nav className={styles.navigation} aria-label="Main navigation">
-          <a href="/" className={styles.logo} aria-label="Bizgenix AI home"><img src="/bizgenixlogo.webp" alt="Bizgenix AI" width={640} height={233} /></a>
+          <Link href="/" className={styles.logo} aria-label="Bizgenix AI home"><img src="/bizgenixlogo.webp" alt="Bizgenix AI" width={640} height={233} /></Link>
           <div className={styles.desktopLinks}>{navigationLinks}</div>
           <div className={styles.actions}>
             <details className={styles.mobileMenu} ref={menuRef}>

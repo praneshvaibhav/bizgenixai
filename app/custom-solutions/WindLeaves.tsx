@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type CSSProperties } from 'react';
+import type { CSSProperties } from 'react';
 import { useAnimationViewport } from '../useAnimationViewport';
 import styles from './WindLeaves.module.css';
 
@@ -22,9 +22,8 @@ const leaves = [
 
 export default function WindLeaves() {
   const { ref, visible } = useAnimationViewport();
-  const [paused, setPaused] = useState(false);
 
-  return <div className={styles.wind} ref={ref} data-playing={visible && !paused}>
+  return <div className={styles.wind} ref={ref} data-playing={visible}>
     <div className={styles.field} aria-hidden="true">
       {leaves.map((leaf, index) => <span className={styles.traveler} key={index} style={{
         '--top': `${leaf.top}%`,
@@ -37,9 +36,5 @@ export default function WindLeaves() {
         <span className={styles.sway}><span className={styles.leaf} /></span>
       </span>)}
     </div>
-    <button className={styles.control} type="button" onClick={() => setPaused(value => !value)} aria-label={paused ? 'Resume leaf animation' : 'Pause leaf animation'}>
-      <span aria-hidden="true">{paused ? '▷' : 'Ⅱ'}</span>
-      {paused ? 'Resume leaves' : 'Pause leaves'}
-    </button>
   </div>;
 }

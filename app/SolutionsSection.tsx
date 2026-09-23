@@ -50,7 +50,6 @@ function TestimonialCard({ testimonial, featured = false }: { testimonial: typeo
     <figure className={`${styles.card} ${featured ? styles.featured : ''}`}>
       <div className={styles.cardHeader}>
         <span className={styles.service}>Client experience</span>
-        <span className={styles.company}>{testimonial.company}</span>
       </div>
       <span className={styles.quoteMark} aria-hidden="true">“</span>
       <blockquote><p>{testimonial.quote}</p></blockquote>

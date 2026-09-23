@@ -130,11 +130,11 @@ main section[id]{scroll-margin-top:calc(var(--nav-height) + 16px)}
 }
 .hero::before{width:115px;height:42px;left:-38px;top:90px;border-radius:24px}
 .hero::after{width:150px;height:54px;right:-42px;bottom:78px;border-radius:30px}
-.hero h1{color:#fff;max-width:760px;text-shadow:0 3px 20px rgba(0,0,0,.42)}
+.hero h1{color:#5AAA6C;max-width:760px;text-shadow:0 3px 20px rgba(0,0,0,.42)}
 .hero h1 span[aria-hidden='true']{text-shadow:0 3px 20px rgba(0,0,0,.42)}
 .hero .lead{color:rgba(255,255,255,.92);max-width:680px;text-shadow:0 2px 12px rgba(0,0,0,.42)}
 .hero .button{
-  background:#fff;
+  background:#5AAA6C;
   color:#082615;
   box-shadow:0 12px 28px rgba(0,0,0,.2);
 }

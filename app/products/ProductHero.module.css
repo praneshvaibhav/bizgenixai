@@ -39,7 +39,7 @@
 .product>div {min-width:0; flex:1;}
 .product h2 {color:#000000; font-size:clamp(15px,1.14vw,21px); line-height:1.15; letter-spacing:-.055em; margin:0 0 10px;}
 .product p {color:#000000; font-size:clamp(11px,.88vw,16px); line-height:1.55; margin:0;}
-.arrow {display:grid; place-items:center; flex-shrink:0; width:35px; height:35px; border-radius:50%; border:1px solid #5AAA6C; background:#FFFFFF; color:#000000; font-size:22px;}
+.arrow {display:flex; align-items:center; justify-content:center; flex-shrink:0; width:35px; height:35px; padding:0 0 2px; border-radius:50%; border:1px solid #5AAA6C; background:#FFFFFF; color:#000000; font-family:Arial,sans-serif; font-size:22px; line-height:1; text-align:center;}
 .product:hover {border-color:#5AAA6C; background:#FFFFFF; color:#000000;}
 .product:focus-visible {outline:3px solid #5AAA6C; outline-offset:4px;}
 .signature {position:absolute; top:23%; right:-3%; color:#000000; font-family:'Segoe Script','Brush Script MT',cursive; font-size:clamp(19px,1.7vw,31px); line-height:1.22; letter-spacing:-.055em; margin:0; transform:rotate(-10deg);}

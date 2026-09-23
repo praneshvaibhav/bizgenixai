@@ -16,7 +16,7 @@ export default function CaseStudiesPage() {
   const una = caseStudies.find(item => item.slug === 'una-homes')!;
   return <div className={styles.page}>
     <a href="#main-content" className={styles.skipLink}>Skip to content</a>
-    <Navigation activePath="/case-studies" />
+    <Navigation activePath="/case-studies" theme="light" />
     <main id="main-content">
       <section className={styles.hero} aria-labelledby="case-studies-title">
         <div className={`${styles.container} ${styles.heroGrid}`}>
@@ -37,7 +37,6 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      <section className={`${styles.container} ${styles.trusted}`} aria-label="Featured client businesses"><p className={styles.eyebrow}>BUILT FOR GROWING BUSINESSES</p><div className={styles.clientNames}>{['Waffle Castle', 'Mahavir Traders', 'Bhaskar Silk Mills', 'Una Homes', 'Spectrum Dyes', 'Sanjay Jain'].map((name, index) => <span key={name}><span className={styles.clientMark} aria-hidden="true">{['◇', '▥', '◈', '▱', '▦', '◎'][index]}</span>{name}</span>)}</div></section>
       <section className={`${styles.container} ${styles.stats}`} aria-label="Bizgenix portfolio at a glance">{portfolioStats.map(([value, label]) => <div key={label}><strong>{value}</strong><span>{label}</span></div>)}</section>
 
       <section className={`${styles.container} ${styles.featured}`} id="featured-case" aria-labelledby="featured-title">

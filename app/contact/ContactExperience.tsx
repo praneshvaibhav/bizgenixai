@@ -20,9 +20,9 @@ export default function ContactExperience() {
   }
 
   return (
-    <div className={styles.page} data-theme="dark" id="top">
+    <div className={styles.page} data-theme="light" id="top">
       <a className={styles.skipLink} href="#main-content">Skip to content</a>
-      <Navigation activePath="/contact" overlay />
+      <Navigation activePath="/contact" overlay theme="light" />
       <main id="main-content" className={styles.main}>
         <section className={styles.hero} aria-labelledby="contact-title"><div className={styles.heroCopy}>
           <p className={styles.eyebrow}>Start the Conversation</p>

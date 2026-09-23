@@ -35,10 +35,10 @@ export default function LearningMap() {
 
   return (
     <div className={styles.learningMap} aria-label="Choose a way to learn with Bizgenix">
-      <svg className={styles.learningPath} viewBox="0 0 1000 270" preserveAspectRatio="none" aria-hidden="true">
-        <path className={styles.pathBase} d="M 90 55 C 240 55 300 205 500 205 C 700 205 760 55 910 55" />
-        <path className={`${styles.pathActive} ${activeIndex === 0 || activeIndex === 1 ? styles.visiblePath : ''}`} d="M 90 55 C 240 55 300 205 500 205" />
-        <path className={`${styles.pathActive} ${activeIndex === 1 || activeIndex === 2 ? styles.visiblePath : ''}`} d="M 500 205 C 700 205 760 55 910 55" />
+      <svg className={styles.learningPath} viewBox="0 0 1000 120" preserveAspectRatio="none" aria-hidden="true">
+        <path className={styles.pathBase} d="M 155 55 H 845" />
+        <path className={`${styles.pathActive} ${activeIndex === 0 || activeIndex === 1 ? styles.visiblePath : ''}`} d="M 155 55 H 500" />
+        <path className={`${styles.pathActive} ${activeIndex === 1 || activeIndex === 2 ? styles.visiblePath : ''}`} d="M 500 55 H 845" />
       </svg>
 
       {learningOptions.map((option, index) => {
@@ -67,7 +67,6 @@ export default function LearningMap() {
             <div
               className={`${styles.learningCard} ${isActive ? styles.activeCard : ''}`}
               id={`learning-option-${index}`}
-              aria-hidden={!isActive}
             >
               <span>{option.number}</span>
               <h3>{option.name}</h3>
@@ -76,7 +75,6 @@ export default function LearningMap() {
                 href={option.href}
                 target={option.external ? '_blank' : undefined}
                 rel={option.external ? 'noopener noreferrer' : undefined}
-                tabIndex={isActive ? undefined : -1}
               >
                 {option.action} <span aria-hidden="true">{option.external ? '↗' : '→'}</span>
               </a>
