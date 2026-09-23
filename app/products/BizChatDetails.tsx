@@ -43,7 +43,7 @@ function PhoneScreen() {
 }
 
 export default function BizChatDetails({ active }: { active: boolean }) {
-  const product = products[1];
+  const product = products.find(product => product.id === 'bizchat')!;
   const sceneRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (active && sceneRef.current) return animateBizChat(sceneRef.current);

@@ -32,7 +32,7 @@ const capabilities = [
 export default function CustomSolutionsPage() {
   return <div className={styles.page} id="top">
     <a className={styles.skipLink} href="#main-content">Skip to content</a>
-    <Navigation />
+    <Navigation theme="light" />
     <main id="main-content">
       <Hero />
       <div className={styles.overview}><div className={styles.container}><div className={styles.heroBottom}><span>FROM COMPLEXITY<br /><b>TO POSSIBILITY.</b></span><p>From AI-powered CRM and ERP platforms to intelligent agents, analytics systems, workflow automation and integrated web applications, we turn complex business challenges into practical, scalable solutions.</p><a href="#capabilities" aria-label="Explore our custom solution capabilities">↓</a></div></div></div>

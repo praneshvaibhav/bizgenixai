@@ -14,9 +14,10 @@ type NavigationProps = {
   activePath?: string;
   overlay?: boolean;
   heroBlend?: boolean;
+  theme?: 'dark' | 'light';
 };
 
-export default function Navigation({ activePath = '/custom-solutions', overlay = false, heroBlend = false }: NavigationProps) {
+export default function Navigation({ activePath = '/custom-solutions', overlay = false, heroBlend = false, theme = 'dark' }: NavigationProps) {
   const menuRef = useRef<HTMLDetailsElement>(null);
   const closeMenu = () => { if (menuRef.current) menuRef.current.open = false; };
   const navigationLinks = links.map(([label, href]) => (
@@ -25,7 +26,7 @@ export default function Navigation({ activePath = '/custom-solutions', overlay =
 
   return (
     <div className={overlay ? styles.overlay : styles.space}>
-      <header className={styles.header} data-theme="dark" data-hero-blend={heroBlend || undefined} onKeyDown={event => {
+      <header className={styles.header} data-theme={theme} data-hero-blend={heroBlend || undefined} onKeyDown={event => {
         if (event.key === 'Escape' && menuRef.current?.open) {
           closeMenu();
           menuRef.current.querySelector('summary')?.focus();

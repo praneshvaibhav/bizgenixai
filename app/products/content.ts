@@ -3,7 +3,7 @@ export const demoUrl = (product?: string) => `https://wa.me/918780671906?text=${
   ? `Hi Bizgenix, I'd like to discuss ${product} and book a product demo.`
   : "Hi Bizgenix, I'd like to book a product demo and find the right AI product for my business.")}`;
 
-export const products = [
+const productCatalog = [
   {
     id: 'voice-ai', name: 'Voice AI', initial: 'V', category: 'CUSTOMER CONVERSATIONS',
     summary: 'Automate customer calls and conversations.',
@@ -52,7 +52,23 @@ export const products = [
     workflow: ['Tally & business data', 'Secure connector', 'Business insights', 'Better-informed decisions'],
     action: 'Book an Analytics Demo',
   },
+  {
+    id: 'crm', name: 'CRM', initial: 'C', category: 'CUSTOMER RELATIONSHIPS',
+    summary: 'Manage leads, follow-ups and customer relationships in one place.',
+    bestFor: 'Sales pipelines, lead tracking and customer management',
+    headline: 'Every lead visible. Every follow-up on time.',
+    description: 'Bizgenix CRM gives sales and customer-facing teams one connected workspace for enquiries, lead stages, follow-ups, ownership and customer history. It helps businesses respond consistently and move opportunities forward with better visibility.',
+    capabilities: ['Central lead and customer database', 'Custom sales pipelines and lead stages', 'Follow-up tasks, reminders and ownership', 'Customer interaction and activity history', 'Team dashboards and performance visibility', 'Lead-source and conversion reporting', 'Role-based access and workflow controls', 'Integration-ready business workflows'],
+    useCases: ['Website and campaign lead management', 'Sales pipeline and opportunity tracking', 'Dealer, channel and partner follow-ups', 'Customer onboarding and relationship management', 'Team assignment and escalation', 'Management review of lead conversion'],
+    benefits: ['Create one source of truth for every lead', 'Reduce missed and delayed follow-ups', 'Improve sales-team accountability', 'Understand pipeline health in real time', 'Build consistent customer journeys'],
+    workflow: ['Capture the lead', 'Assign ownership', 'Track every follow-up', 'Convert & grow'],
+    action: 'Open Bizgenix CRM',
+    externalUrl: 'https://crm.bizgenix.ai/',
+  },
 ] as const;
+
+const productOrder = ['growth-intelligence', 'crm', 'scaleos', 'voice-ai', 'bizchat'] as const;
+export const products = productOrder.map(id => productCatalog.find(product => product.id === id)!);
 
 export const functions = [
   ['Sales & lead management', 'Voice AI + BizChat', 'Faster response, qualification and follow-up', 'voice-ai'],

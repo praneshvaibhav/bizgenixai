@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return <div className={styles.page} id="top">
     <a href="#main-content" className={styles.skipLink}>Skip to content</a>
-    <Navigation activePath="/products" />
+    <Navigation activePath="/products" theme="light" />
     <main id="main-content">
       <ProductHero />
       <section className={`${styles.suite} ${styles.container}`} id="product-suite" aria-labelledby="suite-title">

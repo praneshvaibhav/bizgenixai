@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navigation from '../custom-solutions/Navigation';
 import ContactSection from '../ContactSection';
-import { directors, impact, industries, strategyUrl } from './content';
+import { directors, impact, strategyUrl } from './content';
 import styles from './page.module.css';
 
 const title = 'About Bizgenix | Practical AI, Automation and Business Impact';
@@ -21,25 +21,20 @@ const journey = [
 export default function AboutPage() {
   return <div className={styles.page} id="top">
     <a className={styles.skipLink} href="#main-content">Skip to content</a>
-    <Navigation activePath="/about" />
+    <Navigation activePath="/about" theme="light" />
     <main id="main-content">
       <section className={styles.hero} aria-labelledby="about-title">
-        <div className={styles.heroGlow} aria-hidden="true" />
         <div className={`${styles.container} ${styles.heroGrid}`}>
-          <div className={styles.heroTitle}><p className={styles.eyebrow}>ABOUT BIZGENIX</p><h1 id="about-title"><span>ABOUT</span><span>BIZGENIX</span></h1></div>
-          <div className={styles.heroCopy}><h2>We build intelligent systems that help businesses <em>move forward.</em></h2><p>Bizgenix brings business strategy, artificial intelligence, automation and enterprise technology together to solve real operational challenges.</p><a href={strategyUrl} target="_blank" rel="noopener noreferrer">Talk to our experts <span aria-hidden="true">↗</span></a></div>
-          <div className={styles.heroPortrait}><Image src="/founder-umang-ratani.webp" alt="Dr. CA Umang Ratani, founder of Bizgenix" fill sizes="(max-width: 800px) 90vw, 44vw" priority /><div className={styles.heroCaption}><span>Business insight</span><span>Intelligent systems</span><span>Real progress</span></div></div>
-          <dl className={styles.heroStats}><div><dd>110+</dd><dt>Live AI systems</dt></div><div><dd>2,000+</dd><dt>Professionals trained</dt></div><div><dd>1,000+</dd><dt>Community members</dt></div></dl>
+          <div className={styles.heroLogo}><Image src="/bizgenixlogo.webp" alt="Bizgenix AI" width={640} height={233} priority /></div>
+          <div className={styles.heroTitle}><p className={styles.eyebrow}>WHO WE ARE</p><h1 id="about-title">About<br /><em>Bizgenix AI</em></h1></div>
         </div>
       </section>
 
-      <section className={`${styles.container} ${styles.intro}`} aria-labelledby="intro-title"><p className={styles.eyebrow}>WHO WE ARE</p><div><h2 id="intro-title">Business understanding first.<br /><em>Technology with purpose.</em></h2><div className={styles.introCopy}><p>Businesses generate more data than ever, yet many still depend on manual operations, disconnected software and delayed decisions.</p><p>We work closely with every client to understand their processes, identify bottlenecks and build systems that improve efficiency, visibility and growth.</p></div></div></section>
+      <section className={`${styles.container} ${styles.intro}`} aria-labelledby="intro-title"><div><h2 id="intro-title">Business understanding first.<br /><em>Technology with purpose.</em></h2><div className={styles.introCopy}><p>Businesses generate more data than ever, yet many still depend on manual operations, disconnected software and delayed decisions.</p><p>We work closely with every client to understand their processes, identify bottlenecks and build systems that improve efficiency, visibility and growth.</p></div></div></section>
 
       <section className={styles.purpose} aria-label="Our vision and mission"><div className={`${styles.container} ${styles.purposeGrid}`}><article><span>01</span><div><p className={styles.eyebrow}>VISION</p><h2>Make the future of business <em>more intelligent.</em></h2><p>To become India’s most trusted AI implementation partner by delivering scalable, secure solutions that create lasting business value.</p></div></article><article><span>02</span><div><p className={styles.eyebrow}>MISSION</p><h2>Make AI practical.<br /><em>Make progress measurable.</em></h2><p>To make artificial intelligence accessible and useful—automating routine work, empowering people and supporting sustainable growth.</p></div></article></div></section>
 
       <section className={`${styles.container} ${styles.journey}`} aria-labelledby="journey-title"><header><p className={styles.eyebrow}>OUR JOURNEY</p><h2 id="journey-title">Built through action.<br /><em>Growing with purpose.</em></h2></header><ol>{journey.map(([year, name, detail], index) => <li key={year}><span className={styles.timelineIndex}>0{index + 1}</span><strong>{year}</strong><h3>{name}</h3><p>{detail}</p></li>)}</ol></section>
-
-      <section className={styles.industries} aria-labelledby="industries-title"><div className={styles.container}><header><p className={styles.eyebrow}>BUSINESS VERTICALS</p><h2 id="industries-title">Different industries.<br /><em>One practical approach.</em></h2></header><div className={styles.industryGrid}>{industries.slice(0, 8).map((industry, index) => <article key={industry.name}><span>{String(index + 1).padStart(2, '0')}</span><h3>{industry.name}</h3><p>{industry.description}</p></article>)}</div></div></section>
 
       <section className={`${styles.container} ${styles.founder}`} id="leadership" aria-labelledby="founder-title"><div className={styles.founderImage}><Image src="/founder-umang-ratani.webp" alt="Dr. CA Umang Ratani" fill sizes="(max-width: 900px) 90vw, 40vw" /></div><div className={styles.founderCopy}><p className={styles.eyebrow}>FOUNDER &amp; LEADER</p><h2 id="founder-title">Dr. CA<br /><em>Umang Ratani</em></h2><h3>Helping Indian businesses adopt AI in a practical and results-driven way.</h3><p>By combining business strategy, financial expertise and technology, Dr. CA Umang Ratani has guided organizations toward smarter operations and sustainable growth.</p><div className={styles.founderTags}><span>Business strategy</span><span>Financial expertise</span><span>Technology</span></div></div></section>
 

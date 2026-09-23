@@ -6,7 +6,7 @@ import ProductWorkflow from './ProductWorkflow';
 import { animateVoiceAI } from './animateVoiceAI';
 import styles from './VoiceAIDetails.module.css';
 
-const voiceProduct = products[0];
+const voiceProduct = products.find(product => product.id === 'voice-ai')!;
 const results = [['3x', 'More Conversions'], ['60%', 'Lower Call Costs'], ['100%', 'Consistent Messaging'], ['24/7', 'Customer Support']];
 
 function Waveform({ screen = false }: { screen?: boolean }) {

@@ -9,8 +9,9 @@ import VoiceAIDetails from './VoiceAIDetails';
 import BizChatDetails from './BizChatDetails';
 import ScaleOSDetails from './ScaleOSDetails';
 import GrowthIntelligenceDetails from './GrowthIntelligenceDetails';
+import CRMDetails from './CRMDetails';
 
-const tabDescriptions = ['Customer Conversations', 'WhatsApp Automation', 'Operations in One Place', 'Data to Decisions'];
+const tabDescriptions = ['Data to Decisions', 'Customer Relationships', 'Operations in One Place', 'Customer Conversations', 'WhatsApp Automation'];
 
 function subscribe(callback: () => void) {
   window.addEventListener('hashchange', callback);
@@ -54,7 +55,7 @@ export default function ProductShowcase() {
 
   return <>
     <div className={styles.overviewGrid} ref={overviewRef}>{products.map((product, index) => <div className={styles.overviewSlot} data-suite-slot key={product.id}><article className={styles.overviewCard}>
-      <div className={styles.overviewArtwork} style={{ backgroundImage: `url('/products/${product.id}.png')` }} aria-hidden="true" />
+      <div className={`${styles.overviewArtwork} ${product.id === 'crm' ? styles.crmArtwork : ''}`} style={product.id === 'crm' ? undefined : { backgroundImage: `url('/products/${product.id}.png')` }} aria-hidden="true">{product.id === 'crm' && <span>CRM</span>}</div>
       <span className={styles.cardIndex}>0{index + 1}</span>
       <h3>{product.name}</h3><p>{product.summary}</p><div className={styles.bestFor}><small>BEST FOR</small>{product.bestFor}</div>
       <a href={`#${product.id}`} onClick={event => { event.preventDefault(); select(product.id); detailsRef.current?.scrollIntoView({ block: 'start' }); }}>Explore {product.name} <span aria-hidden="true">↗</span></a>
@@ -67,7 +68,7 @@ export default function ProductShowcase() {
         </a>)}
       </div>
       {products.map(product => <section key={product.id} id={`${product.id}-panel`} role="tabpanel" aria-labelledby={product.id} tabIndex={0} hidden={active !== product.id} className={details.panel}>
-        {product.id === 'voice-ai' ? <VoiceAIDetails active={active === product.id} /> : product.id === 'bizchat' ? <BizChatDetails active={active === product.id} /> : product.id === 'scaleos' ? <ScaleOSDetails active={active === product.id} /> : <GrowthIntelligenceDetails active={active === product.id} />}
+        {product.id === 'voice-ai' ? <VoiceAIDetails active={active === product.id} /> : product.id === 'bizchat' ? <BizChatDetails active={active === product.id} /> : product.id === 'scaleos' ? <ScaleOSDetails active={active === product.id} /> : product.id === 'crm' ? <CRMDetails active={active === product.id} /> : <GrowthIntelligenceDetails active={active === product.id} />}
       </section>)}
     </div>
   </>;

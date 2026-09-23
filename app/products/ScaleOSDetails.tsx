@@ -50,7 +50,7 @@ function Dashboard() {
 
 export default function ScaleOSDetails({ active }: { active: boolean }) {
   const sceneRef = useRef<HTMLDivElement>(null);
-  const product = products[2];
+  const product = products.find(product => product.id === 'scaleos')!;
   useLayoutEffect(() => {
     if (active && sceneRef.current) return animateScaleOS(sceneRef.current);
   }, [active]);

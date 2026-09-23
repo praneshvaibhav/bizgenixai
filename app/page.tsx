@@ -28,7 +28,7 @@ const institutions=[
 const Arrow=()=> <span className="arrow">↗</span>;
 export default function Home(){return <SplashIntro><main><ScrollAnimations/>
 <Navigation activePath="/" heroBlend />
-<section className="hero section" id="top"><video className="heroVideo" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src="/hero-circuit-board.mp4" type="video/mp4" /></video><div className="heroVideoOverlay" aria-hidden="true"/><div className="heroCopy"><HeroIntro/></div></section>
+<section className="hero section" id="top"><video className="heroVideo" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src="/smart-city-hero.mp4" type="video/mp4" /></video><div className="heroVideoOverlay" aria-hidden="true"/><div className="heroCopy"><HeroIntro/></div></section>
 <section className="trust section" id="about"><div className="institutions"><div className="institutionCopy"><i>◈</i> Trusted stages and institutions</div><div className="institutionLogos" aria-label="Trusted stages and institutions"><div className="institutionTrack">{[0,1].map(sequence=><div className="institutionSequence" key={sequence} aria-hidden={sequence===1}>{institutions.map(([shortName,fullName,style,logo])=><span className={'institutionLogo '+style} key={shortName} title={fullName} aria-label={sequence===0?fullName:undefined}>{logo?<img src={logo} alt={sequence===0?fullName:''} loading="lazy" decoding="async"/>:shortName}</span>)}</div>)}</div></div></div></section>
 <ServicesSection/>
 <BusinessProblems/>

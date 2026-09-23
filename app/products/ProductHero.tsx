@@ -12,12 +12,13 @@ const metrics = [
 ];
 
 const desktopPaths = [
-  'M230 270 C340 270 290 63 430 63',
-  'M230 296 C365 296 300 219 430 219',
-  'M230 296 C365 296 300 375 430 375',
-  'M230 322 C345 322 285 531 430 531',
+  'M230 258 C340 258 290 54 430 54',
+  'M230 278 C365 278 300 177 430 177',
+  'M230 296 C365 296 300 300 430 300',
+  'M230 314 C365 314 300 423 430 423',
+  'M230 334 C345 334 285 546 430 546',
 ];
-const mobilePaths = [285, 400, 515, 630].map(y => `M180 180 V207 Q180 226 161 226 H39 Q20 226 20 245 V${y - 14} Q20 ${y} 34 ${y} H44`);
+const mobilePaths = [285, 400, 515, 630, 745].map(y => `M180 180 V207 Q180 226 161 226 H39 Q20 226 20 245 V${y - 14} Q20 ${y} 34 ${y} H44`);
 
 export default function ProductHero() {
   const diagramRef = useRef<HTMLDivElement>(null);
@@ -139,20 +140,20 @@ export default function ProductHero() {
         <ul className={styles.trust}>{['Built for real workflows', 'Trusted by businesses', 'Designed for scale'].map(item => <li key={item}><span aria-hidden="true">✓</span>{item}</li>)}</ul>
         <p className={styles.note}>One platform.<br />Many possibilities.</p>
       </div>
-      <div className={styles.diagram} ref={diagramRef} role="group" aria-label="AI for real business connects four Bizgenix products">
+      <div className={styles.diagram} ref={diagramRef} role="group" aria-label="AI for real business connects five Bizgenix products">
         <div className={styles.hub} data-hub><h2>AI for<br /> real business</h2><span aria-hidden="true" /><p>A complete suite of AI products, built to work together for greater impact.</p></div>
         <svg className={styles.desktopConnections} viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
           <defs><linearGradient id={gradientId}><stop stopColor="#5AAA6C" /><stop offset="1" stopColor="#FFFFFF" /></linearGradient></defs>
           {desktopPaths.map((path, index) => <g key={path}>
             <path d={path} pathLength="1" stroke={`url(#${gradientId})`} data-connection={index} />
-            <g data-node={index}><circle cx="230" cy={[270, 296, 296, 322][index]} r="6" /><circle cx="430" cy={63 + index * 156} r="6" /></g>
+            <g data-node={index}><circle cx="230" cy={[258, 278, 296, 314, 334][index]} r="6" /><circle cx="430" cy={54 + index * 123} r="6" /></g>
           </g>)}
         </svg>
-        <svg className={styles.mobileConnections} viewBox="0 0 360 700" preserveAspectRatio="none" aria-hidden="true">
+        <svg className={styles.mobileConnections} viewBox="0 0 360 815" preserveAspectRatio="none" aria-hidden="true">
           {mobilePaths.map((path, index) => <g key={path}><path d={path} pathLength="1" data-connection={index} /><g data-node={index}><circle cx="180" cy="180" r="4" /><circle cx="44" cy={285 + index * 115} r="4" /></g></g>)}
         </svg>
-        {products.map((product, index) => <a key={product.id} href={`#${product.id}`} className={`${styles.product} ${styles[`product${index}`]}`} data-product={index}>
-          <span className={styles.number}>0{index + 1}</span><div><h2>{product.name}</h2><p>{product.summary}</p></div><span className={styles.arrow} aria-hidden="true">→</span>
+        {products.map((product, index) => <a key={product.id} href={'externalUrl' in product ? product.externalUrl : `#${product.id}`} target={'externalUrl' in product ? '_blank' : undefined} rel={'externalUrl' in product ? 'noopener noreferrer' : undefined} className={`${styles.product} ${styles[`product${index}`]}`} data-product={index}>
+          <img className={styles.productArtwork} src={`/products/hero-${product.id}.png`} alt="" /><div><h2>{product.name}</h2><p>{product.summary}</p></div><span className={styles.arrow} aria-hidden="true">→</span>
         </a>)}
         <p className={styles.signature}>Tools<br />that work<br /><span>together.</span></p>
         <p className={styles.future}>Built<br />for what’s<br />next.</p>

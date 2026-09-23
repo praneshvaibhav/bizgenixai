@@ -27,7 +27,7 @@ const metrics: { icon: IconName; value: string; label: string }[] = [
 export default function GrowthIntelligenceDetails({ active }: { active: boolean }) {
   const sceneRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
-  const product = products[3];
+  const product = products.find(product => product.id === 'growth-intelligence')!;
   useLayoutEffect(() => {
     if (active && sceneRef.current && imageRef.current) return animateGrowthIntelligence(sceneRef.current, imageRef.current);
   }, [active]);
