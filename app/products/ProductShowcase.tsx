@@ -54,9 +54,8 @@ export default function ProductShowcase() {
   };
 
   return <>
-    <div className={styles.overviewGrid} ref={overviewRef}>{products.map((product, index) => <div className={styles.overviewSlot} data-suite-slot key={product.id}><article className={styles.overviewCard}>
-      <div className={`${styles.overviewArtwork} ${product.id === 'crm' ? styles.crmArtwork : ''}`} style={product.id === 'crm' ? undefined : { backgroundImage: `url('/products/${product.id}.png')` }} aria-hidden="true">{product.id === 'crm' && <span>CRM</span>}</div>
-      <span className={styles.cardIndex}>0{index + 1}</span>
+    <div className={styles.overviewGrid} ref={overviewRef}>{products.map(product => <div className={styles.overviewSlot} data-suite-slot key={product.id}><article className={styles.overviewCard}>
+      <div className={styles.overviewArtwork} style={{ backgroundImage: `url('/products/hero-${product.id}.png')` }} aria-hidden="true" />
       <h3>{product.name}</h3><p>{product.summary}</p><div className={styles.bestFor}><small>BEST FOR</small>{product.bestFor}</div>
       <a href={`#${product.id}`} onClick={event => { event.preventDefault(); select(product.id); detailsRef.current?.scrollIntoView({ block: 'start' }); }}>Explore {product.name} <span aria-hidden="true">↗</span></a>
     </article></div>)}</div>

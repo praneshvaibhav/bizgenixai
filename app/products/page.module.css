@@ -35,31 +35,26 @@
 
 
 
-.suite {padding-block:68px;}
+.suite {width:min(1640px,94%); padding-block:68px;}
 .sectionHeading {display:flex; align-items:flex-end; justify-content:space-between; gap:50px; margin-bottom:30px;}
 .sectionHeading h2 {font-size:clamp(32px,3.15vw,47px); line-height:1.1; letter-spacing:-.055em; margin:0;}
 .sectionHeading .eyebrow {margin-bottom:16px;}
 .sectionHeading>p {max-width:380px; color:var(--product-muted); font-size:14px; line-height:1.75; margin:0;}
-.overviewGrid {position:relative; isolation:isolate; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:16px;}
+.overviewGrid {position:relative; isolation:isolate; display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:16px;}
 .overviewSlot {display:flex; min-width:0;}
-.overviewCard {position:relative; isolation:isolate; overflow:hidden; width:100%; display:flex; flex-direction:column; padding:164px 24px 24px; border:1px solid #5AAA6C; border-radius:16px; background:#FFFFFF; scroll-margin-top:110px; color:#000000;}
-.overviewArtwork {position:absolute; z-index:0; pointer-events:none; inset:0 0 auto; height:180px; background-color:#FFFFFF; background-size:auto 190px; background-repeat:no-repeat; background-position:center -8px; mask-image:linear-gradient(#000000 65%,transparent 100%); color:#000000;}
+.overviewCard {position:relative; isolation:isolate; overflow:hidden; width:100%; display:flex; flex-direction:column; padding:196px 20px 24px; border:1px solid #5AAA6C; border-radius:16px; background:#FFFFFF; scroll-margin-top:110px; color:#000000;}
+.overviewArtwork {position:absolute; z-index:0; pointer-events:none; inset:0 0 auto; height:180px; background-color:#f7fff9; background-size:cover; background-repeat:no-repeat; background-position:center; color:#000000;}
 .overviewCard>*:not(.overviewArtwork) {position:relative;z-index:1;}
-.crmArtwork {display:grid;place-items:center;background:radial-gradient(circle at 50% 42%,#dff4e4 0 18%,transparent 19%),linear-gradient(135deg,#f7fff8,#b8dfc2);}
-.crmArtwork::before,.crmArtwork::after {content:'';position:absolute;border:1px solid #5AAA6C;border-radius:50%;}
-.crmArtwork::before {width:112px;height:112px;}
-.crmArtwork::after {width:152px;height:152px;opacity:.45;}
-.crmArtwork span {position:relative;z-index:1;display:grid;place-items:center;width:76px;height:76px;border-radius:22px;background:#5AAA6C;color:#fff;font-size:22px;font-weight:800;letter-spacing:.08em;}
-.cardIndex {position:absolute; top:16px; right:16px; display:grid; place-items:center; width:28px; height:28px; border:1px solid #5AAA6C; border-radius:50%; background:#FFFFFF; color:#000000; font-size:10px;}
 .overviewCard h3 {font-size:21px; margin:0 0 12px; line-height:1.2;}
 .overviewCard>p {font-size:13px; line-height:1.6; color:var(--product-muted); margin:0 0 20px;}
 .bestFor {margin-top:auto; border-top:1px solid #5AAA6C; padding-top:16px; font-size:12px; line-height:1.6; color:#000000;}
 .bestFor small {display:block; margin-bottom:7px; font-size:8px; color:#000000; letter-spacing:.12em;}
 .overviewCard>a {display:flex; justify-content:space-between; align-items:center; gap:10px; font-size:12px; font-weight:600; color:#000000; margin-top:22px;}
 
+@media(max-width:1400px) {.overviewGrid{grid-template-columns:repeat(3,minmax(0,1fr));}}
 @media(max-width:1100px) {.overviewGrid{grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:800px) {.sectionHeading{align-items:flex-start; flex-direction:column; gap:20px;}.sectionHeading>p{max-width:580px;}.suite{padding-block:48px;}}
-@media(max-width:500px) {.container{width:calc(100% - 40px);}.eyebrow{font-size:8px;}.actions{align-items:stretch; flex-direction:column;}.overviewGrid{grid-template-columns:1fr;}.overviewCard{padding:164px 22px 22px;}.sectionHeading h2{font-size:34px;}}
+@media(max-width:500px) {.container{width:calc(100% - 40px);}.suite{width:calc(100% - 40px);}.eyebrow{font-size:8px;}.actions{align-items:stretch; flex-direction:column;}.overviewGrid{grid-template-columns:1fr;}.overviewCard{padding:196px 22px 22px;}.sectionHeading h2{font-size:34px;}}
 
 .productDetails {margin-top:35px; border:1px solid #5AAA6C; border-radius:21px; overflow:hidden; scroll-margin-top:110px;}
 .tabList {display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:6px; padding:10px; background:#FFFFFF; border-bottom:1px solid #5AAA6C; color:#000000;}
