@@ -1,10 +1,10 @@
 'use client';
 
+import Image from 'next/image';
 import { products } from './content';
-import ProductWorkflow from './ProductWorkflow';
 import styles from './ProductDetails.module.css';
 
-export default function CRMDetails({ active }: { active: boolean }) {
+export default function CRMDetails({ active: _active }: { active: boolean }) {
   const product = products.find(item => item.id === 'crm')!;
 
   return <div>
@@ -16,7 +16,13 @@ export default function CRMDetails({ active }: { active: boolean }) {
         <a className={styles.demo} href={product.externalUrl} target="_blank" rel="noopener noreferrer">Open Bizgenix CRM <span aria-hidden="true">→</span></a>
         <ul className={styles.traits}><li>One customer view</li><li>Clear ownership</li><li>Stronger conversion</li></ul>
       </div>
-      <ProductWorkflow product={product} active={active} />
+      <div className={styles.dashboardScene} role="img" aria-label="Bizgenix CRM sidebar customization dashboard">
+        <div className={styles.dashboardLaptop}>
+          <div className={styles.dashboardLid}><span className={styles.dashboardCamera} /><div className={styles.dashboardScreen}><Image src="/products/crm-dashboard-screen.png" alt="" width={1821} height={864} unoptimized loading="eager" className={styles.dashboardScreenshot} /></div></div>
+          <div className={styles.dashboardBase}><span /></div>
+          <div className={styles.dashboardShadow} />
+        </div>
+      </div>
     </div>
     <div className={styles.columns}>
       <div><h4>Key capabilities</h4><p className={styles.columnCaption}>BUILT FOR SALES VISIBILITY</p><ul>{product.capabilities.map(item => <li key={item}>{item}</li>)}</ul></div>

@@ -47,7 +47,7 @@ export default function GrowthIntelligenceDetails({ active }: { active: boolean 
             <span className={styles.camera} aria-hidden="true" />
             <div className={styles.screen}>
               <div className={styles.dashboard} data-growth-reveal="screen">
-                <Image ref={imageRef} src="/products/growth-interface-reference.png" alt="Growth Intelligence dashboard: Your operating picture starts with one clean sync." width={1855} height={848} unoptimized loading="eager" className={styles.dashboardImage} />
+                <Image ref={imageRef} src="/products/growth-dashboard-screen.png" alt="Growth Intelligence dashboard showing the operating picture and Tally connection workspace." width={1919} height={911} unoptimized loading="eager" className={styles.dashboardImage} />
               </div>
               <span className={styles.reflection} aria-hidden="true" />
             </div>

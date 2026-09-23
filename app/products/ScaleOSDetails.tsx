@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useLayoutEffect, useRef } from 'react';
 import { demoUrl, products } from './content';
 import { animateScaleOS } from './animateScaleOS';
@@ -69,7 +70,7 @@ export default function ScaleOSDetails({ active }: { active: boolean }) {
           <div className={styles.orbit} data-scale-reveal="orbit" />
           <div className={styles.laptopEntrance} data-scale-reveal="laptop">
             <div className={styles.laptop}>
-              <div className={styles.lid}><span className={styles.camera} /><div className={styles.screen}><div className={styles.screenContent} data-scale-reveal="screen"><Dashboard /></div><div className={styles.reflection} /></div></div>
+              <div className={styles.lid}><span className={styles.camera} /><div className={styles.screen}><div className={styles.screenContent} data-scale-reveal="screen"><Image src="/products/scaleos-dashboard-screen.png" alt="" width={1864} height={844} unoptimized loading="eager" className={styles.dashboardImage} /></div><div className={styles.reflection} /></div></div>
               <div className={styles.base}><span className={styles.notch} /><span className={styles.vents}>▪▪▪▪▪</span></div>
               <div className={styles.laptopShadow} />
             </div>

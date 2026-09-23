@@ -18,9 +18,10 @@
 .laptop {position:relative;transform:perspective(1400px) rotateY(-9deg) rotateX(5deg) rotateZ(1deg);transform-origin:center;}
 .lid {position:relative;padding:12px 10px 13px;border-radius:20px 20px 12px 12px;background:#000000;border:2px solid #5AAA6C;box-shadow:none;color:#FFFFFF;}
 .camera {position:absolute;left:50%;top:5px;width:3px;height:3px;border-radius:50%;background:#000000;box-shadow:none;color:#FFFFFF;}
-.screen {position:relative;aspect-ratio:1.49;overflow:hidden;border-radius:7px;background:#000000;container-type:inline-size;color:#FFFFFF;}
+.screen {position:relative;aspect-ratio:1864/844;overflow:hidden;border-radius:7px;background:#000000;container-type:inline-size;color:#FFFFFF;}
 .screenContent {position:absolute;inset:0;}
-.reflection {position:absolute;inset:0;background:#FFFFFF;pointer-events:none;color:#000000;}
+.dashboardImage {display:block;width:100%;height:100%;object-fit:cover;}
+.reflection {position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,.16),transparent 35%);pointer-events:none;color:#000000;}
 .base {position:relative;left:-10%;width:111%;height:19px;margin-top:-3px;z-index:2;border-radius:0 0 50% 45% / 0 0 70% 70%;background:#FFFFFF;box-shadow:none;color:#000000;}
 .notch {position:absolute;left:39%;top:0;width:15%;height:5px;background:#FFFFFF;border-radius:0 0 8px 8px;color:#000000;}
 .vents {position:absolute;right:2%;top:-5px;color:#000000;font-size:14px;letter-spacing:1px;}

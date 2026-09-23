@@ -15,12 +15,12 @@
 .laptop {position:relative;z-index:2;min-width:0;margin:0;}
 .lid {position:relative;padding:12px 9px 13px;border:2px solid #5AAA6C;border-radius:18px 18px 5px 5px;background:#000000;box-shadow:none;color:#FFFFFF;}
 .camera {position:absolute;top:4px;left:50%;width:3px;height:3px;border-radius:50%;background:#000000;box-shadow:none;color:#FFFFFF;}
-.screen {position:relative;aspect-ratio:749/420;border-radius:8px;overflow:hidden;background:#000000;color:#FFFFFF;}
+.screen {position:relative;aspect-ratio:1919/911;border-radius:8px;overflow:hidden;background:#000000;color:#FFFFFF;}
 .dashboard {position:absolute;inset:0;overflow:hidden;}
 /* Display only the dashboard region of the unmodified user-supplied reference.
    Reference: 1855 × 848. Screen bounds: x=750, y=246, w=749, h=420. */
-.dashboardImage {position:absolute;width:247.663551%;height:201.904762%;max-width:none;left:-100.133511%;top:-58.571429%;}
-.reflection {position:absolute;inset:0;pointer-events:none;background:#FFFFFF;color:#000000;}
+.dashboardImage {display:block;width:100%;height:100%;object-fit:cover;}
+.reflection {position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,rgba(255,255,255,.18),transparent 35%);color:#000000;}
 .base {position:relative;z-index:2;left:-7%;width:114%;height:18px;margin-top:-2px;border-radius:0 0 50% 50% / 0 0 80% 80%;background:#FFFFFF;box-shadow:none;color:#000000;}
 .base>span {position:absolute;top:0;left:42%;width:17%;height:6px;border-radius:0 0 10px 10px;background:#FFFFFF;color:#000000;}
 .laptopShadow {position:absolute;bottom:-12px;left:0;right:0;height:16px;border-radius:50%;background:#000000;filter:blur(9px);z-index:-1;color:#FFFFFF;}
