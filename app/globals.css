@@ -90,11 +90,28 @@ main section[id]{scroll-margin-top:calc(var(--nav-height) + 16px)}
 .hero{
   position:relative;
   isolation:isolate;
+  grid-template-columns:1fr;
   background:
     radial-gradient(circle at 78% 42%,rgba(143,232,164,.42) 0,rgba(202,246,214,.25) 28%,transparent 54%),
     radial-gradient(circle at 8% 10%,rgba(181,239,195,.42) 0,transparent 34%),
     linear-gradient(112deg,#f5fff7 0%,#fbfffc 43%,#e5f9e9 100%);
   color:#081d12;
+}
+.heroVideo{
+  position:absolute;
+  z-index:-3;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+.heroVideoOverlay{
+  position:absolute;
+  z-index:-2;
+  inset:0;
+  background:rgba(245,255,247,.78);
+  pointer-events:none;
 }
 .hero::before,.hero::after{
   content:'';
@@ -122,10 +139,12 @@ main section[id]{scroll-margin-top:calc(var(--nav-height) + 16px)}
 }
 .heroCopy{
   align-self:center;
+  justify-self:center;
   display:flex;
   flex-direction:column;
   align-items:center;
   text-align:center;
+  width:min(100%,920px);
 }
 .hero .lead,.hero .support{margin-left:auto;margin-right:auto}
 .hero .actions{justify-content:center}
@@ -151,17 +170,33 @@ main section[id]{scroll-margin-top:calc(var(--nav-height) + 16px)}
 .intelligence .outline:hover{background:#fff;color:#2f7d45}
 .intelligence .growthActions a:focus-visible{outline-color:#fff}
 
-/* Keep every trusted-stage logo inside an equal, responsive frame. */
+/* Move all trusted-stage cards in one continuous right-to-left sequence. */
 .institutionLogos{
-  display:grid;
-  grid-template-columns:repeat(5,minmax(0,1fr));
+  display:block;
+  overflow:hidden;
+  width:100%;
+  max-width:100%;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+}
+.institutionTrack{
+  display:flex;
+  width:max-content;
+  animation:institutionMarquee 32s linear infinite;
+  will-change:transform;
+}
+.institutionSequence{
+  display:flex;
+  flex:none;
   gap:12px;
-  width:min(100%,760px);
+  padding-right:12px;
 }
 .institutionLogo{
-  width:100%!important;
+  flex:none;
+  width:132px!important;
   height:74px!important;
   padding:10px!important;
+  animation:none;
 }
 .institutionLogo.tedx{padding:0!important}
 .institutionLogo img{
@@ -170,11 +205,13 @@ main section[id]{scroll-margin-top:calc(var(--nav-height) + 16px)}
   object-fit:contain;
   transform:none!important;
 }
-@media(max-width:780px){
-  .institutionLogos{grid-template-columns:repeat(3,minmax(0,1fr));width:min(100%,480px)}
+@keyframes institutionMarquee{
+  from{transform:translateX(0)}
+  to{transform:translateX(-50%)}
 }
+@media(prefers-reduced-motion:reduce){.institutionTrack{animation-play-state:paused}}
 @media(max-width:520px){
-  .institutionLogos{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;width:100%;max-width:320px}
-  .institutionLogo{height:64px!important;padding:8px!important}
+  .institutionSequence{gap:9px;padding-right:9px}
+  .institutionLogo{height:64px!important;padding:8px!important;width:108px!important}
   .institutionLogo.tedx{height:64px!important;padding:0!important}
 }
