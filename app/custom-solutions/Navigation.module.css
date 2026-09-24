@@ -37,10 +37,10 @@
 .desktopLinks a:hover { color: var(--nav-text); }
 .actions { display: flex; align-items: center; gap: 16px; }
 .mobileMenu { display: none; }
-.menuToggle { display: grid; place-items: center; min-width: 44px; min-height: 44px; padding: 8px; cursor: pointer; list-style: none; color: var(--nav-secondary); font-size: 22px; }
+.menuToggle { display: grid; place-items: center; min-width: 44px; min-height: 44px; padding: 8px; cursor: pointer; list-style: none; color: var(--nav-secondary); font-size: 22px; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
 .menuToggle::-webkit-details-marker { display: none; }
-.mobileLinks { position: absolute; inset: 68px 0 auto; display: flex; flex-direction: column; padding: 16px 32px 24px; background: var(--nav-menu); border-bottom: 1px solid var(--nav-border); max-height: calc(100dvh - 68px); overflow-y: auto; }
-.mobileLinks a { display: flex; align-items: center; min-height: 48px; padding: 12px 0; border-bottom: 1px solid var(--nav-border); font-size: 15px; font-weight: 400; color: var(--nav-secondary); text-decoration: none; }
+.mobileLinks { position: absolute; z-index: 1; inset: 68px 0 auto; display: flex; flex-direction: column; padding: 16px 32px 24px; background: var(--nav-menu); border-bottom: 1px solid var(--nav-border); max-height: calc(100dvh - 68px); overflow-y: auto; }
+.mobileLinks a { display: flex; align-items: center; min-height: 48px; padding: 12px 0; border-bottom: 1px solid var(--nav-border); font-size: 15px; font-weight: 400; color: var(--nav-secondary); text-decoration: none; touch-action: manipulation; }
 .mobileLinks a:hover { color: var(--nav-text); }
 .mobileLinks a[aria-current='page'] { color: var(--nav-text); font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
 .header a:focus-visible, .header button:focus-visible, .header summary:focus-visible { outline: 2px solid #5aaa6c; outline-offset: 4px; }
