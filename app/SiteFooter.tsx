@@ -39,14 +39,14 @@ export default function SiteFooter() {
             <p className={styles.description}>India&apos;s trusted AI business consultant — delivering AI automation, AI strategy, AI training, and digital transformation to enterprises and SMEs nationwide.</p>
           </div>
 
-          <details className={styles.footerGroup}>
+          <details className={styles.footerGroup} open>
             <summary><h2 className={styles.heading}>Services</h2><span className={styles.groupArrow} aria-hidden="true">⌄</span></summary>
             <nav className={styles.linkGroup} aria-label="Footer services">
               <ul>{services.map(([label, href]) => <li key={label}><a href={href}>{label}</a></li>)}</ul>
             </nav>
           </details>
 
-          <details className={styles.footerGroup}>
+          <details className={styles.footerGroup} open>
             <summary><h2 className={styles.heading}>Contact</h2><span className={styles.groupArrow} aria-hidden="true">⌄</span></summary>
             <address className={styles.contactList}>
                 <a href="mailto:info@bizgenix.com"><span className={styles.contactIcon}><img src="/footer/mail.svg" alt="" width={20} height={20} /></span><span>info@bizgenix.com</span></a>
@@ -55,7 +55,7 @@ export default function SiteFooter() {
               </address>
           </details>
 
-          <details className={`${styles.footerGroup} ${styles.follow}`}>
+          <details className={`${styles.footerGroup} ${styles.follow}`} open>
             <summary><h2 className={styles.heading}>Founder&apos;s Handles</h2><span className={styles.groupArrow} aria-hidden="true">⌄</span></summary>
             <ul className={styles.socials}>
               {founderSocials.map(social => <li key={social.icon}>
@@ -67,7 +67,7 @@ export default function SiteFooter() {
             </ul>
           </details>
 
-          <details className={`${styles.footerGroup} ${styles.follow}`}>
+          <details className={`${styles.footerGroup} ${styles.follow}`} open>
             <summary><h2 className={styles.heading}>Follow us on</h2><span className={styles.groupArrow} aria-hidden="true">⌄</span></summary>
             <ul className={styles.socials}>
               {companySocials.map(social => <li key={social.icon}>
