@@ -6,7 +6,7 @@ import styles from './CourseProgramSection.module.css';
 import PriceCountdown from './PriceCountdown';
 
 const enrollmentUrl = 'https://rzp.io/rzp/Q47luheE';
-const whatsappUrl = 'https://wa.me/918200858674?text=Hi%2C%20I%20want%20to%20apply%20for%20Scale%20With%20AI%E2%80%94the%20live%2012-week%20AI%20implementation%20program.%20Please%20help%20me%20confirm%20my%20fit%20and%20the%20%E2%82%B914%2C999%20application%20offer.';
+const contactUrl = '/contact#contact-form';
 
 const highlights = [
   { from: 12, label: 'weeks, live' },
@@ -223,7 +223,7 @@ export default function CourseProgramSection() {
           <p className={styles.perWeek}>Less than <strong>₹1,250 per week</strong> across the journey</p>
           <ul>{inclusions.map(item => <li key={item}><span aria-hidden="true">✓</span>{item}</li>)}</ul>
           <a className={styles.priceCta} href={enrollmentUrl} target="_blank" rel="noopener noreferrer">Pay ₹14,999 & enroll now <span aria-hidden="true">↗</span></a>
-          <a className={styles.priceQuestion} href={whatsappUrl} target="_blank" rel="noopener noreferrer">Have a question first? WhatsApp the team ↗</a>
+          <a className={styles.priceQuestion} href={contactUrl}>Have a question first? Contact the team →</a>
           <small>First-two-session fit protection applies; confirm terms with the team before enrolment.</small>
         </article>
       </div>

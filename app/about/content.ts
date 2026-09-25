@@ -1,6 +1,6 @@
 // Core copy: Bizgenix_About_Page_Content_Detailed.pdf.
 // Industry examples reuse the existing website's industry descriptions.
-export const strategyUrl = 'https://wa.me/918780671906?text=' + encodeURIComponent("Hi Bizgenix, I'd like to book a free AI strategy session for my business.");
+export const strategyUrl = '/contact#contact-form';
 export const capabilities = [
   { title: 'In-House Products', headline: 'A focused product. A practical starting point.', description: 'Explore intelligent systems for customer conversations, operations and business visibility.', label: 'Explore our products', href: '/products', items: [
     ['Voice AI', '/products#voice-ai'], ['BizChat', '/products#bizchat'], ['ScaleOS', '/products#scaleos'], ['Growth Intelligence', '/products#growth-intelligence'],

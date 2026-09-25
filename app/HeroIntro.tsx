@@ -5,7 +5,7 @@ import { useSplashComplete } from './SplashIntro';
 import styles from './HeroIntro.module.css';
 
 const headline = ['AI That Takes Work', 'Off Your Desk.'];
-const description = 'Bizgenix builds AI systems, business automations and intelligent applications that help Indian businesses reduce repetitive work, respond faster, improve visibility and scale without unnecessary operational complexity.';
+const description = 'We help Indian businesses automate follow-ups, reduce manual work and make clearer decisions - with practical AI systems built around their teams.';
 const headlineLength = headline.join('').length;
 const totalLength = headlineLength + description.length;
 const headlineSpeed = 48;

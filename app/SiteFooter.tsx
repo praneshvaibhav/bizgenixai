@@ -22,7 +22,7 @@ const founderSocials: readonly { name: string; icon: string; href: string }[] = 
 const companySocials: readonly { name: string; icon: string; href: string }[] = [
   { name: 'Instagram', icon: 'instagram', href: 'https://www.instagram.com/bizgenix.ai/' },
   { name: 'LinkedIn', icon: 'linkedin', href: 'https://www.linkedin.com/company/bizgenix-ai-solutions/posts/' },
-  { name: 'WhatsApp', icon: 'whatsapp', href: 'https://api.whatsapp.com/send?phone=918780671906&text=Hi%21+I+would+like+to+have+some+queries.&type=phone_number&app_absent=0' },
+  { name: 'Contact', icon: 'mail', href: '/contact' },
 ];
 
 const mapUrl = 'https://www.google.com/maps/place/Bizgenix+AI+Solutions+Pvt+Ltd/@23.0767474,72.5054583,17z/data=!3m1!4b1!4m6!3m5!1s0xb21a53f2c4da69d:0x5ba37ae89bf70d3d!8m2!3d23.0767474!4d72.5080332!16s%2Fg%2F11z38y6rxt?hl=en-US';
@@ -71,7 +71,7 @@ export default function SiteFooter() {
             <summary><h2 className={styles.heading}>Follow us on</h2><span className={styles.groupArrow} aria-hidden="true">⌄</span></summary>
             <ul className={styles.socials}>
               {companySocials.map(social => <li key={social.icon}>
-                <a className={styles.social} href={social.href} target="_blank" rel="noopener noreferrer">
+                <a className={styles.social} href={social.href} target={social.href.startsWith('http') ? '_blank' : undefined} rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}>
                   <img src={`/footer/${social.icon}.svg`} alt="" width={20} height={20} />
                   <span>{social.name}</span>
                 </a>

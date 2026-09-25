@@ -1,7 +1,7 @@
 // Course content supplied in Bizgenix_Courses_Page_Content_Detailed.pdf.
-export const enquire = (topic: string) => `https://wa.me/918780671906?text=${encodeURIComponent(`Hi Bizgenix, I'd like to know more about ${topic}. Please share the details and next steps.`)}`;
-export const communityUrl = enquire('joining the Bizgenix AI learning community');
-export const corporateUrl = enquire('a customized corporate AI training program for our team');
+export const enquire = '/contact#contact-form';
+export const communityUrl = enquire;
+export const corporateUrl = enquire;
 
 export const courses = [
   { id: 'ai-foundations', title: 'AI Foundations for Everyone', level: 'Beginner', category: 'Foundations', image: "/courses/ai-foundations.webp", imageAlt: "Participants at a Bizgenix AI learning workshop in Surat", imagePosition: "50% 50%", outcome: 'Understand AI concepts, tools, opportunities and responsible use without requiring a technical background.' },

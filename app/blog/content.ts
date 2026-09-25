@@ -1,6 +1,6 @@
 // Source: Bizgenix_Blog_Page_Content_Detailed.pdf. The brief supplies previews,
 // not published article bodies, dates, popularity data or downloadable resources.
-export const contactUrl = (subject: string) => `https://wa.me/918780671906?text=${encodeURIComponent(`Hi Bizgenix, I'd like to discuss ${subject}.`)}`;
+export const contactUrl = '/contact#contact-form';
 
 export const categories = [
   ['AI Strategy', 'Guides for identifying AI opportunities, planning adoption, estimating ROI and creating an implementation roadmap.'],
