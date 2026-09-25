@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, type CSSProperties } from 'react';
-import { demoUrl, products } from './content';
+import { products } from './content';
 import ProductWorkflow from './ProductWorkflow';
 import { animateVoiceAI } from './animateVoiceAI';
 import styles from './VoiceAIDetails.module.css';
@@ -30,7 +30,7 @@ export default function VoiceAIDetails({ active }: { active: boolean }) {
           <li><span className={styles.globe} aria-hidden="true"><i /></span><p><strong>Works in</strong>Multiple Languages</p></li>
           <li><span className={styles.sliders} aria-hidden="true"><i /><i /><i /></span><p><strong>Integrates with</strong>your CRM &amp; Systems</p></li>
         </ul>
-        <a className={styles.cta} href={demoUrl('Voice AI')} target="_blank" rel="noopener noreferrer">Schedule a Live Demo <span aria-hidden="true">→</span></a>
+        <a className={styles.cta} href="/contact#contact-form">Schedule a Live Demo <span aria-hidden="true">→</span></a>
       </div>
       <div className={styles.scene} aria-hidden="true">
         <div className={styles.halo} data-voice-reveal="halo" />

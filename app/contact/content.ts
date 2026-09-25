@@ -7,7 +7,7 @@ export const queryTypes = [
   'Data Analytics & BI',
   'AI Strategy Consulting',
   'AI Training',
-  'Software Services',
+  'Custom Solution',
 ];
 export const nextSteps = [
   { title: 'Consultation Scheduled', description: 'We’ll review your needs and schedule a meeting.' },

@@ -1,22 +1,26 @@
 ﻿'use client';
 
 import { useState, type FormEvent } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import { email, nextSteps, phone, queryTypes } from './content';
 import styles from './page.module.css';
 import SiteFooter from '../SiteFooter';
 import Navigation from '../custom-solutions/Navigation';
 
 export default function ContactExperience() {
-  const [emailOpened, setEmailOpened] = useState(false);
+  const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID;
+  const [configurationError, setConfigurationError] = useState(false);
+  const [state, handleSubmit] = useForm(formId || 'form-not-configured');
 
-  function sendMessage(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const value = (name: string) => String(data.get(name) ?? '').trim();
-    const subject = `Website enquiry: ${value('projectType') || 'General enquiry'}`;
-    const body = [`Name: ${value('firstName')} ${value('lastName')}`, `Email: ${value('email')}`, `Company: ${value('company') || 'Not provided'}`, `Query: ${value('projectType') || 'General enquiry'}`, '', value('message')].join('\n');
-    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setEmailOpened(true);
+  async function submitForm(event: FormEvent<HTMLFormElement>) {
+    if (!formId) {
+      event.preventDefault();
+      setConfigurationError(true);
+      return;
+    }
+
+    setConfigurationError(false);
+    await handleSubmit(event);
   }
 
   return (
@@ -34,18 +38,17 @@ export default function ContactExperience() {
             <div className={styles.card}>
               <div className={styles.cardHeading}><h2>Begin Your Journey</h2><p>Ready to transform your business with AI ? Let&apos;s discuss your goals, challenges, and the right AI solution for your business.
 </p></div>
-              <form className={styles.form} onSubmit={sendMessage}>
-                <div className={styles.nameRow}>
-                  <div><label htmlFor="first-name">First Name<span>*</span></label><input id="first-name" name="firstName" autoComplete="given-name" placeholder="Your First Name" required maxLength={100} /></div>
-                  <div><label htmlFor="last-name">Last Name<span>*</span></label><input id="last-name" name="lastName" autoComplete="family-name" placeholder="Your Last Name" required maxLength={100} /></div>
-                </div>
+              <form id="contact-form" className={styles.form} onSubmit={submitForm}>
+                <div><label htmlFor="name">Name<span>*</span></label><input id="name" name="name" autoComplete="name" placeholder="Your Name" required maxLength={200} /></div>
                 <div><label htmlFor="contact-email">Email<span>*</span></label><input id="contact-email" type="email" name="email" autoComplete="email" placeholder="your@email.com" required maxLength={254} /></div>
                 <div><label htmlFor="company">Company</label><input id="company" name="company" autoComplete="organization" placeholder="Your Company Name" maxLength={200} /></div>
-                <div><label htmlFor="query">Query</label><div className={styles.selectWrap}><select id="query" name="projectType" defaultValue=""><option value="">Select query type</option>{queryTypes.map(query => <option key={query}>{query}</option>)}</select></div></div>
+                <div><label htmlFor="query">Query</label><div className={styles.selectWrap}><select id="query" name="queryType" defaultValue=""><option value="">Select query type</option>{queryTypes.map(query => <option key={query}>{query}</option>)}</select></div></div>
                 <div><label htmlFor="message">Message<span>*</span></label><textarea id="message" name="message" placeholder="Tell us about your project requirements, timeline, and any specific needs..." required maxLength={4000} /></div>
-                <button className={styles.sendButton} type="submit" aria-describedby="email-help">Send Message <span aria-hidden="true">→</span></button>
-                <p id="email-help" className={styles.formHelp}>Opens your email app with your message ready to send.</p>
-                {emailOpened && <p className={styles.formStatus} role="status">Finish sending in your email app. If it did not open, email us directly at <a href={`mailto:${email}`}>{email}</a>. Your message has not been sent by this website.</p>}
+                <button className={styles.sendButton} type="submit" disabled={state.submitting}>{state.submitting ? 'Sending...' : <>Send Message <span aria-hidden="true">→</span></>}</button>
+                <p className={styles.formHelp}>We&apos;ll get back to you as soon as possible.</p>
+                {state.succeeded && <p className={styles.formStatus} role="status">Thank you! Your message has been sent successfully.</p>}
+                {(configurationError || state.errors) && <p className={styles.formStatus} role="alert">Something went wrong. Please try again.</p>}
+                <ValidationError errors={state.errors} className={styles.formStatus} />
               </form>
             </div>
             <div className={styles.sideCards}>

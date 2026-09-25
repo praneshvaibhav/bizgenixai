@@ -87,8 +87,11 @@ export default function ScaleWithAI() {
   }, []);
 
   return (
-    <section className={styles.section} id="programs" ref={sectionRef} aria-labelledby="scale-stories-title">
+    <section className={styles.section} id="programs" ref={sectionRef} aria-labelledby="physical-event-title">
       <div className={styles.glow} aria-hidden="true" />
+      <div className={styles.container}>
+        <h2 className={styles.sectionTitle} id="physical-event-title" data-learning-reveal>Physical Event</h2>
+      </div>
       <div className={styles.scrollScene} ref={sceneRef} style={{ '--scene-height': `${100 + stories.length * 55}vh` } as CSSProperties}>
         <div className={styles.sticky}>
           <div className={styles.container}>
@@ -96,7 +99,7 @@ export default function ScaleWithAI() {
               <div className={styles.copy}>
                 <header className={styles.header} ref={headerRef}>
                   <div data-reveal><span className={styles.eyebrow}>Scale With AI</span></div>
-                  <h2 id="scale-stories-title"><span className={styles.titleClip}><span data-reveal>India’s hands-on AI movement <em>for business owners.</em></span></span></h2>
+                  <h3 id="scale-stories-title"><span className={styles.titleClip}><span data-reveal>India’s hands-on AI movement <em>for business owners.</em></span></span></h3>
                 </header>
                 <p className={styles.description}>Scale With AI brings business owners into a live, practical environment where they build AI agents, no-code apps and automation blueprints instead of only watching presentations.</p>
                 <ul className={styles.cities}>
@@ -161,7 +164,6 @@ export default function ScaleWithAI() {
       <div className={styles.container}>
         <div className={styles.actions}>
           <a className={styles.exploreButton} href="https://scalewithai.in/" target="_blank" rel="noopener noreferrer">Explore Scale with AI <span aria-hidden="true">↗</span></a>
-          <a className={styles.trainingLink} href="https://api.whatsapp.com/send/?phone=918780671906&text=Hi%21+I%27d+like+to+know+more+about+the+Corporate+Training+Program+%E2%80%94+including+the+program+fee+and+enrolment+details.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">Enquire about Corporate Training <span aria-hidden="true">→</span></a>
         </div>
       </div>
     </section>

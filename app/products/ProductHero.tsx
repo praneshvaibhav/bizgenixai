@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef } from 'react';
 import { observeVisibility } from '../observeVisibility';
-import { demoUrl, products } from './content';
+import { products } from './content';
 import styles from './ProductHero.module.css';
 
 const metrics = [
@@ -18,6 +18,14 @@ const desktopPaths = [
   'M230 314 C365 314 300 423 430 423',
   'M230 334 C345 334 285 546 430 546',
 ];
+
+const productUrls = {
+  'growth-intelligence': 'https://gi.bizgenix.ai/',
+  crm: 'https://crm.bizgenix.ai/',
+  scaleos: 'https://scaleos.bizgenix.ai/login',
+  'voice-ai': 'https://voice.bizgenix.ai/',
+  bizchat: 'https://chat.bizgenix.ai/',
+} as const;
 const mobilePaths = [285, 400, 515, 630, 745].map(y => `M180 180 V207 Q180 226 161 226 H39 Q20 226 20 245 V${y - 14} Q20 ${y} 34 ${y} H44`);
 
 export default function ProductHero() {
@@ -136,7 +144,6 @@ export default function ProductHero() {
         <p className={styles.eyebrow}>Our product ecosystem</p>
         <h1 id="products-title">AI products built to<br /><em>run smarter<br />businesses.</em></h1>
         <p className={styles.description}>Communicate faster. Automate repetitive work. See your business clearly. Practical AI products built around real workflows, Indian operating environments and measurable outcomes.</p>
-        <div className={styles.actions}><a className={styles.primary} href="#product-suite">Explore Our Products <span aria-hidden="true">→</span></a><a className={styles.secondary} href={demoUrl()} target="_blank" rel="noopener noreferrer">Book a Product Demo <span aria-hidden="true">→</span></a></div>
         <ul className={styles.trust}>{['Built for real workflows', 'Trusted by businesses', 'Designed for scale'].map(item => <li key={item}><span aria-hidden="true">✓</span>{item}</li>)}</ul>
         <p className={styles.note}>One platform.<br />Many possibilities.</p>
       </div>
@@ -152,9 +159,9 @@ export default function ProductHero() {
         <svg className={styles.mobileConnections} viewBox="0 0 360 815" preserveAspectRatio="none" aria-hidden="true">
           {mobilePaths.map((path, index) => <g key={path}><path d={path} pathLength="1" data-connection={index} /><g data-node={index}><circle cx="180" cy="180" r="4" /><circle cx="44" cy={285 + index * 115} r="4" /></g></g>)}
         </svg>
-        {products.map((product, index) => <a key={product.id} href={'externalUrl' in product ? product.externalUrl : `#${product.id}`} target={'externalUrl' in product ? '_blank' : undefined} rel={'externalUrl' in product ? 'noopener noreferrer' : undefined} className={`${styles.product} ${styles[`product${index}`]}`} data-product={index}>
-          <span className={styles.number}>0{index + 1}</span><div><h2>{product.name}</h2><p>{product.summary}</p></div><span className={styles.arrow} aria-hidden="true">→</span>
-        </a>)}
+        {products.map((product, index) => <article key={product.id} className={`${styles.product} ${styles[`product${index}`]}`} data-product={index}>
+          <span className={styles.number}>0{index + 1}</span><div><h2>{product.name}</h2><p>{product.summary}</p></div><a className={styles.arrow} href={productUrls[product.id]} target="_blank" rel="noopener noreferrer" aria-label={`Open ${product.name}`}>→</a>
+        </article>)}
         <p className={styles.signature}>Tools<br />that work<br /><span>together.</span></p>
         <p className={styles.future}>Built<br />for what’s<br />next.</p>
       </div>

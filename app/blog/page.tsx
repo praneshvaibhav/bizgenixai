@@ -7,7 +7,7 @@ import styles from './BlogListing.module.css';
 
 const title = "The CEO's Playbook: AI and Business Insights | Bizgenix";
 const description = "Explore Dr. CA Umang Ratani's LinkedIn newsletter articles on AI adoption, automation, business intelligence and growth.";
-export const metadata: Metadata = { title, description, openGraph: { title, description, type: 'website' }, twitter: { card: 'summary', title, description } };
+export const metadata: Metadata = { title, description, alternates: { canonical: '/blog' }, openGraph: { title, description, type: 'website' }, twitter: { card: 'summary', title, description } };
 
 export default function BlogPage() {
   return <div className={styles.page} id="top">

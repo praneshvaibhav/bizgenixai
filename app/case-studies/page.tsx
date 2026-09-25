@@ -1,6 +1,6 @@
 ﻿import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '../InternalLink';
 import Navigation from '../custom-solutions/Navigation';
 import SiteFooter from '../SiteFooter';
 import CaseStudyCatalog from './CaseStudyCatalog';
@@ -9,7 +9,7 @@ import styles from './page.module.css';
 
 const title = 'AI Case Studies & Business Results | Bizgenix AI';
 const description = 'Explore 18 real Bizgenix AI implementations, from franchise operations and bill verification to textile workflows and WhatsApp automation.';
-export const metadata: Metadata = { title, description, openGraph: { title, description, type: 'website', images: [] }, twitter: { card: 'summary', title, description, images: [] } };
+export const metadata: Metadata = { title, description, alternates: { canonical: '/case-studies' }, openGraph: { title, description, type: 'website', images: [] }, twitter: { card: 'summary', title, description, images: [] } };
 
 export default function CaseStudiesPage() {
   const featured = caseStudies[0];

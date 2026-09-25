@@ -8,6 +8,7 @@ const description = 'Please review the terms that govern your use of Bizgenix AI
 export const metadata: Metadata = {
   title,
   description,
+  alternates: { canonical: '/terms' },
   openGraph: { title, description, type: 'website' },
   twitter: { card: 'summary', title, description },
 };

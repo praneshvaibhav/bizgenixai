@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Link from '../../InternalLink';
 import { notFound } from 'next/navigation';
 import Navigation from '../../custom-solutions/Navigation';
 import ContactSection from '../../ContactSection';
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const insight = insights.find(item => item.slug === slug);
   if (!insight) return {};
   const title = `${insight.title} | Bizgenix Insights`;
-  return { title, description: insight.summary, robots: { index: false, follow: true }, openGraph: { title, description: insight.summary, type: 'website', images: [] }, twitter: { card: 'summary', title, description: insight.summary, images: [] } };
+  return { title, description: insight.summary, alternates: { canonical: `/blog/${insight.slug}` }, robots: { index: false, follow: true }, openGraph: { title, description: insight.summary, type: 'website', images: [] }, twitter: { card: 'summary', title, description: insight.summary, images: [] } };
 }
 
 export default async function InsightPage({ params }: { params: Promise<{ slug: string }> }) {

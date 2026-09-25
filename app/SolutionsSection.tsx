@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './SolutionsSection.module.css';
 
 const testimonials = [
@@ -54,7 +55,7 @@ function TestimonialCard({ testimonial, featured = false }: { testimonial: typeo
       <span className={styles.quoteMark} aria-hidden="true">“</span>
       <blockquote><p>{testimonial.quote}</p></blockquote>
       <figcaption className={styles.client}>
-        <span className={styles.avatar} aria-hidden="true"><img src={testimonial.image} alt="" loading="lazy" decoding="async" /></span>
+        <span className={styles.avatar} aria-hidden="true"><Image src={testimonial.image} alt="" fill sizes="52px" /></span>
         <div><strong>{testimonial.name}</strong><span>{testimonial.company}</span></div>
       </figcaption>
     </figure>

@@ -8,6 +8,7 @@ const description = 'Learn how Bizgenix AI collects, uses, protects, and manages
 export const metadata: Metadata = {
   title,
   description,
+  alternates: { canonical: '/privacy-policy' },
   openGraph: { title, description, type: 'website' },
   twitter: { card: 'summary', title, description },
 };

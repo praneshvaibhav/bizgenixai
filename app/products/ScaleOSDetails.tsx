@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useLayoutEffect, useRef } from 'react';
-import { demoUrl, products } from './content';
+import { products } from './content';
 import { animateScaleOS } from './animateScaleOS';
 import styles from './ScaleOSDetails.module.css';
 
@@ -24,31 +24,6 @@ const workflow: { icon: IconName; label: string }[] = [
   { icon: 'chart', label: 'Gain Visibility' },
 ];
 const metrics = [['50%', 'Faster Approvals'], ['3x', 'Team Productivity'], ['100%', 'Operational Visibility'], ['Built to Scale', 'For Growing Businesses']];
-const navGroups = [
-  ['OVERVIEW', 'Home'], ['SALES', 'Pipeline', 'Proposals'], ['CLIENTS', 'Clients', 'Checklists'], ['WORK', 'Tasks', 'Boards', 'Approvals', 'Projects', 'Teams', 'Reports'],
-];
-
-/** A decorative, live-text dashboard inside the laptop, matching the supplied reference. */
-function Dashboard() {
-  return <div className={styles.dashboard}>
-    <div className={styles.sidebar}>
-      <div className={styles.brand}><span className={styles.brandMark}>S</span><div><strong>ScaleOS</strong><small>BIZGENIX AI</small></div></div>
-      <div className={styles.addTask}>＋ Add task</div>
-      {navGroups.map(([group, ...items]) => <div className={styles.navGroup} key={group}><small>{group}</small>{items.map(item => <div key={item} className={item === 'Home' ? styles.selectedNav : undefined}><span>▧</span>{item}</div>)}</div>)}
-    </div>
-    <div className={styles.desktop}>
-      <div className={styles.topbar}><div><strong>My day</strong><small>YOUR WORKDAY AT A GLANCE</small></div><span className={styles.search}>⌕ &nbsp; Search clients, deals, work or people</span><span className={styles.notifications}>♧ &nbsp; ◉</span><span className={styles.avatar}>YN</span></div>
-      <div className={styles.greeting}><div><small>YOUR OPERATING DAY</small><strong>Good afternoon, Your Name.</strong><p>0 tasks · 0 follow-ups · 0 checklist items today.</p></div><div className={styles.due}><small>ONE NUMBER TO WATCH</small><strong>0</strong><p>due today or earlier</p></div></div>
-      <div className={styles.toolbar}><span>＋ Add task</span><span>◉ Break</span><span>◉ Check out</span><span>▣ Add follow-up</span><span>◉ WhatsApp reminder</span></div>
-      <div className={styles.dashboardMetrics}>{[['Tasks due today', 'none overdue'], ['Follow-ups due', 'today or earlier'], ['Done this week', 'since Monday'], ['Active pipeline', 'opportunities']].map(([label, note]) => <div key={label}><span>◉</span><div><small>{label}</small><strong>0</strong><p>{note}</p></div></div>)}</div>
-      <div className={styles.dashboardBottom}>
-        <div className={styles.queue}><div className={styles.cardHeading}><strong>Your queue</strong><span>All my tasks →</span></div><small>Tasks and follow-ups due today or earlier</small><div className={styles.emptyQueue}><span>▤</span><p>Nothing due today. Plan ahead in <b>Tasks.</b></p></div></div>
-        <div className={styles.activityColumn}><div className={styles.quickActions}><strong>Quick actions</strong><div>{[['＋', 'Add task'], ['▣', 'Add follow-up'], ['☎', 'Log call'], ['▤', 'Create note']].map(([symbol, label]) => <div key={label}><span>{symbol}</span><small>{label}</small></div>)}</div></div><div className={styles.activity}><div className={styles.cardHeading}><strong>Recent activity</strong><span>View all →</span></div><p>No recent activity yet.<br />Your updates will appear here.</p></div></div>
-      </div>
-    </div>
-  </div>;
-}
-
 export default function ScaleOSDetails({ active }: { active: boolean }) {
   const sceneRef = useRef<HTMLDivElement>(null);
   const product = products.find(product => product.id === 'scaleos')!;
@@ -62,7 +37,7 @@ export default function ScaleOSDetails({ active }: { active: boolean }) {
         <p className={styles.eyebrow}>{product.category}</p>
         <h3>One connected system.<br /><em>Clearer execution.</em></h3>
         <p className={styles.description}>{product.description}</p>
-        <a className={styles.cta} href={demoUrl(product.name)} target="_blank" rel="noopener noreferrer">{product.action}<span aria-hidden="true">→</span></a>
+        <a className={styles.cta} href="/contact#contact-form">{product.action}<span aria-hidden="true">→</span></a>
       </div>
       <div className={styles.scene} ref={sceneRef} role="img" aria-label="ScaleOS laptop dashboard connecting task ownership, progress tracking, approvals and business visibility">
         <div className={styles.sceneContents} aria-hidden="true">

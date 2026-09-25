@@ -54,13 +54,12 @@ export default function HeroIntro() {
     };
   }, [splashComplete]);
 
-  const complete = visibleCharacters >= totalLength;
   const typingHeading = splashComplete && visibleCharacters < headlineLength;
-  const typingDescription = splashComplete && visibleCharacters >= headlineLength && !complete;
+  const typingDescription = splashComplete && visibleCharacters >= headlineLength && visibleCharacters < totalLength;
 
   return (
     <>
-      <noscript><style>{`.${styles.untyped}{visibility:visible!important}.${styles.actions}[data-ready='false']{visibility:visible!important;opacity:1!important;pointer-events:auto!important}.${styles.caret}{display:none!important}`}</style></noscript>
+      <noscript><style>{`.${styles.untyped}{visibility:visible!important}.${styles.caret}{display:none!important}`}</style></noscript>
       <h1>
         <span className={styles.srOnly}>{headline.join(' ')}</span>
         <span aria-hidden="true">
@@ -72,9 +71,6 @@ export default function HeroIntro() {
         <span className={styles.srOnly}>{description}</span>
         <span aria-hidden="true"><TypedText text={description} count={visibleCharacters - headlineLength} cursor={typingDescription} /></span>
       </p>
-      <div className={`actions ${styles.actions}`} data-ready={complete}>
-        <a className="button" href="https://api.whatsapp.com/send/?phone=918780671906&text=Hi%21+I%27d+like+to+book+a+Free+AI+Strategy+Session+including+details.&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">Book an AI Strategy Session <span className="arrow">↗</span></a>
-      </div>
     </>
   );
 }

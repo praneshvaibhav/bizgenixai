@@ -5,8 +5,9 @@ import SiteFooter from './SiteFooter';
 
 export default function ContactSection({
   footerOnly = false,
-  bookingHref = 'https://api.whatsapp.com/send/?phone=918780671906&text=Hi%21+I%27d+like+to+book+a+Free+AI+Strategy+Session+including+details.&type=phone_number&app_absent=0',
+  bookingHref = '/contact#contact-form',
 }: { homeHref?: string; footerOnly?: boolean; bookingHref?: string }) {
+  const opensNewTab = /^https?:\/\//.test(bookingHref);
   return <>
     {!footerOnly && <section className={styles.section} id="contact" aria-labelledby="contact-title">
       <div className={styles.layout}>
@@ -15,7 +16,7 @@ export default function ContactSection({
           <h2 id="contact-title">Ready to put AI to work inside <em>your business?</em></h2>
           <p className={styles.description}>Tell us where your business is losing time, leads, cash or visibility. We will help you identify the right first AI use case and the fastest practical path to implementation.</p>
           <div className={styles.actions}>
-            <a className={styles.primary} href={bookingHref} target="_blank" rel="noopener noreferrer">Book a Free AI Strategy Session <span aria-hidden="true">⟶</span></a>
+            <a className={styles.primary} href={bookingHref} target={opensNewTab ? '_blank' : undefined} rel={opensNewTab ? 'noopener noreferrer' : undefined}>Book a Free AI Strategy Session <span aria-hidden="true">⟶</span></a>
           </div>
         </div>
 

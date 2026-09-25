@@ -99,20 +99,29 @@ export default function SplashIntro({ children }: { children: ReactNode }) {
     <>
       <noscript><style>{`.${styles.splash}{display:none!important}.${styles.content}{display:block!important}`}</style></noscript>
       {active && (
-        <div className={styles.splash} ref={splashRef}>
-          <div className={styles.logo} role="img" aria-label="Welcome to Bizgenix AI">
+        <div
+          className={styles.splash}
+          ref={splashRef}
+          style={{ position: 'fixed', inset: 0, zIndex: 1000, display: 'grid', placeItems: 'center', background: '#fff', color: '#000' }}
+        >
+          <div
+            className={styles.logo}
+            role="img"
+            aria-label="Welcome to Bizgenix AI"
+            style={{ position: 'relative', width: 'min(76vw, 520px)', aspectRatio: '640 / 233' }}
+          >
             {/* Clip two copies of the original asset to preserve the exact brand artwork. */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img data-logo-symbol className={styles.symbol} src="/bizgenixlogo.webp" width="640" height="233" alt="" fetchPriority="high" />
+            <img data-logo-symbol className={styles.symbol} src="/bizgenixlogo.webp" width="640" height="233" alt="" fetchPriority="high" style={{ position: 'absolute', inset: 0, display: 'block', width: '100%', height: '100%', objectFit: 'contain', clipPath: 'inset(15% 66% 20% 9%)', transformOrigin: '21.5% 47%', transform: 'translateX(28.5%) scale(.72)', opacity: 0 }} />
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img data-logo-wordmark className={styles.wordmark} src="/bizgenixlogo.webp" width="640" height="233" alt="" />
+            <img data-logo-wordmark className={styles.wordmark} src="/bizgenixlogo.webp" width="640" height="233" alt="" style={{ position: 'absolute', inset: 0, display: 'block', width: '100%', height: '100%', objectFit: 'contain', clipPath: 'inset(25% 66% 25% 34%)' }} />
           </div>
-          <button className={styles.skip} onClick={() => setActive(false)}>Skip intro</button>
+          <button className={styles.skip} onClick={() => setActive(false)} style={{ position: 'absolute', right: 24, bottom: 24, padding: '10px 16px', border: '1px solid #5AAA6C', borderRadius: 999, background: '#fff', color: '#000', font: 'inherit', fontSize: 13, cursor: 'pointer' }}>Skip intro</button>
         </div>
       )}
       {/* No layout while the intro plays, so viewport animations wait for the homepage. */}
       <SplashCompleteContext.Provider value={!active}>
-        <div className={styles.content} data-intro-active={active}>{children}</div>
+        <div className={styles.content} data-intro-active={active} style={{ display: active ? 'none' : 'block' }}>{children}</div>
       </SplashCompleteContext.Provider>
     </>
   );

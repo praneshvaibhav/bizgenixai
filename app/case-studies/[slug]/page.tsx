@@ -1,6 +1,6 @@
 ﻿import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from '../../InternalLink';
 import { notFound } from 'next/navigation';
 import Navigation from '../../custom-solutions/Navigation';
 import SiteFooter from '../../SiteFooter';
@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!study) return {};
   const title = `${study.client}: ${study.title} | Bizgenix AI`;
   const image = `https://bizgenix.ai${study.images[0].src}`;
-  return { title, description: study.summary, openGraph: { title, description: study.summary, type: 'article', images: [{ url: image, alt: study.images[0].caption }] }, twitter: { card: 'summary_large_image', title, description: study.summary, images: [image] } };
+  return { title, description: study.summary, alternates: { canonical: `/case-studies/${study.slug}` }, openGraph: { title, description: study.summary, type: 'article', images: [{ url: image, alt: study.images[0].caption }] }, twitter: { card: 'summary_large_image', title, description: study.summary, images: [image] } };
 }
 
 export default async function CaseStudyPage({ params }: PageProps) {

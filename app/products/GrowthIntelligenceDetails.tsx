@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { useLayoutEffect, useRef } from 'react';
-import { demoUrl, products } from './content';
+import { products } from './content';
 import { animateGrowthIntelligence } from './animateGrowthIntelligence';
 import styles from './GrowthIntelligenceDetails.module.css';
 
@@ -38,7 +38,7 @@ export default function GrowthIntelligenceDetails({ active }: { active: boolean 
         <p className={styles.eyebrow}>{product.category}</p>
         <h3>See where <em>growth<br />and cash are stuck.</em></h3>
         <p className={styles.description}>{product.description}</p>
-        <a className={styles.cta} href={demoUrl(product.name)} target="_blank" rel="noopener noreferrer">{product.action}<span aria-hidden="true">→</span></a>
+        <a className={styles.cta} href="/contact#contact-form">{product.action}<span aria-hidden="true">→</span></a>
       </div>
       <div className={styles.scene} ref={sceneRef}>
         <div className={styles.glow} data-growth-reveal="glow" aria-hidden="true" />

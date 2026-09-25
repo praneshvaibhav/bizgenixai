@@ -6,12 +6,15 @@ import styles from './CountUp.module.css';
 
 export default function CountUp({ value, suffix = '+', duration = 2200 }: { value: number; suffix?: string; duration?: number }) {
   const ref = useRef<HTMLElement>(null);
-  const [shown, setShown] = useState(value);
+  const [shown, setShown] = useState(0);
 
   useEffect(() => {
     const element = ref.current;
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (!element || motion.matches) return;
+    if (!element || motion.matches) {
+      setShown(value);
+      return;
+    }
     let frame = 0;
     let elapsed = 0;
     let last: number | null = null;

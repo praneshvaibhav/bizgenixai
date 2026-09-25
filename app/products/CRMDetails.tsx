@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { products } from './content';
 import styles from './ProductDetails.module.css';
 
-export default function CRMDetails({ active: _active }: { active: boolean }) {
+export default function CRMDetails({}: { active: boolean }) {
   const product = products.find(item => item.id === 'crm')!;
 
   return <div>
@@ -13,7 +13,7 @@ export default function CRMDetails({ active: _active }: { active: boolean }) {
         <p className={styles.eyebrow}>{product.category}</p>
         <h3>Every lead visible.<br /><em>Every follow-up on time.</em></h3>
         <p className={styles.description}>{product.description}</p>
-        <a className={styles.demo} href={product.externalUrl} target="_blank" rel="noopener noreferrer">Open Bizgenix CRM <span aria-hidden="true">→</span></a>
+        <a className={styles.demo} href="/contact#contact-form">Discuss Bizgenix CRM <span aria-hidden="true">→</span></a>
         <ul className={styles.traits}><li>One customer view</li><li>Clear ownership</li><li>Stronger conversion</li></ul>
       </div>
       <div className={styles.dashboardScene} role="img" aria-label="Bizgenix CRM sidebar customization dashboard">

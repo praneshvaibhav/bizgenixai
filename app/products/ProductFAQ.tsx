@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState } from 'react';
-import { demoUrl, faqs } from './content';
+import { faqs } from './content';
 import styles from './ProductFAQ.module.css';
 
 // Lead with integrations as in the reference, while retaining all existing FAQs.
@@ -31,7 +31,7 @@ export default function ProductFAQ() {
         <p className={styles.eyebrow}>A FEW THINGS YOU MAY BE WONDERING</p>
         <h2 id="faq-title">Good questions.<br /><em>Clear answers.</em></h2>
         <p className={styles.description}>Need to discuss your specific workflow?</p>
-        <a className={styles.cta} href={demoUrl()} target="_blank" rel="noopener noreferrer">Talk to our team <span aria-hidden="true">↗</span></a>
+        <a className={styles.cta} href="/contact#contact-form">Talk to our team <span aria-hidden="true">↗</span></a>
       </div>
 
       <div className={styles.panel}>
@@ -61,7 +61,7 @@ export default function ProductFAQ() {
       <aside className={styles.support} aria-label="More help from Bizgenix">
         <div className={styles.noteScene}>
           <span className={styles.questionMark} aria-hidden="true">?</span>
-          <a className={styles.note} href={demoUrl()} target="_blank" rel="noopener noreferrer">
+          <a className={styles.note} href="/contact#contact-form">
             <span className={styles.bulb} aria-hidden="true"><i /><i /><i /></span>
             <strong>Still have<br />questions?</strong><span>We’re here to help.</span>
           </a>

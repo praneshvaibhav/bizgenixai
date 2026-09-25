@@ -1,4 +1,4 @@
-import { demoUrl, reasons } from './content';
+import { reasons } from './content';
 import styles from './ProductDifference.module.css';
 
 /** Reuse artwork from the supplied reference without baking the page copy into an image. */
@@ -19,12 +19,12 @@ const titles = [
   <>Proof before<br />a large commitment</>,
 ];
 const links = [
-  { href: '#product-suite', label: 'Explore products built around business outcomes' },
-  { href: '/custom-solutions', label: 'Explore custom solutions for your business' },
-  { href: '#product-integrations', label: 'Explore supported business integrations' },
-  { href: '#product-integrations', label: 'Explore India-first workflows' },
-  { href: '#implementation-journey', label: 'Explore implementation, training and support' },
-  { href: demoUrl(), label: 'Discuss a prototype with Bizgenix', external: true },
+  { href: '/contact#contact-form', label: 'Discuss products built around business outcomes' },
+  { href: '/contact#contact-form', label: 'Discuss custom solutions for your business' },
+  { href: '/contact#contact-form', label: 'Discuss supported business integrations' },
+  { href: '/contact#contact-form', label: 'Discuss India-first workflows' },
+  { href: '/contact#contact-form', label: 'Discuss implementation, training and support' },
+  { href: '/contact#contact-form', label: 'Discuss a prototype with Bizgenix' },
 ];
 
 function CardIllustration({ index }: { index: number }) {
@@ -52,7 +52,7 @@ export default function ProductDifference() {
         <Artwork x={[137, 716, 1295][index % 3]} y={index < 3 ? 418 : 619} width={72} height={72} className={styles.icon} />
         <div className={styles.copy}><h3>{titles[index]}</h3><p>{copy}</p></div>
         <CardIllustration index={index} />
-        <a className={styles.arrow} href={links[index].href} aria-label={links[index].label} target={links[index].external ? '_blank' : undefined} rel={links[index].external ? 'noopener noreferrer' : undefined}><span aria-hidden="true">→</span></a>
+        <a className={styles.arrow} href={links[index].href} aria-label={links[index].label}><span aria-hidden="true">→</span></a>
       </article>)}</div>
     </div>
   </section>;

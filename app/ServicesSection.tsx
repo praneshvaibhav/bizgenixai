@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from './InternalLink';
 import type { CSSProperties } from 'react';
 import styles from './ServicesSection.module.css';
 

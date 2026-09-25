@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Hero, { strategyUrl } from './Hero';
+import Hero from './Hero';
 import WhyCustomSolutions from './WhyCustomSolutions';
 import ContactSection from '../ContactSection';
 import Navigation from './Navigation';
@@ -12,11 +12,10 @@ const description = 'Bizgenix builds custom AI applications, CRM, ERP, enterpris
 export const metadata: Metadata = {
   title,
   description,
+  alternates: { canonical: '/custom-solutions' },
   openGraph: { title, description, type: 'website' },
   twitter: { card: 'summary', title, description },
 };
-
-const requirementUrl = `https://wa.me/918780671906?text=${encodeURIComponent("Hi Bizgenix, I'd like to discuss a custom AI solution for my business.")}`;
 
 const capabilities = [
   { title: 'Custom AI Applications', tag: 'INTELLIGENCE', build: 'AI-powered tools, assistants and decision systems', outcome: 'Faster work and smarter decisions', symbol: '✳' },
@@ -43,10 +42,10 @@ export default function CustomSolutionsPage() {
         <div className={styles.container}>
           <div className={styles.capabilitiesHeader}><div><p className={styles.eyebrow}>02 / OUR CUSTOM SOLUTION CAPABILITIES</p><h2 id="capabilities-title">What your business needs.<br /><em>What we build.</em></h2></div><p>From a single workflow to an integrated enterprise platform, built around the outcomes that matter to you.</p></div>
           <CapabilityReveal className={styles.capabilityGrid}>{capabilities.map((capability, index) => <article className={styles.capability} key={capability.title}><div className={styles.capabilityTop}><span className={styles.capabilityIcon} aria-hidden="true">{capability.symbol}</span><span>{capability.tag}</span><small>0{index + 1}</small></div><h3>{capability.title}</h3><p className={styles.build}>{capability.build}</p><div className={styles.outcome}><div><small>THE BUSINESS OUTCOME</small><p>{capability.outcome}</p></div></div></article>)}</CapabilityReveal>
-          <div className={styles.capabilityCta}><p>Have a requirement that doesn’t fit a category?<br /><b>That’s exactly where custom starts.</b></p><a className={styles.primary} href={requirementUrl} target="_blank" rel="noopener noreferrer">Discuss Your Requirement <span aria-hidden="true">↗</span></a></div>
+          <div className={styles.capabilityCta}><p>Have a requirement that doesn’t fit a category?<br /><b>That’s exactly where custom starts.</b></p><a className={styles.primary} href="/contact#contact-form">Discuss Your Requirement <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
-      <ContactSection homeHref="/" bookingHref={strategyUrl} />
+      <ContactSection homeHref="/" />
     </main>
   </div>;
 }

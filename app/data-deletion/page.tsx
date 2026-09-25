@@ -8,6 +8,7 @@ const description = 'Request deletion of personal information associated with Bi
 export const metadata: Metadata = {
   title,
   description,
+  alternates: { canonical: '/data-deletion' },
   openGraph: { title, description, type: 'website' },
   twitter: { card: 'summary', title, description },
 };

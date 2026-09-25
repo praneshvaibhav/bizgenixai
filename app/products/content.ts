@@ -1,8 +1,4 @@
 // Product copy supplied in Bizgenix_Products_Page_Content_Detailed.pdf.
-export const demoUrl = (product?: string) => `https://wa.me/918780671906?text=${encodeURIComponent(product
-  ? `Hi Bizgenix, I'd like to discuss ${product} and book a product demo.`
-  : "Hi Bizgenix, I'd like to book a product demo and find the right AI product for my business.")}`;
-
 const productCatalog = [
   {
     id: 'voice-ai', name: 'Voice AI', initial: 'V', category: 'CUSTOMER CONVERSATIONS',
@@ -76,6 +72,7 @@ export const functions = [
   ['Operations & delivery', 'ScaleOS', 'Clear tasks, ownership, stages and accountability', 'scaleos'],
   ['Finance & management', 'Growth Intelligence', 'Receivables, cash flow and business insights', 'growth-intelligence'],
   ['Cross-department automation', 'ScaleOS + Integrations', 'Connected processes and automated reporting', 'scaleos'],
+  ['Multi departments', 'Custom Solution', 'Integrate each department into a central platform', 'custom-solutions'],
 ] as const;
 
 export const industries = [

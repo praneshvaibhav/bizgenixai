@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 
 export default function FounderSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -75,7 +76,7 @@ export default function FounderSection() {
   return (
     <section ref={sectionRef} className="founder section" id="founder">
       <div className="portrait">
-        <img src="/founder-umang-ratani.webp" alt="Dr. CA Umang Ratani, founder of Bizgenix AI" width={1024} height={1536} loading="lazy" decoding="async" />
+        <Image src="/founder-umang-ratani.webp" alt="Dr. CA Umang Ratani, founder of Bizgenix AI" width={1024} height={1536} sizes="(max-width: 800px) 90vw, 45vw" />
         <span>THE BUSINESS LEADER&apos;S AI ARCHITECT</span>
       </div>
       <div>

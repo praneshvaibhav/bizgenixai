@@ -39,9 +39,10 @@
 .product>div {min-width:0; flex:1;}
 .product h2 {color:#000000; font-size:clamp(15px,1.14vw,21px); line-height:1.15; letter-spacing:-.055em; margin:0 0 10px;}
 .product p {color:#000000; font-size:clamp(11px,.88vw,16px); line-height:1.55; margin:0;}
-.arrow {display:flex; align-items:center; justify-content:center; flex-shrink:0; width:35px; height:35px; padding:0 0 2px; border-radius:50%; border:1px solid #5AAA6C; background:#FFFFFF; color:#000000; font-family:Arial,sans-serif; font-size:22px; line-height:1; text-align:center;}
+.arrow {display:flex; align-items:center; justify-content:center; flex-shrink:0; width:35px; height:35px; padding:0 0 2px; border-radius:50%; border:1px solid #5AAA6C; background:#FFFFFF; color:#000000; font-family:Arial,sans-serif; font-size:22px; line-height:1; text-align:center; transition:background .2s,color .2s,transform .2s;}
+.arrow:hover{background:#5AAA6C;color:#000000;transform:translateX(2px)}
 .product:hover {border-color:#5AAA6C; background:#FFFFFF; color:#000000;}
-.product:focus-visible {outline:3px solid #5AAA6C; outline-offset:4px;}
+.arrow:focus-visible {outline:3px solid #5AAA6C; outline-offset:4px;}
 .signature {position:absolute; top:23%; right:-3%; color:#000000; font-family:'Segoe Script','Brush Script MT',cursive; font-size:clamp(19px,1.7vw,31px); line-height:1.22; letter-spacing:-.055em; margin:0; transform:rotate(-10deg);}
 .signature>span {display:block; margin-left:9px;}
 .signature::after {content:''; display:block; width:110%; height:13px; border-top:2px solid #5AAA6C; border-radius:50%; transform:rotate(-9deg); margin-top:12px;}
