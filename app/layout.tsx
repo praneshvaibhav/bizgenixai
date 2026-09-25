@@ -23,6 +23,5 @@ export const metadata: Metadata = {
     description: 'Practical AI products, automation, and custom solutions built to help businesses scale.',
     images: ['/custom-solutions-hero.webp'],
   },
-  icons: { icon: [{ url: '/favicon.jpg', type: 'image/jpeg' }] },
 };
 export default function RootLayout({children}:Readonly<{children:React.ReactNode}>){return <html lang="en"><body>{children}</body></html>}
