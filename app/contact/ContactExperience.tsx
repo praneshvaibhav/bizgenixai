@@ -2,7 +2,6 @@
 
 import { useState, type FormEvent } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { useSearchParams } from 'next/navigation';
 import { email, nextSteps, phone, queryTypes } from './content';
 import styles from './page.module.css';
 import SiteFooter from '../SiteFooter';
@@ -10,12 +9,8 @@ import Navigation from '../custom-solutions/Navigation';
 
 export default function ContactExperience() {
   const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID;
-  const searchParams = useSearchParams();
   const [configurationError, setConfigurationError] = useState(false);
   const [state, handleSubmit] = useForm(formId || 'form-not-configured');
-  const requested = searchParams.get('interest') || '';
-  const interest = queryTypes.includes(requested) ? requested : '';
-  const source = searchParams.get('source') || '/contact';
 
   async function submitForm(event: FormEvent<HTMLFormElement>) {
     if (!formId) {
@@ -34,26 +29,25 @@ export default function ContactExperience() {
       <Navigation activePath="/contact" overlay theme="light" />
       <main id="main-content" className={styles.main}>
         <section className={styles.hero} aria-labelledby="contact-title"><div className={styles.heroCopy}>
-          <p className={styles.eyebrow}>Free Business Review</p>
-          <h1 id="contact-title">Tell us what should work better.</h1>
-          <p className={styles.introduction}>Describe the process or problem. We&apos;ll review it and contact you to discuss the right first step.</p>
+          <p className={styles.eyebrow}>Start the Conversation</p>
+          <h1 id="contact-title">Your AI Journey Starts Here</h1>
+          <p className={styles.introduction}>Connect with our AI experts to explore your challenges, discover the right solutions, and turn your ideas into real-world AI applications.</p>
         </div></section>
         <section className={styles.contactSection} aria-label="Contact the Bizgenix team">
           <div className={styles.contactGrid}>
             <div className={styles.card}>
-              <div className={styles.cardHeading}><h2>Send your requirement</h2><p>You do not need a technical brief. Tell us what is happening today.</p></div>
+              <div className={styles.cardHeading}><h2>Begin Your Journey</h2><p>Ready to transform your business with AI ? Let&apos;s discuss your goals, challenges, and the right AI solution for your business.
+</p></div>
               <form id="contact-form" className={styles.form} onSubmit={submitForm}>
-                <input type="hidden" name="source" value={source} />
                 <div><label htmlFor="name">Name<span>*</span></label><input id="name" name="name" autoComplete="name" placeholder="Your Name" required maxLength={200} /></div>
-                <div><label htmlFor="whatsapp">WhatsApp number<span>*</span></label><input id="whatsapp" type="tel" name="whatsapp" autoComplete="tel" inputMode="tel" placeholder="+91" required maxLength={30} /></div>
-                <div><label htmlFor="contact-email">Email</label><input id="contact-email" type="email" name="email" autoComplete="email" placeholder="your@email.com" maxLength={254} /></div>
+                <div><label htmlFor="contact-email">Email<span>*</span></label><input id="contact-email" type="email" name="email" autoComplete="email" placeholder="your@email.com" required maxLength={254} /></div>
                 <div><label htmlFor="company">Company</label><input id="company" name="company" autoComplete="organization" placeholder="Your Company Name" maxLength={200} /></div>
-                <div><label htmlFor="query">What would you like help with?</label><div className={styles.selectWrap}><select id="query" name="queryType" defaultValue={interest}><option value="">Select an option</option>{queryTypes.map(query => <option key={query}>{query}</option>)}</select></div></div>
-                <div><label htmlFor="message">What&apos;s happening today?<span>*</span></label><textarea id="message" name="message" placeholder="Describe what your team keeps chasing, repeating or struggling to see." required maxLength={4000} /></div>
-                <button className={styles.sendButton} type="submit" disabled={state.submitting}>{state.submitting ? 'Sending...' : <>Send My Requirement <span aria-hidden="true">→</span></>}</button>
-                <p className={styles.formHelp}>We use these details only to review and respond to your enquiry.</p>
-                {state.succeeded && <p className={styles.formStatus} role="status">Thank you. Your requirement has been sent to the Bizgenix team.</p>}
-                {(configurationError || state.errors) && <p className={styles.formStatus} role="alert">Your message was not sent. Your entries are still here; please try again or contact us by WhatsApp.</p>}
+                <div><label htmlFor="query">Query</label><div className={styles.selectWrap}><select id="query" name="queryType" defaultValue=""><option value="">Select query type</option>{queryTypes.map(query => <option key={query}>{query}</option>)}</select></div></div>
+                <div><label htmlFor="message">Message<span>*</span></label><textarea id="message" name="message" placeholder="Tell us about your project requirements, timeline, and any specific needs..." required maxLength={4000} /></div>
+                <button className={styles.sendButton} type="submit" disabled={state.submitting}>{state.submitting ? 'Sending...' : <>Send Message <span aria-hidden="true">→</span></>}</button>
+                <p className={styles.formHelp}>We&apos;ll get back to you as soon as possible.</p>
+                {state.succeeded && <p className={styles.formStatus} role="status">Thank you! Your message has been sent successfully.</p>}
+                {(configurationError || state.errors) && <p className={styles.formStatus} role="alert">Something went wrong. Please try again.</p>}
                 <ValidationError errors={state.errors} className={styles.formStatus} />
               </form>
             </div>

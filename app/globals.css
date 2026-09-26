@@ -224,13 +224,3 @@ main section[id]{scroll-margin-top:calc(var(--nav-height) + 16px)}
   .institutionLogo{height:64px!important;padding:8px!important;width:108px!important}
   .institutionLogo.tedx{height:64px!important;padding:0!important}
 }
-
-/* Launch-guide shared foundations. */
-@font-face{font-family:Bizgenix Sans;src:url('/fonts/contact-dm-sans.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
-html,body{max-width:100%;overflow-x:clip}
-body{font-family:Inter,Bizgenix Sans,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#1F2A24;background:#fff}
-h1,h2,h3,h4,h5,h6{font-family:Manrope,Bizgenix Sans,system-ui,sans-serif;font-weight:650}
-.floatingWhatsApp{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:120;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;border:2px solid #fff;border-radius:999px;background:#1F5A34;color:#fff;font-size:13px;font-weight:700;box-shadow:0 8px 28px #153d2470}
-.floatingWhatsApp:hover{background:#163F27;color:#fff}
-.floatingWhatsApp:focus-visible{outline:3px solid #58A068;outline-offset:4px}
-@media(max-width:520px){.floatingWhatsApp{right:14px;bottom:14px;min-height:46px;padding:11px 15px}}

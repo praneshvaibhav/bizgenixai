@@ -7,7 +7,7 @@ import { animateVoiceAI } from './animateVoiceAI';
 import styles from './VoiceAIDetails.module.css';
 
 const voiceProduct = products.find(product => product.id === 'voice-ai')!;
-const results = [['Inbound', 'Calling Workflows'], ['Outbound', 'Calling Workflows'], ['CRM', 'Lead Updates'], ['Human', 'Escalation']];
+const results = [['3x', 'More Conversions'], ['60%', 'Lower Call Costs'], ['100%', 'Consistent Messaging'], ['24/7', 'Customer Support']];
 
 function Waveform({ screen = false }: { screen?: boolean }) {
   return <div className={screen ? styles.screenWave : styles.wave} aria-hidden="true">{Array.from({ length: screen ? 35 : 57 }, (_, index) => <i key={index} style={{ height: `${12 + Math.pow(Math.sin(index * .37), 2) * (screen ? 68 : 125) * Math.sin(Math.PI * (index + 1) / (screen ? 36 : 58))}px`, '--wave-delay': `${index * -73}ms` } as CSSProperties} />)}</div>;
@@ -24,9 +24,9 @@ export default function VoiceAIDetails({ active }: { active: boolean }) {
       <div className={styles.copy}>
         <p className={styles.eyebrow}>VOICE AI</p>
         <h3>Every call a<br /><em>business opportunity.</em></h3>
-        <p className={styles.description}>AI Voice supports defined inbound and outbound calling workflows, captures key information, qualifies leads and triggers the agreed next action.</p>
+        <p className={styles.description}>AI Voice handles your inbound and outbound calls, talks naturally with customers, captures key information, qualifies leads and triggers the next action — 24/7, without manual effort.</p>
         <ul className={styles.features}>
-          <li><span aria-hidden="true">●</span><p><strong>Defined</strong>Calling Workflows</p></li>
+          <li><span aria-hidden="true">ϟ</span><p><strong>24/7</strong>Always On</p></li>
           <li><span className={styles.globe} aria-hidden="true"><i /></span><p><strong>Works in</strong>Multiple Languages</p></li>
           <li><span className={styles.sliders} aria-hidden="true"><i /><i /><i /></span><p><strong>Integrates with</strong>your CRM &amp; Systems</p></li>
         </ul>

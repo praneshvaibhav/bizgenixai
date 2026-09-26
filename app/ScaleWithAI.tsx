@@ -9,7 +9,7 @@ const stories = [
   { image: 'ahmedabad.webp', title: 'Ahmedabad', note: '' },
   { image: 'surat.webp', title: 'Surat', note: '' },
   { image: 'mumbai.webp', title: 'Mumbai', note: '' },
-  { image: 'vadodra.webp', title: 'Vadodara', note: '' },
+  { image: 'vadodra.webp', title: 'Vadodra', note: '' },
 ];
 
 // Keep the source's stacked-photo animation and final overview, with equal
@@ -103,10 +103,10 @@ export default function ScaleWithAI() {
                 </header>
                 <p className={styles.description}>Scale With AI brings business owners into a live, practical environment where they build AI agents, no-code apps and automation blueprints instead of only watching presentations.</p>
                 <ul className={styles.cities}>
-                  <li><strong>Ahmedabad</strong><span>past event</span></li>
-                  <li><strong>Surat</strong><span>past event</span></li>
-                  <li><strong>Mumbai</strong><span>past event</span></li>
-                  <li><strong>Vadodara</strong><span>past event</span></li>
+                  <li><strong>Ahmedabad</strong><span>sold out, 100+ owners</span></li>
+                  <li><strong>Surat</strong><span>sold out, 200+ owners</span></li>
+                  <li><strong>Mumbai</strong><span>300+ participants, full house</span></li>
+                  <li><strong>Vadodara</strong><span>300+ participants, full house</span></li>
                 </ul>
                 <div className={styles.stats}>
                   <p><CountUp value={2000} /><span>owners trained across the movement</span></p>

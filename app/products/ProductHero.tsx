@@ -20,11 +20,11 @@ const desktopPaths = [
 ];
 
 const productUrls = {
-  'growth-intelligence': '/contact?interest=Growth%20Intelligence#contact-form',
-  crm: '/contact?interest=CRM#contact-form',
-  scaleos: '/contact?interest=ScaleOS#contact-form',
-  'voice-ai': '/contact?interest=Voice%20AI#contact-form',
-  bizchat: '/contact?interest=BizChat#contact-form',
+  'growth-intelligence': 'https://gi.bizgenix.ai/',
+  crm: 'https://crm.bizgenix.ai/',
+  scaleos: 'https://scaleos.bizgenix.ai/login',
+  'voice-ai': 'https://voice.bizgenix.ai/',
+  bizchat: 'https://chat.bizgenix.ai/',
 } as const;
 const mobilePaths = [285, 400, 515, 630, 745].map(y => `M180 180 V207 Q180 226 161 226 H39 Q20 226 20 245 V${y - 14} Q20 ${y} 34 ${y} H44`);
 

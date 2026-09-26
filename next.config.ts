@@ -10,16 +10,6 @@ const securityHeaders = [
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
-  async redirects() {
-    return [
-      { source: '/solutions', destination: '/custom-solutions', permanent: true },
-      { source: '/solution', destination: '/custom-solutions', permanent: true },
-      { source: '/product', destination: '/products', permanent: true },
-      { source: '/learning', destination: '/courses', permanent: true },
-      { source: '/case-study', destination: '/case-studies', permanent: true },
-      { source: '/contact-us', destination: '/contact', permanent: true },
-    ];
-  },
   async headers() {
     return [{ source: '/(.*)', headers: securityHeaders }];
   },
