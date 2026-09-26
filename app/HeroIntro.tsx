@@ -5,7 +5,10 @@ import { useSplashComplete } from './SplashIntro';
 import styles from './HeroIntro.module.css';
 
 const headline = ['AI That Takes Work', 'Off Your Desk.'];
-const description = 'We help Indian businesses automate follow-ups, reduce manual work and make clearer decisions - with practical AI systems built around their teams.';
+const descriptionLead = 'Led by ';
+const descriptionName = 'Dr. CA Umang Ratani';
+const descriptionRest = ', Bizgenix builds AI products and custom systems around how your business really runs - on Tally, WhatsApp and the tools you already use. See a working prototype before you commit to a full build.';
+const description = descriptionLead + descriptionName + descriptionRest;
 const headlineLength = headline.join('').length;
 const totalLength = headlineLength + description.length;
 const headlineSpeed = 48;
@@ -15,6 +18,18 @@ const descriptionDelay = headlineLength * headlineSpeed + 180;
 function TypedText({ text, count, cursor }: { text: string; count: number; cursor: boolean }) {
   const visible = Math.max(0, Math.min(text.length, count));
   return <>{text.slice(0, visible)}{cursor && <span className={styles.caret} />}<span className={styles.untyped}>{text.slice(visible)}</span></>;
+}
+
+function TypedDescription({ count, cursor }: { count: number; cursor: boolean }) {
+  const nameStart = descriptionLead.length;
+  const restStart = nameStart + descriptionName.length;
+  return <>
+    <TypedText text={descriptionLead} count={count} cursor={cursor && count < nameStart} />
+    <span className={styles.highlight}>
+      <TypedText text={descriptionName} count={count - nameStart} cursor={cursor && count >= nameStart && count < restStart} />
+    </span>
+    <TypedText text={descriptionRest} count={count - restStart} cursor={cursor && count >= restStart} />
+  </>;
 }
 
 export default function HeroIntro() {
@@ -69,8 +84,12 @@ export default function HeroIntro() {
       </h1>
       <p className="lead">
         <span className={styles.srOnly}>{description}</span>
-        <span aria-hidden="true"><TypedText text={description} count={visibleCharacters - headlineLength} cursor={typingDescription} /></span>
+        <span aria-hidden="true"><TypedDescription count={visibleCharacters - headlineLength} cursor={typingDescription} /></span>
       </p>
+      <div className={styles.actions} data-ready={splashComplete && visibleCharacters >= totalLength}>
+        <a className={styles.primaryAction} href="/contact#contact-form">Book a Free Business Review</a>
+        <a className={styles.secondaryAction} href="/products">See What We&apos;ve Built</a>
+      </div>
     </>
   );
 }

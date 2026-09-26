@@ -130,7 +130,7 @@ main section[id]{scroll-margin-top:calc(var(--nav-height) + 16px)}
 }
 .hero::before{width:115px;height:42px;left:-38px;top:90px;border-radius:24px}
 .hero::after{width:150px;height:54px;right:-42px;bottom:78px;border-radius:30px}
-.hero h1{color:#5AAA6C;max-width:760px;text-shadow:0 3px 20px rgba(0,0,0,.42)}
+.hero h1{color:#FFFFFF;font-family:Arial,Helvetica,sans-serif;font-weight:700;max-width:760px;text-shadow:0 3px 20px rgba(0,0,0,.42)}
 .hero h1 span[aria-hidden='true']{text-shadow:0 3px 20px rgba(0,0,0,.42)}
 .hero .lead{color:rgba(255,255,255,.92);font-size:clamp(26px,1.75vw,30px);line-height:1.55;max-width:820px;text-shadow:0 2px 12px rgba(0,0,0,.42)}
 .hero .button{
