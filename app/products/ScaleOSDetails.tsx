@@ -14,7 +14,7 @@ function Icon({ name }: { name: IconName }) {
 const features: { icon: IconName; title: string; description: string }[] = [
   { icon: 'people', title: 'Bring teams together', description: 'People, tasks & processes in one place' },
   { icon: 'bolt', title: 'Reduce delays', description: 'Faster approvals and execution' },
-  { icon: 'eye', title: 'Get real-time visibility', description: 'See what’s happening across teams' },
+  { icon: 'eye', title: 'See current status', description: 'Review work across teams' },
   { icon: 'chart', title: 'Built for growth', description: 'Scales with your business' },
 ];
 const workflow: { icon: IconName; label: string }[] = [
@@ -23,7 +23,7 @@ const workflow: { icon: IconName; label: string }[] = [
   { icon: 'people', label: 'Review & Approve' },
   { icon: 'chart', label: 'Gain Visibility' },
 ];
-const metrics = [['50%', 'Faster Approvals'], ['3x', 'Team Productivity'], ['100%', 'Operational Visibility'], ['Built to Scale', 'For Growing Businesses']];
+const metrics = [['Tasks', 'Work Tracking'], ['Approvals', 'Clear Ownership'], ['Teams', 'Shared Status'], ['Reports', 'Management Review']];
 export default function ScaleOSDetails({ active }: { active: boolean }) {
   const sceneRef = useRef<HTMLDivElement>(null);
   const product = products.find(product => product.id === 'scaleos')!;
@@ -58,7 +58,7 @@ export default function ScaleOSDetails({ active }: { active: boolean }) {
     </div>
     <div className={styles.bottomRow}>
       <dl className={styles.metrics}>{metrics.map(([value, label]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
-      <figure className={styles.testimonial}><span aria-hidden="true">“</span><div><blockquote>“From tasks to approvals, everything in one place.<br />ScaleOS keeps our business moving.”</blockquote><figcaption>— Growing Business, India</figcaption></div></figure>
+      <p>Book a demo to confirm fit, users, setup and integrations.</p>
     </div>
   </div>;
 }

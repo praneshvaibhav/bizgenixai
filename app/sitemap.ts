@@ -7,7 +7,7 @@ const routes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = routes.map(route => ({ url: `https://bizgenix.ai${route}` }));
-  const studies = caseStudies.map(study => ({ url: `https://bizgenix.ai/case-studies/${study.slug}` }));
+  const pages = routes.map(route => ({ url: `https://www.bizgenix.ai${route}` }));
+  const studies = caseStudies.map(study => ({ url: `https://www.bizgenix.ai/case-studies/${study.slug}` }));
   return [...pages, ...studies];
 }

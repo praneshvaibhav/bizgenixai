@@ -13,10 +13,10 @@ export default function ContactSection({
       <div className={styles.layout}>
         <div className={styles.intro}>
           <span className={styles.eyebrow}>CONTACT</span>
-          <h2 id="contact-title">Ready to put AI to work inside <em>your business?</em></h2>
-          <p className={styles.description}>Tell us where your business is losing time, leads, cash or visibility. We will help you identify the right first AI use case and the fastest practical path to implementation.</p>
+          <h2 id="contact-title">Which part of your business should <em>work better?</em></h2>
+          <p className={styles.description}>Tell us what your team keeps chasing, repeating or struggling to see. You do not need a technical brief.</p>
           <div className={styles.actions}>
-            <a className={styles.primary} href={bookingHref} target={opensNewTab ? '_blank' : undefined} rel={opensNewTab ? 'noopener noreferrer' : undefined}>Book a Free AI Strategy Session <span aria-hidden="true">⟶</span></a>
+            <a className={styles.primary} href={bookingHref} target={opensNewTab ? '_blank' : undefined} rel={opensNewTab ? 'noopener noreferrer' : undefined}>Book a Free Business Review <span aria-hidden="true">→</span></a>
           </div>
         </div>
 

@@ -13,15 +13,15 @@ function Icon({ name }: { name: IconName }) {
 
 const insights: { icon: IconName; title: string; detail: string }[] = [
   { icon: 'chart', title: 'Unified Business View', detail: 'Tally + Operations + Teams' },
-  { icon: 'people', title: 'Real-time Insights', detail: 'Know what’s happening' },
+  { icon: 'people', title: 'Current Business View', detail: 'Know what needs attention' },
   { icon: 'target', title: 'Identify Risks', detail: 'Act before it’s critical' },
   { icon: 'bolt', title: 'Faster Decision Making', detail: 'From data to action' },
 ];
 const metrics: { icon: IconName; value: string; label: string }[] = [
-  { icon: 'chart', value: '90%', label: 'Faster Reporting' },
-  { icon: 'eye', value: 'Real-time', label: 'Business Visibility' },
-  { icon: 'people', value: 'Data Driven', label: 'Better Decisions' },
-  { icon: 'shield', value: 'Built for Scale', label: 'Growing Businesses' },
+  { icon: 'chart', value: 'Tally', label: 'Source Data' },
+  { icon: 'eye', value: 'See Clearly', label: 'Business Visibility' },
+  { icon: 'people', value: 'Ask GI', label: 'Guided Questions' },
+  { icon: 'shield', value: 'Next Action', label: 'Owner Guidance' },
 ];
 
 export default function GrowthIntelligenceDetails({ active }: { active: boolean }) {
@@ -63,7 +63,7 @@ export default function GrowthIntelligenceDetails({ active }: { active: boolean 
     </div>
     <div className={styles.bottomRow}>
       <dl className={styles.metrics}>{metrics.map(metric => <div key={metric.value}><dt>{metric.label}</dt><dd><Icon name={metric.icon} /><strong>{metric.value}</strong></dd></div>)}</dl>
-      <figure className={styles.testimonial}><span aria-hidden="true">“</span><div><blockquote>“Clear data, sharper insights, faster decisions.<br />That’s the difference Growth Intelligence makes.”</blockquote><figcaption>— &nbsp; Bizgenix AI</figcaption></div></figure>
+      <p>Capabilities and refresh timing are confirmed during setup. Tally remains the source.</p>
     </div>
   </div>;
 }

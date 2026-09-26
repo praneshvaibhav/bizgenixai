@@ -56,7 +56,7 @@ const productCatalog = [
     description: 'Bizgenix CRM gives sales and customer-facing teams one connected workspace for enquiries, lead stages, follow-ups, ownership and customer history. It helps businesses respond consistently and move opportunities forward with better visibility.',
     capabilities: ['Central lead and customer database', 'Custom sales pipelines and lead stages', 'Follow-up tasks, reminders and ownership', 'Customer interaction and activity history', 'Team dashboards and performance visibility', 'Lead-source and conversion reporting', 'Role-based access and workflow controls', 'Integration-ready business workflows'],
     useCases: ['Website and campaign lead management', 'Sales pipeline and opportunity tracking', 'Dealer, channel and partner follow-ups', 'Customer onboarding and relationship management', 'Team assignment and escalation', 'Management review of lead conversion'],
-    benefits: ['Create one source of truth for every lead', 'Reduce missed and delayed follow-ups', 'Improve sales-team accountability', 'Understand pipeline health in real time', 'Build consistent customer journeys'],
+    benefits: ['Create one source of truth for every lead', 'Reduce missed and delayed follow-ups', 'Improve sales-team accountability', 'Review current pipeline health', 'Build consistent customer journeys'],
     workflow: ['Capture the lead', 'Assign ownership', 'Track every follow-up', 'Convert & grow'],
     action: 'Open Bizgenix CRM',
     externalUrl: 'https://crm.bizgenix.ai/',

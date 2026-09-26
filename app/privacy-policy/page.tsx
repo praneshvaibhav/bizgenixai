@@ -27,9 +27,9 @@ export default function PrivacyPolicyPage() {
         </header>
         <div className={styles.content}>
           <article className={styles.policy} aria-labelledby="privacy-title">
-            <p><strong>Effective Date:</strong> 1 April 2026<br/><strong>Company Name:</strong> Bizgenix Ai Solution Pvt Ltd<br/><strong>Website:</strong> https://bizgenix.ai/</p>
+            <p><strong>Effective Date:</strong> 1 April 2026<br/><strong>Company Name:</strong> Bizgenix AI Solutions Pvt. Ltd.<br/><strong>Website:</strong> https://www.bizgenix.ai/</p>
             <h2>1. Introduction</h2>
-            <p>Bizgenix Ai Solution Pvt Ltd (&quot;Company&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and protect information when you interact with our website, services, and communication channels including WhatsApp Business.</p>
+            <p>Bizgenix AI Solutions Pvt. Ltd. (&quot;Company&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) values your privacy and is committed to protecting your personal information. This Privacy Policy explains how we collect, use, store, and protect information when you interact with our website, AI products, custom software services, courses, events, payments and communication channels including WhatsApp Business.</p>
             <p>By using our website or communicating with us through WhatsApp, phone, email, or any other platform, you agree to the terms outlined in this Privacy Policy.</p>
             <h2>2. Information We Collect</h2>
             <p>We may collect the following types of information:</p>
@@ -38,15 +38,15 @@ export default function PrivacyPolicyPage() {
             <h3>Technical Information</h3>
             <ul><li>IP address</li><li>Browser type</li><li>Device information</li><li>Website usage data</li><li>Cookies and analytics data</li></ul>
             <h2>3. How We Use Your Information</h2>
-            <ul><li>To respond to inquiries and project requests</li><li>To provide architecture, design, and related services</li><li>To communicate updates and project-related information</li><li>To improve our website and customer experience</li><li>To provide support through WhatsApp Business and other communication channels</li><li>To send promotional or informational messages (only where permitted)</li><li>To comply with legal obligations</li></ul>
+            <ul><li>To respond to enquiries and project requests</li><li>To provide AI products, software implementation, courses, events and related support</li><li>To communicate updates and project-related information</li><li>To process course or event payments through payment providers such as Razorpay</li><li>To improve our website and customer experience</li><li>To provide support through WhatsApp Business and other communication channels</li><li>To send promotional or informational messages only where permitted</li><li>To comply with legal obligations</li></ul>
             <h2>4. WhatsApp Communication</h2>
-            <p>By contacting Bizgenix Ai Solution Pvt Ltd through WhatsApp, you consent to receive:</p>
+            <p>By contacting Bizgenix AI Solutions Pvt. Ltd. through WhatsApp, you consent to receive:</p>
             <ul><li>Project-related updates</li><li>Customer support messages</li><li>Appointment confirmations</li><li>Service-related notifications</li><li>Promotional communications (if opted in)</li></ul>
             <p>Users may opt out of promotional communications at any time by replying with &quot;STOP&quot; or by contacting us directly.</p>
             <h2>5. Sharing of Information</h2>
             <p>We do not sell, rent, or trade personal information to third parties.</p>
             <p>We may share information only with:</p>
-            <ul><li>Trusted service providers assisting in operations</li><li>Legal authorities when required by law</li><li>Platforms necessary for communication and service delivery, including Meta and WhatsApp</li></ul>
+            <ul><li>Trusted service providers assisting in operations, hosting, analytics, form delivery or payment processing</li><li>Legal authorities when required by law</li><li>Platforms necessary for communication and service delivery, including Meta, WhatsApp and Razorpay</li></ul>
             <h2>6. Data Security</h2>
             <p>We implement reasonable administrative, technical, and physical safeguards to protect your information against unauthorized access, misuse, or disclosure.</p>
             <p>However, no method of internet transmission or electronic storage is completely secure, and we cannot guarantee absolute security.</p>
@@ -65,7 +65,7 @@ export default function PrivacyPolicyPage() {
             <h2>12. Changes to This Privacy Policy</h2>
             <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
             <h2>13. Contact Information</h2>
-            <p>Bizgenix Ai Solution Pvt Ltd<br/>G 13, SILVER RADIENCE-2, Science City Rd,<br/>Sola, Ahmedabad, Gujarat 380060<br/> Email: info@bizgenix.com<br/>Phone: +91 87806 71906<br/>Website: https://bizgenix.ai/</p>
+            <p>Bizgenix AI Solutions Pvt. Ltd.<br/>G-13, Silver Radiance 2, Science City Road,<br/>Sola, Ahmedabad, Gujarat 380060<br/>Email: info@bizgenix.com<br/>Phone: +91 87806 71906<br/>Website: https://www.bizgenix.ai/</p>
           </article>
         </div>
       </main>

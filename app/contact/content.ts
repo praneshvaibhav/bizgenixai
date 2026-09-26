@@ -1,16 +1,9 @@
 export const email = 'info@bizgenix.com';
 export const phone = '+91 87806 71906';
-export const queryTypes = [
-  'AI Product',
-  'Intelligent Agents / Chatbots',
-  'Process Automation',
-  'Data Analytics & BI',
-  'AI Strategy Consulting',
-  'AI Training',
-  'Custom Solution',
-];
+export const queryTypes = ['Custom solution', 'Growth Intelligence', 'CRM', 'ScaleOS', 'Voice AI', 'BizChat', 'Course', 'Corporate training', 'Help me choose'];
 export const nextSteps = [
-  { title: 'Consultation Scheduled', description: 'We’ll review your needs and schedule a meeting.' },
-  { title: 'Custom Proposal', description: 'We’ll create a proposal tailored to your needs.' },
-  { title: 'Development Begins', description: 'A dedicated engineer will be assigned and development starts.' },
+  { title: 'Review', description: 'We review the process or problem you described.' },
+  { title: 'Call', description: 'We speak with you to understand the right first step.' },
+  { title: 'Written scope & fees', description: 'You receive the agreed scope, price and milestones in writing.' },
+  { title: 'Build', description: 'After approval, we prototype or build the agreed solution.' },
 ];

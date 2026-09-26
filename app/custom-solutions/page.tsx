@@ -7,26 +7,17 @@ import CapabilityReveal from './CapabilityReveal';
 import styles from './page.module.css';
 
 const title = 'Custom AI Solutions Built Around Your Business | Bizgenix AI';
-const description = 'Bizgenix builds custom AI applications, CRM, ERP, enterprise web and mobile platforms, business intelligence, integrations and workflow automation around your business.';
-
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical: '/custom-solutions' },
-  openGraph: { title, description, type: 'website' },
-  twitter: { card: 'summary', title, description },
-};
+const description = 'When standard software does not fit, Bizgenix builds around your process: from enquiry and follow-up to operations, approvals and reporting.';
+export const metadata: Metadata = { title, description, alternates: { canonical: '/custom-solutions' }, openGraph: { title, description, type: 'website', images: ['/og.png'] }, twitter: { card: 'summary_large_image', title, description, images: ['/og.png'] } };
 
 const capabilities = [
-  { title: 'Custom AI Applications', tag: 'INTELLIGENCE', build: 'AI-powered tools, assistants and decision systems', outcome: 'Faster work and smarter decisions', symbol: '✳' },
-  { title: 'AI CRM', tag: 'CUSTOMER RELATIONSHIPS', build: 'Lead, follow-up, pipeline and customer management platforms', outcome: 'Better conversion and customer visibility', symbol: '◎' },
-  { title: 'AI ERP', tag: 'BUSINESS OPERATIONS', build: 'Connected operations, finance, inventory and workflow systems', outcome: 'Process control and unified data', symbol: '▦' },
-  { title: 'Enterprise Web Platforms', tag: 'DIGITAL WORKSPACES', build: 'Secure role-based portals and business applications', outcome: 'Scalable digital operations', symbol: '▤' },
-  { title: 'Mobile Applications', tag: 'WORK FROM ANYWHERE', build: 'Customer, employee and field-force apps', outcome: 'Access and execution from anywhere', symbol: '▯' },
-  { title: 'Business Intelligence', tag: 'DATA TO DECISIONS', build: 'Dashboards, analytics and automated reporting', outcome: 'Real-time management insights', symbol: '▥' },
-  { title: 'System Integrations', tag: 'CONNECTED SYSTEMS', build: 'CRM, ERP, Tally, WhatsApp, APIs and internal tools', outcome: 'Connected workflows and reduced duplication', symbol: '⇄' },
-  { title: 'Automation Solutions', tag: 'EVERYDAY EFFICIENCY', build: 'Workflow, approval, reminder and data-processing automation', outcome: 'Lower manual effort and faster execution', symbol: '↗' },
+  { title: 'Sales & Service', tag: 'ENQUIRIES AND CUSTOMERS', build: 'CRM, lead routing, follow-ups, Voice AI and WhatsApp workflows', outcome: 'See Waffle Castle', symbol: 'S', href: '/case-studies/waffle-castle' },
+  { title: 'Operations', tag: 'TASKS AND APPROVALS', build: 'Role-based workflows, tasks, approvals, field apps and operating systems', outcome: 'See Bhaskar Silk Mills', symbol: 'O', href: '/case-studies/bhaskar-silk-mills' },
+  { title: 'Finance & MIS', tag: 'CASH AND REPORTING', build: 'Tally-connected reporting, receivables, bill checks and management views', outcome: 'See Una Homes', symbol: 'F', href: '/case-studies/una-homes' },
+  { title: 'Integrations', tag: 'CONNECTED TOOLS', build: 'CRM, ERP, Tally, WhatsApp, APIs and existing internal systems', outcome: 'Browse all implementations', symbol: 'I', href: '/case-studies' },
 ];
+const process = ['Discover the workflow', 'Find the leak', 'Scope the first use case', 'Build a working prototype', 'Develop and integrate', 'Deploy and train', 'Review adoption and results'];
+const scope = ['Workflow and users', 'Integrations and data', 'Roles and ownership', 'Support and handover', 'Success measure'];
 
 export default function CustomSolutionsPage() {
   return <div className={styles.page} id="top">
@@ -34,17 +25,14 @@ export default function CustomSolutionsPage() {
     <Navigation theme="light" />
     <main id="main-content">
       <Hero />
-      <div className={styles.overview}><div className={styles.container}><div className={styles.heroBottom}><span>FROM COMPLEXITY<br /><b>TO POSSIBILITY.</b></span><p>From AI-powered CRM and ERP platforms to intelligent agents, analytics systems, workflow automation and integrated web applications, we turn complex business challenges into practical, scalable solutions.</p><a href="#capabilities" aria-label="Explore our custom solution capabilities">↓</a></div></div></div>
-
+      <div className={styles.overview}><div className={styles.container}><div className={styles.heroBottom}><span>PROCESS FIRST<br /><b>TECHNOLOGY SECOND.</b></span><p>We begin with how work moves through your business, then choose the smallest useful system to prove and build.</p><a href="#capabilities" aria-label="Explore custom solution capabilities">↓</a></div></div></div>
       <WhyCustomSolutions />
-
-      <section className={styles.capabilities} id="capabilities" aria-labelledby="capabilities-title">
-        <div className={styles.container}>
-          <div className={styles.capabilitiesHeader}><div><p className={styles.eyebrow}>02 / OUR CUSTOM SOLUTION CAPABILITIES</p><h2 id="capabilities-title">What your business needs.<br /><em>What we build.</em></h2></div><p>From a single workflow to an integrated enterprise platform, built around the outcomes that matter to you.</p></div>
-          <CapabilityReveal className={styles.capabilityGrid}>{capabilities.map((capability, index) => <article className={styles.capability} key={capability.title}><div className={styles.capabilityTop}><span className={styles.capabilityIcon} aria-hidden="true">{capability.symbol}</span><span>{capability.tag}</span><small>0{index + 1}</small></div><h3>{capability.title}</h3><p className={styles.build}>{capability.build}</p><div className={styles.outcome}><div><small>THE BUSINESS OUTCOME</small><p>{capability.outcome}</p></div></div></article>)}</CapabilityReveal>
-          <div className={styles.capabilityCta}><p>Have a requirement that doesn’t fit a category?<br /><b>That’s exactly where custom starts.</b></p><a className={styles.primary} href="/contact#contact-form">Discuss Your Requirement <span aria-hidden="true">↗</span></a></div>
-        </div>
-      </section>
+      <section className={styles.capabilities} id="capabilities" aria-labelledby="capabilities-title"><div className={styles.container}>
+        <div className={styles.capabilitiesHeader}><div><p className={styles.eyebrow}>CUSTOM SOLUTION CAPABILITIES</p><h2 id="capabilities-title">Grouped around the work<br /><em>your team actually does.</em></h2></div><p>Each capability links to proof from a real implementation.</p></div>
+        <CapabilityReveal className={styles.capabilityGrid}>{capabilities.map(capability => <article className={styles.capability} key={capability.title}><div className={styles.capabilityTop}><span className={styles.capabilityIcon} aria-hidden="true">{capability.symbol}</span><span>{capability.tag}</span></div><h3>{capability.title}</h3><p className={styles.build}>{capability.build}</p><div className={styles.outcome}><div><small>RELATED IMPLEMENTATION</small><p><a href={capability.href}>{capability.outcome} →</a></p></div></div></article>)}</CapabilityReveal>
+        <div className={styles.capabilityCta}><p>Have a workflow that does not fit standard software?<br /><b>That is exactly where custom starts.</b></p><a className={styles.primary} href="/contact?interest=Custom%20solution#contact-form">Discuss Your Workflow <span aria-hidden="true">→</span></a></div>
+      </div></section>
+      <section className={`${styles.container} ${styles.delivery}`} aria-labelledby="delivery-title"><div><p className={styles.eyebrow}>HOW WE BUILD</p><h2 id="delivery-title">A clear path from workflow to adoption.</h2><ol>{process.map((step,index)=><li key={step}><span>{index+1}</span>{step}</li>)}</ol></div><aside><h3>What we scope with you</h3><ul>{scope.map(item=><li key={item}>{item}</li>)}</ul><a className={styles.primary} href="/contact?interest=Custom%20solution#contact-form">Book a Free Business Review</a></aside></section>
       <ContactSection homeHref="/" />
     </main>
   </div>;

@@ -14,8 +14,8 @@ const description = 'Explore Bizgenix AI products including Voice AI, BizChat, S
 export const metadata: Metadata = {
   title, description,
   alternates: { canonical: '/products' },
-  openGraph: { title, description, type: 'website' },
-  twitter: { card: 'summary', title, description },
+  openGraph: { title, description, type: 'website', images: ['/og.png'] },
+  twitter: { card: 'summary_large_image', title, description, images: ['/og.png'] },
 };
 
 export default function ProductsPage() {
@@ -25,6 +25,7 @@ export default function ProductsPage() {
     <main id="main-content">
       <ProductHero />
       <section className={`${styles.suite} ${styles.container}`} id="product-suite" aria-label="Bizgenix product details">
+        <p className={styles.productGuide}>Choose the part of your business you want to improve. We&apos;ll help you check fit, setup and integrations.</p>
         <ProductShowcase />
       </section>
       <section className={`${styles.functionSection} ${styles.container}`} aria-labelledby="function-title">

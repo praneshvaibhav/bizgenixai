@@ -3,9 +3,7 @@
 import { createElement, useEffect, useRef } from 'react';
 import CountUp from '../CountUp';
 import styles from './CourseProgramSection.module.css';
-import PriceCountdown from './PriceCountdown';
 
-const enrollmentUrl = 'https://rzp.io/rzp/Q47luheE';
 const contactUrl = '/contact#contact-form';
 
 const highlights = [
@@ -217,14 +215,13 @@ export default function CourseProgramSection() {
         <article className={styles.priceCard}>
           <span className={styles.priceBadge}>APPLICATIONS OPEN NOW</span>
           <p>Scale With AI · 12-week live program</p>
-          <s>₹30,000–₹35,000 member investment</s>
-          <div className={styles.price}><sup>₹</sup><PriceCountdown /></div>
+          <div className={styles.price}><sup>₹</sup>14,999</div>
           <p className={styles.priceDetail}>Same live program · 12 months access · practical implementation</p>
           <p className={styles.perWeek}>Less than <strong>₹1,250 per week</strong> across the journey</p>
           <ul>{inclusions.map(item => <li key={item}><span aria-hidden="true">✓</span>{item}</li>)}</ul>
-          <a className={styles.priceCta} href={enrollmentUrl} target="_blank" rel="noopener noreferrer">Pay ₹14,999 & enroll now <span aria-hidden="true">↗</span></a>
+          <a className={styles.priceCta} href="/contact?interest=Course#contact-form">Ask for the next cohort details <span aria-hidden="true">→</span></a>
           <a className={styles.priceQuestion} href={contactUrl}>Have a question first? Contact the team →</a>
-          <small>First-two-session fit protection applies; confirm terms with the team before enrolment.</small>
+          <small>Before payment, the team will confirm the start date, weekly schedule and time, teaching language, GST treatment and written refund or fit-protection terms.</small>
         </article>
       </div>
     </div>
