@@ -17,7 +17,7 @@
 .resultBar button{border:0;background:none;color:#357647;font:inherit;cursor:pointer;padding:8px 0}
 .resultBar button span{padding-left:6px;font-size:17px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 26px}
-.card{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid #edf0ed;border-radius:12px;overflow:hidden;box-shadow:0 4px 22px #1833220a;transition:box-shadow .2s,transform .2s}
+.card{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid #000;border-radius:12px;overflow:hidden;box-shadow:0 4px 22px #1833220a;transition:box-shadow .2s,transform .2s}
 .card:hover{box-shadow:0 10px 30px #18332213;transform:translateY(-3px)}
 .cover{display:block;position:relative;aspect-ratio:1.8;background:#e9f0eb;overflow:hidden}
 .cover img{object-fit:cover;transition:transform .4s}

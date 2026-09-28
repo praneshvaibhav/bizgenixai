@@ -7,7 +7,7 @@ import styles from './Navigation.module.css';
 
 const links = [
   ['About', '/about'], ['Custom Solution', '/custom-solutions'],
-  ['Product', '/products'], ['Learning', '/courses'], ['Case Study', '/case-studies'], ['Blog', '/blog'], ['Contact Us', '/contact'],
+  ['Product', '/products'], ['Learning', '/courses'], ['Case Study', '/case-studies'], ['Insights', '/blog'], ['Contact Us', '/contact'],
 ] as const;
 
 type NavigationProps = {
