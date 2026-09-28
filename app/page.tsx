@@ -55,13 +55,13 @@ export default function Home(){return <SplashIntro><main><ScrollAnimations/>
         <div>Follow up with an AI employee, with approval</div>
       </div>
       <p className={featured.note}>Tally remains the source. Connection setup and data refresh timing are confirmed during the demo.</p>
+    </div>
+    <div className={featured.visual}>
+      <GrowthDashboard/>
       <div className={featured.actions}>
         <a className={featured.demoLink} href="/contact#contact-form">Book a GI Demo</a>
         <a className={featured.exploreLink} href="https://gi.bizgenix.ai/" target="_blank" rel="noopener noreferrer">Explore GI</a>
       </div>
-    </div>
-    <div className={featured.visual}>
-      <GrowthDashboard/>
     </div>
   </div>
 </section>

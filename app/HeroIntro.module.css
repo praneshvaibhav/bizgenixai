@@ -105,15 +105,7 @@
   .actions[data-ready='true'] { animation: none; }
 }
 
-/* Keep the mobile booking action available beneath the morph during typing. */
 @media (max-width: 650px) {
-  .actions[data-ready] {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: auto;
-    animation: none;
-  }
-
   .actions {
     width: 100%;
     flex-direction: column;
@@ -127,4 +119,6 @@
     min-height: 54px;
     padding-inline: 20px;
   }
+
+  .actions[data-ready='true'] { animation: revealActions 350ms ease-out both; }
 }

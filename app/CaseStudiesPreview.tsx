@@ -49,6 +49,7 @@ export default function CaseStudiesPreview() {
             <article className={styles.card} key={study.href}>
               <Link className={`${styles.visual} ${study.kind === 'logo' ? styles.logoVisual : ''}`} href={study.href} tabIndex={-1} aria-hidden="true">
                 <Image src={study.image} alt="" fill sizes="(max-width: 820px) 92vw, 31vw" />
+                <span className={styles.imageText}><small>{study.client} · {study.context}</small><strong>{study.title}</strong></span>
               </Link>
               <div className={styles.content}>
                 <p className={styles.meta}>{study.client} <span aria-hidden="true">·</span> {study.context}</p>

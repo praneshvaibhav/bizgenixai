@@ -72,11 +72,48 @@
   background: #edf5ef;
 }
 
+.visual::after {
+  position: absolute;
+  z-index: 1;
+  inset: 35% 0 0;
+  background: linear-gradient(180deg, transparent, rgba(4, 24, 12, .9));
+  content: '';
+  pointer-events: none;
+}
+
 .visual img { object-fit: cover; transition: transform .55s cubic-bezier(.2, .7, .2, 1); }
 .card:hover .visual img { transform: scale(1.035); }
 .logoVisual { background: #f2f9f3; }
 .logoVisual img { object-fit: contain; padding: 45px; }
 .card:hover .logoVisual img { transform: scale(1.02); }
+
+.imageText {
+  position: absolute;
+  z-index: 2;
+  right: 22px;
+  bottom: 20px;
+  left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .65);
+}
+
+.imageText small {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.imageText strong {
+  font-size: clamp(16px, 1.35vw, 21px);
+  line-height: 1.18;
+}
+
+.logoVisual::after { background: linear-gradient(180deg, transparent 10%, rgba(4, 24, 12, .88)); }
 
 .content { padding: 28px 28px 30px; }
 
