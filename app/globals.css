@@ -53,6 +53,10 @@ body{background:var(--pale);color:var(--ink)}
 [data-scroll-animation]:not([data-animation-visible='true']),[data-scroll-animation]:not([data-animation-visible='true']) *{animation-play-state:paused!important}
 @media(prefers-reduced-motion:reduce){[data-scroll-animation],[data-scroll-animation] *{animation:none!important}}
 
+/* Keep the homepage founder-to-contact transition compact. */
+.founder{padding-bottom:48px}
+@media(max-width:650px){.founder{padding-bottom:32px}}
+
 .growthDashboard{align-self:center;min-width:0;margin:0;overflow:hidden;border:1px solid #5AAA6C;border-radius:16px;box-shadow:none;background:#FFFFFF;color:#000000}
 .growthDashboard img{display:block;width:100%;height:auto}
 

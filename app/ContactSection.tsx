@@ -5,11 +5,12 @@ import SiteFooter from './SiteFooter';
 
 export default function ContactSection({
   footerOnly = false,
+  compactTop = false,
   bookingHref = '/contact#contact-form',
-}: { homeHref?: string; footerOnly?: boolean; bookingHref?: string }) {
+}: { homeHref?: string; footerOnly?: boolean; compactTop?: boolean; bookingHref?: string }) {
   const opensNewTab = /^https?:\/\//.test(bookingHref);
   return <>
-    {!footerOnly && <section className={styles.section} id="contact" aria-labelledby="contact-title">
+    {!footerOnly && <section className={`${styles.section} ${compactTop ? styles.compactTop : ''}`} id="contact" aria-labelledby="contact-title">
       <div className={styles.layout}>
         <div className={styles.intro}>
           <span className={styles.eyebrow}>CONTACT</span>

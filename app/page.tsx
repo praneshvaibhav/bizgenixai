@@ -46,7 +46,7 @@ export default function Home(){return <SplashIntro><main><ScrollAnimations/>
   <div className={featured.inner}>
     <div className={featured.copy}>
       <p className={featured.eyebrow}>Growth Intelligence by Bizgenix AI</p>
-      <h2 id="growth-intelligence-title">Know Faster. Act Smarter. Grow Stronger.</h2>
+      <h2 id="growth-intelligence-title">Know Faster. Decide Smarter. Grow Stronger.</h2>
       <p className={featured.intro}>Tally already knows where your money is stuck. Growth Intelligence shows cash, receivables, payables and stock, with the next action for each.</p>
       <div className={featured.capabilities} aria-label="Growth Intelligence capabilities">
         <div>See clearly</div>
@@ -69,5 +69,5 @@ export default function Home(){return <SplashIntro><main><ScrollAnimations/>
 
 <OurProcess/>
 <FounderSection/>
-<ContactSection/>
+<ContactSection compactTop/>
 </main></SplashIntro>}
