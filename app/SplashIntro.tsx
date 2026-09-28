@@ -4,17 +4,30 @@ import { createContext, useContext, useEffect, useLayoutEffect, useRef, useState
 import styles from './SplashIntro.module.css';
 
 const SplashCompleteContext = createContext(true);
+const splashSessionKey = 'bizgenix-splash-seen';
 
 export const useSplashComplete = () => useContext(SplashCompleteContext);
 
 export default function SplashIntro({ children }: { children: ReactNode }) {
   const [active, setActive] = useState(true);
   const splashRef = useRef<HTMLDivElement>(null);
+  const shouldResetScroll = useRef(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    try {
+      if (window.sessionStorage.getItem(splashSessionKey) === 'true') {
+        setActive(false);
+        return;
+      }
+      window.sessionStorage.setItem(splashSessionKey, 'true');
+    } catch {
+      // If storage is unavailable, keep the first-load intro as a safe fallback.
+    }
+
+    shouldResetScroll.current = true;
     const previousRestoration = window.history.scrollRestoration;
     window.history.scrollRestoration = 'manual';
-    // Each intro leads to the beginning, including reloads from a section link.
+    // The one-time intro always begins at the top of the homepage.
     if (window.location.hash) {
       window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search);
     }
@@ -86,7 +99,7 @@ export default function SplashIntro({ children }: { children: ReactNode }) {
   }, [active]);
 
   useLayoutEffect(() => {
-    if (active) return;
+    if (active || !shouldResetScroll.current) return;
     // Reset before paint; bypass the site's smooth scrolling and saved position.
     window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
     const frame = requestAnimationFrame(() => {
