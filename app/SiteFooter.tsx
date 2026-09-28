@@ -1,5 +1,8 @@
+'use client';
+
 /* eslint-disable @next/next/no-html-link-for-pages -- Match the site's document navigation. */
 /* eslint-disable @next/next/no-img-element -- Small local logo and icon assets. */
+import { useEffect, useRef } from 'react';
 import styles from './SiteFooter.module.css';
 
 const services = [
@@ -28,8 +31,23 @@ const companySocials: readonly { name: string; icon: string; href: string }[] = 
 const mapUrl = 'https://www.google.com/maps/place/Bizgenix+AI+Solutions+Pvt+Ltd/@23.0767474,72.5054583,17z/data=!3m1!4b1!4m6!3m5!1s0xb21a53f2c4da69d:0x5ba37ae89bf70d3d!8m2!3d23.0767474!4d72.5080332!16s%2Fg%2F11z38y6rxt?hl=en-US';
 
 export default function SiteFooter() {
+  const footerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const mobile = window.matchMedia('(max-width: 650px)');
+    const syncGroups = () => {
+      footerRef.current?.querySelectorAll('details').forEach(group => {
+        group.open = !mobile.matches;
+      });
+    };
+
+    syncGroups();
+    mobile.addEventListener('change', syncGroups);
+    return () => mobile.removeEventListener('change', syncGroups);
+  }, []);
+
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} ref={footerRef}>
       <div className={styles.inner}>
         <div className={styles.grid}>
           <div className={styles.brand}>
@@ -39,14 +57,14 @@ export default function SiteFooter() {
             <p className={styles.description}>India&apos;s trusted AI business consultant — delivering AI automation, AI strategy, AI training, and digital transformation to enterprises and SMEs nationwide.</p>
           </div>
 
-          <details className={styles.footerGroup}>
+          <details className={styles.footerGroup} open>
             <summary><h2 className={styles.heading}>Services</h2><span className={styles.groupArrow} aria-hidden="true">⌄</span></summary>
             <nav className={styles.linkGroup} aria-label="Footer services">
               <ul>{services.map(([label, href]) => <li key={label}><a href={href}>{label}</a></li>)}</ul>
             </nav>
           </details>
 
-          <details className={styles.footerGroup}>
+          <details className={styles.footerGroup} open>
             <summary><h2 className={styles.heading}>Contact</h2><span className={styles.groupArrow} aria-hidden="true">⌄</span></summary>
             <address className={styles.contactList}>
                 <a href="mailto:info@bizgenix.ai"><span className={styles.contactIcon}><img src="/footer/mail.svg" alt="" width={20} height={20} /></span><span>info@bizgenix.ai</span></a>
@@ -55,7 +73,7 @@ export default function SiteFooter() {
               </address>
           </details>
 
-          <details className={`${styles.footerGroup} ${styles.follow}`}>
+          <details className={`${styles.footerGroup} ${styles.follow}`} open>
             <summary><h2 className={styles.heading}>Founder&apos;s Handles</h2><span className={styles.groupArrow} aria-hidden="true">⌄</span></summary>
             <ul className={styles.socials}>
               {founderSocials.map(social => <li key={social.icon}>
@@ -67,7 +85,7 @@ export default function SiteFooter() {
             </ul>
           </details>
 
-          <details className={`${styles.footerGroup} ${styles.follow}`}>
+          <details className={`${styles.footerGroup} ${styles.follow}`} open>
             <summary><h2 className={styles.heading}>Follow us on</h2><span className={styles.groupArrow} aria-hidden="true">⌄</span></summary>
             <ul className={styles.socials}>
               {companySocials.map(social => <li key={social.icon}>
