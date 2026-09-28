@@ -49,7 +49,7 @@ export default function SiteFooter() {
           <details className={styles.footerGroup} open>
             <summary><h2 className={styles.heading}>Contact</h2><span className={styles.groupArrow} aria-hidden="true">⌄</span></summary>
             <address className={styles.contactList}>
-                <a href="mailto:info@bizgenix.com"><span className={styles.contactIcon}><img src="/footer/mail.svg" alt="" width={20} height={20} /></span><span>info@bizgenix.com</span></a>
+                <a href="mailto:info@bizgenix.ai"><span className={styles.contactIcon}><img src="/footer/mail.svg" alt="" width={20} height={20} /></span><span>info@bizgenix.ai</span></a>
                 <a href="tel:+918780671906"><span className={styles.contactIcon}><img src="/footer/phone.svg" alt="" width={20} height={20} /></span><span>+91 87806 71906</span></a>
                 <a href={mapUrl} target="_blank" rel="noopener noreferrer"><span className={styles.contactIcon}><img src="/footer/map-pin.svg" alt="" width={20} height={20} /></span><span>G 13, Silver Radience-2, Science City Rd, Sola, Ahmedabad, Gujarat 380060</span></a>
               </address>
