@@ -1,4 +1,4 @@
-.section { --card-width: clamp(285px, 25vw, 360px); --card-gap: 20px; padding: 96px 0 42px; overflow: hidden; background: #FFFFFF; scroll-margin-top: 90px; color: #000000; }
+.section { --card-width: clamp(285px, 25vw, 360px); --card-gap: 20px; padding: 38px 0 42px; overflow: hidden; background: #FFFFFF; scroll-margin-top: 90px; color: #000000; }
 .header { max-width: 1000px; margin: 0 auto 46px; padding: 0 24px; text-align: center; }
 .eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 21px; color: #000000; font-size: 11px; font-weight: 700; letter-spacing: .16em; }
 .eyebrow > span, .statusDot { width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: #5AAA6C; color: #000000; }
@@ -31,7 +31,7 @@
 .section :focus-visible { outline: 3px solid #5AAA6C; outline-offset: 4px; }
 .viewport:focus-visible { outline-offset: -3px; }
 @media (max-width: 700px) {
-  .section { --card-width: min(80vw, 330px); --card-gap: 15px; padding: 64px 0 30px; }
+  .section { --card-width: min(80vw, 330px); --card-gap: 15px; padding: 34px 0 30px; }
   .header { margin-bottom: 27px; }
   .eyebrow { font-size: 9px; letter-spacing: .12em; }
   .desktopBreak { display: none; }

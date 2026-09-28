@@ -1,0 +1,158 @@
+.section {
+  background: #205f36;
+  color: #fff;
+  padding-bottom: 74px;
+  padding-top: 74px;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1240px;
+}
+
+.eyebrow {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  margin: 0 0 25px;
+  text-transform: uppercase;
+}
+
+.section h2 {
+  color: #fff;
+  font-size: clamp(38px, 4vw, 62px);
+  line-height: 1.08;
+  margin: 0 0 24px;
+  max-width: 1150px;
+}
+
+.intro {
+  font-size: clamp(18px, 1.55vw, 24px);
+  line-height: 1.55;
+  margin: 0;
+  max-width: 1180px;
+}
+
+.capabilities {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 34px 0 25px;
+}
+
+.capabilities div {
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, .48);
+  border-radius: 16px;
+  display: flex;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.45;
+  min-height: 62px;
+  padding: 16px 18px;
+}
+
+.note {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 34px;
+  margin-top: 34px;
+}
+
+.demoLink,
+.exploreLink {
+  align-items: center;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 54px;
+  transition: transform .2s ease, background-color .2s ease, color .2s ease;
+}
+
+.demoLink {
+  padding: 0 4px;
+}
+
+.exploreLink {
+  background: #fff;
+  border-radius: 999px;
+  color: #205f36;
+  padding: 0 27px;
+}
+
+.demoLink:hover,
+.exploreLink:hover {
+  transform: translateY(-2px);
+}
+
+.exploreLink:hover {
+  background: #eef8f1;
+}
+
+.demoLink:focus-visible,
+.exploreLink:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding-bottom: 58px;
+    padding-top: 58px;
+  }
+
+  .eyebrow {
+    font-size: 11px;
+    line-height: 1.5;
+    margin-bottom: 19px;
+  }
+
+  .section h2 {
+    font-size: clamp(34px, 10vw, 46px);
+    margin-bottom: 20px;
+  }
+
+  .intro {
+    font-size: 17px;
+  }
+
+  .capabilities {
+    grid-template-columns: 1fr;
+    margin-top: 28px;
+  }
+
+  .capabilities div {
+    font-size: 15px;
+    min-height: 58px;
+  }
+
+  .note {
+    font-size: 13px;
+  }
+
+  .actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 13px;
+    margin-top: 29px;
+  }
+
+  .demoLink,
+  .exploreLink {
+    width: 100%;
+  }
+
+  .demoLink {
+    border: 1px solid rgba(255, 255, 255, .48);
+    border-radius: 999px;
+  }
+}

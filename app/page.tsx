@@ -3,11 +3,12 @@ import Image from 'next/image';
 import Navigation from './custom-solutions/Navigation';
 import HeroIntro from './HeroIntro';
 import SplashIntro from './SplashIntro';
-import GrowthDashboard from './GrowthDashboard';
 import ScrollAnimations from './ScrollAnimations';
+import featured from './FeaturedProduct.module.css';
 
 import BusinessProblems from './BusinessProblems';
 import ServicesSection from './ServicesSection';
+import CaseStudiesPreview from './CaseStudiesPreview';
 import SolutionsSection from './SolutionsSection';
 import IndustriesSection from './IndustriesSection';
 import WhyBizgenix from './WhyBizgenix';
@@ -36,10 +37,28 @@ export default function Home(){return <SplashIntro><main><ScrollAnimations/>
 <section className="hero section" id="top"><video className="heroVideo" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src="/smart-city-hero.mp4" type="video/mp4" /></video><div className="heroVideoOverlay" aria-hidden="true"/><div className="heroCopy"><HeroIntro/></div></section>
 <section className="trust section" id="about"><div className="institutions"><div className="institutionCopy"><i>◈</i> Trusted stages and institutions</div><div className="institutionLogos" aria-label="Trusted stages and institutions"><div className="institutionTrack">{[0,1].map(sequence=><div className="institutionSequence" key={sequence} aria-hidden={sequence===1}>{institutions.map(([shortName,fullName,style,logo])=><span className={'institutionLogo '+style} key={shortName} title={fullName} aria-label={sequence===0?fullName:undefined}>{logo?<Image src={logo} alt={sequence===0?fullName:''} width={132} height={74} sizes="132px"/>:shortName}</span>)}</div>)}</div></div></div></section>
 <ServicesSection/>
-<BusinessProblems/>
-<SolutionsSection/>
-<section className="intelligence section" id="growth-intelligence"><div><p className="eyebrow light">FEATURED PRODUCT — GROWTH INTELLIGENCE</p><h2>See what is happening in your business — before it becomes a problem.</h2><p>Growth Intelligence is a business analytics application designed to convert accounting and operational data into practical decision-making insights.</p><p>It helps owners move beyond static reports and understand where cash, profitability and working capital are getting affected.</p><div className="points"><span>Business performance & KPI overview</span><span>Receivables & overdue amounts</span><span>Cash movement & bank visibility</span><span>Management alerts & action-oriented insights</span><span>Payables and upcoming financial obligations</span><span>Sales, purchase and expense trends</span><span>Month-on-month and period comparisons</span><span>Inventory and closing-stock visibility</span></div><p>Not another dashboard — <b>a decision-support system for business owners.</b></p><div className="growthActions"><a className="button white" href="https://gi.bizgenix.ai/" target="_blank" rel="noopener noreferrer">Explore Growth Intelligence <Arrow/></a><a className="outline" href="/contact#contact-form">Request an Analytics Demo <Arrow/></a></div></div><GrowthDashboard/></section>
 <IndustriesSection/>
+<BusinessProblems/>
+<CaseStudiesPreview/>
+<SolutionsSection/>
+<section className={`${featured.section} section`} id="growth-intelligence" aria-labelledby="growth-intelligence-title">
+  <div className={featured.inner}>
+    <p className={featured.eyebrow}>Growth Intelligence by Bizgenix AI</p>
+    <h2 id="growth-intelligence-title">Know Faster. Act Smarter. Grow Stronger.</h2>
+    <p className={featured.intro}>Tally already knows where your money is stuck. Growth Intelligence shows cash, receivables, payables and stock, with the next action for each.</p>
+    <div className={featured.capabilities} aria-label="Growth Intelligence capabilities">
+      <div>See clearly</div>
+      <div>Ask GI</div>
+      <div>Decide with Virtual CFO guidance</div>
+      <div>Follow up with an AI employee, with approval</div>
+    </div>
+    <p className={featured.note}>Tally remains the source. Connection setup and data refresh timing are confirmed during the demo.</p>
+    <div className={featured.actions}>
+      <a className={featured.demoLink} href="/contact#contact-form">Book a GI Demo</a>
+      <a className={featured.exploreLink} href="https://gi.bizgenix.ai/" target="_blank" rel="noopener noreferrer">Explore GI</a>
+    </div>
+  </div>
+</section>
 <WhyBizgenix/>
 
 <OurProcess/>

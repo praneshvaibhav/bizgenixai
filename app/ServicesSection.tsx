@@ -4,22 +4,22 @@ import styles from './ServicesSection.module.css';
 
 const services = [
   {
-    title: 'Custom Solution',
-    description: 'AI systems and automations built around your business, processes and team.',
+    title: 'Fix a business problem',
+    description: 'Enquiries missed after 7 pm? MIS rebuilt in Excel every month? Payments nobody chased? We map the workflow and build around it.',
     href: '/custom-solutions',
-    action: 'Explore custom solutions',
+    action: 'Discuss your workflow',
   },
   {
-    title: 'Product',
-    description: 'Ready-to-use AI products that simplify work and help your business grow.',
+    title: 'Use a ready AI product',
+    description: 'Growth Intelligence for Tally visibility, plus CRM, ScaleOS, Voice AI and BizChat.',
     href: '/products',
     action: 'Explore products',
   },
   {
-    title: 'Learning',
-    description: 'Practical AI courses and workshops for professionals and business teams.',
+    title: "Build your team's AI skills",
+    description: 'Live events, the 12-week programme and corporate training.',
     href: '/courses',
-    action: 'Explore Learning',
+    action: 'Explore learning',
   },
 ];
 
@@ -27,7 +27,8 @@ export default function ServicesSection() {
   return (
     <section className={`section ${styles.section}`} id="services" aria-labelledby="services-title">
       <div className={styles.inner}>
-        <h2 id="services-title">Services we provide</h2>
+        <p className={styles.eyebrow}>Start with what needs to improve</p>
+        <h2 id="services-title">What would you like to improve?</h2>
         <div className={styles.cards}>
           {services.map((service, index) => (
             <Link
@@ -37,10 +38,9 @@ export default function ServicesSection() {
               data-scroll-animation
               style={{ '--service-delay': `${index * 160}ms` } as CSSProperties}
             >
-              <span className={styles.number} aria-hidden="true">0{index + 1}</span>
               <h3>{service.title}</h3>
               <p>{service.description}</p>
-              <span className={styles.action}>{service.action}<span aria-hidden="true">↗</span></span>
+              <span className={styles.action}>{service.action}<span aria-hidden="true">→</span></span>
             </Link>
           ))}
         </div>

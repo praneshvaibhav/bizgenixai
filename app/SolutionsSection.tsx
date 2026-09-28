@@ -5,44 +5,51 @@ const testimonials = [
   {
     name: 'Kaushk Savla',
     company: 'MYKRAFT Apparels',
+    service: 'Garment workflow automation',
     image: '/client-profiles/kaushk-savla.webp',
-    quote: 'Bizgenix helped us connect day-to-day operations with a clearer view of orders and priorities. The team spends less time chasing updates and more time moving the business forward.',
+    quote: 'In garments, one delayed handoff affects everything after it. We wanted the routine updates and follow-ups to happen on their own, without changing how the floor team works. Now I don’t need to call five people just to know where an order is.',
   },
   {
     name: 'Ashok Sanghvi',
     company: 'Mahavir Traders',
+    service: 'Inventory management system',
     image: '/client-profiles/ashok-sanghvi.webp',
-    quote: 'As our work expanded, manual tracking became difficult. The new workflow gives us clearer ownership, better visibility and a simpler way to stay on top of every important action.',
+    quote: 'Stock was never one clean answer. Someone had one sheet, the godown had another number, and we would confirm it again before committing to a customer. The inventory system has given us one place to check what came in, what moved and what is actually available.',
   },
   {
     name: 'Bhavya',
     company: 'VS Associate',
+    service: 'AI debt recovery voice agent',
     image: '/client-profiles/bhavya.webp',
-    quote: 'The solution fits the way our team actually works. It reduces repetitive effort and keeps client communication, responsibilities and day-to-day tasks better organised.',
+    quote: 'Debt-recovery calls are repetitive, but they still need to sound respectful. The voice agent handles the first follow-up, notes the customer’s response and records a promised payment date. My team steps in when a real conversation is needed instead of spending the day dialling numbers.',
   },
   {
     name: 'Chintan Shah',
     company: 'Linq Corporate Solutions',
+    service: 'AI sales call analysis',
     image: '/client-profiles/chintan-shah.webp',
-    quote: 'We now have a more connected view of work across the business. The system helps our team collaborate better, act faster and spend less time searching for updates.',
+    quote: 'We were reviewing only a handful of sales calls because listening manually takes too long. The AI now transcribes every call, checks it against our script and gives the agent a clear score. Coaching conversations are far more useful now.',
   },
   {
     name: 'Dhaval Ukani',
     company: 'Aavkar Corporation',
+    service: 'Email, WhatsApp & cheque automation',
     image: '/client-profiles/dhaval-ukani.webp',
-    quote: 'From routine coordination to management visibility, the solution has made our process more consistent. We can follow progress clearly and respond without unnecessary delays.',
+    quote: 'My follow-ups were split between email, WhatsApp and a separate cheque list, so it was easy to miss something on a busy day. Now important emails are sorted, WhatsApp messages go out on time and cheque reminders run before the deposit date. I only get involved when the system flags an exception.',
   },
   {
     name: 'Prachetan Bansal',
     company: 'Spectrum Dyes and Chemical Private Limited',
+    service: 'Industry knowledge RAG model',
     image: '/client-profiles/prachetan-bansal.webp',
-    quote: 'Bizgenix translated a complex requirement into a practical system. It brings the right information together and supports faster, clearer and more informed decisions.',
+    quote: 'We have years of industry knowledge, but it was sitting across product sheets, test reports and old documents. With the RAG model, the team can ask a technical question in plain language and see an answer grounded in our own material. The source is right there, so we can verify it before replying.',
   },
   {
     name: 'Varun Shrivastava',
     company: 'Kailash Veda Infra',
+    service: 'Project coordination system',
     image: '/client-profiles/varun-shrivastava.webp',
-    quote: 'The solution gives our team a dependable way to coordinate projects, track responsibilities and keep important information visible. Decisions are faster because everyone works from the same picture.',
+    quote: 'On a live project, “I thought someone else was handling it” is an expensive sentence. We now have one place for responsibilities, progress and pending decisions. The site team and office team are finally looking at the same picture.',
   },
 ];
 
@@ -50,7 +57,10 @@ function TestimonialCard({ testimonial, featured = false }: { testimonial: typeo
   return (
     <figure className={`${styles.card} ${featured ? styles.featured : ''}`}>
       <div className={styles.cardHeader}>
-        <span className={styles.service}>Client experience</span>
+        <span className={styles.service}>
+          <small>Solution type</small>
+          <strong>{testimonial.service}</strong>
+        </span>
       </div>
       <span className={styles.quoteMark} aria-hidden="true">“</span>
       <blockquote><p>{testimonial.quote}</p></blockquote>
