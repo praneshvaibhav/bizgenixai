@@ -73,7 +73,7 @@ export default function HeroIntro() {
   const typingDescription = splashComplete && visibleCharacters >= headlineLength && visibleCharacters < totalLength;
 
   return (
-    <>
+    <div className={styles.root}>
       <noscript><style>{`.${styles.untyped}{visibility:visible!important}.${styles.caret}{display:none!important}`}</style></noscript>
       <h1>
         <span className={styles.srOnly}>{headline.join(' ')}</span>
@@ -90,6 +90,6 @@ export default function HeroIntro() {
         <a className={styles.primaryAction} href="/contact#contact-form">Book a Free Business Review</a>
         <a className={styles.secondaryAction} href="/products">See What We&apos;ve Built</a>
       </div>
-    </>
+    </div>
   );
 }
