@@ -4,6 +4,7 @@ import Navigation from './custom-solutions/Navigation';
 import HeroIntro from './HeroIntro';
 import SplashIntro from './SplashIntro';
 import ScrollAnimations from './ScrollAnimations';
+import GrowthDashboard from './GrowthDashboard';
 import featured from './FeaturedProduct.module.css';
 
 import BusinessProblems from './BusinessProblems';
@@ -43,19 +44,24 @@ export default function Home(){return <SplashIntro><main><ScrollAnimations/>
 <SolutionsSection/>
 <section className={`${featured.section} section`} id="growth-intelligence" aria-labelledby="growth-intelligence-title">
   <div className={featured.inner}>
-    <p className={featured.eyebrow}>Growth Intelligence by Bizgenix AI</p>
-    <h2 id="growth-intelligence-title">Know Faster. Act Smarter. Grow Stronger.</h2>
-    <p className={featured.intro}>Tally already knows where your money is stuck. Growth Intelligence shows cash, receivables, payables and stock, with the next action for each.</p>
-    <div className={featured.capabilities} aria-label="Growth Intelligence capabilities">
-      <div>See clearly</div>
-      <div>Ask GI</div>
-      <div>Decide with Virtual CFO guidance</div>
-      <div>Follow up with an AI employee, with approval</div>
+    <div className={featured.copy}>
+      <p className={featured.eyebrow}>Growth Intelligence by Bizgenix AI</p>
+      <h2 id="growth-intelligence-title">Know Faster. Act Smarter. Grow Stronger.</h2>
+      <p className={featured.intro}>Tally already knows where your money is stuck. Growth Intelligence shows cash, receivables, payables and stock, with the next action for each.</p>
+      <div className={featured.capabilities} aria-label="Growth Intelligence capabilities">
+        <div>See clearly</div>
+        <div>Ask GI</div>
+        <div>Decide with Virtual CFO guidance</div>
+        <div>Follow up with an AI employee, with approval</div>
+      </div>
+      <p className={featured.note}>Tally remains the source. Connection setup and data refresh timing are confirmed during the demo.</p>
+      <div className={featured.actions}>
+        <a className={featured.demoLink} href="/contact#contact-form">Book a GI Demo</a>
+        <a className={featured.exploreLink} href="https://gi.bizgenix.ai/" target="_blank" rel="noopener noreferrer">Explore GI</a>
+      </div>
     </div>
-    <p className={featured.note}>Tally remains the source. Connection setup and data refresh timing are confirmed during the demo.</p>
-    <div className={featured.actions}>
-      <a className={featured.demoLink} href="/contact#contact-form">Book a GI Demo</a>
-      <a className={featured.exploreLink} href="https://gi.bizgenix.ai/" target="_blank" rel="noopener noreferrer">Explore GI</a>
+    <div className={featured.visual}>
+      <GrowthDashboard/>
     </div>
   </div>
 </section>
