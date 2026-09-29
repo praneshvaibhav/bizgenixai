@@ -25,6 +25,19 @@ export default function AboutPage() {
     <a className={styles.skipLink} href="#main-content">Skip to content</a>
     <Navigation activePath="/about" theme="light" />
     <main id="main-content">
+      <section className={styles.hero} aria-labelledby="about-title">
+        <div className={styles.container}>
+          <div className={styles.heroHeading}>
+            <div><p className={styles.eyebrow}>ABOUT BIZGENIX</p><h1 id="about-title">The people behind<br /><em>practical AI.</em></h1></div>
+            <p>We are strategists, builders and educators working together to turn emerging technology into systems businesses can actually use.</p>
+          </div>
+          <figure className={styles.teamPortrait}>
+            <Image src="/bizgenix-team.png" alt="The Bizgenix team together at a company event" fill priority sizes="(max-width: 700px) 100vw, 90vw" />
+            <figcaption><span>THE BIZGENIX TEAM</span><span>BUILDERS · EDUCATORS · IMPLEMENTERS</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
       <section className={`${styles.container} ${styles.intro}`} aria-labelledby="intro-title"><div><h1 id="intro-title">Business understanding first.<br /><em>Technology with purpose.</em></h1><div className={styles.introCopy}><p>Businesses generate more data than ever, yet many still depend on manual operations, disconnected software and delayed decisions.</p><p>We work closely with every client to understand their processes, identify bottlenecks and build systems that improve efficiency, visibility and growth.</p></div></div></section>
 
       <section className={styles.purpose} aria-label="Our vision and mission"><ScrollReveal className={`${styles.container} ${styles.purposeGrid}`}><article><span>01</span><div><p className={styles.eyebrow}>VISION</p><h2>Make the future of business <em>more intelligent.</em></h2><p>To become India’s most trusted AI implementation partner by delivering scalable, secure solutions that create lasting business value.</p></div></article><article><span>02</span><div><p className={styles.eyebrow}>MISSION</p><h2>Make AI practical.<br /><em>Make progress measurable.</em></h2><p>To make artificial intelligence accessible and useful—automating routine work, empowering people and supporting sustainable growth.</p></div></article></ScrollReveal></section>
