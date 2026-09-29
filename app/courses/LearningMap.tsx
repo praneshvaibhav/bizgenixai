@@ -14,18 +14,18 @@ const learningOptions = [
   },
   {
     number: '02',
-    name: 'Courses',
-    detail: 'Hands-on learning paths for AI foundations, prompt engineering, automation, agents and real business applications.',
-    href: '#featured-courses',
-    action: 'Explore courses',
-    external: false,
-  },
-  {
-    number: '03',
     name: 'Corporate Training',
     detail: 'Customized programs that help teams adopt AI responsibly, improve productivity and build shared ways of working.',
     href: '#corporate-training',
     action: 'Explore team training',
+    external: false,
+  },
+  {
+    number: '03',
+    name: 'Courses',
+    detail: 'Hands-on learning paths for AI foundations, prompt engineering, automation, agents and real business applications.',
+    href: '#featured-courses',
+    action: 'Explore courses',
     external: false,
   },
 ];
