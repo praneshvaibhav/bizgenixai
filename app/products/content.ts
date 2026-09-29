@@ -89,7 +89,7 @@ export const reasons = [
   ['Built around business outcomes', 'Each product begins with a business problem and a measurable result.'],
   ['Configurable for your business', 'Workflows, fields, rules, scripts and reports can be adapted to your organization.'],
   ['Integration-ready', 'Connect with CRM, ERP, Tally, WhatsApp, calendars, spreadsheets and existing systems.'],
-  ['India-first experience', 'Built around Indian communication patterns, languages and operating workflows.'],
+  ['Made for global', 'Built around global communication patterns, languages and operating workflows.'],
   ['End-to-end support', 'From discovery and configuration to integration, deployment, training and optimization.'],
   ['Proof before a large commitment', 'Where suitable, evaluate a prototype or scoped proof before full implementation.'],
 ] as const;

@@ -14,7 +14,7 @@ const titles = [
   <>Built around<br />business outcomes</>,
   <>Configurable<br />for your business</>,
   <>Integration-ready</>,
-  <>India-first<br />experience</>,
+  <>Made for<br />global</>,
   <>End-to-end<br />support</>,
   <>Proof before<br />a large commitment</>,
 ];
@@ -22,7 +22,7 @@ const links = [
   { href: '/contact#contact-form', label: 'Discuss products built around business outcomes' },
   { href: '/contact#contact-form', label: 'Discuss custom solutions for your business' },
   { href: '/contact#contact-form', label: 'Discuss supported business integrations' },
-  { href: '/contact#contact-form', label: 'Discuss India-first workflows' },
+  { href: '/contact#contact-form', label: 'Discuss products made for global businesses' },
   { href: '/contact#contact-form', label: 'Discuss implementation, training and support' },
   { href: '/contact#contact-form', label: 'Discuss a prototype with Bizgenix' },
 ];

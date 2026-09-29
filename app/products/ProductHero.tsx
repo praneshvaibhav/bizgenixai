@@ -41,8 +41,7 @@ export default function ProductHero() {
     const animations: Animation[] = [];
     const completed = new Set<Animation>();
     let stopped = false;
-    let heroComplete = false;
-    let metricsVisible = false;
+    let heroVisible = false;
     let countComplete = false;
     let countFrame = 0;
     let elapsed = 0;
@@ -65,7 +64,7 @@ export default function ProductHero() {
     const updateCounters = () => {
       cancelAnimationFrame(countFrame);
       lastFrame = null;
-      if (heroComplete && metricsVisible && !countComplete && !stopped) countFrame = requestAnimationFrame(count);
+      if (heroVisible && !countComplete && !stopped) countFrame = requestAnimationFrame(count);
     };
 
     const animate = (element: Element, frames: Keyframe[], duration: number, delay = 0) => {
@@ -74,10 +73,6 @@ export default function ProductHero() {
       animation.onfinish = () => {
         completed.add(animation);
         animation.cancel();
-        if (completed.size === animations.length) {
-          heroComplete = true;
-          updateCounters();
-        }
       };
       animations.push(animation);
     };
@@ -110,19 +105,17 @@ export default function ProductHero() {
       cancelAnimationFrame(countFrame);
       counters.forEach(counter => { counter.textContent = Number(counter.dataset.countTo).toLocaleString('en-IN'); });
     };
-    // Keep the sequence playing while either the diagram or its metrics are in view.
+    // Start and pause the diagram and counters together with the hero experience.
     const stopObserving = observeVisibility(experienceRef.current ?? diagram, visible => {
       if (stopped) return;
+      heroVisible = visible;
       animations.forEach(animation => {
         if (completed.has(animation)) return;
         if (visible) animation.play();
         else animation.pause();
       });
-    });
-    const stopMetrics = metricsRef.current ? observeVisibility(metricsRef.current, visible => {
-      metricsVisible = visible;
       updateCounters();
-    }) : () => {};
+    });
     // Keyboard users should never land on a visually hidden product link.
     const onFocus = () => finish();
     const onMotionChange = () => { if (motion.matches) finish(); };
@@ -131,7 +124,6 @@ export default function ProductHero() {
     return () => {
       finish();
       stopObserving();
-      stopMetrics();
       diagram.removeEventListener('focusin', onFocus);
       motion.removeEventListener('change', onMotionChange);
     };

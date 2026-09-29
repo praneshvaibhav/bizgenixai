@@ -4,6 +4,7 @@ import WhyCustomSolutions from './WhyCustomSolutions';
 import ContactSection from '../ContactSection';
 import Navigation from './Navigation';
 import CapabilityReveal from './CapabilityReveal';
+import ProductDifference from '../products/ProductDifference';
 import styles from './page.module.css';
 
 const title = 'Custom AI Solutions Built Around Your Business | Bizgenix AI';
@@ -45,6 +46,7 @@ export default function CustomSolutionsPage() {
           <div className={styles.capabilityCta}><p>Have a requirement that doesn’t fit a category?<br /><b>That’s exactly where custom starts.</b></p><a className={styles.primary} href="/contact#contact-form">Discuss Your Requirement <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
+      <ProductDifference />
       <ContactSection homeHref="/" />
     </main>
   </div>;
