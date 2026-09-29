@@ -1,6 +1,6 @@
 ﻿'use client';
 
-import { useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { email, nextSteps, phone, queryTypes } from './content';
 import styles from './page.module.css';
@@ -9,10 +9,20 @@ import Navigation from '../custom-solutions/Navigation';
 
 export default function ContactExperience() {
   const formId = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID;
+  const formRef = useRef<HTMLFormElement>(null);
   const [configurationError, setConfigurationError] = useState(false);
   const [state, handleSubmit] = useForm(formId || 'form-not-configured');
 
+  useEffect(() => {
+    if (state.succeeded) formRef.current?.reset();
+  }, [state.succeeded]);
+
   async function submitForm(event: FormEvent<HTMLFormElement>) {
+    if (state.submitting) {
+      event.preventDefault();
+      return;
+    }
+
     if (!formId) {
       event.preventDefault();
       setConfigurationError(true);
@@ -38,7 +48,7 @@ export default function ContactExperience() {
             <div className={styles.card}>
               <div className={styles.cardHeading}><h2>Begin Your Journey</h2><p>Ready to transform your business with AI ? Let&apos;s discuss your goals, challenges, and the right AI solution for your business.
 </p></div>
-              <form id="contact-form" className={styles.form} onSubmit={submitForm}>
+              <form ref={formRef} id="contact-form" className={styles.form} onSubmit={submitForm}>
                 <div><label htmlFor="name">Name<span>*</span></label><input id="name" name="name" autoComplete="name" placeholder="Your Name" required maxLength={200} /></div>
                 <div><label htmlFor="contact-email">Email<span>*</span></label><input id="contact-email" type="email" name="email" autoComplete="email" placeholder="your@email.com" required maxLength={254} /></div>
                 <div><label htmlFor="company">Company</label><input id="company" name="company" autoComplete="organization" placeholder="Your Company Name" maxLength={200} /></div>

@@ -32,7 +32,6 @@ const institutions=[
   ['Ruby Print N Pack','Ruby Print N Pack','ruby','/institutions/ruby-print-n-pack.webp'],
   ['SJ Sangath','SJ Sangath','sangath','/institutions/sj-sangath.webp'],
 ];
-const Arrow=()=> <span className="arrow">↗</span>;
 export default function Home(){return <SplashIntro><main><ScrollAnimations/>
 <Navigation activePath="/" heroBlend />
 <section className="hero section" id="top"><video className="heroVideo" autoPlay muted loop playsInline preload="metadata" aria-hidden="true"><source src="/smart-city-hero.mp4" type="video/mp4" /></video><div className="heroVideoOverlay" aria-hidden="true"/><div className="heroCopy"><HeroIntro/></div></section>

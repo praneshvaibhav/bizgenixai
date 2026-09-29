@@ -16,8 +16,8 @@ export default function SplashIntro({ children }: { children: ReactNode }) {
   useLayoutEffect(() => {
     try {
       if (window.sessionStorage.getItem(splashSessionKey) === 'true') {
-        setActive(false);
-        return;
+        const frame = requestAnimationFrame(() => setActive(false));
+        return () => cancelAnimationFrame(frame);
       }
       window.sessionStorage.setItem(splashSessionKey, 'true');
     } catch {
