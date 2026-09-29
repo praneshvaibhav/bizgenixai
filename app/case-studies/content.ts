@@ -309,7 +309,7 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     "slug": "sanjay-jain-scaleos",
-    "client": "Sanjay Jain",
+    "client": "SJ Sangaath",
     "title": "ScaleOS — one system for the whole business",
     "category": "Services",
     "industry": "Service & operations management",
