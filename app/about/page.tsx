@@ -25,19 +25,6 @@ export default function AboutPage() {
     <a className={styles.skipLink} href="#main-content">Skip to content</a>
     <Navigation activePath="/about" theme="light" />
     <main id="main-content">
-      <section className={styles.hero} aria-labelledby="about-title">
-        <div className={styles.container}>
-          <div className={styles.heroHeading}>
-            <div><p className={styles.eyebrow}>ABOUT BIZGENIX</p><h1 id="about-title">The people behind<br /><em>practical AI.</em></h1></div>
-            <p>We are strategists, builders and educators working together to turn emerging technology into systems businesses can actually use.</p>
-          </div>
-          <figure className={styles.teamPortrait}>
-            <Image src="/bizgenix-team.png" alt="The Bizgenix team together at a company event" fill priority sizes="(max-width: 700px) 100vw, 90vw" />
-            <figcaption><span>THE BIZGENIX TEAM</span><span>BUILDERS · EDUCATORS · IMPLEMENTERS</span></figcaption>
-          </figure>
-        </div>
-      </section>
-
       <section className={`${styles.container} ${styles.intro}`} aria-labelledby="intro-title"><div><h1 id="intro-title">Business understanding first.<br /><em>Technology with purpose.</em></h1><div className={styles.introCopy}><p>Businesses generate more data than ever, yet many still depend on manual operations, disconnected software and delayed decisions.</p><p>We work closely with every client to understand their processes, identify bottlenecks and build systems that improve efficiency, visibility and growth.</p></div></div></section>
 
       <section className={styles.purpose} aria-label="Our vision and mission"><ScrollReveal className={`${styles.container} ${styles.purposeGrid}`}><article><span>01</span><div><p className={styles.eyebrow}>VISION</p><h2>Make the future of business <em>more intelligent.</em></h2><p>To become India’s most trusted AI implementation partner by delivering scalable, secure solutions that create lasting business value.</p></div></article><article><span>02</span><div><p className={styles.eyebrow}>MISSION</p><h2>Make AI practical.<br /><em>Make progress measurable.</em></h2><p>To make artificial intelligence accessible and useful—automating routine work, empowering people and supporting sustainable growth.</p></div></article></ScrollReveal></section>
@@ -49,6 +36,8 @@ export default function AboutPage() {
       <section className={styles.directors} id="directors" aria-labelledby="directors-title"><div className={styles.container}><header><p className={styles.eyebrow}>OUR DIRECTORS</p><h2 id="directors-title">The people helping shape<br /><em>our direction.</em></h2></header><ScrollReveal className={styles.directorGrid}>{directors.map((director, index) => <article key={director.id}><div className={styles.directorPhoto}><Image src={director.image} alt={director.imageAlt} fill sizes="(max-width: 760px) 86vw, 36vw" style={{ objectPosition: director.imagePosition }} /></div><div className={styles.directorInfo}><span>0{index + 1} / DIRECTOR</span><h3>{director.name}</h3><p className={styles.directorFocus}>{director.focus}</p><p>{director.paragraphs[0]}</p><ul>{director.expertise.map(item => <li key={item}>{item}</li>)}</ul></div></article>)}</ScrollReveal></div></section>
 
       <section className={`${styles.container} ${styles.results}`} aria-labelledby="results-title"><header><p className={styles.eyebrow}>WHAT WE CREATE</p><h2 id="results-title">All that matters is<br /><em>real business impact.</em></h2></header><div>{impact.slice(0, 4).map(([name, copy], index) => <article key={name}><span>0{index + 1}</span><h3>{name}</h3><p>{copy}</p></article>)}</div></section>
+
+      <section className={styles.team} aria-labelledby="team-title"><div className={styles.container}><header><p className={styles.eyebrow}>ABOUT BIZGENIX</p><h2 id="team-title">The people behind<br /><em>practical AI.</em></h2></header><Image className={styles.teamPortrait} src="/bizgenix-team.png" alt="The Bizgenix team together at a company event" width={1410} height={899} sizes="(max-width: 700px) calc(100vw - 36px), (max-width: 1200px) 84vw, 1100px" /><p className={styles.teamCopy}>We are strategists, builders and educators working together to turn emerging technology into systems businesses can actually use.</p></div></section>
 
       <section className={styles.cta} aria-labelledby="cta-title"><div className={styles.container}><p className={styles.eyebrow}>LET’S BUILD WHAT COMES NEXT</p><h2 id="cta-title">Bring us the challenge.<br /><em>We’ll build the intelligent way forward.</em></h2><div><Link className={styles.secondary} href="/contact#contact-form">Contact our team</Link></div></div></section>
     </main>
