@@ -130,3 +130,14 @@
 
   .actions[data-ready='true'] { animation: revealActions 350ms ease-out both; }
 }
+
+@media (max-width: 760px) {
+  .root {
+    display: contents;
+  }
+
+  .actions {
+    order: 4;
+    width: 100%;
+  }
+}

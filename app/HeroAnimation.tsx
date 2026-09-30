@@ -4,6 +4,7 @@ export default function HeroAnimation() {
   return (
     <div
       className={styles.visual}
+      data-hero-animation
       role="img"
       aria-label="Business signals flowing into the Bizgenix intelligence core"
     >

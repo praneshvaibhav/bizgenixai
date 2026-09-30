@@ -137,6 +137,11 @@ main section[id]{scroll-margin-top:calc(var(--nav-height) + 16px)}
 }
 @media(max-width:760px){
   .hero{grid-template-columns:1fr;gap:0}
+  .hero>.heroCopy{display:contents}
+  .hero h1{order:1;width:100%}
+  .hero .lead{order:2;width:100%}
+  .hero>[data-hero-animation]{order:3}
+  .hero [data-hero-actions]{order:4}
 }
 @media(max-width:650px){
   .hero{min-height:calc(100svh - 70px);padding-top:80px;padding-bottom:80px}

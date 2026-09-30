@@ -5,7 +5,7 @@ import { useSplashComplete } from './SplashIntro';
 import styles from './HeroIntro.module.css';
 
 const headline = ['AI That Takes Work', 'Off Your Desk.'];
-const description = 'The We help Indian businesses automate follow-ups, reduce manual work and make clearer decisions - with practical AI systems built around their teams.';
+const description = 'We help Indian businesses automate follow-ups, reduce manual work and make clearer decisions - with practical AI systems built around their teams.';
 const headlineLength = headline.join('').length;
 const totalLength = headlineLength + description.length;
 const headlineSpeed = 48;
@@ -71,7 +71,7 @@ export default function HeroIntro() {
         <span className={styles.srOnly}>{description}</span>
         <span aria-hidden="true"><TypedText text={description} count={visibleCharacters - headlineLength} cursor={typingDescription} /></span>
       </p>
-      <div className={styles.actions} data-ready={splashComplete && visibleCharacters >= totalLength}>
+      <div className={styles.actions} data-hero-actions data-ready={splashComplete && visibleCharacters >= totalLength}>
         <a className={styles.primaryAction} href="/contact#contact-form">Book a Free Business Review</a>
         <a className={styles.secondaryAction} href="/products">See What We&apos;ve Built</a>
       </div>
