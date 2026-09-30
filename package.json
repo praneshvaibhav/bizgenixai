@@ -6,7 +6,7 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "dev": "vinext dev",
+    "dev": "vinext dev --port 3120",
     "build": "vite build",
     "build:vercel": "vite build --config vite.vercel.config.ts",
     "start": "vinext start",
