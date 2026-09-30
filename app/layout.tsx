@@ -5,6 +5,11 @@ export const metadata: Metadata = {
   title: { default: 'Bizgenix AI | AI That Takes Work Off Your Desk', template: '%s' },
   description: 'Custom AI systems, ready products and business automation for Indian businesses.',
   applicationName: 'Bizgenix AI',
+  icons: {
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+    shortcut: ['/favicon.svg'],
+    apple: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+  },
   openGraph: {
     type: 'website',
     siteName: 'Bizgenix AI',

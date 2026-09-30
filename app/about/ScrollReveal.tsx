@@ -7,7 +7,7 @@ export default function ScrollReveal({ className, children }: { className: strin
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const element = ref.current;
+    const element = ref.current;  
     if (!element) return;
 
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');

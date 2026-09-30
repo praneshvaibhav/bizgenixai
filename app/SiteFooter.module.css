@@ -31,8 +31,25 @@
 .footerGroup > summary { list-style: none; }
 .footerGroup > summary::-webkit-details-marker { display: none; }
 .groupArrow { display: none; }
-.brandLink { display: inline-flex; align-items: center; max-width: 100%; padding: 0; }
-.brandLink .brandLogo { display: block; width: 190px; height: auto; max-width: 100%; padding: 0; border: 0; border-radius: 0; background: transparent; }
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  padding: 5px 8px;
+  overflow: hidden;
+  border: 1px solid rgba(20, 93, 45, 0.18);
+  border-radius: 8px;
+  background: linear-gradient(145deg, #ffffff 0%, #f4faf6 100%);
+  box-shadow:
+    0 6px 14px rgba(8, 38, 17, 0.14),
+    0 1px 3px rgba(8, 38, 17, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+.brandLink::before {
+  display: none;
+}
+.brandLink .brandLogo { display: block; width: 155px; height: auto; max-width: 100%; padding: 0; border: 0; border-radius: 0; background: transparent; }
 .footer .description { max-width: 390px; margin: 12px 0 0; color: #fff; font-size: inherit; font-weight: 400; line-height: 1.65; letter-spacing: 0; }
 .socials { display: flex; flex-direction: column; gap: 2px; padding: 0; margin: 0; list-style: none; }
 .social { display: flex; align-items: center; gap: 8px; min-height: 28px; color: #fff; font-size: 14px; font-weight: 400; line-height: 1.4; letter-spacing: .02em; text-decoration: none; }
@@ -55,7 +72,7 @@
 .footer a:focus-visible { outline: 2px solid #00e089; outline-offset: 5px; border-radius: 3px; }
 @media(max-width:1100px) {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 36px; }
-  .brandLink { padding-left: 0; }
+  .brandLink { padding: 5px 8px; }
 }
 @media(min-width:651px) {
   .footerGroup > summary { pointer-events: none; }
@@ -64,7 +81,8 @@
 @media(max-width:650px) {
   .footer { padding: 0 22px; font-size: 14px; }
   .grid { padding: 24px 0; grid-template-columns: minmax(0, 1fr); gap: 0; }
-  .brandLink { padding: 0; }
+  .brandLink { padding: 4px 7px; border-radius: 7px; }
+  .brandLink .brandLogo { width: 145px; }
   .footer .description { margin: 10px 0 0; line-height: 1.65; }
   .footerGroup { border-top: 1px solid rgba(255,255,255,.24); }
   .footerGroup:last-child { border-bottom: 1px solid rgba(255,255,255,.24); }

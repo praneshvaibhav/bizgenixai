@@ -6,10 +6,13 @@
 .copy h2 { font: 700 clamp(38px, 4vw, 61px)/1.04 Arial, sans-serif; letter-spacing: -.045em; margin: 0 0 18px; }
 .copy h2 em { color: #5aaa6c; font-style: normal; }
 .copy > p { font-size: 14px; line-height: 1.6; max-width: 630px; margin: 0 auto; }
-.cards { width: 100%; overflow: hidden; scroll-margin-top: 115px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
-.track { display: flex; align-items: stretch; gap: 20px; width: max-content; padding: 4px 0 16px; animation: clientMarquee 52s linear infinite; will-change: transform; }
+.cards { width: 100%; overflow-x: auto; overflow-y: hidden; scroll-margin-top: 115px; scrollbar-width: none; cursor: grab; touch-action: pan-y; overscroll-behavior-x: contain; }
+.cards::-webkit-scrollbar { display: none; }
+.cards[data-dragging='true'] { cursor: grabbing; }
+.cards:focus-visible { outline: 2px solid #5aaa6c; outline-offset: -2px; }
+.cards img { pointer-events: none; user-select: none; }
+.track { display: flex; align-items: stretch; gap: 20px; width: max-content; padding: 4px 0 16px; }
 .group { display: flex; align-items: stretch; gap: 20px; }
-.cards:hover .track, .cards:focus-within .track { animation-play-state: paused; }
 .card { display: flex; flex: 0 0 clamp(310px, 31vw, 430px); flex-direction: column; min-width: 0; margin: 0; padding: 30px; border: 1px solid #5aaa6c; border-radius: 21px; background: #fff; color: #000; box-shadow: 0 12px 30px rgba(34, 91, 48, .07); }
 .featured { background: #5aaa6c; }
 .cardHeader { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; min-height: 56px; }
@@ -32,15 +35,12 @@
 .client > div { min-width: 0; }
 .client strong { display: block; font-size: 16px; line-height: 1.4; }
 .client div > span { display: block; margin-top: 5px; font-size: 12px; line-height: 1.5; }
-@keyframes clientMarquee { to { transform: translateX(calc(-50% - 10px)); } }
 @media (max-width: 850px) {
   .copy h2 { font-size: clamp(36px, 8vw, 53px); }
   .hero { padding-bottom: 32px; }
   .track, .group { gap: 14px; }
-  .track { animation-duration: 46s; }
   .card { flex-basis: min(82vw, 370px); padding: 24px; }
   .card blockquote p { font-size: 17px; }
-  @keyframes clientMarquee { to { transform: translateX(calc(-50% - 7px)); } }
 }
 @media (max-width: 400px) {
   .card { padding: 22px; }
@@ -49,7 +49,6 @@
   .company { max-width: 165px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .cards { overflow-x: auto; -webkit-mask-image: none; mask-image: none; }
   .track { animation: none; padding-inline: 22px; }
   .duplicate { display: none; }
 }

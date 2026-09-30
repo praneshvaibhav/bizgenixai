@@ -71,7 +71,8 @@
 }
 
 .primaryAction {
-  background: #1e6038;
+  background: #59A76B;
+  border-color: #59A76B;
   color: #fff;
 }
 
@@ -86,8 +87,8 @@
 }
 
 .primaryAction:hover {
-  background: #174e2e;
-  border-color: #174e2e;
+  background: #59A76B;
+  border-color: #59A76B;
 }
 
 .secondaryAction:hover {

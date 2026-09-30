@@ -1,0 +1,81 @@
+.visual {
+  position: relative;
+  min-width: 0;
+  width: 100%;
+  height: min(640px, calc(100svh - 150px));
+  min-height: 500px;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(
+    ellipse closest-side at 50% 50%,
+    #000 66%,
+    rgba(0, 0, 0, 0.96) 74%,
+    rgba(0, 0, 0, 0.58) 88%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse closest-side at 50% 50%,
+    #000 66%,
+    rgba(0, 0, 0, 0.96) 74%,
+    rgba(0, 0, 0, 0.58) 88%,
+    transparent 100%
+  );
+}
+
+.desktopVideo,
+.mobileVideo {
+  position: absolute;
+  display: block;
+  max-width: none;
+}
+
+.desktopVideo {
+  top: 50%;
+  left: -64%;
+  width: 164%;
+  height: auto;
+  transform: translateY(-50%);
+}
+
+.mobileVideo {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .desktopVideo,
+  .mobileVideo {
+    display: none;
+  }
+
+  .visual {
+    background: url('/hero-animation/desktop-poster.jpg') 73% center / auto 100% no-repeat;
+  }
+}
+
+@media (max-width: 760px) {
+  .visual {
+    height: min(88vw, 520px);
+    min-height: 300px;
+    margin-top: 8px;
+  }
+
+  .desktopVideo {
+    display: none;
+  }
+
+  .mobileVideo {
+    display: block;
+    top: -30%;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 760px) and (prefers-reduced-motion: reduce) {
+  .visual {
+    background-image: url('/hero-animation/mobile-poster.jpg');
+    background-position: center 57%;
+    background-size: 100% auto;
+  }
+}

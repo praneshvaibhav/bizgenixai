@@ -1,4 +1,8 @@
+'use client';
+
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
+import type { KeyboardEvent, PointerEvent as ReactPointerEvent } from 'react';
 import styles from './SolutionsSection.module.css';
 
 const testimonials = [
@@ -73,6 +77,75 @@ function TestimonialCard({ testimonial, featured = false }: { testimonial: typeo
 }
 
 export default function SolutionsSection() {
+  const cardsRef = useRef<HTMLDivElement>(null);
+  const pausedRef = useRef(false);
+  const resumeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const dragRef = useRef({ active: false, startX: 0, startScroll: 0 });
+
+  const resumeLater = () => {
+    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    resumeTimerRef.current = setTimeout(() => { pausedRef.current = false; }, 1200);
+  };
+
+  useEffect(() => {
+    const cards = cardsRef.current;
+    if (!cards || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    let frame = 0;
+    let previous = performance.now();
+    const animate = (now: number) => {
+      const elapsed = Math.min(now - previous, 50);
+      previous = now;
+      if (!pausedRef.current) {
+        cards.scrollLeft += elapsed * 0.025;
+        const loopPoint = cards.scrollWidth / 2;
+        if (cards.scrollLeft >= loopPoint) cards.scrollLeft -= loopPoint;
+      }
+      frame = requestAnimationFrame(animate);
+    };
+    frame = requestAnimationFrame(animate);
+
+    return () => {
+      cancelAnimationFrame(frame);
+      if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    };
+  }, []);
+
+  const handlePointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
+    if (event.pointerType === 'mouse' && event.button !== 0) return;
+    const cards = cardsRef.current;
+    if (!cards) return;
+    pausedRef.current = true;
+    if (resumeTimerRef.current) clearTimeout(resumeTimerRef.current);
+    dragRef.current = { active: true, startX: event.clientX, startScroll: cards.scrollLeft };
+    cards.dataset.dragging = 'true';
+    cards.setPointerCapture(event.pointerId);
+  };
+
+  const handlePointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const cards = cardsRef.current;
+    if (!cards || !dragRef.current.active) return;
+    cards.scrollLeft = dragRef.current.startScroll - (event.clientX - dragRef.current.startX);
+  };
+
+  const endDrag = (event: ReactPointerEvent<HTMLDivElement>) => {
+    const cards = cardsRef.current;
+    if (!cards || !dragRef.current.active) return;
+    dragRef.current.active = false;
+    delete cards.dataset.dragging;
+    if (cards.hasPointerCapture(event.pointerId)) cards.releasePointerCapture(event.pointerId);
+    resumeLater();
+  };
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    const cards = cardsRef.current;
+    if (!cards || (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight')) return;
+    event.preventDefault();
+    pausedRef.current = true;
+    cards.scrollBy({ left: event.key === 'ArrowRight' ? 340 : -340, behavior: 'smooth' });
+    resumeLater();
+  };
+
   return (
     <section className={styles.section} id="products" aria-labelledby="solutions-title">
       <div className={styles.inner}>
@@ -82,7 +155,22 @@ export default function SolutionsSection() {
             <p>Businesses that trust Bizgenix to make everyday work clearer, faster and more connected.</p>
           </div>
         </div>
-        <div className={styles.cards} id="solution-options" role="region" aria-label="Client experiences">
+        <div
+          ref={cardsRef}
+          className={styles.cards}
+          id="solution-options"
+          role="region"
+          aria-label="Client experiences"
+          aria-roledescription="carousel"
+          tabIndex={0}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={endDrag}
+          onPointerCancel={endDrag}
+          onKeyDown={handleKeyDown}
+          onFocus={() => { pausedRef.current = true; }}
+          onBlur={resumeLater}
+        >
           <div className={styles.track}>
             <div className={styles.group}>
               {testimonials.map((testimonial, index) => <TestimonialCard key={testimonial.name} testimonial={testimonial} featured={index === 1 || index === 4} />)}
