@@ -85,8 +85,8 @@
 .priceCta { width:100%; }
 .priceQuestion { display:block; margin-top:17px; color:#000; text-align:center; font-size:11px; font-weight:700; text-decoration:underline; text-underline-offset:5px; }
 .priceCard>small { display:block; margin-top:16px; color:#444; text-align:center; font-size:9px; line-height:1.5; }
-[data-course-reveal] { opacity:0; transform:translateY(24px); transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.3,1); }
-[data-course-reveal][data-visible='true'] { opacity:1; transform:none; }
+.program [data-course-reveal] { opacity:0; transform:translateY(24px); transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.3,1); }
+.program [data-course-reveal][data-visible='true'] { opacity:1; transform:none; }
 .benefitCard:nth-child(2) { transition-delay:.08s; }
 .benefitCard:nth-child(3) { transition-delay:.16s; }
 .program a:focus-visible,.program summary:focus-visible { outline:3px solid #5aaa6c; outline-offset:5px; }
@@ -140,7 +140,7 @@
 }
 @media(prefers-reduced-motion:reduce) {
   .orb,.visualStage { transform:none; }
-  [data-course-reveal] { opacity:1; transform:none; transition:none; }
+  .program [data-course-reveal] { opacity:1; transform:none; transition:none; }
   .benefitCard,.primaryCta,.priceCta,.toggle,.price { transition:none; }
   .benefitCard:hover,.primaryCta:hover,.priceCta:hover { transform:none; }
 }
