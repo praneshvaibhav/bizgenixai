@@ -4,13 +4,13 @@ import { useEffect, useState } from 'react';
 import { useSplashComplete } from './SplashIntro';
 import styles from './HeroIntro.module.css';
 
-const headline = ['AI That Takes Work', 'Off Your Desk.'];
-const description = 'We help Indian businesses automate follow-ups, reduce manual work and make clearer decisions - with practical AI systems built around their teams.';
+const headline = ['AI Automation Solutions for Businesses in India.', ''];
+const description = 'Bizgenix AI helps businesses in India automate sales, customer service, HR, finance, and daily operations with AI agents, workflow automation, CRM systems, voice AI, and WhatsApp automation. We deliver tailored AI solutions that streamline workflows and integrate with existing business systems.';
 const headlineLength = headline.join('').length;
 const totalLength = headlineLength + description.length;
 const headlineSpeed = 48;
 const descriptionSpeed = 11;
-const descriptionDelay = headlineLength * headlineSpeed + 180;
+const descriptionDelay = headlineLength * headlineSpeed + 190;
 
 function TypedText({ text, count, cursor }: { text: string; count: number; cursor: boolean }) {
   const visible = Math.max(0, Math.min(text.length, count));

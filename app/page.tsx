@@ -17,6 +17,7 @@ import WhyBizgenix from './WhyBizgenix';
 import FounderSection from './FounderSection';
 import OurProcess from './OurProcess';
 import ContactSection from './ContactSection';
+import WhatIsBizgenixAI from './WhatisBizenixAI';
 
 const title = 'Bizgenix AI | AI That Takes Work Off Your Desk';
 const description = 'Custom AI systems, ready products and business automation for Indian businesses.';
@@ -36,6 +37,7 @@ const institutions=[
 export default function Home(){return <SplashIntro><main><ScrollAnimations/>
 <Navigation activePath="/" heroBlend />
 <section className="hero section" id="top"><div className="heroCopy"><HeroIntro/></div><HeroAnimation/></section>
+<WhatIsBizgenixAI />
 <section className="trust section" id="about"><div className="institutions"><div className="institutionCopy"><i>◈</i> Trusted stages and institutions</div><div className="institutionLogos" aria-label="Trusted stages and institutions"><div className="institutionTrack">{[0,1].map(sequence=><div className="institutionSequence" key={sequence} aria-hidden={sequence===1}>{institutions.map(([shortName,fullName,style,logo])=><span className={'institutionLogo '+style} key={shortName} title={fullName} aria-label={sequence===0?fullName:undefined}>{logo?<Image src={logo} alt={sequence===0?fullName:''} width={132} height={74} sizes="132px"/>:shortName}</span>)}</div>)}</div></div></div></section>
 <ServicesSection/>
 <IndustriesSection/>
