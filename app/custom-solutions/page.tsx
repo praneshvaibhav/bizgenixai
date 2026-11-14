@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '../seo';
 import Hero from './Hero';
 import WhyCustomSolutions from './WhyCustomSolutions';
 import ContactSection from '../ContactSection';
@@ -7,16 +8,10 @@ import CapabilityReveal from './CapabilityReveal';
 import ProductDifference from '../products/ProductDifference';
 import styles from './page.module.css';
 
-const title = 'Custom AI Solutions Built Around Your Business | Bizgenix AI';
+const title = 'Custom AI Development Company in India | Bizgenix AI';
 const description = 'Bizgenix builds custom AI applications, CRM, ERP, enterprise web and mobile platforms, business intelligence, integrations and workflow automation around your business.';
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical: '/custom-solutions' },
-  openGraph: { title, description, type: 'website' },
-  twitter: { card: 'summary', title, description },
-};
+export const metadata: Metadata = pageMeta({ title, description, path: '/custom-solutions' });
 
 const capabilities = [
   { title: 'Custom AI Applications', tag: 'INTELLIGENCE', build: 'AI-powered tools, assistants and decision systems', outcome: 'Faster work and smarter decisions', symbol: '✳' },

@@ -14,6 +14,19 @@ const nextConfig: NextConfig = {
   typescript: {
    ignoreBuildErrors: true,
  },
+  async redirects() {
+    return [
+      // One hostname: www goes to the apex domain.
+      { source: '/:path*', has: [{ type: 'host', value: 'www.bizgenix.ai' }], destination: 'https://bizgenix.ai/:path*', permanent: true },
+      // Old URLs that Google still shows under the brand result.
+      { source: '/solutions', destination: '/custom-solutions', permanent: true },
+      { source: '/services', destination: '/custom-solutions', permanent: true },
+      { source: '/careers', destination: '/about', permanent: true },
+      { source: '/ai-course-india', destination: '/courses', permanent: true },
+      { source: '/ai-training', destination: '/courses', permanent: true },
+      { source: '/corporate-training', destination: '/courses', permanent: true },
+    ];
+  },
   async headers() {
     return [{ source: '/(.*)', headers: securityHeaders }];
   },

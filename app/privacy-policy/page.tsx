@@ -1,17 +1,12 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '../seo';
 import Navigation from '../custom-solutions/Navigation';
 import SiteFooter from '../SiteFooter';
 import styles from './page.module.css';
 
 const title = 'Privacy Policy | Bizgenix AI';
 const description = 'Learn how Bizgenix AI collects, uses, protects, and manages your information across our website and communication channels.';
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical: '/privacy-policy' },
-  openGraph: { title, description, type: 'website' },
-  twitter: { card: 'summary', title, description },
-};
+export const metadata: Metadata = pageMeta({ title, description, path: '/privacy-policy' });
 
 // Policy wording copied from https://bizgenix.ai/privacy-policy on 17 September 2026.
 export default function PrivacyPolicyPage() {
@@ -65,7 +60,7 @@ export default function PrivacyPolicyPage() {
             <h2>12. Changes to This Privacy Policy</h2>
             <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
             <h2>13. Contact Information</h2>
-            <p>Bizgenix Ai Solution Pvt Ltd<br/>G 13, SILVER RADIENCE-2, Science City Rd,<br/>Sola, Ahmedabad, Gujarat 380060<br/> Email: info@bizgenix.com<br/>Phone: +91 87806 71906<br/>Website: https://bizgenix.ai/</p>
+            <p>Bizgenix Ai Solution Pvt Ltd<br/>G 13, SILVER RADIENCE-2, Science City Rd,<br/>Sola, Ahmedabad, Gujarat 380060<br/> Email: info@bizgenix.ai<br/>Phone: +91 87806 71906<br/>Website: https://bizgenix.ai/</p>
           </article>
         </div>
       </main>

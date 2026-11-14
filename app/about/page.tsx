@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '../seo';
 import Image from 'next/image';
 import Link from '../InternalLink';
 import Navigation from '../custom-solutions/Navigation';
@@ -8,9 +9,9 @@ import JourneyTimeline from './JourneyTimeline';
 import ScrollReveal from './ScrollReveal';
 import styles from './page.module.css';
 
-const title = 'About Bizgenix | Practical AI, Automation and Business Impact';
+const title = 'About Bizgenix AI | AI Company in Ahmedabad, India';
 const description = 'Meet Bizgenix, an AI implementation and business automation company building intelligent products, custom solutions and practical AI education for Indian businesses.';
-export const metadata: Metadata = { title, description, alternates: { canonical: '/about' }, openGraph: { title, description, type: 'website' }, twitter: { card: 'summary', title, description } };
+export const metadata: Metadata = pageMeta({ title, description, path: '/about' });
 
 const journey = [
   ['2021', 'The idea took shape', 'A practical vision for connecting business expertise with intelligent technology.'],

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '../seo';
 import Navigation from '../custom-solutions/Navigation';
 import ContactSection from '../ContactSection';
 import { functions } from './content';
@@ -10,12 +11,7 @@ import styles from './page.module.css';
 
 const title = 'AI Products for Business Automation, Voice and Analytics | Bizgenix';
 const description = 'Explore Bizgenix AI products including Voice AI, BizChat, ScaleOS and Growth Intelligence for customer communication, business automation, operations and analytics.';
-export const metadata: Metadata = {
-  title, description,
-  alternates: { canonical: '/products' },
-  openGraph: { title, description, type: 'website' },
-  twitter: { card: 'summary', title, description },
-};
+export const metadata: Metadata = pageMeta({ title, description, path: '/products' });
 
 export default function ProductsPage() {
   return <div className={styles.page} id="top">

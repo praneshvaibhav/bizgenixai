@@ -73,7 +73,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://www.bizgenix.ai/sitemap.xml',
-    host: 'https://www.bizgenix.ai',
+    sitemap: 'https://bizgenix.ai/sitemap.xml',
+    host: 'https://bizgenix.ai',
   };
 }

@@ -6,11 +6,12 @@ import { useEffect, useRef } from 'react';
 import styles from './SiteFooter.module.css';
 
 const services = [
-  ['AI Strategy Consulting', '/contact'],
-  ['Business Process Automation', '/custom-solutions#capabilities'],
+  ['AI Consulting', '/ai-consulting'],
+  ['AI Automation', '/ai-automation'],
+  ['Custom AI Solutions', '/custom-solutions'],
   ['AI Training & Workshops', '/courses'],
   ['Intelligent AI Agents', '/products'],
-  ['Data Analytics', '/#growth-intelligence'],
+  ['Growth Intelligence', '/products/growth-intelligence'],
 ] as const;
 
 const founderSocials: readonly { name: string; icon: string; href: string }[] = [

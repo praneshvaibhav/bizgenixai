@@ -1,17 +1,12 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '../seo';
 import Navigation from '../custom-solutions/Navigation';
 import SiteFooter from '../SiteFooter';
 import styles from '../privacy-policy/page.module.css';
 
 const title = 'Terms of Service | Bizgenix AI';
 const description = 'Please review the terms that govern your use of Bizgenix AI services, website, and communication channels.';
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical: '/terms' },
-  openGraph: { title, description, type: 'website' },
-  twitter: { card: 'summary', title, description },
-};
+export const metadata: Metadata = pageMeta({ title, description, path: '/terms' });
 
 // Terms wording copied from https://bizgenix.ai/terms on 17 September 2026.
 export default function TermsPage() {
@@ -61,7 +56,7 @@ export default function TermsPage() {
             <h2>11. Changes to Terms</h2>
             <p>We may modify these Terms of Service at any time. Updated versions will be posted on this page with the revised effective date.</p>
             <h2>12. Contact Information</h2>
-            <p>Bizgenix Ai Solution Pvt Ltd<br/>G 13, Silver Radience-2, Science City Rd,<br/>Sola, Ahmedabad, Gujarat 380060<br/>Email: info@bizgenix.com<br/>Phone: +91 87806 71906<br/>Website: https://bizgenix.ai/</p>
+            <p>Bizgenix Ai Solution Pvt Ltd<br/>G 13, Silver Radience-2, Science City Rd,<br/>Sola, Ahmedabad, Gujarat 380060<br/>Email: info@bizgenix.ai<br/>Phone: +91 87806 71906<br/>Website: https://bizgenix.ai/</p>
           </article>
         </div>
       </main>

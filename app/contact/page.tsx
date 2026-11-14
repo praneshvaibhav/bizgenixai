@@ -1,9 +1,10 @@
 ﻿import type { Metadata } from 'next';
 import ContactExperience from './ContactExperience';
 
-const title = 'Contact Us | Bizgenix AI';
-const description = 'Connect with the Bizgenix team to discuss your AI, automation and custom software needs.';
-export const metadata: Metadata = { title, description, alternates: { canonical: '/contact' }, openGraph: { title, description, type: 'website' }, twitter: { card: 'summary', title, description } };
+import { pageMeta } from '../seo';
+const title = 'Contact Bizgenix AI | AI Consulting & Automation, Ahmedabad';
+const description = 'Talk to Bizgenix AI about AI consulting, automation or custom software. Office on Science City Road, Ahmedabad. Call or WhatsApp +91 87806 71906.';
+export const metadata: Metadata = pageMeta({ title, description, path: '/contact' });
 
 export default function ContactPage() {
   return <ContactExperience />;

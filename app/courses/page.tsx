@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '../seo';
 import Image from 'next/image';
 import Navigation from '../custom-solutions/Navigation';
 import ContactSection from '../ContactSection';
@@ -10,9 +11,9 @@ import LearningPageAnimator from './LearningPageAnimator';
 import { communityUrl, corporateUrl, corporateTopics, courseFaqs, enquire } from './content';
 import styles from './page.module.css';
 
-const title = 'Practical AI Courses, Workshops & Corporate Training | Bizgenix';
-const description = 'Learn AI, prompt engineering, automation, AI agents, Voice AI and business intelligence through practical Bizgenix courses for owners, professionals, students and corporate teams.';
-export const metadata: Metadata = { title, description, alternates: { canonical: '/courses' }, openGraph: { title, description, type: 'website' }, twitter: { card: 'summary', title, description } };
+const title = 'AI Training & Corporate AI Workshops in India | Bizgenix AI';
+const description = 'Practical AI training for business owners and corporate teams: AI workshops, the Scale With AI programme, prompt engineering, automation and AI agents.';
+export const metadata: Metadata = pageMeta({ title, description, path: '/courses' });
 
 const corporateTrainingGallery = [
   { file: 'sj-sangath-gift-city.jpeg', title: 'Corporate AI Enablement', location: 'GIFT City', format: 'Team workshop' },

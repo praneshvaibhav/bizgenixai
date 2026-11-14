@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from './seo';
 import Image from 'next/image';
 import Navigation from './custom-solutions/Navigation';
 import HeroIntro from './HeroIntro';
@@ -19,9 +20,9 @@ import OurProcess from './OurProcess';
 import ContactSection from './ContactSection';
 import WhatIsBizgenixAI from './WhatisBizenixAI';
 
-const title = 'Bizgenix AI | AI That Takes Work Off Your Desk';
-const description = 'Custom AI systems, ready products and business automation for Indian businesses.';
-export const metadata: Metadata = { title, description, alternates: { canonical: '/' }, openGraph: { title, description, type: 'website' }, twitter: { card: 'summary', title, description } };
+const title = 'Bizgenix AI | AI Automation & Custom AI Solutions in India';
+const description = 'AI automation company in Ahmedabad. Bizgenix AI builds AI agents, workflow and WhatsApp automation, CRM, voice AI and custom AI solutions for Indian businesses.';
+export const metadata: Metadata = pageMeta({ title, description, path: '/' });
 const institutions=[
   ['ICAI','Institute of Chartered Accountants of India','icai','/institution-icai.webp'],
   ['CMAI','The Clothing Manufacturers Association of India','cmai','/institution-cmai.webp'],

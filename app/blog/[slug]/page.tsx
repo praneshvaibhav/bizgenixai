@@ -6,11 +6,19 @@ import ContactSection from '../../ContactSection';
 import { categories, contactUrl, insights } from '../content';
 import InsightArt from '../InsightArt';
 import styles from '../page.module.css';
+import { articles } from '../articles';
+import ArticleView from '../ArticleView';
+import { pageMeta } from '../../seo';
 
-export function generateStaticParams() { return insights.map(({ slug }) => ({ slug })); }
+// Only the slugs listed below exist; anything else is a real 404.
+export const dynamicParams = false;
+
+export function generateStaticParams() { return [...articles.map(({ slug }) => ({ slug })), ...insights.map(({ slug }) => ({ slug }))]; }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
+  const article = articles.find(item => item.slug === slug);
+  if (article) return pageMeta({ title: `${article.title} | Bizgenix AI`, description: article.description, path: `/blog/${article.slug}`, type: 'article', publishedTime: `${article.date}T09:00:00+05:30`, ...(article.cover ? { image: { url: article.cover, alt: article.h1 } } : {}) });
   const insight = insights.find(item => item.slug === slug);
   if (!insight) return {};
   const title = `${insight.title} | Bizgenix Insights`;
@@ -19,6 +27,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function InsightPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const article = articles.find(item => item.slug === slug);
+  if (article) return <ArticleView article={article} />;
   const insight = insights.find(item => item.slug === slug);
   if (!insight) notFound();
   const related = insights.filter(item => item.slug !== slug).sort((a, b) => Number(b.category === insight.category) - Number(a.category === insight.category)).slice(0, 3);

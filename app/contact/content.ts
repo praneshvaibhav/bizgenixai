@@ -1,4 +1,4 @@
-export const email = 'info@bizgenix.com';
+export const email = 'info@bizgenix.ai';
 export const phone = '+91 87806 71906';
 export const queryTypes = [
   'AI Product',
