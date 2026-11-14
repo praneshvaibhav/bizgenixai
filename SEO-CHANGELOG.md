@@ -58,3 +58,11 @@ Deliberately not done (see the review for reasons): `Disallow: /_next/` in robot
 - No GA4 tag on bizgenix.ai yet.
 - Growth Intelligence page: the "Rajesh Shah, Vardhman Tex-Fab" quote and the security claims need Umang's confirmation.
 - `typescript.ignoreBuildErrors` is still on because of existing type errors in the Growth Intelligence page files.
+
+
+## 14 November 2026 — enquiry conversion repair (Codex)
+- Existing deployed build lacked NEXT_PUBLIC_FORMSPREE_FORM_ID. Added explicit email-draft fallback, preserving the existing configured Formspree path. No false sent confirmation.
+- Separate custom, product demo, corporate training and individual learning categories; allowlisted URL intent/product preselection, contextual brief and product selector.
+- Updated home, product, service and training CTAs to carry intent.
+- Direct business WhatsApp/call alternatives; next steps no longer promise development before scope and commercials are agreed.
+- Does not install analytics or claim enquiry delivery; mail drafts require the visitor to send them.

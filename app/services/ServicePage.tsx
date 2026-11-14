@@ -33,6 +33,9 @@ export type ServiceContent = {
 };
 
 export default function ServicePage({ content }: { content: ServiceContent }) {
+  const contactHref = content.path.startsWith('/products/')
+    ? `/contact?intent=product&product=${encodeURIComponent(content.path.split('/').pop() || '')}#contact-form`
+    : '/contact?intent=custom#contact-form';
   const url = `${SITE_URL}${content.path}`;
   const secondary = content.secondaryCta ?? { label: 'See 18 implementations', href: '/case-studies' };
   const jsonLd = {
@@ -82,7 +85,7 @@ export default function ServicePage({ content }: { content: ServiceContent }) {
           <h1>{content.h1}</h1>
           <p className={styles.lead}>{content.lead}</p>
           <div className={styles.actions}>
-            <Link className={styles.primary} href="/contact#contact-form">{content.primaryCta} <span aria-hidden="true">→</span></Link>
+            <Link className={styles.primary} href={contactHref}>{content.primaryCta} <span aria-hidden="true">→</span></Link>
             <Link className={styles.secondary} href={secondary.href} target={secondary.href.startsWith('http') ? '_blank' : undefined} rel={secondary.href.startsWith('http') ? 'noopener noreferrer' : undefined}>{secondary.label}</Link>
           </div>
         </div>

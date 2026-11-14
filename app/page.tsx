@@ -62,7 +62,7 @@ export default function Home(){return <SplashIntro><main><ScrollAnimations/>
     <div className={featured.visual}>
       <GrowthDashboard/>
       <div className={featured.actions}>
-        <a className={featured.demoLink} href="/contact#contact-form">Book a GI Demo</a>
+        <a className={featured.demoLink} href="/contact?intent=product&amp;product=growth-intelligence#contact-form">Book a GI Demo</a>
         <a className={featured.exploreLink} href="https://gi.bizgenix.ai/" target="_blank" rel="noopener noreferrer">Explore GI</a>
       </div>
     </div>

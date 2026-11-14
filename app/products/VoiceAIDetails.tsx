@@ -30,7 +30,7 @@ export default function VoiceAIDetails({ active }: { active: boolean }) {
           <li><span className={styles.globe} aria-hidden="true"><i /></span><p><strong>Works in</strong>Multiple Languages</p></li>
           <li><span className={styles.sliders} aria-hidden="true"><i /><i /><i /></span><p><strong>Integrates with</strong>your CRM &amp; Systems</p></li>
         </ul>
-        <a className={styles.cta} href="/contact#contact-form">Schedule a Live Demo <span aria-hidden="true">→</span></a>
+        <a className={styles.cta} href="/contact?intent=product&amp;product=voice-ai#contact-form">Schedule a Live Demo <span aria-hidden="true">→</span></a>
         <p style={{ margin: '14px 0 0', fontSize: 13 }}><a href="/products/voice-ai" style={{ textDecoration: 'underline', textDecorationColor: '#5AAA6C', textUnderlineOffset: 4 }}>Full details: Voice AI →</a></p>
       </div>
       <div className={styles.scene} aria-hidden="true">

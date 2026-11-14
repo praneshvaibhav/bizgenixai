@@ -28,7 +28,7 @@ export default function ProductsPage() {
       </section>
       <ProductJourney />
       <ProductFAQ />
-      <section className={styles.finalCta} id="contact" aria-labelledby="contact-title"><div className={styles.container}><p className={styles.eyebrow}>YOUR NEXT CHAPTER STARTS HERE</p><h2 id="contact-title">Choose the right AI product<br /><em>for your business.</em></h2><p>Tell us where your business is losing time, leads, visibility or revenue. Our team will help you identify the most suitable Bizgenix product and implementation path.</p><div className={styles.actions}><a className={styles.exploreLink} href="/contact#contact-form">Send Your Requirement</a></div></div></section>
+      <section className={styles.finalCta} id="contact" aria-labelledby="contact-title"><div className={styles.container}><p className={styles.eyebrow}>YOUR NEXT CHAPTER STARTS HERE</p><h2 id="contact-title">Choose the right AI product<br /><em>for your business.</em></h2><p>Tell us where your business is losing time, leads, visibility or revenue. Our team will help you identify the most suitable Bizgenix product and implementation path.</p><div className={styles.actions}><a className={styles.exploreLink} href="/contact?intent=product#contact-form">Send Your Requirement</a></div></div></section>
       <ContactSection homeHref="/" footerOnly />
     </main>
   </div>;

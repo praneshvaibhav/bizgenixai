@@ -38,7 +38,7 @@ export default function CustomSolutionsPage() {
         <div className={styles.container}>
           <div className={styles.capabilitiesHeader}><div><p className={styles.eyebrow}>02 / OUR CUSTOM SOLUTION CAPABILITIES</p><h2 id="capabilities-title">What your business needs.<br /><em>What we build.</em></h2></div><p>From a single workflow to an integrated enterprise platform, built around the outcomes that matter to you.</p></div>
           <CapabilityReveal className={styles.capabilityGrid}>{capabilities.map((capability, index) => <article className={styles.capability} key={capability.title}><div className={styles.capabilityTop}><span className={styles.capabilityIcon} aria-hidden="true">{capability.symbol}</span><span>{capability.tag}</span><small>0{index + 1}</small></div><h3>{capability.title}</h3><p className={styles.build}>{capability.build}</p><div className={styles.outcome}><div><small>THE BUSINESS OUTCOME</small><p>{capability.outcome}</p></div></div></article>)}</CapabilityReveal>
-          <div className={styles.capabilityCta}><p>Have a requirement that doesn’t fit a category?<br /><b>That’s exactly where custom starts.</b></p><a className={styles.primary} href="/contact#contact-form">Discuss Your Requirement <span aria-hidden="true">↗</span></a></div>
+          <div className={styles.capabilityCta}><p>Have a requirement that doesn’t fit a category?<br /><b>That’s exactly where custom starts.</b></p><a className={styles.primary} href="/contact?intent=custom#contact-form">Discuss Your Requirement <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
       <ProductDifference />

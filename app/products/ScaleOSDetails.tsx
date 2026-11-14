@@ -37,7 +37,7 @@ export default function ScaleOSDetails({ active }: { active: boolean }) {
         <p className={styles.eyebrow}>{product.category}</p>
         <h3>One connected system.<br /><em>Clearer execution.</em></h3>
         <p className={styles.description}>{product.description}</p>
-        <a className={styles.cta} href="/contact#contact-form">{product.action}<span aria-hidden="true">→</span></a>
+        <a className={styles.cta} href="/contact?intent=product&amp;product=scaleos#contact-form">{product.action}<span aria-hidden="true">→</span></a>
         <p style={{ margin: '14px 0 0', fontSize: 13 }}><a href="/products/scaleos" style={{ textDecoration: 'underline', textDecorationColor: '#5AAA6C', textUnderlineOffset: 4 }}>Full details: ScaleOS →</a></p>
       </div>
       <div className={styles.scene} ref={sceneRef} role="img" aria-label="ScaleOS laptop dashboard connecting task ownership, progress tracking, approvals and business visibility">
