@@ -66,3 +66,11 @@ Deliberately not done (see the review for reasons): `Disallow: /_next/` in robot
 - Updated home, product, service and training CTAs to carry intent.
 - Direct business WhatsApp/call alternatives; next steps no longer promise development before scope and commercials are agreed.
 - Does not install analytics or claim enquiry delivery; mail drafts require the visitor to send them.
+
+## 14 November 2026 — automatic enquiries, measurement and claim corrections
+- Replaced mailto-only fallback with durable private enquiry queue, server validation, idempotent record creation and fixed-recipient SES delivery worker with retry/backoff.
+- Added first-party conversion events and session campaign attribution; excludes labelled delivery tests from genuine leads.
+- Rewrote two unsupported-result articles and synchronized newsletter metadata/covers; removed unsubstantiated product metrics/testimonials/guarantees and labelled calculator assumptions.
+- Updated factual privacy wording for enquiry storage/email and first-party measurement.
+- Added operations runbook, worker systemd units and queue tests. Upgraded Next.js to address the production dependency audit finding.
+- Found and removed the GI demo form's simulated success flow (a timeout, with no delivery). Replaced it with the real GI enquiry route and wired previously undefined demo/CRM handlers. Sample-data preview is explicitly labelled.

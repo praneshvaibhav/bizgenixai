@@ -1,0 +1,14 @@
+[Unit]
+Description=Deliver queued Bizgenix website enquiries
+After=network-online.target
+[Service]
+Type=oneshot
+User=ubuntu
+WorkingDirectory=/var/www/html/bizgenixai
+EnvironmentFile=/etc/bizgenix-website-mail.env
+Environment=BIZGENIX_DATA_DIR=/var/lib/bizgenix-website
+ExecStart=/usr/bin/node /var/www/html/bizgenixai/scripts/deliver-enquiries.mjs
+TimeoutStartSec=50
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true

@@ -33,13 +33,13 @@
 
 ## Articles
 
-- [What AI Can and Cannot Do in Your Business: The 4-R Framework](https://bizgenix.ai/blog/what-ai-can-and-cannot-do-4r-framework)
-- [The 90-Day AI Implementation Plan](https://bizgenix.ai/blog/90-day-ai-implementation-plan)
-- [Hire or Automate? The 5-V Test](https://bizgenix.ai/blog/hire-or-automate-5v-test)
-- [Will AI Replace My Team? A 3-Conversation Plan](https://bizgenix.ai/blog/will-ai-replace-my-team)
-- [Clean Your Data Before AI: The Four Registers](https://bizgenix.ai/blog/clean-business-data-before-ai-four-registers)
-- [The One Rupee Test for AI Projects](https://bizgenix.ai/blog/one-rupee-test-ai-project)
-- [AI Employee vs Chatbot: Lessons From 52 Indian Businesses](https://bizgenix.ai/blog/ai-employee-vs-chatbot-indian-business)
+- [The 4-R Framework: Choosing Useful AI Tasks](https://bizgenix.ai/blog/what-ai-can-and-cannot-do-4r-framework)
+- [A 90-Day AI Implementation Plan: Proof, System and Handover](https://bizgenix.ai/blog/90-day-ai-implementation-plan)
+- [Hire or Automate? A 5-V Planning Checklist](https://bizgenix.ai/blog/hire-or-automate-5v-test)
+- [Talking to Your Team About AI: Three Useful Conversations](https://bizgenix.ai/blog/will-ai-replace-my-team)
+- [Clean Business Data Before AI: The Four Registers](https://bizgenix.ai/blog/clean-business-data-before-ai-four-registers)
+- [The One Rupee Test: Define Evidence of Completed AI Work](https://bizgenix.ai/blog/one-rupee-test-ai-project)
+- [AI Employee vs Chatbot: A Practical Framework for Indian Businesses](https://bizgenix.ai/blog/ai-employee-vs-chatbot-indian-business)
 - [All articles](https://bizgenix.ai/blog)
 
 ## People

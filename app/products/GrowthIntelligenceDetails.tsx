@@ -13,13 +13,13 @@ function Icon({ name }: { name: IconName }) {
 
 const insights: { icon: IconName; title: string; detail: string }[] = [
   { icon: 'chart', title: 'Unified Business View', detail: 'Tally + Operations + Teams' },
-  { icon: 'people', title: 'Real-time Insights', detail: 'Know what’s happening' },
+  { icon: 'people', title: 'Business Insights', detail: 'Review connected records' },
   { icon: 'target', title: 'Identify Risks', detail: 'Act before it’s critical' },
   { icon: 'bolt', title: 'Faster Decision Making', detail: 'From data to action' },
 ];
 const metrics: { icon: IconName; value: string; label: string }[] = [
-  { icon: 'chart', value: '90%', label: 'Faster Reporting' },
-  { icon: 'eye', value: 'Real-time', label: 'Business Visibility' },
+  { icon: 'chart', value: 'Management', label: 'Reporting View' },
+  { icon: 'eye', value: 'Connected', label: 'Business Data' },
   { icon: 'people', value: 'Data Driven', label: 'Better Decisions' },
   { icon: 'shield', value: 'Built for Scale', label: 'Growing Businesses' },
 ];

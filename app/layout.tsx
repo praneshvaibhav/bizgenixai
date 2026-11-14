@@ -1,3 +1,4 @@
+import Attribution from './Attribution';
 import type { Metadata } from 'next';
 import './globals.css';
 import { organizationJsonLd } from './seo';
@@ -32,4 +33,4 @@ export const metadata: Metadata = {
     images: ['/custom-solutions-hero.webp'],
   },
 };
-export default function RootLayout({children}:Readonly<{children:React.ReactNode}>){return <html lang="en-IN"><body>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} /></body></html>}
+export default function RootLayout({children}:Readonly<{children:React.ReactNode}>){return <html lang="en-IN"><body><Attribution />{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }} /></body></html>}

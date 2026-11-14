@@ -23,6 +23,7 @@ export default function ArticleView({ article }: { article: Article }) {
         description: article.description,
         image: `${SITE_URL}${article.cover ?? '/custom-solutions-hero.webp'}`,
         datePublished: `${article.date}T09:00:00+05:30`,
+        ...(article.modified ? { dateModified: article.modified } : {}),
         author: { '@id': `${SITE_URL}/#founder` },
         publisher: { '@id': `${SITE_URL}/#organization` },
         mainEntityOfPage: url,

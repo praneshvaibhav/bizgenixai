@@ -67,7 +67,7 @@ const inclusions = [
   'Live weekly implementation sessions',
   'Recordings, notes, prompts and transcripts',
   'Homework review and monthly open Q&A',
-  'WhatsApp support group and 1,000+ community',
+  'WhatsApp support group and community access',
   'Prompt vault, templates, workbooks and updates',
   'Capstone, roadmap and certificate',
 ];

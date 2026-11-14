@@ -13,21 +13,21 @@ import {
 export const MetricsAndTestimonials: React.FC = () => {
   const stats = [
     {
-      metric: "₹120+ Cr",
-      label: "Tally Receivables & Inventory Analyzed",
-      subtext: "Across 240+ Indian manufacturing and trading firms",
+      metric: "Review",
+      label: "Receivables & Inventory",
+      subtext: "Discuss the records needed for your operating view",
       icon: BarChart3
     },
     {
-      metric: "85%",
-      label: "Reduction in MIS Preparation Time",
-      subtext: "From 3 days of manual Excel pivoting down to instant mobile queries",
+      metric: "Prepare",
+      label: "Management Reports",
+      subtext: "Compare report preparation and review effort against your baseline",
       icon: Clock
     },
     {
-      metric: "14 Days",
-      label: "Average DSO Improvement",
-      subtext: "Accelerated cash collection cycle freeing working capital from aging ledgers",
+      metric: "Track",
+      label: "Collection Follow-up",
+      subtext: "Measure changes in receivables using consistent definitions",
       icon: TrendingDown
     }
   ];
@@ -80,20 +80,20 @@ export const MetricsAndTestimonials: React.FC = () => {
             <div className="lg:col-span-8 space-y-4">
               <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#2E7D4E]">
                 <Quote className="w-4 h-4 text-[#2E7D4E]" />
-                <span>Textile Manufacturer Case Study</span>
+                <span>Suggested Receivables Review</span>
               </div>
               
-              <blockquote className="text-lg sm:text-xl font-medium text-slate-900 leading-relaxed italic">
-                “Before Bizgenix, we waited until month-end for our accountant to give us an outdated debtor list. Within 3 weeks of connecting Growth Intelligence to our Tally, we recovered <span className="text-[#25663F] font-bold not-italic">₹84 Lakhs of 60+ day old dues</span> via automated WhatsApp reminders. Our cash balance actually went up by 35% without taking an extra rupee from our bank overdraft.”
-              </blockquote>
+              <p className="text-lg sm:text-xl font-medium text-slate-900 leading-relaxed italic">
+                Start with an agreed receivables report. Identify the accounts that need attention, assign follow-up responsibility and record actual receipts. Compare the results with your baseline before attributing an improvement to a new workflow.
+              </p>
 
               <div className="pt-2 flex items-center gap-3">
                 <div className="w-11 h-11 rounded-full bg-[#2E7D4E] text-white flex items-center justify-center font-bold text-sm">
-                  RS
+                  GI
                 </div>
                 <div>
-                  <div className="font-bold text-slate-900 text-sm">Rajesh Shah</div>
-                  <div className="text-xs text-slate-500">Managing Director · Vardhman Tex-Fab Industries (Surat, Gujarat)</div>
+                  <div className="font-bold text-slate-900 text-sm">Growth Intelligence</div>
+                  <div className="text-xs text-slate-500">A proposed workflow discussion, not a client testimonial</div>
                 </div>
               </div>
             </div>
@@ -101,23 +101,23 @@ export const MetricsAndTestimonials: React.FC = () => {
             {/* Verifiable Impact Badge Box */}
             <div className="lg:col-span-4 bg-[#F2F9F4] p-5 rounded-xl border border-[#2E7D4E]/30 space-y-3 text-xs">
               <div className="font-bold text-slate-900 text-xs uppercase tracking-wider text-[#25663F]">
-                Verified 30-Day Transformation:
+                What to Measure:
               </div>
               <div className="flex justify-between items-center py-1.5 border-b border-[#2E7D4E]/15">
-                <span className="text-slate-600">Old Debtor Dues Recovered:</span>
-                <span className="font-bold text-slate-900 tabular-nums">₹84,20,000</span>
+                <span className="text-slate-600">Collection progress:</span>
+                <span className="font-bold text-slate-900 tabular-nums">Actual receipts</span>
               </div>
               <div className="flex justify-between items-center py-1.5 border-b border-[#2E7D4E]/15">
-                <span className="text-slate-600">Receivables DSO Reduction:</span>
-                <span className="font-bold text-[#2E7D4E] tabular-nums">-16 Days</span>
+                <span className="text-slate-600">Collection period:</span>
+                <span className="font-bold text-[#2E7D4E] tabular-nums">Baseline vs current</span>
               </div>
               <div className="flex justify-between items-center py-1.5 border-b border-[#2E7D4E]/15">
-                <span className="text-slate-600">Bank Overdraft Interest Saved:</span>
-                <span className="font-bold text-slate-900 tabular-nums">₹1.15 Lakhs / Mo</span>
+                <span className="text-slate-600">Borrowing cost:</span>
+                <span className="font-bold text-slate-900 tabular-nums">Actual statements</span>
               </div>
               <div className="text-[11px] text-slate-500 pt-1 flex items-center gap-1">
                 <ShieldCheck className="w-3.5 h-3.5 text-[#2E7D4E]" />
-                <span>Audited via Tally Bank Reconciliation Voucher</span>
+                <span>Validate against your accounting records</span>
               </div>
             </div>
 
@@ -127,7 +127,7 @@ export const MetricsAndTestimonials: React.FC = () => {
         {/* Industry Trust Strip */}
         <div className="mt-12 text-center">
           <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-4">
-            Trusted by Leaders Across High-Volume Indian Sectors
+            Example Sectors for a Workflow Discussion
           </div>
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
             {industries.map((ind, idx) => (

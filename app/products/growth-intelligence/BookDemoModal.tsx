@@ -204,7 +204,7 @@ export const BookDemoModal: React.FC<BookDemoModalProps> = ({ isOpen, onClose })
               <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 flex items-start gap-2.5 text-[11px] text-slate-600">
                 <ShieldCheck className="w-4 h-4 text-[#2E7D4E] shrink-0 mt-0.5" />
                 <span>
-                  <strong>100% On-Premise Guarantee:</strong> During the demo, you can choose to connect your actual Tally or test on our dummy manufacturing dataset. No credit card required.
+                  <strong>Review the deployment options:</strong> During the demo, you can choose to connect your actual Tally or test on our dummy manufacturing dataset. No credit card required.
                 </span>
               </div>
 

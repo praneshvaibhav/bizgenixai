@@ -1,0 +1,8 @@
+[Unit]
+Description=Retry Bizgenix website enquiry delivery every minute
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=60s
+Persistent=true
+[Install]
+WantedBy=timers.target

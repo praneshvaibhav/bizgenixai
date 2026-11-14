@@ -84,7 +84,7 @@ export default function FounderSection() {
         <h2>Led by a business advisor who understands both numbers and AI.</h2>
         <h3>Dr. CA Umang Ratani</h3>
         <p className="credentials">CA &nbsp; CS &nbsp; MBA &nbsp; LLB &nbsp; PhD</p>
-        <p>13+ years of business advisory experience. 1,000+ businesses advised. ₹750+ Cr cumulative growth guided.</p>
+        <p>The company’s published profile reports 13+ years of advisory experience, 1,000+ businesses guided and a ₹750+ Cr client portfolio. Portfolio size is not a measure of growth caused by our work.</p>
         <div className="founderSignature">
           <span className="founderSignatureText">Umang Ratani</span>
           <span className="founderSignatureStroke" aria-hidden="true" />

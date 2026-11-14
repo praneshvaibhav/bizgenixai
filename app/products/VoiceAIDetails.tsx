@@ -7,7 +7,7 @@ import { animateVoiceAI } from './animateVoiceAI';
 import styles from './VoiceAIDetails.module.css';
 
 const voiceProduct = products.find(product => product.id === 'voice-ai')!;
-const results = [['3x', 'More Conversions'], ['60%', 'Lower Call Costs'], ['100%', 'Consistent Messaging'], ['24/7', 'Customer Support']];
+const results = [['Qualify', 'Customer Enquiries'], ['Capture', 'Call Details'], ['Configure', 'Conversation Rules'], ['Route', 'Team Follow-up']];
 
 function Waveform({ screen = false }: { screen?: boolean }) {
   return <div className={screen ? styles.screenWave : styles.wave} aria-hidden="true">{Array.from({ length: screen ? 35 : 57 }, (_, index) => <i key={index} style={{ height: `${12 + Math.pow(Math.sin(index * .37), 2) * (screen ? 68 : 125) * Math.sin(Math.PI * (index + 1) / (screen ? 36 : 58))}px`, '--wave-delay': `${index * -73}ms` } as CSSProperties} />)}</div>;
