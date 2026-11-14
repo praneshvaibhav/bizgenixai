@@ -21,6 +21,10 @@ export type ServiceContent = {
   proof?: { label: string; slug?: string; href?: string }[];
   secondaryCta?: { label: string; href: string };
   schemaType?: 'Service' | 'SoftwareApplication';
+  /** Breadcrumb parent, e.g. Products. */
+  parent?: { name: string; href: string };
+  /** City served, for local pages. Defaults to India. */
+  areaServedCity?: string;
   processTitle: string;
   steps: { title: string; text: string }[];
   faqs: { q: string; a: string }[];
@@ -51,7 +55,7 @@ export default function ServicePage({ content }: { content: ServiceContent }) {
           description: content.lead,
           url,
           provider: { '@id': `${SITE_URL}/#organization` },
-          areaServed: { '@type': 'Country', name: 'India' },
+          areaServed: content.areaServedCity ? { '@type': 'City', name: content.areaServedCity } : { '@type': 'Country', name: 'India' },
         },
       {
         '@type': 'FAQPage',
@@ -61,7 +65,8 @@ export default function ServicePage({ content }: { content: ServiceContent }) {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-          { '@type': 'ListItem', position: 2, name: content.eyebrow, item: url },
+          ...(content.parent ? [{ '@type': 'ListItem', position: 2, name: content.parent.name, item: `${SITE_URL}${content.parent.href}` }] : []),
+          { '@type': 'ListItem', position: content.parent ? 3 : 2, name: content.eyebrow, item: url },
         ],
       },
     ],

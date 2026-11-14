@@ -12,6 +12,7 @@ const content: ServiceContent = {
   eyebrow: 'Bizgenix AI CRM',
   serviceType: 'Bizgenix AI CRM',
   schemaType: 'SoftwareApplication',
+  parent: { name: 'Products', href: '/products' },
   h1: 'AI CRM that captures every lead and keeps every follow-up moving.',
   lead: 'Leads arrive from ads, IndiaMART, Justdial, WhatsApp and email. Bizgenix AI CRM brings them into one workspace, scores them, assigns an owner and keeps the next action visible, so enquiries stop slipping between people and spreadsheets.',
   primaryCta: 'Book a free CRM demo',

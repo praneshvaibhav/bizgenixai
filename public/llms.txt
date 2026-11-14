@@ -13,7 +13,19 @@
 
 - [Growth Intelligence](https://bizgenix.ai/products/growth-intelligence): turns Tally data into answers on cash, receivables, payables and stock, with the next action for each. App: https://gi.bizgenix.ai/
 - [Bizgenix AI CRM](https://bizgenix.ai/products/ai-crm): captures leads from IndiaMART, Justdial, Facebook and Instagram ads and email, scores and assigns them, and keeps follow-ups, WhatsApp conversations, invoices and agreements in one workspace. App: https://crm.bizgenix.ai/
-- [All products](https://bizgenix.ai/products): Voice AI, BizChat and ScaleOS.
+- [Voice AI](https://bizgenix.ai/products/voice-ai): inbound and outbound AI calling in English, Hindi and Hinglish for lead qualification, bookings, reminders and follow-up, with outcomes written to the CRM.
+- [BizChat](https://bizgenix.ai/products/bizchat): WhatsApp automation for lead replies, follow-ups, reminders, support and broadcasts, connected to CRM and spreadsheets.
+- [ScaleOS](https://bizgenix.ai/products/scaleos): tasks, processes, approvals and management reports in one system, with WhatsApp notifications.
+- [All products](https://bizgenix.ai/products)
+
+## Industries
+
+- [AI for textile manufacturers](https://bizgenix.ai/industries/textile): one operating system in place of spreadsheets, production and dispatch capture, payment follow-up and AI product imagery, with five published case studies.
+- [AI for real estate and construction](https://bizgenix.ai/industries/real-estate-construction): RA bill verification, delayed-payment interest, cheque reminders and valuation workflows, with five published case studies.
+
+## Location
+
+- [AI consultant in Ahmedabad](https://bizgenix.ai/ai-consultant-ahmedabad): office on Science City Road, Sola; works with businesses across India.
 
 ## Proof
 

@@ -12,6 +12,10 @@ const services = [
   ['AI Training & Workshops', '/courses'],
   ['AI CRM', '/products/ai-crm'],
   ['Growth Intelligence', '/products/growth-intelligence'],
+  ['Voice AI', '/products/voice-ai'],
+  ['BizChat WhatsApp Automation', '/products/bizchat'],
+  ['ScaleOS', '/products/scaleos'],
+  ['AI Consultant in Ahmedabad', '/ai-consultant-ahmedabad'],
 ] as const;
 
 const founderSocials: readonly { name: string; icon: string; href: string }[] = [
