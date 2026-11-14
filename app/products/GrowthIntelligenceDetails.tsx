@@ -39,6 +39,7 @@ export default function GrowthIntelligenceDetails({ active }: { active: boolean 
         <h3>See where <em>growth<br />and cash are stuck.</em></h3>
         <p className={styles.description}>{product.description}</p>
         <a className={styles.cta} href="/contact#contact-form">{product.action}<span aria-hidden="true">→</span></a>
+        <p style={{ margin: '14px 0 0', fontSize: 13 }}><a href="/products/growth-intelligence" style={{ textDecoration: 'underline', textDecorationColor: '#5AAA6C', textUnderlineOffset: 4 }}>Full details: Growth Intelligence →</a></p>
       </div>
       <div className={styles.scene} ref={sceneRef}>
         <div className={styles.glow} data-growth-reveal="glow" aria-hidden="true" />

@@ -10,7 +10,7 @@ const services = [
   ['AI Automation', '/ai-automation'],
   ['Custom AI Solutions', '/custom-solutions'],
   ['AI Training & Workshops', '/courses'],
-  ['Intelligent AI Agents', '/products'],
+  ['AI CRM', '/products/ai-crm'],
   ['Growth Intelligence', '/products/growth-intelligence'],
 ] as const;
 

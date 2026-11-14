@@ -12,7 +12,8 @@
 ## Products
 
 - [Growth Intelligence](https://bizgenix.ai/products/growth-intelligence): turns Tally data into answers on cash, receivables, payables and stock, with the next action for each. App: https://gi.bizgenix.ai/
-- [All products](https://bizgenix.ai/products): Voice AI, BizChat, ScaleOS and Bizgenix CRM.
+- [Bizgenix AI CRM](https://bizgenix.ai/products/ai-crm): captures leads from IndiaMART, Justdial, Facebook and Instagram ads and email, scores and assigns them, and keeps follow-ups, WhatsApp conversations, invoices and agreements in one workspace. App: https://crm.bizgenix.ai/
+- [All products](https://bizgenix.ai/products): Voice AI, BizChat and ScaleOS.
 
 ## Proof
 

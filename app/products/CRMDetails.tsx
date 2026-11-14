@@ -14,6 +14,7 @@ export default function CRMDetails({}: { active: boolean }) {
         <h3>Every lead visible.<br /><em>Every follow-up on time.</em></h3>
         <p className={styles.description}>{product.description}</p>
         <a className={styles.demo} href="/contact#contact-form">Discuss Bizgenix CRM <span aria-hidden="true">→</span></a>
+        <p style={{ margin: '14px 0 0', fontSize: 13 }}><a href="/products/ai-crm" style={{ textDecoration: 'underline', textDecorationColor: '#5AAA6C', textUnderlineOffset: 4 }}>Full details: Bizgenix AI CRM →</a></p>
         <ul className={styles.traits}><li>One customer view</li><li>Clear ownership</li><li>Stronger conversion</li></ul>
       </div>
       <div className={styles.dashboardScene} role="img" aria-label="Bizgenix CRM sidebar customization dashboard">

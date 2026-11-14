@@ -13,9 +13,14 @@ export type ServiceContent = {
   whatTitle: string;
   whatIntro: string;
   items: { title: string; text: string }[];
-  proofTitle: string;
-  proofIntro: string;
-  proof: { label: string; slug: string }[];
+  /** Second card grid, e.g. example workflows by industry. */
+  extra?: { title: string; intro: string; items: { title: string; text: string }[] };
+  proofTitle?: string;
+  proofIntro?: string;
+  /** Links to proof: a case-study slug, or any href. */
+  proof?: { label: string; slug?: string; href?: string }[];
+  secondaryCta?: { label: string; href: string };
+  schemaType?: 'Service' | 'SoftwareApplication';
   processTitle: string;
   steps: { title: string; text: string }[];
   faqs: { q: string; a: string }[];
@@ -25,18 +30,29 @@ export type ServiceContent = {
 
 export default function ServicePage({ content }: { content: ServiceContent }) {
   const url = `${SITE_URL}${content.path}`;
+  const secondary = content.secondaryCta ?? { label: 'See 18 implementations', href: '/case-studies' };
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': 'Service',
-        name: content.h1,
-        serviceType: content.serviceType,
-        description: content.lead,
-        url,
-        provider: { '@id': `${SITE_URL}/#organization` },
-        areaServed: { '@type': 'Country', name: 'India' },
-      },
+      content.schemaType === 'SoftwareApplication'
+        ? {
+          '@type': 'SoftwareApplication',
+          name: content.serviceType,
+          applicationCategory: 'BusinessApplication',
+          operatingSystem: 'Web',
+          description: content.lead,
+          url,
+          publisher: { '@id': `${SITE_URL}/#organization` },
+        }
+        : {
+          '@type': 'Service',
+          name: content.h1,
+          serviceType: content.serviceType,
+          description: content.lead,
+          url,
+          provider: { '@id': `${SITE_URL}/#organization` },
+          areaServed: { '@type': 'Country', name: 'India' },
+        },
       {
         '@type': 'FAQPage',
         mainEntity: content.faqs.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
@@ -62,7 +78,7 @@ export default function ServicePage({ content }: { content: ServiceContent }) {
           <p className={styles.lead}>{content.lead}</p>
           <div className={styles.actions}>
             <Link className={styles.primary} href="/contact#contact-form">{content.primaryCta} <span aria-hidden="true">→</span></Link>
-            <Link className={styles.secondary} href="/case-studies">See 18 implementations</Link>
+            <Link className={styles.secondary} href={secondary.href} target={secondary.href.startsWith('http') ? '_blank' : undefined} rel={secondary.href.startsWith('http') ? 'noopener noreferrer' : undefined}>{secondary.label}</Link>
           </div>
         </div>
       </header>
@@ -78,12 +94,23 @@ export default function ServicePage({ content }: { content: ServiceContent }) {
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.ruled}`} aria-labelledby="proof-title">
+      {content.extra && <section className={`${styles.section} ${styles.ruled}`} aria-labelledby="extra-title">
+        <div className={styles.container}>
+          <div className={styles.sectionHead}><h2 id="extra-title">{content.extra.title}</h2><p>{content.extra.intro}</p></div>
+          <div className={styles.grid}>{content.extra.items.map((item, index) => <article className={styles.card} key={item.title}>
+            <span className={styles.cardIndex}>{String(index + 1).padStart(2, '0')}</span>
+            <h3>{item.title}</h3>
+            <p>{item.text}</p>
+          </article>)}</div>
+        </div>
+      </section>}
+
+      {content.proof && content.proof.length > 0 && <section className={`${styles.section} ${styles.ruled}`} aria-labelledby="proof-title">
         <div className={styles.container}>
           <div className={styles.sectionHead}><h2 id="proof-title">{content.proofTitle}</h2><p>{content.proofIntro}</p></div>
-          <ul className={styles.proofList}>{content.proof.map(item => <li key={item.slug}><Link href={`/case-studies/${item.slug}`}><span>{item.label}</span><span aria-hidden="true">↗</span></Link></li>)}</ul>
+          <ul className={styles.proofList}>{content.proof.map(item => <li key={item.label}><Link href={item.href ?? `/case-studies/${item.slug}`}><span>{item.label}</span><span aria-hidden="true">↗</span></Link></li>)}</ul>
         </div>
-      </section>
+      </section>}
 
       <section className={styles.section} aria-labelledby="process-title">
         <div className={styles.container}>
