@@ -1,8 +1,25 @@
-// Full articles by Dr. CA Umang Ratani, first published in The CEO's Playbook on LinkedIn.
+// Articles from Bizgenix and linked editions of The CEO's Playbook.
 // Generated from the article library; edit the source text, not this file.
 export type Article = { slug: string; title: string; h1: string; description: string; date: string; modified?: string; tags: string[]; originalHeadline: string; cover: string | null; linkedinSlug: string | null; words: number; minutes: number; html: string };
 
 export const articles: Article[] = [
+{
+  "slug": "custom-ai-vs-ready-made-software",
+  "title": "How should a business choose between an AI product and a custom AI solution?",
+  "h1": "How should a business choose between an AI product and a custom AI solution?",
+  "description": "A practical build-or-buy guide from Bizgenix AI: compare workflow fit, integrations, review controls, implementation and ongoing support.",
+  "date": "2026-11-15",
+  "tags": [
+    "AI Strategy",
+    "AI for Business Owners"
+  ],
+  "originalHeadline": "A practical decision guide from Dr CA Umang Ratani and Bizgenix AI.",
+  "cover": null,
+  "linkedinSlug": null,
+  "words": 272,
+  "minutes": 2,
+  "html": "<p>Choose a product when its existing workflow fits your requirements; choose a custom solution when essential processes, integrations or controls cannot be met without substantial adaptation.</p><p>Before comparing tools, write down one workflow: what starts it, which data it uses, who checks the output and what successful completion means. A sales follow-up workflow and a finance reporting workflow need different evaluation criteria.</p><h2>Five checks before choosing a supplier</h2><p>Ask every supplier to demonstrate five things:\n1. The task using representative data you are allowed to share.\n2. What happens when an input is missing or wrong.\n3. Where a person approves a consequential action.\n4. How the system connects to your existing tools and what that requires.\n5. What support, maintenance and export options are included.</p><p>A ready product can reduce bespoke development, but configuration and integration still take work. Custom development offers flexibility, but requires an agreed scope, acceptance criteria and ongoing ownership. Compare the complete implementation, not just a subscription price.</p><p>For example, an owner may need visibility into receivables from accounting data, while another team needs a workflow joining sales, delivery and finance. The first step is to establish the data source and decision to support; the second is to map cross-team ownership. These are illustrative situations, not reported customer outcomes.</p><p>Disclosure: Dr CA Umang Ratani is the founder of Bizgenix AI. Bizgenix offers products and custom implementation; the appropriate route depends on fit.\nCTA: Discuss one workflow: https://bizgenix.ai/contact?intent=custom&amp;utm_source=linkedin&amp;utm_medium=organic_social&amp;utm_campaign=build_or_buy_202611</p><h2>Explore the appropriate next step</h2><p>Start with <a href=\"/ai-consulting\">AI consulting</a> if the scope is unclear, compare <a href=\"/products\">Bizgenix products</a> when a defined workflow fits, or discuss <a href=\"/custom-solutions\">custom AI solutions</a> for specific requirements.</p>"
+},
   {
     "slug": "ai-employee-vs-chatbot-indian-business",
     "title": "AI Employee vs Chatbot: A Practical Framework for Indian Businesses",

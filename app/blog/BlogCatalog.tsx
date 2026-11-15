@@ -2,12 +2,14 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { categories, insights, topics, formatPublishDate } from './newsletter';
-import { onsiteByNewsletterSlug } from './articles';
+import { categories, insights as newsletterInsights, topics, formatPublishDate } from './newsletter';
+import { articles, onsiteByNewsletterSlug } from './articles';
+
+const insights = [...articles.filter(article => !article.linkedinSlug).map(article => ({slug:article.slug,title:article.title,category:'AI Strategy',summary:article.description,tags:article.tags,sourceUrl:`/blog/${article.slug}`,cover:article.cover || '/custom-solutions-hero.webp',publishedAt:article.date,author:'Dr. CA Umang Ratani'})), ...newsletterInsights].sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt));
 
 /** Prefer the on-site article; fall back to the LinkedIn edition. */
 function linkFor(item: { slug: string; sourceUrl: string }) {
-  const onsite = onsiteByNewsletterSlug[item.slug];
+  const onsite = item.sourceUrl.startsWith('/blog/') ? item.slug : onsiteByNewsletterSlug[item.slug];
   return onsite
     ? { href: `/blog/${onsite}`, target: undefined, rel: undefined, onsite: true }
     : { href: item.sourceUrl, target: '_blank' as const, rel: 'noopener noreferrer', onsite: false };
