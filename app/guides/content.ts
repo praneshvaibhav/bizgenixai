@@ -20,6 +20,84 @@ export type Guide = {
 };
 
 export const guides: Guide[] = [
+{
+  "slug": "tally-receivables-dashboard-checklist",
+  "title": "Tally Receivables Dashboard: A Buyer Checklist",
+  "h1": "What should a Tally receivables dashboard show?",
+  "description": "Evaluate receivables dashboards using company, period, freshness, invoice reconciliation, ownership and collection follow-up checks.",
+  "answer": "A useful receivables dashboard shows what is outstanding, what is overdue, which balances need review and who owns the next action. It should identify the source company, reporting date and last successful refresh so an owner can judge whether the numbers are usable.",
+  "tags": [
+    "Tally",
+    "Receivables",
+    "Growth Intelligence"
+  ],
+  "html": "<h2>Start with trustworthy balances</h2><p>Ask the supplier to demonstrate how a selected customer balance reconciles to the source accounting records. Check whether receipts, credit notes, disputed amounts and allocations are reflected. A total alone cannot explain why an invoice remains unpaid.</p><p>Keep each company and reporting period separate. Agree whether ageing is calculated from invoice date or due date; these answer different questions. A recent screen refresh is not necessarily a recent accounting-data refresh.</p><h2>Use a review checklist</h2><ul><li>Company and period are visible.</li><li>Last successful source refresh is visible, including failed or partial updates.</li><li>Outstanding and overdue are distinguished using an agreed basis.</li><li>A reviewer can trace a balance to supporting records.</li><li>Disputes and promised-payment dates are separate from actual receipts.</li><li>Each follow-up has an owner and a next-action date.</li></ul><h2>Move from a list to a controlled workflow</h2><p>Review the largest or oldest unresolved balances with the responsible team. Confirm that the invoice and customer contact are correct before drafting a reminder. A draft message is not a sent message, and a sent message is not a collection.</p><p>If WhatsApp, email or calling is part of a proposed solution, confirm the integration, access, approvals, usage charges and failure handling in the agreed scope. Do not assume every dashboard includes automatic messaging.</p><h2>What to test in a demo</h2><p>Use a small authorised sample with a normal invoice, a partial receipt and a disputed item. Ask what happens when source data is unavailable. The demo should show limitations explicitly rather than presenting stale records as current.</p><p>Growth Intelligence by Bizgenix AI is positioned as a Tally-connected decision and action layer, not accounting software. Discuss your current setup and the decisions you want to support before agreeing implementation scope.</p><h2>Measure useful outcomes</h2><p>Track reconciled balances, unresolved exceptions, review time and completed follow-ups. Report money received separately from expected receipts. Do not attribute a collection to software without a defensible attribution method.</p><p>Related: <a href=\"/guides/mis-report-in-tally\">MIS reporting in Tally</a> and <a href=\"/products/growth-intelligence\">Growth Intelligence</a>.</p>",
+  "faqs": [
+    [
+      "Does a dashboard replace Tally?",
+      "No. A connected decision layer depends on the source accounting records; confirm supported versions, access and integration requirements before implementation."
+    ],
+    [
+      "Does a WhatsApp reminder mean payment has been collected?",
+      "No. Track draft, sent, replied, promised and received states separately. Confirm receipt in the source records."
+    ]
+  ],
+  "date": "2026-11-15",
+  "updated": "2026-11-15",
+  "minutes": 4,
+  "next": {
+    "eyebrow": "NEXT STEP",
+    "title": "Discuss a Growth Intelligence demo",
+    "text": "Share the workflow, current tools and team involved so we can discuss fit and scope.",
+    "primary": {
+      "label": "Discuss a Growth Intelligence demo",
+      "href": "/contact?intent=product&product=growth-intelligence"
+    },
+    "secondary": {
+      "label": "Explore all guides",
+      "href": "/guides"
+    }
+  }
+},
+{
+  "slug": "ai-training-for-ca-accounting-firms",
+  "title": "AI Training for CA and Accounting Firms: Planning Guide",
+  "h1": "How should CA and accounting firms plan practical AI training?",
+  "description": "Plan role-based AI training for CA and accounting teams with approved data, review exercises, human responsibility and adoption measures.",
+  "answer": "Start AI training with a few recurring tasks that staff can practise safely, such as summarising approved material, drafting client questions and explaining a checked management report. Define who reviews each output and how confidential information may be used before selecting tools.",
+  "tags": [
+    "Corporate AI Training",
+    "Accounting Firms",
+    "AI Adoption"
+  ],
+  "html": "<h2>Choose tasks by role</h2><p>A partner, reviewer and junior team member need different exercises. A partner might practise turning a verified management report into questions for a business owner. A reviewer might compare a draft summary with its sources. A junior might organise an approved checklist and flag missing information.</p><p>These are suggested learning exercises, not claims of measured client outcomes. Training does not transfer professional responsibility to an AI tool.</p><h2>Agree the data rules first</h2><p>Use fictional or appropriately anonymised examples initially. Confirm the firm's approved tools and permitted uses of client material. Remove unnecessary personal identifiers. Do not assume that a paid account alone makes every upload appropriate.</p><h2>Ask for a practical programme</h2><ol><li>Define the participants, their current experience and one task for each role.</li><li>Demonstrate the task using a controlled source pack.</li><li>Have participants attempt it themselves.</li><li>Introduce missing data or a plausible incorrect answer and practise review.</li><li>Agree an internal owner, a permitted workflow and a follow-up review date.</li></ol><h2>Evaluate the output, not the confidence</h2><p>Check whether a participant can identify the source, distinguish fact from inference and explain what still needs verification. A fluent answer can contain a mistaken amount, date or assumption. For consequential client work, use the firm's normal review and approval controls.</p><h2>Measure adoption after the workshop</h2><p>Choose a small baseline task and record time, corrections and accepted outputs before and after training. Include checking time. A certificate, attendance photograph or completed prompt is not proof of sustained adoption.</p><p>Bizgenix AI offers corporate AI training and workshops with founder Umang Ratani. Discuss departments, participant count, experience, delivery format and intended workflows so the programme can be scoped. No accreditation, CPE credit or guaranteed productivity improvement is implied.</p><p>Related: <a href=\"/courses\">AI training and workshops</a> and <a href=\"/ai-consulting\">AI consulting</a>.</p>",
+  "faqs": [
+    [
+      "Can training use our real client files?",
+      "Begin with fictional or anonymised examples. Use real files only under your firm’s approved access, confidentiality and tool-use process."
+    ],
+    [
+      "How do we choose the right programme?",
+      "Share participant roles, current AI experience, intended tasks, delivery preferences and dates. Agree learning outcomes and review exercises before booking."
+    ]
+  ],
+  "date": "2026-11-15",
+  "updated": "2026-11-15",
+  "minutes": 4,
+  "next": {
+    "eyebrow": "NEXT STEP",
+    "title": "Discuss training for your firm",
+    "text": "Share the workflow, current tools and team involved so we can discuss fit and scope.",
+    "primary": {
+      "label": "Discuss training for your firm",
+      "href": "/contact?intent=training"
+    },
+    "secondary": {
+      "label": "Explore all guides",
+      "href": "/guides"
+    }
+  }
+},
   {
     slug: 'mis-report-in-tally',
     title: 'MIS Report in Tally: Format, Reports to Use and What to Read',

@@ -33,7 +33,7 @@ export function pageMeta({ title, description, path, type = 'website', image = D
       siteName: 'Bizgenix AI',
       locale: 'en_IN',
       images: [image],
-      ...(type === 'article' && publishedTime ? { publishedTime, authors: ['Dr. CA Umang Ratani'] } : {}),
+      ...(type === 'article' && publishedTime ? { publishedTime, authors: ['Umang Ratani'] } : {}),
     },
     twitter: { card: 'summary_large_image', title, description, images: [image.url] },
   };
@@ -73,8 +73,10 @@ export const organizationJsonLd = {
     {
       '@type': 'Person',
       '@id': `${SITE_URL}/#founder`,
-      name: 'Dr. CA Umang Ratani',
-      jobTitle: 'Founder, Bizgenix AI',
+      name: 'Umang Ratani',
+      alternateName: ['Dr. CEO Umang Ratani', 'CEO Umang Ratani', 'Dr. CA Umang Ratani'],
+      honorificPrefix: 'Dr.',
+      jobTitle: 'Founder and CEO, Bizgenix AI',
       worksFor: { '@id': `${SITE_URL}/#organization` },
       url: 'https://www.umangratani.com/',
       sameAs: ['https://www.linkedin.com/in/umangratani/', 'https://www.umangratani.com/'],
