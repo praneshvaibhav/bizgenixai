@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Link from '../../InternalLink';
 import Navigation from '../../custom-solutions/Navigation';
@@ -34,7 +35,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         headline: guide.h1,
         description: guide.description,
         abstract: guide.answer,
-        image: `${SITE_URL}/custom-solutions-hero.webp`,
+        image: `${SITE_URL}${guide.photo?.src || "/custom-solutions-hero.webp"}`,
         datePublished: `${guide.date}T09:00:00+05:30`,
         dateModified: `${guide.updated}T09:00:00+05:30`,
         author: { '@id': `${SITE_URL}/#organization` },
@@ -70,6 +71,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           <p className={styles.byline}>By the Bizgenix AI team <span>•</span> Updated <time dateTime={guide.updated}>{formatPublishDate(guide.updated)}</time> <span>•</span> {guide.minutes} min read</p>
           <div className={body.body}>
             <blockquote><strong>Short answer.</strong> {guide.answer}</blockquote>
+            {guide.photo && <figure><Image src={guide.photo.src} alt={guide.photo.alt} width={971} height={509} sizes="(max-width: 900px) 100vw, 850px" style={{ width: "100%", height: "auto" }} /><figcaption>{guide.photo.caption}</figcaption></figure>}
             <div dangerouslySetInnerHTML={{ __html: guide.html }} />
             <h2 id="questions">Common questions</h2>
             {guide.faqs.map(([question, answer]) => <div key={question}><h3>{question}</h3><p>{answer}</p></div>)}

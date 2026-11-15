@@ -15,11 +15,55 @@ export type Guide = {
   tags: string[];
   minutes: number;
   html: string;
+  photo?: { src: string; alt: string; caption: string };
   faqs: [string, string][];
   next: { eyebrow: string; title: string; text: string; primary: { label: string; href: string }; secondary: { label: string; href: string } };
 };
 
 export const guides: Guide[] = [
+{
+  "slug": "evaluate-ai-automation-pilot",
+  "title": "How to Evaluate an AI Automation Pilot",
+  "h1": "How do you know an AI automation pilot is ready for everyday work?",
+  "description": "A practical acceptance checklist for business owners evaluating AI automation: scope, errors, human review, recovery and measurable outcomes.",
+  "answer": "An AI automation pilot is ready for wider use when it completes an agreed workflow on representative examples, handles exceptions visibly and has a named owner. Compare useful completed work, review effort and errors against your starting process before expanding access or scope.",
+  "date": "2026-11-15",
+  "updated": "2026-11-15",
+  "tags": [
+    "AI consulting",
+    "Automation",
+    "Buyer guide"
+  ],
+  "minutes": 5,
+  "html": "<h2>Define one workflow and its boundary</h2><p>Write down the trigger, required inputs, expected output and person responsible for accepting the work. For example, a pilot might prepare an internal follow-up task after a sales enquiry. Sending a customer message, changing an account or committing a payment is a separate action to agree explicitly.</p><p>Start with representative, authorised sample data. Record which business, period and source each example belongs to. Remove confidential information that is unnecessary for the test.</p><h2>Test five failure cases</h2><ol><li><strong>Duplicate input:</strong> submit the same request twice and check that it does not create duplicate records or actions.</li><li><strong>Missing information:</strong> omit a required field. The workflow should request review instead of inventing a value.</li><li><strong>Unavailable connection:</strong> agree how failed work is retained, reported and safely retried.</li><li><strong>Wrong access:</strong> confirm that an unauthorised role cannot view or change restricted records.</li><li><strong>Incorrect output:</strong> show how a reviewer finds the source, corrects the result and prevents an unchecked action.</li></ol><h2>Count the whole effort</h2><p>Measure useful tasks completed, preparation time, review time, corrections and unresolved exceptions. Faster generation can still leave a team with more checking. Compare equivalent work and record changes in volume or complexity so the comparison remains meaningful.</p><p>A proposed reminder is not a sent message. A reply is not a booked meeting, and a promise to pay is not money received. Define the outcome before calculating any return.</p><h2>Agree acceptance before expansion</h2><p>Write a short acceptance record: test set, observed result, unresolved issue, responsible person and next review date. The business owner and implementation team should agree acceptable error levels for the particular task; there is no universal pass percentage suitable for every workflow.</p><p>Keep a manual fallback and a way to stop external actions. Start with a limited group and review failures before adding users, data sources or automation permissions.</p><h2>Choose a product or a custom build</h2><p>If an existing product handles the workflow adequately, evaluate its configuration and integration options first. A custom build may fit distinctive approval rules or processes that the available tools cannot support. Compare implementation, recurring usage, maintenance and ownership requirements.</p><p>Read our <a href=\"/blog/custom-ai-vs-ready-made-software\">product-versus-custom guide</a>, explore <a href=\"/custom-solutions\">custom solutions</a>, or use the <a href=\"/guides/tally-receivables-dashboard-checklist\">receivables checklist</a> for a finance workflow.</p><h2>A proposed checklist, not a customer result</h2><p>This guide provides evaluation questions from the Bizgenix AI team. The examples are illustrative and do not represent measured client savings, guaranteed returns or a certification of any product.</p>",
+  "faqs": [
+    [
+      "How long should a pilot take?",
+      "Agree timing around data readiness, integrations and the examples needed to test the workflow. A calendar deadline alone does not demonstrate readiness."
+    ],
+    [
+      "Can we evaluate a pilot without connecting live accounting data?",
+      "Start with authorised sample or anonymised data. Confirm permissions and handling requirements before enabling a production connection."
+    ],
+    [
+      "Who should approve the result?",
+      "Name the business process owner and the implementation owner. The people responsible for the work should review exceptions and agree acceptance before expanding use."
+    ]
+  ],
+  "next": {
+    "eyebrow": "PLAN A SCOPED PILOT",
+    "title": "Discuss your first workflow",
+    "text": "Share the task, current tools and desired outcome. We can discuss whether a product, integration or custom build fits.",
+    "primary": {
+      "label": "Discuss AI consulting",
+      "href": "/contact?intent=custom#contact-form"
+    },
+    "secondary": {
+      "label": "Explore custom solutions",
+      "href": "/custom-solutions"
+    }
+  }
+},
 {
   "slug": "tally-receivables-dashboard-checklist",
   "title": "Tally Receivables Dashboard: A Buyer Checklist",
@@ -61,6 +105,7 @@ export const guides: Guide[] = [
 },
 {
   "slug": "ai-training-for-ca-accounting-firms",
+  "photo": { "src": "/corporate-training/ai-for-cas-jamnagar.png", "alt": "Group photo of participants seated in a training room", "caption": "AI for Chartered Accountants session, Jamnagar — from the Bizgenix training gallery." },
   "title": "AI Training for CA and Accounting Firms: Planning Guide",
   "h1": "How should CA and accounting firms plan practical AI training?",
   "description": "Plan role-based AI training for CA and accounting teams with approved data, review exercises, human responsibility and adoption measures.",

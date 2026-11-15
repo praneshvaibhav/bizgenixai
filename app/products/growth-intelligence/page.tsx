@@ -88,7 +88,7 @@ const GIProductPage = () => {
               </div>
               <div>
                 <span className="font-bold text-slate-900 block text-sm">Need to accelerate sales and stop lead leakage?</span>
-                <span className="text-xs text-slate-500">Explore Bizgenix CRM with IndiaMART capture and direct Tally Sales Order sync.</span>
+                <span className="text-xs text-slate-500">Explore Bizgenix CRM for sales follow-up; confirm required integrations during your demo.</span>
               </div>
             </div>
             <button
