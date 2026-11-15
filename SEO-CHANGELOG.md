@@ -10,6 +10,23 @@ Rules that apply to every entry:
 
 ---
 
+## 15 Nov 2026 — Guides section, IndexNow and a friendlier phone rule (Claude)
+
+Built on Codex's `e788f84` (required phone field).
+
+- **Guides** (`app/guides/`): new answer-first section by "the Bizgenix AI team", separate from the founder's articles in `/blog`. Each guide opens with a quoted short answer, ends with visible FAQs, and carries Article + FAQPage + BreadcrumbList JSON-LD with the organisation as author. Content rules are at the top of `app/guides/content.ts`.
+
+| URL | Target searches (India, monthly, Serpstat) |
+|---|---|
+| `/guides/mis-report-in-tally` | mis report 246,000 (difficulty 11); tally mis report 170; tally reports 390 |
+| `/guides/virtual-cfo` | virtual cfo 1,000; virtual cfo services 1,000; cfo services 3,600 |
+| `/guides/whatsapp-automation-for-business` | whatsapp automation 3,600 (difficulty 13); whatsapp business api 18,100 |
+
+- `/guides` index; footer link "Business Guides"; link from `/blog`; sitemap (53 URLs); `public/llms.txt` Guides section.
+- **IndexNow**: key file `public/968123604ee7506344a131d50fd74277.txt` and `scripts/indexnow.mjs`. Run `node scripts/indexnow.mjs` after any deploy that adds or changes pages. It notifies Bing (the index behind ChatGPT search and Copilot), Yandex, Naver and Seznam.
+- **Phone rule** (`lib/enquiries.mjs` `phoneNumber()`): a plain 10-digit Indian mobile, or one typed with a leading 0 or 91, is now accepted and saved as `+91…`. Other countries still need `+` and the country code. Letters and repeated-digit numbers are rejected. Before this, `9876543210` was refused with "enter a phone number with country code".
+- **Team email**: subject now reads `Bizgenix website enquiry: <type> / <product> from <name> [reference]`; body adds an "Open WhatsApp chat" link built from the number.
+
 ## 3 — 14 Nov 2026 — Product, industry and local pages (after the Gemini review)
 
 Source: two Gemini research documents reviewed against the live site. Adopted points only; the full adopted / rejected list is in `seo-audit-nov-2026/GEMINI-REVIEW.md`.

@@ -18,7 +18,7 @@ export default function BlogPage() {
       <header className={styles.hero}>
         <p className={styles.eyebrow}>THE BIZGENIX BLOG</p>
         <h1>Insights From<br />Our Experts<span>.</span></h1>
-        <p>Business and AI insights from Dr. CA Umang Ratani’s <a href={newsletterUrl} target="_blank" rel="noopener noreferrer">The CEO’s Playbook</a>.</p>
+        <p>Business and AI insights from Dr. CA Umang Ratani’s <a href={newsletterUrl} target="_blank" rel="noopener noreferrer">The CEO’s Playbook</a>. Looking for a how-to? See our <a href="/guides">answer-first guides</a>.</p>
       </header>
       <BlogCatalog />
     </main>

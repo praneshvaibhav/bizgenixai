@@ -42,6 +42,15 @@
 - [AI Employee vs Chatbot: A Practical Framework for Indian Businesses](https://bizgenix.ai/blog/ai-employee-vs-chatbot-indian-business)
 - [All articles](https://bizgenix.ai/blog)
 
+## Guides
+
+Answer-first guides by the Bizgenix AI team. Each opens with a short answer.
+
+- [MIS report in Tally: format, reports to use and what to read](https://bizgenix.ai/guides/mis-report-in-tally)
+- [Virtual CFO: what it is, what it does and when software helps](https://bizgenix.ai/guides/virtual-cfo)
+- [WhatsApp automation for business: what you can automate and what it takes](https://bizgenix.ai/guides/whatsapp-automation-for-business)
+- [All guides](https://bizgenix.ai/guides)
+
 ## People
 
 - Founder: Dr. CA Umang Ratani, AI and business consultant, Chartered Accountant, TEDx speaker. https://www.umangratani.com/

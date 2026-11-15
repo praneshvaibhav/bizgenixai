@@ -16,6 +16,7 @@ const services = [
   ['BizChat WhatsApp Automation', '/products/bizchat'],
   ['ScaleOS', '/products/scaleos'],
   ['AI Consultant in Ahmedabad', '/ai-consultant-ahmedabad'],
+  ['Business Guides', '/guides'],
 ] as const;
 
 const founderSocials: readonly { name: string; icon: string; href: string }[] = [
