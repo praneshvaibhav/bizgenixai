@@ -3,7 +3,7 @@ import { pageMeta } from '../../seo';
 import ServicePage, { type ServiceContent } from '../../services/ServicePage';
 
 const title = 'AI CRM Software for Indian Sales Teams | Bizgenix AI CRM';
-const description = 'Bizgenix AI CRM captures leads from IndiaMART, Justdial, ads and email, scores them, assigns an owner and keeps every follow-up visible. Book a free demo.';
+const description = 'Evaluate Bizgenix AI CRM for lead ownership, sales stages and follow-up. Confirm supported lead sources, WhatsApp setup and pilot requirements in a demo.';
 
 export const metadata: Metadata = pageMeta({ title, description, path: '/products/ai-crm' });
 
@@ -13,7 +13,7 @@ const content: ServiceContent = {
   serviceType: 'Bizgenix AI CRM',
   schemaType: 'SoftwareApplication',
   parent: { name: 'Products', href: '/products' },
-  h1: 'AI CRM that captures every lead and keeps every follow-up moving.',
+  h1: 'AI CRM for lead ownership, sales stages and follow-up.',
   lead: 'Leads arrive from ads, IndiaMART, Justdial, WhatsApp and email. Bizgenix AI CRM brings them into one workspace, scores them, assigns an owner and keeps the next action visible, so enquiries stop slipping between people and spreadsheets.',
   primaryCta: 'Book a free CRM demo',
   secondaryCta: { label: 'Open Bizgenix AI CRM', href: 'https://crm.bizgenix.ai/' },
@@ -46,6 +46,9 @@ const content: ServiceContent = {
     { title: 'Follow up and convert', text: 'Reminders, conversations and next actions are tracked until the deal is won or closed.' },
   ],
   faqs: [
+    { q: 'What should we bring to a CRM demo?', a: 'Bring your team size, lead sources, current stages and one missed-follow-up example. Use anonymised sample records. Confirm supported integrations and access requirements before connecting production accounts.' },
+    { q: 'How do we know a pilot is working?', a: 'Test source capture, duplicate handling, assignment, next actions and failed-message recovery. Compare unassigned enquiries and review effort with your baseline. Count qualified opportunities separately from messages or submissions.' },
+    { q: 'Who is behind Bizgenix AI CRM?', a: 'Bizgenix AI is founded by Umang Ratani. The team provides AI consulting, custom solutions, products and training; discuss the delivery and support scope for your proposed CRM configuration.' },
     { q: 'What is an AI CRM?', a: 'An AI CRM is a customer relationship management system that uses AI for the steps people skip when busy: reading enquiry emails, scoring leads and, where enabled, calling new leads and logging the outcome.' },
     { q: 'Who is Bizgenix AI CRM for?', a: 'Sales teams in Indian businesses that want enquiries, sales stages and follow-up activity organised in one place instead of across spreadsheets and chats.' },
     { q: 'Does it capture IndiaMART and Justdial leads?', a: 'Yes. Once connected, enquiries from IndiaMART and Justdial and leads from Facebook and Instagram ads arrive in the CRM automatically.' },
@@ -56,6 +59,8 @@ const content: ServiceContent = {
     { q: 'Can our workflow be customised?', a: 'Share your requirements. Our team reviews scope, feasibility and commercial terms before any commitment.' },
   ],
   related: [
+    { label: 'WhatsApp CRM buyer guide', href: '/guides/whatsapp-crm-for-indian-sales-teams' },
+    { label: 'AI pilot acceptance checklist', href: '/guides/evaluate-ai-automation-pilot' },
     { label: 'All products', href: '/products' },
     { label: 'Growth Intelligence', href: '/products/growth-intelligence' },
     { label: 'AI automation', href: '/ai-automation' },

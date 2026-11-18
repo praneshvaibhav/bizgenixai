@@ -22,6 +22,53 @@ export type Guide = {
 
 export const guides: Guide[] = [
 {
+  "slug": "whatsapp-crm-for-indian-sales-teams",
+  "title": "WhatsApp CRM for Indian Sales Teams: A Practical Guide",
+  "h1": "How should an Indian sales team choose a WhatsApp CRM?",
+  "description": "A practical WhatsApp CRM checklist: lead ownership, supported integrations, rollout, messaging controls and qualified-opportunity measurement.",
+  "answer": "A WhatsApp-connected CRM should help a sales team keep customer conversations, lead ownership and next actions together. Before buying, confirm the capabilities supported for your business number and lead sources, then test the complete workflow with a small pilot.",
+  "date": "2026-11-18",
+  "updated": "2026-11-18",
+  "tags": [
+    "CRM",
+    "WhatsApp",
+    "Sales operations"
+  ],
+  "minutes": 6,
+  "html": "<h2>The problem: a conversation without an owner</h2><p>When customer conversations sit across individual phones and spreadsheets, a sales manager can struggle to see who should reply next. A quotation may have been sent, but its follow-up date and responsible person may be missing. The goal is a shared record of the work, not simply more messages.</p><h2>What a WhatsApp CRM should help you manage</h2><p>A WhatsApp-connected CRM combines customer records and sales stages with supported messaging workflows. Features differ between products and configurations. Ask which conversations can be shared, what history is retained and which channels require a separate integration.</p><ol><li><strong>Capture:</strong> record the enquiry and its source. List website, advertising, marketplace, referral and offline sources separately; do not assume every source connects automatically.</li><li><strong>Assign:</strong> give each active lead a named owner and a handover route when that person is unavailable.</li><li><strong>Track:</strong> keep the stage, last meaningful interaction and next action together.</li><li><strong>Follow up:</strong> distinguish a suggested reply, an approved message, a sent message and a customer response.</li><li><strong>Review:</strong> report useful business outcomes from agreed definitions rather than counting messages as sales.</li></ol><h2>Prepare three things before choosing software</h2><h3>1. Write the stages on one page</h3><p>A B2B services example is enquiry → discovery call → proposal → decision. A manufacturing example is dealer enquiry → quotation → follow-up → order. These are illustrative workflows, not required stages. Agree what evidence moves a lead between stages and who maintains the record.</p><h3>2. Map your lead sources</h3><p>For each source, record where the enquiry arrives today, who sees it, which fields are available and how duplicate enquiries are handled. Test the route from source to assigned owner. A connector shown in a presentation is not proof that your particular account is connected.</p><h3>3. Agree number ownership and team access</h3><p>Choose the business number and confirm who controls it. If customers currently contact personal numbers, plan the transition and check what conversation history can actually be retained. Define who may view, export or change records and what happens when a team member leaves.</p><h2>A phased rollout checklist</h2><p>Use this sequence as planning guidance, not a promised onboarding duration. Timing depends on your data, number setup, integrations and team readiness.</p><ol><li>Agree stages, lead sources, number ownership and acceptance criteria.</li><li>Connect only the supported sources in the agreed scope. Send a test enquiry from each and verify the saved source and owner.</li><li>Configure assignment and escalation rules. Include an exception for enquiries that cannot be assigned automatically.</li><li>Give the pilot team appropriate access and prepare reviewed reply templates.</li><li>Import a small, authorised set of active enquiries, checking duplicates and data quality.</li><li>Run a limited pilot and inspect missed messages, wrong assignments and failed integrations.</li><li>Review the evidence with the sales owner before expanding to more users or sources.</li></ol><p>Keep a fallback process during the pilot. Do not remove a working customer-contact route before confirming that the replacement works.</p><h2>Seven questions to ask in a demo</h2><ol><li>Which of our lead sources are supported now, and which need additional work?</li><li>What happens when the same person enquires twice or uses a different phone number?</li><li>Can we see the owner, stage and overdue next action on a representative record?</li><li>Which WhatsApp capabilities are available for our number, and what activation, consent or template requirements apply?</li><li>What history can the business retain, and what happens when someone leaves?</li><li>What are the implementation, user, messaging, calling and support charges? Ask for current scope and terms in writing.</li><li>What happens when a message fails or a connection is unavailable? Ask to see the failure and recovery process.</li></ol><h2>Keep automation boundaries clear</h2><p>A shared inbox, campaign sender, chatbot and sales CRM serve different needs. Some setups combine them; others require separate tools. The WhatsApp Business app and a connected CRM are not interchangeable categories, and neither should be described as universally limited to one person or capable of every integration.</p><p>Confirm applicable messaging permissions and provider requirements before automating outbound contact. A requested internal reminder is not permission to send a customer message. Voice calling, where available, needs its own agreed setup and review.</p><h2>Measure qualified opportunities, not activity alone</h2><p>Start with a baseline: unassigned enquiries, enquiries without a next action, response time and opportunities that reach a meaningful next step. Then measure the same definitions during the pilot. Separate tests, duplicates and irrelevant submissions from sales opportunities.</p><p>A submitted form is not automatically a qualified lead. Record the business need and sales review, then track booked calls, proposals and confirmed wins separately. If outcome data is unavailable, mark it unknown rather than reporting zero or estimating revenue.</p><h2>Where Bizgenix fits</h2><p>Bizgenix AI, founded by Umang Ratani, offers AI consulting, custom solutions, products and team training. For a sales workflow, explore <a href=\"/products/ai-crm\">Bizgenix AI CRM</a> and ask the team to demonstrate the capabilities supported in your proposed configuration. For customer-conversation workflows, discuss <a href=\"/products/bizchat\">BizChat</a>. Confirm integrations and commercials before committing.</p><p>Compare the <a href=\"/blog/custom-ai-vs-ready-made-software\">product-versus-custom approach</a> and use our <a href=\"/guides/evaluate-ai-automation-pilot\">AI pilot evaluation checklist</a>. This guide is practical buyer guidance adapted from the team's draft; it does not claim a measured CRM customer result.</p>",
+  "faqs": [
+    [
+      "Does every WhatsApp CRM connect every lead source?",
+      "No. Confirm supported sources, account access, integration steps and charges for your specific configuration. Verify a test enquiry from each source."
+    ],
+    [
+      "How long does setup take?",
+      "Agree timing after reviewing number setup, data readiness, integrations and team access. The phased checklist is planning guidance, not an onboarding promise."
+    ],
+    [
+      "Does a CRM guarantee more sales?",
+      "No. Measure lead handling and qualified opportunities against your baseline. Sales also depend on fit, offer, follow-up and the buyer decision."
+    ],
+    [
+      "Should we use CRM or a WhatsApp chatbot?",
+      "Use the workflow to decide: sales ownership and pipeline management differ from automated replies. Ask whether a combination is needed and confirm the scope."
+    ]
+  ],
+  "next": {
+    "eyebrow": "REVIEW YOUR SALES WORKFLOW",
+    "title": "Discuss a Bizgenix AI CRM demo",
+    "text": "Share your team size, lead sources and one follow-up problem so we can discuss the relevant configuration.",
+    "primary": {
+      "label": "Request a CRM demo",
+      "href": "/contact?intent=product&product=ai-crm#contact-form"
+    },
+    "secondary": {
+      "label": "Explore Bizgenix AI CRM",
+      "href": "/products/ai-crm"
+    }
+  }
+},
+{
   "slug": "evaluate-ai-automation-pilot",
   "title": "How to Evaluate an AI Automation Pilot",
   "h1": "How do you know an AI automation pilot is ready for everyday work?",
