@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '../seo';
 import Navigation from '../custom-solutions/Navigation';
 import ContactSection from '../ContactSection';
 import BlogCatalog from './BlogCatalog';
 import { newsletterUrl } from './newsletter';
 import styles from './BlogListing.module.css';
 
-const title = "The CEO's Playbook: AI and Business Insights | Bizgenix";
-const description = "Explore Dr. CA Umang Ratani's LinkedIn newsletter articles on AI adoption, automation, business intelligence and growth.";
-export const metadata: Metadata = { title, description, alternates: { canonical: '/blog' }, openGraph: { title, description, type: 'website' }, twitter: { card: 'summary', title, description } };
+const title = "AI for Business Insights | The CEO's Playbook | Bizgenix AI";
+const description = 'Articles by Dr. CA Umang Ratani on AI for business: automation, AI agents, implementation plans, hiring versus automating, and the decisions owners face.';
+export const metadata: Metadata = pageMeta({ title, description, path: '/blog' });
 
 export default function BlogPage() {
   return <div className={styles.page} id="top">
@@ -17,7 +18,7 @@ export default function BlogPage() {
       <header className={styles.hero}>
         <p className={styles.eyebrow}>THE BIZGENIX BLOG</p>
         <h1>Insights From<br />Our Experts<span>.</span></h1>
-        <p>Business and AI insights from Dr. CA Umang Ratani’s <a href={newsletterUrl} target="_blank" rel="noopener noreferrer">The CEO’s Playbook</a>.</p>
+        <p>Business and AI insights from Dr. CA Umang Ratani’s <a href={newsletterUrl} target="_blank" rel="noopener noreferrer">The CEO’s Playbook</a>. Looking for a how-to? See our <a href="/guides">answer-first guides</a>.</p>
       </header>
       <BlogCatalog />
     </main>

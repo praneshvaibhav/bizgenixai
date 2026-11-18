@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '../seo';
 import Navigation from '../custom-solutions/Navigation';
 import ContactSection from '../ContactSection';
 import { functions } from './content';
@@ -10,12 +11,7 @@ import styles from './page.module.css';
 
 const title = 'AI Products for Business Automation, Voice and Analytics | Bizgenix';
 const description = 'Explore Bizgenix AI products including Voice AI, BizChat, ScaleOS and Growth Intelligence for customer communication, business automation, operations and analytics.';
-export const metadata: Metadata = {
-  title, description,
-  alternates: { canonical: '/products' },
-  openGraph: { title, description, type: 'website' },
-  twitter: { card: 'summary', title, description },
-};
+export const metadata: Metadata = pageMeta({ title, description, path: '/products' });
 
 export default function ProductsPage() {
   return <div className={styles.page} id="top">
@@ -32,7 +28,7 @@ export default function ProductsPage() {
       </section>
       <ProductJourney />
       <ProductFAQ />
-      <section className={styles.finalCta} id="contact" aria-labelledby="contact-title"><div className={styles.container}><p className={styles.eyebrow}>YOUR NEXT CHAPTER STARTS HERE</p><h2 id="contact-title">Choose the right AI product<br /><em>for your business.</em></h2><p>Tell us where your business is losing time, leads, visibility or revenue. Our team will help you identify the most suitable Bizgenix product and implementation path.</p><div className={styles.actions}><a className={styles.exploreLink} href="/contact#contact-form">Send Your Requirement</a></div></div></section>
+      <section className={styles.finalCta} id="contact" aria-labelledby="contact-title"><div className={styles.container}><p className={styles.eyebrow}>YOUR NEXT CHAPTER STARTS HERE</p><h2 id="contact-title">Choose the right AI product<br /><em>for your business.</em></h2><p>Tell us where your business is losing time, leads, visibility or revenue. Our team will help you identify the most suitable Bizgenix product and implementation path.</p><div className={styles.actions}><a className={styles.exploreLink} href="/contact?intent=product#contact-form">Send Your Requirement</a></div></div></section>
       <ContactSection homeHref="/" footerOnly />
     </main>
   </div>;

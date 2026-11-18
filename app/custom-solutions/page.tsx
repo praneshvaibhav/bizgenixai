@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import { pageMeta } from '../seo';
 import Hero from './Hero';
 import WhyCustomSolutions from './WhyCustomSolutions';
 import ContactSection from '../ContactSection';
@@ -7,16 +9,10 @@ import CapabilityReveal from './CapabilityReveal';
 import ProductDifference from '../products/ProductDifference';
 import styles from './page.module.css';
 
-const title = 'Custom AI Solutions Built Around Your Business | Bizgenix AI';
+const title = 'Custom AI Development Company in India | Bizgenix AI';
 const description = 'Bizgenix builds custom AI applications, CRM, ERP, enterprise web and mobile platforms, business intelligence, integrations and workflow automation around your business.';
 
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical: '/custom-solutions' },
-  openGraph: { title, description, type: 'website' },
-  twitter: { card: 'summary', title, description },
-};
+export const metadata: Metadata = pageMeta({ title, description, path: '/custom-solutions' });
 
 const capabilities = [
   { title: 'Custom AI Applications', tag: 'INTELLIGENCE', build: 'AI-powered tools, assistants and decision systems', outcome: 'Faster work and smarter decisions', symbol: '✳' },
@@ -43,7 +39,18 @@ export default function CustomSolutionsPage() {
         <div className={styles.container}>
           <div className={styles.capabilitiesHeader}><div><p className={styles.eyebrow}>02 / OUR CUSTOM SOLUTION CAPABILITIES</p><h2 id="capabilities-title">What your business needs.<br /><em>What we build.</em></h2></div><p>From a single workflow to an integrated enterprise platform, built around the outcomes that matter to you.</p></div>
           <CapabilityReveal className={styles.capabilityGrid}>{capabilities.map((capability, index) => <article className={styles.capability} key={capability.title}><div className={styles.capabilityTop}><span className={styles.capabilityIcon} aria-hidden="true">{capability.symbol}</span><span>{capability.tag}</span><small>0{index + 1}</small></div><h3>{capability.title}</h3><p className={styles.build}>{capability.build}</p><div className={styles.outcome}><div><small>THE BUSINESS OUTCOME</small><p>{capability.outcome}</p></div></div></article>)}</CapabilityReveal>
-          <div className={styles.capabilityCta}><p>Have a requirement that doesn’t fit a category?<br /><b>That’s exactly where custom starts.</b></p><a className={styles.primary} href="/contact#contact-form">Discuss Your Requirement <span aria-hidden="true">↗</span></a></div>
+          <div className={styles.capabilityCta}><p>Have a requirement that doesn’t fit a category?<br /><b>That’s exactly where custom starts.</b></p><a className={styles.primary} href="/contact?intent=custom#contact-form">Discuss Your Requirement <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+      <section className={styles.capabilities} aria-labelledby="scope-title">
+        <div className={styles.container}>
+          <div className={styles.capabilitiesHeader}><div><p className={styles.eyebrow}>PLAN YOUR FIRST WORKFLOW</p><h2 id="scope-title">Is a custom AI solution<br /><em>right for your business?</em></h2></div><p>Bizgenix AI builds around a defined business process. Start with the task, the people responsible and the data available; choose the technology after agreeing what success means.</p></div>
+          <div className={styles.capabilityGrid}>
+            <article className={styles.capability}><h3>When custom makes sense</h3><p className={styles.build}>Consider a custom build when your workflow, approval rules or integrations cannot be supported adequately by an existing product. Compare configuration and integration options before commissioning new software.</p><Link href="/blog/custom-ai-vs-ready-made-software">Compare buying and building →</Link></article>
+            <article className={styles.capability}><h3>What to bring to a discovery call</h3><p className={styles.build}>Bring one workflow, the tools involved, user roles, a target timeline and anonymised examples of inputs and expected outputs. Agree access and handling requirements before sharing confidential data.</p><Link href="/ai-consulting">Explore an AI assessment →</Link></article>
+            <article className={styles.capability}><h3>What determines cost and timing?</h3><p className={styles.build}>Data preparation, integrations, user permissions, testing, deployment and ongoing support affect scope. Request a proposal that separates implementation from recurring usage and maintenance costs.</p><Link href="/contact?intent=custom#contact-form">Discuss your requirements →</Link></article>
+            <article className={styles.capability}><h3>How should a pilot be evaluated?</h3><p className={styles.build}>Agree a baseline, representative test cases and an owner who accepts the result. Check errors and exceptions as well as time saved. Keep consequential actions under human review until the agreed controls are demonstrated.</p><Link href="/case-studies">Review published client work →</Link></article>
+          </div>
         </div>
       </section>
       <ProductDifference />

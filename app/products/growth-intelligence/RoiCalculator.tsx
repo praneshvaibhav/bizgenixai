@@ -26,7 +26,7 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onOpenDemo }) => {
   const dailyTurnover = (turnoverCrores * 10000000) / 365;
   const currentReceivables = dailyTurnover * currentDso;
   
-  // Assuming a conservative 14-day DSO reduction with Bizgenix
+  // Illustrative scenario assumption only; not a measured or promised Bizgenix result.
   const dsoReduction = Math.min(14, Math.max(7, Math.round(currentDso * 0.22)));
   const freedWorkingCapital = dailyTurnover * dsoReduction;
   const annualInterestSaved = freedWorkingCapital * (interestRate / 100);
@@ -38,14 +38,14 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onOpenDemo }) => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <div className="text-xs font-semibold text-[#2E7D4E] uppercase tracking-wider mb-2">
-            Measurable Cash Return on Investment
+            Illustrative Working Capital Scenario
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
-            Calculate How Much Bank Interest &amp; Cash <br className="hidden sm:inline" />
-            Bizgenix Unlocks From Your Tally
+            Explore the Effect of Collection Timing <br className="hidden sm:inline" />
+            Using Your Own Assumptions
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed">
-            Reducing receivables by just 14 days frees up substantial liquidity and slashes your monthly Cash Credit (CC) / overdraft interest expense.
+            This simplified scenario assumes an improvement in collection timing. It is not a forecast of Bizgenix results. Interest savings require an actual reduction in interest-bearing borrowing.
           </p>
         </div>
 
@@ -128,15 +128,15 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onOpenDemo }) => {
                   className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-[#2E7D4E]"
                 />
                 <div className="flex justify-between text-[11px] text-slate-400 mt-1">
-                  <span>8.5% (Prime)</span>
-                  <span>10.5% (SME Average)</span>
-                  <span>14.0% (NBFC)</span>
+                  <span>8.5%</span>
+                  <span>10.5%</span>
+                  <span>14.0%</span>
                 </div>
               </div>
 
               <div className="text-[11px] text-slate-500 bg-slate-50 p-3 rounded-xl border border-slate-200 flex items-center gap-2">
                 <Coins className="w-4 h-4 text-[#2E7D4E] shrink-0" />
-                <span>Calculations benchmarked against audited Indian manufacturing receivables cycles.</span>
+                <span>Illustrative formula: annual turnover ÷ 365 × assumed days improved. Days improved = 22% of the entered collection period, rounded and bounded to 7–14 days. Turnover is used as a simplified proxy for credit sales. No audited benchmark or delivery promise is implied.</span>
               </div>
             </div>
 
@@ -144,27 +144,27 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onOpenDemo }) => {
             <div className="lg:col-span-5 bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-2xl p-6 sm:p-7 shadow-lg flex flex-col justify-between space-y-6">
               <div>
                 <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider block">
-                  Estimated 90-Day Financial Impact
+                  Illustrative Scenario Output
                 </span>
 
                 <div className="mt-4 pt-4 border-t border-slate-800 space-y-4">
                   <div>
-                    <span className="text-xs text-slate-400 block">Working Capital Freed Back to Bank:</span>
+                    <span className="text-xs text-slate-400 block">Potential Receivables Reduction:</span>
                     <div className="text-2xl sm:text-3xl font-extrabold text-white tabular-nums mt-0.5">
                       ₹{(freedWorkingCapital / 100000).toFixed(2)} Lakhs
                     </div>
                     <span className="text-[11px] text-emerald-400">
-                      via {dsoReduction}-day recovery acceleration
+                      assuming a {dsoReduction}-day collection improvement
                     </span>
                   </div>
 
                   <div className="pt-3 border-t border-slate-800">
-                    <span className="text-xs text-slate-400 block">Annual Bank Interest Slashed:</span>
+                    <span className="text-xs text-slate-400 block">Potential Annual Interest Difference:</span>
                     <div className="text-2xl sm:text-3xl font-extrabold text-[#2E7D4E] tabular-nums mt-0.5">
                       ₹{(annualInterestSaved / 100000).toFixed(2)} Lakhs / Yr
                     </div>
                     <span className="text-[11px] text-slate-400">
-                      Direct cash straight to net profit bottom line
+                      Only if the released funds reduce borrowing at the entered rate
                     </span>
                   </div>
                 </div>
@@ -174,7 +174,7 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onOpenDemo }) => {
                 onClick={onOpenDemo}
                 className="w-full py-3 bg-[#2E7D4E] hover:bg-[#25663F] text-white rounded-xl text-xs font-bold transition-all shadow-md flex items-center justify-center gap-2"
               >
-                <span>Unlock This Capital on Your Tally</span>
+                <span>Discuss Your Collection Workflow</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </div>
@@ -188,7 +188,7 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onOpenDemo }) => {
             Transparent, Predictable Investment
           </h3>
           <p className="text-slate-600 text-sm mt-2">
-            No per-invoice fees or surprise add-ons. 100% money-back guarantee if you don't recover at least 5x the subscription value in 60 days.
+            Confirm the applicable fees, usage limits, support scope and any refund terms in your written proposal. The calculator does not guarantee recovery or savings.
           </p>
 
           {/* Billing Frequency Toggle */}

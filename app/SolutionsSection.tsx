@@ -11,49 +11,49 @@ const testimonials = [
     company: 'MYKRAFT Apparels',
     service: 'Garment workflow automation',
     image: '/client-profiles/kaushk-savla.webp',
-    quote: 'In garments, one delayed handoff affects everything after it. We wanted the routine updates and follow-ups to happen on their own, without changing how the floor team works. Now I don’t need to call five people just to know where an order is.',
+    quote: "Workflow focus: garment order updates, handoffs and routine follow-up. Scope and operating results depend on the configured process.",
   },
   {
     name: 'Ashok Sanghvi',
     company: 'Mahavir Traders',
     service: 'Inventory management system',
     image: '/client-profiles/ashok-sanghvi.webp',
-    quote: 'Stock was never one clean answer. Someone had one sheet, the godown had another number, and we would confirm it again before committing to a customer. The inventory system has given us one place to check what came in, what moved and what is actually available.',
+    quote: "Workflow focus: inventory receipts, movements and availability records. Stock answers need to be checked against the owning records.",
   },
   {
     name: 'Bhavya',
     company: 'VS Associate',
     service: 'AI debt recovery voice agent',
     image: '/client-profiles/bhavya.webp',
-    quote: 'Debt-recovery calls are repetitive, but they still need to sound respectful. The voice agent handles the first follow-up, notes the customer’s response and records a promised payment date. My team steps in when a real conversation is needed instead of spending the day dialling numbers.',
+    quote: "Workflow focus: initial payment reminders, response capture and routing to a team member. Collection results depend on the underlying accounts and follow-up.",
   },
   {
     name: 'Chintan Shah',
     company: 'Linq Corporate Solutions',
     service: 'AI sales call analysis',
     image: '/client-profiles/chintan-shah.webp',
-    quote: 'We were reviewing only a handful of sales calls because listening manually takes too long. The AI now transcribes every call, checks it against our script and gives the agent a clear score. Coaching conversations are far more useful now.',
+    quote: "Workflow focus: call transcription and structured review against agreed criteria. Human review remains important when using scores for coaching.",
   },
   {
     name: 'Dhaval Ukani',
     company: 'Aavkar Corporation',
     service: 'Email, WhatsApp & cheque automation',
     image: '/client-profiles/dhaval-ukani.webp',
-    quote: 'My follow-ups were split between email, WhatsApp and a separate cheque list, so it was easy to miss something on a busy day. Now important emails are sorted, WhatsApp messages go out on time and cheque reminders run before the deposit date. I only get involved when the system flags an exception.',
+    quote: "Workflow focus: email classification, WhatsApp communication and cheque reminders. Exceptions and successful actions need to be recorded.",
   },
   {
     name: 'Prachetan Bansal',
     company: 'Spectrum Dyes and Chemical Private Limited',
     service: 'Industry knowledge RAG model',
     image: '/client-profiles/prachetan-bansal.webp',
-    quote: 'We have years of industry knowledge, but it was sitting across product sheets, test reports and old documents. With the RAG model, the team can ask a technical question in plain language and see an answer grounded in our own material. The source is right there, so we can verify it before replying.',
+    quote: "Workflow focus: retrieving relevant information from approved industry documents with source references for review.",
   },
   {
     name: 'Varun Shrivastava',
     company: 'Kailash Veda Infra',
     service: 'Project coordination system',
     image: '/client-profiles/varun-shrivastava.webp',
-    quote: 'On a live project, “I thought someone else was handling it” is an expensive sentence. We now have one place for responsibilities, progress and pending decisions. The site team and office team are finally looking at the same picture.',
+    quote: "Workflow focus: responsibilities, progress and pending decisions across site and office teams.",
   },
 ];
 
@@ -66,8 +66,8 @@ function TestimonialCard({ testimonial, featured = false }: { testimonial: typeo
           <strong>{testimonial.service}</strong>
         </span>
       </div>
-      <span className={styles.quoteMark} aria-hidden="true">“</span>
-      <blockquote><p>{testimonial.quote}</p></blockquote>
+      <span className={styles.quoteMark} aria-hidden="true">·</span>
+      <div><p>{testimonial.quote}</p></div>
       <figcaption className={styles.client}>
         <span className={styles.avatar} aria-hidden="true"><Image src={testimonial.image} alt="" fill sizes="52px" /></span>
         <div><strong>{testimonial.name}</strong><span>{testimonial.company}</span></div>
@@ -151,8 +151,8 @@ export default function SolutionsSection() {
       <div className={styles.inner}>
         <div className={styles.hero}>
           <div className={styles.copy}>
-            <h2 id="solutions-title">Solutions our <em>clients trust</em></h2>
-            <p>Businesses that trust Bizgenix to make everyday work clearer, faster and more connected.</p>
+            <h2 id="solutions-title">Business <em>workflow examples</em></h2>
+            <p>Editorial descriptions of workflow areas associated with the supplied project profiles. These summaries are not verbatim client testimonials or measured outcome claims.</p>
           </div>
         </div>
         <div

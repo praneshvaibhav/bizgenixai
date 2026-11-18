@@ -1,0 +1,63 @@
+# Bizgenix AI
+
+> Bizgenix AI (Bizgenix AI Solutions Pvt Ltd) is an AI automation and AI development company based in Ahmedabad, Gujarat, India. It builds custom AI solutions and AI automation for Indian businesses, sells its own AI products, and delivers AI consulting and corporate AI training. It was founded by Dr. CA Umang Ratani.
+
+## Services
+
+- [AI automation](https://bizgenix.ai/ai-automation): WhatsApp workflows, reminders, document checking, email triage, sales call analysis and reporting, built on the tools a business already uses.
+- [AI consulting](https://bizgenix.ai/ai-consulting): use-case assessment, data readiness and a 90-day implementation plan with pass/fail gates, for owner-led businesses.
+- [Custom AI solutions](https://bizgenix.ai/custom-solutions): AI applications, AI CRM, AI ERP, web and mobile platforms, business intelligence and system integrations.
+- [AI training and corporate AI workshops](https://bizgenix.ai/courses): in-house workshops for teams and the Scale With AI programme for business owners.
+
+## Products
+
+- [Growth Intelligence](https://bizgenix.ai/products/growth-intelligence): turns Tally data into answers on cash, receivables, payables and stock, with the next action for each. App: https://gi.bizgenix.ai/
+- [Bizgenix AI CRM](https://bizgenix.ai/products/ai-crm): captures leads from IndiaMART, Justdial, Facebook and Instagram ads and email, scores and assigns them, and keeps follow-ups, WhatsApp conversations, invoices and agreements in one workspace. App: https://crm.bizgenix.ai/
+- [Voice AI](https://bizgenix.ai/products/voice-ai): inbound and outbound AI calling in English, Hindi and Hinglish for lead qualification, bookings, reminders and follow-up, with outcomes written to the CRM.
+- [BizChat](https://bizgenix.ai/products/bizchat): WhatsApp automation for lead replies, follow-ups, reminders, support and broadcasts, connected to CRM and spreadsheets.
+- [ScaleOS](https://bizgenix.ai/products/scaleos): tasks, processes, approvals and management reports in one system, with WhatsApp notifications.
+- [All products](https://bizgenix.ai/products)
+
+## Industries
+
+- [AI for textile manufacturers](https://bizgenix.ai/industries/textile): one operating system in place of spreadsheets, production and dispatch capture, payment follow-up and AI product imagery, with five published case studies.
+- [AI for real estate and construction](https://bizgenix.ai/industries/real-estate-construction): RA bill verification, delayed-payment interest, cheque reminders and valuation workflows, with five published case studies.
+
+## Location
+
+- [AI consultant in Ahmedabad](https://bizgenix.ai/ai-consultant-ahmedabad): office on Science City Road, Sola; works with businesses across India.
+
+## Proof
+
+- [Case studies](https://bizgenix.ai/case-studies): 18 published implementations across franchise operations, real estate, textiles, chemicals, interiors and roofing.
+
+## Articles
+
+- [The 4-R Framework: Choosing Useful AI Tasks](https://bizgenix.ai/blog/what-ai-can-and-cannot-do-4r-framework)
+- [A 90-Day AI Implementation Plan: Proof, System and Handover](https://bizgenix.ai/blog/90-day-ai-implementation-plan)
+- [Hire or Automate? A 5-V Planning Checklist](https://bizgenix.ai/blog/hire-or-automate-5v-test)
+- [Talking to Your Team About AI: Three Useful Conversations](https://bizgenix.ai/blog/will-ai-replace-my-team)
+- [Clean Business Data Before AI: The Four Registers](https://bizgenix.ai/blog/clean-business-data-before-ai-four-registers)
+- [The One Rupee Test: Define Evidence of Completed AI Work](https://bizgenix.ai/blog/one-rupee-test-ai-project)
+- [AI Employee vs Chatbot: A Practical Framework for Indian Businesses](https://bizgenix.ai/blog/ai-employee-vs-chatbot-indian-business)
+- [All articles](https://bizgenix.ai/blog)
+
+## Guides
+
+Answer-first guides by the Bizgenix AI team. Each opens with a short answer.
+
+- [MIS report in Tally: format, reports to use and what to read](https://bizgenix.ai/guides/mis-report-in-tally)
+- [Virtual CFO: what it is, what it does and when software helps](https://bizgenix.ai/guides/virtual-cfo)
+- [WhatsApp automation for business: what you can automate and what it takes](https://bizgenix.ai/guides/whatsapp-automation-for-business)
+- [All guides](https://bizgenix.ai/guides)
+
+## People
+
+- Founder: Dr. CA Umang Ratani, AI and business consultant, Chartered Accountant, TEDx speaker. https://www.umangratani.com/
+
+## Contact
+
+- Website: https://bizgenix.ai/
+- Email: info@bizgenix.ai
+- Phone / WhatsApp: +91 87806 71906
+- Office: G-13, Silver Radiance-2, Science City Road, Sola, Ahmedabad 380060, India

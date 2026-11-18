@@ -7,7 +7,7 @@ import { animateVoiceAI } from './animateVoiceAI';
 import styles from './VoiceAIDetails.module.css';
 
 const voiceProduct = products.find(product => product.id === 'voice-ai')!;
-const results = [['3x', 'More Conversions'], ['60%', 'Lower Call Costs'], ['100%', 'Consistent Messaging'], ['24/7', 'Customer Support']];
+const results = [['Qualify', 'Customer Enquiries'], ['Capture', 'Call Details'], ['Configure', 'Conversation Rules'], ['Route', 'Team Follow-up']];
 
 function Waveform({ screen = false }: { screen?: boolean }) {
   return <div className={screen ? styles.screenWave : styles.wave} aria-hidden="true">{Array.from({ length: screen ? 35 : 57 }, (_, index) => <i key={index} style={{ height: `${12 + Math.pow(Math.sin(index * .37), 2) * (screen ? 68 : 125) * Math.sin(Math.PI * (index + 1) / (screen ? 36 : 58))}px`, '--wave-delay': `${index * -73}ms` } as CSSProperties} />)}</div>;
@@ -30,7 +30,8 @@ export default function VoiceAIDetails({ active }: { active: boolean }) {
           <li><span className={styles.globe} aria-hidden="true"><i /></span><p><strong>Works in</strong>Multiple Languages</p></li>
           <li><span className={styles.sliders} aria-hidden="true"><i /><i /><i /></span><p><strong>Integrates with</strong>your CRM &amp; Systems</p></li>
         </ul>
-        <a className={styles.cta} href="/contact#contact-form">Schedule a Live Demo <span aria-hidden="true">→</span></a>
+        <a className={styles.cta} href="/contact?intent=product&amp;product=voice-ai#contact-form">Schedule a Live Demo <span aria-hidden="true">→</span></a>
+        <p style={{ margin: '14px 0 0', fontSize: 13 }}><a href="/products/voice-ai" style={{ textDecoration: 'underline', textDecorationColor: '#5AAA6C', textUnderlineOffset: 4 }}>Full details: Voice AI →</a></p>
       </div>
       <div className={styles.scene} aria-hidden="true">
         <div className={styles.halo} data-voice-reveal="halo" />

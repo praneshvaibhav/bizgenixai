@@ -6,9 +6,9 @@ import { products } from './content';
 import styles from './ProductHero.module.css';
 
 const metrics = [
-  { value: 110, label: 'Live AI systems built' },
-  { value: 1000, label: 'Businesses advised' },
-  { value: 2000, label: 'Professionals and owners trained' },
+  { value: 110, label: 'AI solutions built · company-reported' },
+  { value: 1000, label: 'Businesses advised · company-reported' },
+  { value: 2000, label: 'Owners trained · company-reported' },
 ];
 
 const desktopPaths = [

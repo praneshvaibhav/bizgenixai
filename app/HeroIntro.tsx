@@ -72,7 +72,7 @@ export default function HeroIntro() {
         <span aria-hidden="true"><TypedText text={description} count={visibleCharacters - headlineLength} cursor={typingDescription} /></span>
       </p>
       <div className={styles.actions} data-hero-actions data-ready={splashComplete && visibleCharacters >= totalLength}>
-        <a className={styles.primaryAction} href="/contact#contact-form">Book a Free Business Review</a>
+        <a className={styles.primaryAction} href="/contact?intent=custom#contact-form">Book a Free Business Review</a>
         <a className={styles.secondaryAction} href="/products">See What We&apos;ve Built</a>
       </div>
     </div>

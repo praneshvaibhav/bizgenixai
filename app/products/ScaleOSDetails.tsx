@@ -23,7 +23,7 @@ const workflow: { icon: IconName; label: string }[] = [
   { icon: 'people', label: 'Review & Approve' },
   { icon: 'chart', label: 'Gain Visibility' },
 ];
-const metrics = [['50%', 'Faster Approvals'], ['3x', 'Team Productivity'], ['100%', 'Operational Visibility'], ['Built to Scale', 'For Growing Businesses']];
+const metrics = [['Review', 'Approval Workflows'], ['Coordinate', 'Team Tasks'], ['Track', 'Operational Progress'], ['Built to Scale', 'For Growing Businesses']];
 export default function ScaleOSDetails({ active }: { active: boolean }) {
   const sceneRef = useRef<HTMLDivElement>(null);
   const product = products.find(product => product.id === 'scaleos')!;
@@ -37,7 +37,8 @@ export default function ScaleOSDetails({ active }: { active: boolean }) {
         <p className={styles.eyebrow}>{product.category}</p>
         <h3>One connected system.<br /><em>Clearer execution.</em></h3>
         <p className={styles.description}>{product.description}</p>
-        <a className={styles.cta} href="/contact#contact-form">{product.action}<span aria-hidden="true">→</span></a>
+        <a className={styles.cta} href="/contact?intent=product&amp;product=scaleos#contact-form">{product.action}<span aria-hidden="true">→</span></a>
+        <p style={{ margin: '14px 0 0', fontSize: 13 }}><a href="/products/scaleos" style={{ textDecoration: 'underline', textDecorationColor: '#5AAA6C', textUnderlineOffset: 4 }}>Full details: ScaleOS →</a></p>
       </div>
       <div className={styles.scene} ref={sceneRef} role="img" aria-label="ScaleOS laptop dashboard connecting task ownership, progress tracking, approvals and business visibility">
         <div className={styles.sceneContents} aria-hidden="true">
@@ -58,7 +59,7 @@ export default function ScaleOSDetails({ active }: { active: boolean }) {
     </div>
     <div className={styles.bottomRow}>
       <dl className={styles.metrics}>{metrics.map(([value, label]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
-      <figure className={styles.testimonial}><span aria-hidden="true">“</span><div><blockquote>“From tasks to approvals, everything in one place.<br />ScaleOS keeps our business moving.”</blockquote><figcaption>— Growing Business, India</figcaption></div></figure>
+      <figure className={styles.testimonial}><span aria-hidden="true">“</span><div><div>Tasks, approvals and operational progress in a connected workflow.</div><figcaption>— ScaleOS product overview</figcaption></div></figure>
     </div>
   </div>;
 }

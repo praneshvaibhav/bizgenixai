@@ -89,7 +89,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenDemo, onOpenWhat
               </div>
               <div className="flex items-center gap-1.5 text-slate-700">
                 <ShieldCheck className="w-4 h-4 text-[#2E7D4E] shrink-0" />
-                <span>100% On-Premise Data Privacy</span>
+                <span>Discuss Data Hosting & Privacy</span>
               </div>
               <div className="flex items-center gap-1.5 text-slate-700">
                 <Clock className="w-4 h-4 text-[#2E7D4E] shrink-0" />

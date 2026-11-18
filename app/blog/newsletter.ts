@@ -83,85 +83,85 @@ export const insights: NewsletterArticle[] = [
   },
   {
     "slug": "i-asked-14-cr-surat-trader-show-me-his-customer-list-umang-thakkar-olz7e",
-    "title": "I Asked a ₹14 Cr Surat Trader to Show Me His Customer List.",
+    "title": "Clean Business Data Before AI: The Four Registers",
     "category": "Business Intelligence",
-    "summary": "Conflicting customer records can undermine an AI project before it starts. A Surat trader's example shows why cleaning and reconciling business information should come before buying another automation tool.",
+    "summary": "Before connecting a business workflow to AI, establish which records it should trust. A customer name, product code or payment status can appear in more.",
     "tags": [
       "Business Analytics",
       "AI Readiness"
     ],
     "sourceUrl": "https://www.linkedin.com/pulse/i-asked-14-cr-surat-trader-show-me-his-customer-list-umang-thakkar-olz7e",
-    "cover": "/blog/newsletter/olz7e.png",
+    "cover": "/blog/newsletter/ai-workflow-framework.svg",
     "publishedAt": "2026-07-11",
     "author": "Dr. CA Umang Ratani"
   },
   {
     "slug": "he-texted-me-sir-paisa-waste-ho-gaya-umang-thakkar-tkh6c",
-    "title": "He Texted Me \"Sir, Paisa Waste Ho Gaya\"",
+    "title": "A 90-Day AI Implementation Plan: Proof, System and Handover",
     "category": "AI Automation",
-    "summary": "Starting with a difficult judgment-heavy task can make a promising AI rollout disappointing. This article describes a staged approach that begins with repetitive work and builds confidence through measurable results.",
+    "summary": "A proposed rollout structure with baseline measurement, proof, repeatable operation and handover gates. The timeline is a planning guide, not a promised outcome.",
     "tags": [
       "Workflow Automation",
       "AI Readiness"
     ],
     "sourceUrl": "https://www.linkedin.com/pulse/he-texted-me-sir-paisa-waste-ho-gaya-umang-thakkar-tkh6c",
-    "cover": "/blog/newsletter/tkh6c.jpg",
+    "cover": "/blog/newsletter/ai-proof-system-handover.svg",
     "publishedAt": "2026-06-13",
     "author": "Dr. CA Umang Ratani"
   },
   {
     "slug": "two-distributors-same-surat-market-umang-thakkar-cd4wc",
-    "title": "Two Distributors in the Same Surat Market.",
+    "title": "Building AI Capability Through Repeated Improvement",
     "category": "AI Strategy",
-    "summary": "Two distributors provide the backdrop for a discussion of compounding improvements. The article examines how accumulated business context, team skills, and better workflows can shape the long-term value of AI adoption.",
+    "summary": "An AI workflow can become more useful as a business improves its source information, instructions, checking and operating routines. That improvement takes.",
     "tags": [
       "Business Growth",
       "AI Strategy"
     ],
     "sourceUrl": "https://www.linkedin.com/pulse/two-distributors-same-surat-market-umang-thakkar-cd4wc",
-    "cover": "/blog/newsletter/cd4wc.jpg",
+    "cover": "/blog/newsletter/ai-workflow-framework.svg",
     "publishedAt": "2026-06-06",
     "author": "Dr. CA Umang Ratani"
   },
   {
     "slug": "sir-ai-replace-us-conversation-every-indian-business-owner-thakkar-ql8zc",
-    "title": "Will AI Replace Us? Helping Your Team Become AI Believers",
+    "title": "Talking to Your Team About AI: Three Useful Conversations",
     "category": "Leadership and Growth",
-    "summary": "AI adoption changes how people work, and teams need an honest conversation before the rollout. This edition explores how owners can address job concerns, explain changing responsibilities, and involve employees in implementation.",
+    "summary": "An employee hearing about an AI rollout may have questions about their role, workload, monitoring and future. A useful conversation starts with the.",
     "tags": [
       "Team Leadership",
       "AI Readiness"
     ],
     "sourceUrl": "https://www.linkedin.com/pulse/sir-ai-replace-us-conversation-every-indian-business-owner-thakkar-ql8zc",
-    "cover": "/blog/newsletter/ql8zc.jpg",
+    "cover": "/blog/newsletter/ai-workflow-framework.svg",
     "publishedAt": "2026-05-23",
     "author": "Dr. CA Umang Ratani"
   },
   {
     "slug": "should-you-hire-new-employee-automate-role-5-v-test-saved-thakkar-xntmc",
-    "title": "Should You Hire or Automate? The 5-V Test",
+    "title": "Hire or Automate? A 5-V Planning Checklist",
     "category": "AI Automation",
-    "summary": "Before filling a new role, examine the work it contains. The article introduces a structured assessment for distinguishing suitable automation tasks from responsibilities that depend on human judgment and relationships.",
+    "summary": "When workload rises, a business needs to understand which tasks are increasing before deciding how to staff or automate them. A job title can contain.",
     "tags": [
       "Workflow Automation",
       "Team Leadership"
     ],
     "sourceUrl": "https://www.linkedin.com/pulse/should-you-hire-new-employee-automate-role-5-v-test-saved-thakkar-xntmc",
-    "cover": "/blog/newsletter/xntmc.jpg",
+    "cover": "/blog/newsletter/ai-workflow-framework.svg",
     "publishedAt": "2026-05-16",
     "author": "Dr. CA Umang Ratani"
   },
   {
     "slug": "4-things-ai-actually-does-inside-your-business-always-umang-thakkar-c8orc",
-    "title": "What AI Can and Cannot Do Inside Your Business",
+    "title": "The 4-R Framework: Choosing Useful AI Tasks",
     "category": "AI Strategy",
-    "summary": "A framework for understanding where AI helps and where human responsibility remains essential. The article contrasts suitable business tasks with ambiguous decisions, relationship-sensitive work, and other limits owners should recognize.",
+    "summary": "A useful AI project begins with the work you want done. The same tool can produce a helpful draft in one process and an unreliable answer in.",
     "tags": [
       "AI Strategy",
       "Decision Making"
     ],
     "sourceUrl": "https://www.linkedin.com/pulse/4-things-ai-actually-does-inside-your-business-always-umang-thakkar-c8orc",
-    "cover": "/blog/newsletter/c8orc.jpg",
+    "cover": "/blog/newsletter/ai-workflow-framework.svg",
     "publishedAt": "2026-05-07",
     "author": "Dr. CA Umang Ratani"
   },
@@ -195,15 +195,15 @@ export const insights: NewsletterArticle[] = [
   },
   {
     "slug": "i-gave-52-indian-businesses-ai-employee-heres-what-actually-thakkar-qatqc",
-    "title": "I Gave 52 Indian Businesses an AI Employee. Here's What Actually Happened.",
+    "title": "AI Employee vs Chatbot: A Practical Framework for Indian Businesses",
     "category": "AI Agents",
-    "summary": "What changes when AI becomes part of daily operations? This edition discusses recurring work such as invoice processing, customer queries, and morning briefings, and the difference between experimentation and implementation.",
+    "summary": "A practical framework for context, permissions, supervised workflows and evidence-based pilots. Revised to remove unverified deployment and survey claims.",
     "tags": [
       "AI Agents",
       "Workflow Automation"
     ],
     "sourceUrl": "https://www.linkedin.com/pulse/i-gave-52-indian-businesses-ai-employee-heres-what-actually-thakkar-qatqc",
-    "cover": "/blog/newsletter/qatqc.jpg",
+    "cover": "/blog/newsletter/ai-workflow-framework.svg",
     "publishedAt": "2026-04-11",
     "author": "Dr. CA Umang Ratani"
   },

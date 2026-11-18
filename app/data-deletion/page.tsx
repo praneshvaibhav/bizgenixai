@@ -1,17 +1,12 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '../seo';
 import Navigation from '../custom-solutions/Navigation';
 import SiteFooter from '../SiteFooter';
 import styles from '../privacy-policy/page.module.css';
 
 const title = 'User Data Deletion | Bizgenix AI';
 const description = 'Request deletion of personal information associated with Bizgenix AI services, website forms, or WhatsApp communication.';
-export const metadata: Metadata = {
-  title,
-  description,
-  alternates: { canonical: '/data-deletion' },
-  openGraph: { title, description, type: 'website' },
-  twitter: { card: 'summary', title, description },
-};
+export const metadata: Metadata = pageMeta({ title, description, path: '/data-deletion' });
 
 // Content sourced from https://www.bizgenix.ai/data-deletion on 17 September 2026.
 // Phone updated to the company number supplied by the site owner.
@@ -35,7 +30,7 @@ export default function DataDeletionPage() {
             <ul><li>Full Name</li><li>Registered Mobile Number</li><li>Email Address (if applicable)</li><li>Reason for Data Deletion Request</li></ul>
             <h2>Contact Information</h2>
             <p>Bizgenix Ai Solution Pvt Ltd<br/>G 13, SILVER RADIENCE-2, Science City Rd,<br/>Sola, Ahmedabad, Gujarat 380060</p>
-            <p>Email: <a href="mailto:info@bizgenix.com?subject=Data%20Deletion%20Request">info@bizgenix.com</a><br/>Phone: <a href="tel:+918780671906">+91 87806 71906</a></p>
+            <p>Email: <a href="mailto:info@bizgenix.ai?subject=Data%20Deletion%20Request">info@bizgenix.ai</a><br/>Phone: <a href="tel:+918780671906">+91 87806 71906</a></p>
             <h2>Processing Time</h2>
             <p>After verifying your identity, we will process your request within 7 business days.</p>
           </article>

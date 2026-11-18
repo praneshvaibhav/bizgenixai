@@ -4,10 +4,10 @@ import { useEffect, useRef } from 'react';
 import styles from './IndustriesSection.module.css';
 import { observeVisibility } from './observeVisibility';
 
-const industries = [
+const industries: { title: string; description: string; image: string; alt: string; tag: string; href?: string }[] = [
   { title: 'Manufacturing', description: 'Production planning, quality inspection, machine data, inventory and MIS automation.', image: 'manufacturing', alt: 'Machinery and production lines inside a manufacturing facility', tag: 'PRODUCTION & OPERATIONS' },
-  { title: 'Textile', description: 'Fabric workflows, production tracking, payment recovery, order visibility and Tally integration.', image: 'textile', alt: 'Colorful fabric rolls arranged in a textile workshop', tag: 'ORDERS & MARGINS' },
-  { title: 'Real Estate & Construction', description: 'Lead qualification, site-visit scheduling, CRM follow-ups, billing and project workflows.', image: 'construction', alt: 'Tower crane above a building under construction', tag: 'LEADS & PROJECTS' },
+  { title: 'Textile', description: 'Fabric workflows, production tracking, payment recovery, order visibility and Tally integration.', image: 'textile', alt: 'Colorful fabric rolls arranged in a textile workshop', tag: 'ORDERS & MARGINS', href: '/industries/textile' },
+  { title: 'Real Estate & Construction', description: 'Lead qualification, site-visit scheduling, CRM follow-ups, billing and project workflows.', href: '/industries/real-estate-construction', image: 'construction', alt: 'Tower crane above a building under construction', tag: 'LEADS & PROJECTS' },
   { title: 'Healthcare', description: 'Appointment handling, patient communication, records, billing and operational reporting.', image: 'healthcare', alt: 'Doctor speaking with a patient at their hospital bedside', tag: 'PATIENTS & CARE' },
   { title: 'Education', description: 'Admissions, learning platforms, student support, course portals and reporting automation.', image: 'education', alt: 'Students learning together in a classroom', tag: 'ENQUIRIES & LEARNING' },
   { title: 'Finance & Professional Services', description: 'Tally analytics, client servicing, documentation, compliance and receivable tracking.', image: 'finance', alt: 'Business team collaborating around an office table', tag: 'CLIENTS & WORKFLOWS' },
@@ -103,7 +103,7 @@ export default function IndustriesSection() {
           {[0, 1].map(copy => (
             <div className={`${styles.group} ${copy ? styles.clone : ''}`} ref={copy === 0 ? groupRef : undefined} key={copy} aria-hidden={copy === 1 ? true : undefined}>
               {industries.map((industry, index) => (
-                <a className={styles.card} href="#contact" key={industry.image} tabIndex={copy ? -1 : 0} aria-label={`Explore ${industry.title} AI solutions`}>
+                <a className={styles.card} href={industry.href ?? '#contact'} key={industry.image} tabIndex={copy ? -1 : 0} aria-label={`Explore ${industry.title} AI solutions`}>
                   {/* Local, sized images keep the carousel independent of third-party image services. */}
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img className={styles.image} src={`/industries/${industry.image}.jpg`} alt={copy ? '' : industry.alt} width={640} height={800} loading="lazy" decoding="async" />

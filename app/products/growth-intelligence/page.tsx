@@ -12,17 +12,10 @@ import { DemoFormSection } from './DemoFormSection';
 import { ArrowRight, ArrowUpRight, Kanban } from 'lucide-react';
 import Navigation from '@/app/custom-solutions/Navigation';
 
-interface GIProductPageProps {
-  onOpenDemo: () => void;
-  onOpenWhatsApp: (debtorName?: string, amount?: string, billRef?: string, phone?: string) => void;
-  onNavigateToCRM: () => void;
-}
-
-const GIProductPage: React.FC<GIProductPageProps> = ({
-  onOpenDemo,
-  onOpenWhatsApp,
-  onNavigateToCRM
-}) => {
+const GIProductPage = () => {
+  const onOpenDemo = () => { window.location.href='/contact?intent=product&product=growth-intelligence#contact-form'; };
+  const onOpenWhatsApp = () => { window.location.href='/contact?intent=product&product=growth-intelligence#contact-form'; };
+  const onNavigateToCRM = () => { window.location.href='/products/ai-crm'; };
   return (
     <div>
       {/* Product Sub-Header & In-Page Navigation Bar */}
@@ -70,6 +63,7 @@ const GIProductPage: React.FC<GIProductPageProps> = ({
       <ValuePillars onOpenWhatsApp={onOpenWhatsApp} />
 
       {/* Interactive "Ask GI" Generative AI Showcase */}
+      <p className="px-6 pt-8 text-center text-sm text-slate-600">Interactive illustration using fictional sample data. This is not connected to a live customer account and does not send messages.</p>
       <AskGIDemo onOpenWhatsApp={onOpenWhatsApp} />
 
       {/* 3-Step Setup Progress Flow & Architecture */}
@@ -94,7 +88,7 @@ const GIProductPage: React.FC<GIProductPageProps> = ({
               </div>
               <div>
                 <span className="font-bold text-slate-900 block text-sm">Need to accelerate sales and stop lead leakage?</span>
-                <span className="text-xs text-slate-500">Explore Bizgenix CRM with IndiaMART capture and direct Tally Sales Order sync.</span>
+                <span className="text-xs text-slate-500">Explore Bizgenix CRM for sales follow-up; confirm required integrations during your demo.</span>
               </div>
             </div>
             <button

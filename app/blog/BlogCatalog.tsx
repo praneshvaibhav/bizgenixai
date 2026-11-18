@@ -2,7 +2,18 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { categories, insights, topics, formatPublishDate } from './newsletter';
+import { categories, insights as newsletterInsights, topics, formatPublishDate } from './newsletter';
+import { articles, onsiteByNewsletterSlug } from './articles';
+
+const insights = [...articles.filter(article => !article.linkedinSlug).map(article => ({slug:article.slug,title:article.title,category:'AI Strategy',summary:article.description,tags:article.tags,sourceUrl:`/blog/${article.slug}`,cover:article.cover || '/custom-solutions-hero.webp',publishedAt:article.date,author:'Dr. CA Umang Ratani'})), ...newsletterInsights].sort((a,b)=>b.publishedAt.localeCompare(a.publishedAt));
+
+/** Prefer the on-site article; fall back to the LinkedIn edition. */
+function linkFor(item: { slug: string; sourceUrl: string }) {
+  const onsite = item.sourceUrl.startsWith('/blog/') ? item.slug : onsiteByNewsletterSlug[item.slug];
+  return onsite
+    ? { href: `/blog/${onsite}`, target: undefined, rel: undefined, onsite: true }
+    : { href: item.sourceUrl, target: '_blank' as const, rel: 'noopener noreferrer', onsite: false };
+}
 import styles from './BlogListing.module.css';
 
 const pageSize = 8;
@@ -44,14 +55,16 @@ export default function BlogCatalog() {
       </div>
       <div className={styles.grid}>
         {filtered.slice((page - 1) * pageSize, page * pageSize).map((item, index) => <article className={styles.card} key={item.slug}>
-          <a href={item.sourceUrl} target="_blank" rel="noopener noreferrer" className={styles.cover} tabIndex={-1} aria-hidden="true">
+          <a href={linkFor(item).href} target={linkFor(item).target} rel={linkFor(item).rel} className={styles.cover} tabIndex={-1} aria-hidden="true">
             <Image src={item.cover} alt="" fill sizes="(max-width: 640px) 92vw, (max-width: 1000px) 44vw, 440px" priority={page === 1 && index < 2} />
           </a>
           <div className={styles.author}><span className={styles.avatar}><Image src="/founder-umang-ratani.webp" alt="" fill sizes="52px" /></span><span>{item.author}</span></div>
           <div className={styles.cardBody}>
-            <h3><a href={item.sourceUrl} target="_blank" rel="noopener noreferrer">{item.title}</a></h3>
+            <h3><a href={linkFor(item).href} target={linkFor(item).target} rel={linkFor(item).rel}>{item.title}</a></h3>
             <p>{item.summary}</p>
-            <a className={styles.readMore} href={item.sourceUrl} target="_blank" rel="noopener noreferrer" aria-label={`Read ${item.title} on LinkedIn (opens in a new tab)`}>Read on LinkedIn <span aria-hidden="true">↗</span></a>
+            {linkFor(item).onsite
+              ? <a className={styles.readMore} href={linkFor(item).href} aria-label={`Read ${item.title}`}>Read article <span aria-hidden="true">→</span></a>
+              : <a className={styles.readMore} href={item.sourceUrl} target="_blank" rel="noopener noreferrer" aria-label={`Read ${item.title} on LinkedIn (opens in a new tab)`}>Read on LinkedIn <span aria-hidden="true">↗</span></a>}
           </div>
           <div className={styles.cardFooter}><time dateTime={item.publishedAt}>{formatPublishDate(item.publishedAt)}</time><span>{item.category}</span></div>
         </article>)}
@@ -67,7 +80,7 @@ export default function BlogCatalog() {
       <label className={styles.search}><span className={styles.srOnly}>Search blog posts</span><input type="search" placeholder="Search insights…" value={query} onChange={event => { setQuery(event.target.value); setPage(1); }} /><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 4 4" /></svg></label>
       <section className={styles.sideSection} aria-labelledby="categories-title"><h2 id="categories-title">Categories</h2><ul className={styles.categoryList}>{categories.map(([name]) => <li key={name}><button type="button" aria-pressed={category === name} onClick={() => selectCategory(name)}><span>{name}</span><span>{insights.filter(item => item.category === name).length}</span></button></li>)}</ul></section>
       <section className={styles.sideSection} aria-labelledby="tags-title"><h2 id="tags-title">Tags</h2><div className={styles.tags}>{topics.map(name => <button key={name} type="button" aria-pressed={topic === name} onClick={() => selectTopic(name)}>{name}</button>)}</div></section>
-      <section className={styles.sideSection} aria-labelledby="posts-title"><h2 id="posts-title">Latest Posts</h2><ul className={styles.recentPosts}>{insights.slice(0, 4).map(item => <li key={item.slug}><a href={item.sourceUrl} target="_blank" rel="noopener noreferrer"><span className={styles.recentImage}><Image src={item.cover} alt="" fill sizes="64px" /></span><span><small>{item.category}</small>{item.title}</span></a></li>)}</ul></section>
+      <section className={styles.sideSection} aria-labelledby="posts-title"><h2 id="posts-title">Latest Posts</h2><ul className={styles.recentPosts}>{insights.slice(0, 4).map(item => <li key={item.slug}><a href={linkFor(item).href} target={linkFor(item).target} rel={linkFor(item).rel}><span className={styles.recentImage}><Image src={item.cover} alt="" fill sizes="64px" /></span><span><small>{item.category}</small>{item.title}</span></a></li>)}</ul></section>
     </aside>
   </div>;
 }

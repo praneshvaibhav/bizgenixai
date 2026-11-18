@@ -4,27 +4,27 @@ import { Lock, ShieldAlert, KeyRound, Server, CheckCircle2, ShieldCheck, FileChe
 export const SecuritySection: React.FC = () => {
   const securityPillars = [
     {
-      title: "256-Bit TLS Bank Encryption",
-      subtitle: "In-Transit & At-Rest Security",
-      description: "Every byte transferred between your local Tally PC and the Bizgenix executive cloud uses banking-grade SHA-256 TLS 1.3 encryption. Impossible to intercept on local office Wi-Fi.",
+      title: "Data Transfer & Storage",
+      subtitle: "Review the deployment controls",
+      description: "Ask the team to document encryption in transit, encryption at rest and the systems that receive your business data before connecting a live environment.",
       icon: Lock
     },
     {
-      title: "Strict Read-Only Architecture",
-      subtitle: "Zero Ledger Write-Back",
-      description: "Our connector is hardcoded to execute read-only XML and ODBC export queries. It possesses no write, modify, or delete commands. Your Tally books remain 100% sacred and uncorrupted.",
+      title: "Connector Permissions",
+      subtitle: "Confirm permitted operations",
+      description: "Review the connector permissions and supported operations for your deployment. Agree the access scope and test it before connecting production accounting records.",
       icon: ShieldAlert
     },
     {
-      title: "Role-Based Access Control (RBAC)",
-      subtitle: "Protect Margins & Sensitive Ledgers",
-      description: "Give field sales agents access to their clients' payment outstandings while completely hiding company profit margins, supplier purchase rates, and bank account balances.",
+      title: "Team Access Requirements",
+      subtitle: "Define roles and visibility",
+      description: "Identify which people need access to receivables, margins and account balances. Confirm the available role controls and test the agreed visibility rules during setup.",
       icon: KeyRound
     },
     {
-      title: "Local Indian Data Governance",
-      subtitle: "On-Premise Privacy Compliance",
-      description: "Data is processed strictly in accordance with Indian Digital Personal Data Protection (DPDP) standards. Your financial vouchers are never shared, sold, or used to train third-party public models.",
+      title: "Data Handling Review",
+      subtitle: "Document hosting and retention",
+      description: "Confirm hosting locations, retention, subprocessors and any model-provider data use in the agreed deployment documentation. Review these arrangements before sharing business records.",
       icon: Server
     }
   ];
@@ -37,14 +37,14 @@ export const SecuritySection: React.FC = () => {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F2F9F4] border border-[#2E7D4E]/30 text-[#25663F] text-xs font-semibold uppercase tracking-wider mb-3">
             <ShieldCheck className="w-4 h-4 text-[#2E7D4E]" />
-            <span>Zero-Compromise Security Architecture</span>
+            <span>Security & Data Handling</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0F172A] tracking-tight">
-            Your Accounting Data Is Your Most Sacred Asset. <br />
-            We Keep It Untouchable.
+            Your Accounting Data Needs Clear Controls. <br />
+            Review Them Before Connecting.
           </h2>
           <p className="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed">
-            Designed for Indian business promoters who would never risk unauthorized access, ledger alteration, or staff leaking confidential purchase margins.
+            Discuss permissions, hosting and access requirements with the implementation team before enabling a live connection.
           </p>
         </div>
 
@@ -76,7 +76,7 @@ export const SecuritySection: React.FC = () => {
 
                 <div className="mt-6 pt-3 border-t border-slate-200/60 flex items-center gap-1.5 text-[11px] font-semibold text-emerald-800">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#2E7D4E]" />
-                  <span>Enterprise Hardened</span>
+                  <span>Review during setup</span>
                 </div>
               </div>
             );
@@ -88,11 +88,11 @@ export const SecuritySection: React.FC = () => {
           <div className="flex items-center gap-3">
             <FileCheck className="w-5 h-5 text-[#2E7D4E] shrink-0" />
             <span>
-              <strong>Non-Disclosure &amp; Data Isolation:</strong> Every customer instance runs in an isolated tenant environment with automated token rotation and IP-whitelisting options.
+              <strong>Deployment documentation:</strong> Ask for the applicable confidentiality terms, data separation controls and access-management arrangements.
             </span>
           </div>
           <span className="text-slate-500 font-mono text-[11px] shrink-0">
-            Audit Standard: ISO 27001 &amp; SOC2 Type II Aligned
+            Confirm available security documentation
           </span>
         </div>
 

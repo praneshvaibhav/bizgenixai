@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '../seo';
 import Image from 'next/image';
 import Navigation from '../custom-solutions/Navigation';
 import ContactSection from '../ContactSection';
@@ -10,9 +11,9 @@ import LearningPageAnimator from './LearningPageAnimator';
 import { communityUrl, corporateUrl, corporateTopics, courseFaqs, enquire } from './content';
 import styles from './page.module.css';
 
-const title = 'Practical AI Courses, Workshops & Corporate Training | Bizgenix';
-const description = 'Learn AI, prompt engineering, automation, AI agents, Voice AI and business intelligence through practical Bizgenix courses for owners, professionals, students and corporate teams.';
-export const metadata: Metadata = { title, description, alternates: { canonical: '/courses' }, openGraph: { title, description, type: 'website' }, twitter: { card: 'summary', title, description } };
+const title = 'AI Training & Corporate AI Workshops in India | Bizgenix AI';
+const description = 'Practical AI training for business owners and corporate teams: AI workshops, the Scale With AI programme, prompt engineering, automation and AI agents.';
+export const metadata: Metadata = pageMeta({ title, description, path: '/courses' });
 
 const corporateTrainingGallery = [
   { file: 'sj-sangath-gift-city.jpeg', title: 'Corporate AI Enablement', location: 'GIFT City', format: 'Team workshop' },
@@ -34,7 +35,7 @@ export default function CoursesPage() {
         <div className={styles.heroCopy}><h1 id="courses-title">Learn AI that solves <em>real business problems.</em></h1><p className={styles.heroLead}>Practical skills. Real tools. Possibilities you can put to work.</p><p className={styles.description}>Build practical AI, automation and business transformation skills through hands-on courses designed for business owners, professionals, students and corporate teams.</p></div>
         <LearningMap />
       </div></section>
-      <section className={styles.proof} aria-label="Bizgenix learning in numbers"><dl className={styles.container} data-learning-reveal><div><dt>Professionals & business owners trained</dt><dd><CountUp value={2000} /></dd></div><div><dt>AI community members</dt><dd><CountUp value={1000} /></dd></div><div><dt>Live AI systems built</dt><dd><CountUp value={110} /></dd></div><div><dt>Ahmedabad, Surat, Mumbai · Vadodara upcoming</dt><dd>Multiple cities</dd></div></dl></section>
+      <section className={styles.proof} aria-label="Bizgenix learning in numbers"><dl className={styles.container} data-learning-reveal><div><dt>Owners trained · company-reported</dt><dd><CountUp value={2000} /></dd></div><div><dt>Community members · company-reported</dt><dd><CountUp value={1000} /></dd></div><div><dt>AI solutions built · company-reported</dt><dd><CountUp value={110} /></dd></div><div><dt>Ahmedabad, Surat, Mumbai, Vadodara</dt><dd>Multiple cities</dd></div></dl></section>
       <ScaleWithAI />
       <section className={`${styles.section} ${styles.container}`} id="corporate-training" aria-labelledby="corporate-title"><h2 className={styles.majorSectionTitle} id="corporate-title" data-learning-reveal>Corporate Training</h2><div className={styles.corporatePanel} data-learning-reveal><div className={styles.splitHeading}><p className={styles.eyebrow}>CORPORATE AI TRAINING</p><h3>Stronger teams.<br /><em>Smarter ways to work.</em></h3><p>Customized training that helps your organization improve productivity, accelerate AI adoption and build common standards across teams.</p><div className={styles.formatTags}><span>Online</span><span>At your office</span><span>Hybrid</span></div><a className={styles.primary} href={corporateUrl}>Discuss your team’s training <span aria-hidden="true">→</span></a></div><div className={styles.corporateTopics}><p>BUILT AROUND YOUR BUSINESS</p><ul className={styles.checkList}>{corporateTopics.map(point => <li key={point}><span aria-hidden="true">✓</span>{point}</li>)}</ul></div></div></section>
       <section className={styles.corporateGallerySection} aria-labelledby="training-gallery-title"><div className={`${styles.galleryIntro} ${styles.container}`} data-learning-reveal><div><p className={styles.eyebrow}>TRAINING IN ACTION</p><h2 id="training-gallery-title">Real teams. Real rooms.<br /><em>Practical AI learning.</em></h2></div><p>From focused team sessions to large professional forums, our programs turn AI awareness into confident, practical application.</p></div><div className={styles.galleryViewport}><div className={styles.corporateGallery}>{[false, true].map(clone => <div className={styles.galleryGroup} aria-hidden={clone || undefined} key={clone ? 'duplicate' : 'original'}>{corporateTrainingGallery.map(item => <figure className={styles.trainingCard} key={`${clone ? 'duplicate-' : ''}${item.file}`}><Image src={`/corporate-training/${item.file}`} alt={clone ? '' : `${item.title} corporate AI training session in ${item.location}`} width={900} height={1200} sizes="(max-width: 600px) 75vw, (max-width: 900px) 42vw, 22vw" /><figcaption><span>{item.format}</span><div><strong>{item.title}</strong><small>{item.location}</small></div></figcaption></figure>)}</div>)}</div></div></section>

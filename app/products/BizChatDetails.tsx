@@ -55,7 +55,8 @@ export default function BizChatDetails({ active }: { active: boolean }) {
         <p className={styles.eyebrow}>{product.category}</p>
         <h3>Every conversation <br />moves your<br /><em>business forward.</em></h3>
         <p className={styles.description}>{product.description}</p>
-        <a className={styles.cta} href="/contact#contact-form">{product.action}<span aria-hidden="true">→</span></a>
+        <a className={styles.cta} href="/contact?intent=product&amp;product=bizchat#contact-form">{product.action}<span aria-hidden="true">→</span></a>
+        <p style={{ margin: '14px 0 0', fontSize: 13 }}><a href="/products/bizchat" style={{ textDecoration: 'underline', textDecorationColor: '#5AAA6C', textUnderlineOffset: 4 }}>Full details: BizChat →</a></p>
         <ul className={styles.traits}><li>Automate at scale</li><li>Improve response time</li><li>Turn conversations into results</li></ul>
       </div>
       <figure className={styles.figure}>
@@ -76,7 +77,7 @@ export default function BizChatDetails({ active }: { active: boolean }) {
     <div className={`${common.columns} ${styles.columns}`}>
       <div><div className={styles.columnHeading}><span><Icon name="bolt" /></span><div><h4>Key capabilities</h4><p className={common.columnCaption}>BUILT FOR REAL BUSINESS USE</p></div><b>{product.capabilities.length}</b></div><ul>{product.capabilities.map(item => <li key={item}>{item}</li>)}</ul></div>
       <div><div className={styles.columnHeading}><span><Icon name="briefcase" /></span><div><h4>Common use cases</h4><p className={common.columnCaption}>ACROSS INDUSTRIES</p></div></div><ul>{product.useCases.map(item => <li key={item}>{item}</li>)}</ul></div>
-      <div><div className={styles.columnHeading}><span><Icon name="chart" /></span><div><h4>What changes for your business</h4><p className={common.columnCaption}>MEASURABLE IMPACT</p></div></div><ul>{product.benefits.map(item => <li key={item}>{item}</li>)}</ul><a className={styles.growthCta} href="/contact#contact-form">Real conversations.<br />Real business growth.<span aria-hidden="true">→</span></a></div>
+      <div><div className={styles.columnHeading}><span><Icon name="chart" /></span><div><h4>What changes for your business</h4><p className={common.columnCaption}>MEASURABLE IMPACT</p></div></div><ul>{product.benefits.map(item => <li key={item}>{item}</li>)}</ul><a className={styles.growthCta} href="/contact?intent=product&amp;product=bizchat#contact-form">Real conversations.<br />Real business growth.<span aria-hidden="true">→</span></a></div>
     </div>
   </div>;
 }
